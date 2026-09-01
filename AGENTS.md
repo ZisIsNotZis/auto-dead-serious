@@ -15,7 +15,6 @@ Markdown style: keep each ordinary prose paragraph and each list item as one phy
 7. Before committing related changes, inspect `.gitignore` and exclude generated files, build output, credentials, and local artifacts. Commit coherent changes with truthful messages. Do not create empty or speculative commits.
 8. Publication is approval-gated. Only after explicit approval may `gh` create or update `zisisnotzis/<content-derived-slug>` (public unless `_private`), then push the intended branch and verify the remote, visibility, and result. Leave accurate or unchanged repositories untouched.
 9. Papers belong under `papers/` and are prepared only when explicitly required. Bilibili materials belong under `videos/` and are prepared only when explicitly required. Neither is uploaded automatically; never commit upload credentials. When approved, keep paper/video source, metadata, and evidence with the child.
-10. Always use Luna for substantial independent implementation or investigation work when Luna is available. Give each worker a complete scoped prompt, forbid recursive delegation and Codex CLI, parallelize only disjoint work, and review its evidence before integration. If Luna is unavailable, report the limitation and continue only with work safely in scope.
 
 ## Verification gate
 
