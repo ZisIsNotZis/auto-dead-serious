@@ -5,6 +5,8 @@ follows that child's `AGENTS.md`/`CLAUDE.md` first.
 
 ## Operating rules
 
+Markdown style: write ordinary prose paragraphs and list items on one physical line for wide-screen auto-wrapping; preserve intentional line breaks for headings, code fences, tables, YAML/front matter, and cases where a line would become unreasonably long or semantically unclear.
+
 1. Re-scan top-level directories and inspect actual content before acting.
    Treat folder names as paths only. Derive the product name, package name,
    publication title, and GitHub slug from project content and metadata;
