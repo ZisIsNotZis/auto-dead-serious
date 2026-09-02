@@ -2,7 +2,7 @@
 
 Glossary only. Design rationale lives in docs/adr/, the plan in wayfinder/map.md, the language itself in LANGUAGE.md.
 
-- **expyssion** — the language: everything is an expression; everything is a call. (Canonical name per ticket 008; `expyssoin` is only the working directory.)
+- **expyssion** — the language: everything is an expression; everything is a call. (Canonical name per ticket 008; the working directory was named `expyssoin` during design and has since been renamed to match.)
 - **call (prefix)** — the one syntactic form: `f a b` is `f(a, b)`; an argument followed by indented lines is owned by it.
 - **lambda** — deferred callable, written `:` (`x: x+y`); multi-line bodies return the last executed line's value.
 - **special form** — *not part of expyssion*: there are none. Control structures are ordinary functions.
@@ -10,7 +10,6 @@ Glossary only. Design rationale lives in docs/adr/, the plan in wayfinder/map.md
 - **sync-point channel** — the two-tube protocol crossing sync points: upward (child → parent) carries the private `Yield(v)` wrapper or a bare completion value, plus native exceptions; downward (parent → child) carries spawn arguments or a resume value, no container.
 - **effect handler** — a frame that answers a Result instead of bubbling it upward; resolution is dynamic (nearest active handler).
 - **yield** — a library-level effect performed via the Result channel; suspends the innermost active generator-style handler. No depth parameter.
-- **generator** — the explicit wrapper (`generator body`) that turns any lambda into a lazy iterator: drives it across sync points, delivering yielded values and surfacing completion as `StopIteration`.
 - **collector** — `list`/`dict`/`set` acting as comprehension handlers: a lambda argument is driven internally (handler active) and its yields collected; non-lambda arguments are iterated or collected as values.
 - **generator** — a yielding lambda itself; it carries no wrapper — any consumer that receives it (`list`, `for`, …) drives it across sync points.
 - **elision** — compiler omission of provably pure sync points; a pure optimization, invisible to semantics.
