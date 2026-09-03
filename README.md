@@ -57,6 +57,10 @@ This is an index and release boundary, not a monorepo, shared build system, or
 promise that every experiment is production-ready. Generated dependencies,
 credentials, private material, and unreviewed media do not belong here.
 
+## Workspace rules for agents
+
+This directory aggregates child repositories as pinned submodules: keep each child independent, preserve the parent submodule relationship, and treat folder names as paths only. Work inside a child follows that child's `AGENTS.md`/`CLAUDE.md` first; root [AGENTS.md](AGENTS.md) supplies the universal policy every child inherits. When preparing a child for GitHub, a trailing `_private` in the content-derived slug marks a private repository.
+
 ## Future vision 🛰️
 
 The collection should become a coherent catalogue of working ideas: every
