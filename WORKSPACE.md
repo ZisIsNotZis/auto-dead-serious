@@ -10,7 +10,7 @@ This directory aggregates independent child repositories. Universal agent policy
 
 ## Repository preparation
 
-1. For a child being prepared for GitHub, inspect and update applicable repository files (README, LICENSE, AGENTS.md, CLAUDE.md, `.agents/`, `.claude/`) following the universal Repository files rules, plus these workspace deltas: the README is bilingual (`README.md` + `README.zh-CN.md`); add `AGPL-3.0-only` only when no license decision exists; follow existing conventions and add only files with a clear purpose.
+1. For a child being prepared for GitHub, inspect and update applicable repository files (README, LICENSE, AGENTS.md, CLAUDE.md, `.agents/`, `.claude/`) following the universal Repository files rules, plus these workspace deltas: the README is bilingual (`README.md` + `README.zh-CN.md`); follow existing conventions and add only files with a clear purpose.
 2. Derive the product name, package name, publication title, and GitHub slug from project content and metadata; preserve intentional underscores in the slug (a trailing `_private` means a private GitHub repository).
 3. Preserve existing history, remotes, branches, licenses, and policy decisions.
 
@@ -18,7 +18,3 @@ This directory aggregates independent child repositories. Universal agent policy
 
 1. Publication is approval-gated. Only after explicit approval may `gh` create or update `zisisnotzis/<content-derived-slug>` (public unless `_private`), then push the intended branch and verify the remote, visibility, and result. Leave accurate or unchanged repositories untouched.
 2. After approved publication, verify the submodule commit, remote URL, branch, visibility, and clean status.
-
-## Media
-
-1. Papers belong under `papers/` and are prepared only when explicitly required. Bilibili materials belong under `videos/` and are prepared only when explicitly required. Neither is uploaded automatically; never commit upload credentials. When approved, keep paper/video source, metadata, and evidence with the child.
