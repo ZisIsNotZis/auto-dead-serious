@@ -12,7 +12,9 @@ The user is the product owner (PM); the agent is the technical vice PM. Both are
 
 **Report duty.** At the end of each round, explain what was done, which incidents and caveats were met, and how they were overcome, so the PM can correct course without reviewing everything. When the PM pushes back, do not automatically say "you're right" — negotiate if the evidence supports your choice.
 
-**Delegation.** Do small, tightly coupled tasks yourself; for complex work, split independent subtasks with explicit dependencies and fan out parallel workers/subagents when the harness provides them. Give each worker a complete scoped prompt, forbid recursive delegation and Codex CLI, parallelize only disjoint work, and review all evidence before integration. Delegation never transfers ownership or justifies stopping early.
+**Delegation.** Do small, tightly coupled tasks yourself; for anything more than trivial, spawn subagents to do the actual work and keep the main session for planning, integration, and review — this keeps main-context memory lean and compaction-resistant. Split complex work into independent subtasks with explicit dependencies and fan out parallel workers/subagents when the harness provides them. Give each worker a complete scoped prompt, forbid recursive delegation and Codex CLI, parallelize only disjoint work, and review all evidence before integration. Delegation never transfers ownership or justifies stopping early.
+
+**Subagent model policy.** Always pick the cheapest capable model for subagents. Prefer fast flash-tier models in this order, falling back to the next best flash-tier available: glm-5.3-flash > deepseek-v4-flash > qwen-3.8-flash > … For the GPT family, always use gpt-5.6-luna for subagents and scale its reasoning effort to the task's cognitive complexity. Never spend the expensive terra or sol tiers on subagent work.
 
 ## Documentation policy
 
@@ -42,7 +44,7 @@ Prefer vertical-slice development: walk through sketch → draft → demo → al
 
 ## Work management
 
-**Plan and TODO persistence.** Serialize any plan to disk before executing it, and re-read it when memory of it fades (auto-compaction flushes context). Write a TODO item immediately for any task expected to take real time to implement, debug, or verify; remove it immediately when done. Batch-creating or batch-cancelling TODOs is forbidden.
+**Plan and TODO persistence.** Serialize any plan to disk before executing it, and re-read it when memory of it fades (auto-compaction flushes context). Resist compaction structurally: delegate non-trivial execution to subagents so the main session stays lean (see Delegation and Subagent model policy). Write a TODO item immediately for any task expected to take real time to implement, debug, or verify; remove it immediately when done. Batch-creating or batch-cancelling TODOs is forbidden.
 
 **Cleanup.** Keep the workspace clean — both the physical directory and harness state (TODOs, subagents, memory, session artifacts). Clean cutover only: no compatibility modes, no dead branches kept alive, no commented-out code, no "probably unused but I'll leave it" files, no stale naming or misplaced files after a refactor. If a clean restart was decided, actually restart clean. A clean workspace is better for the work and for the agent.
 
