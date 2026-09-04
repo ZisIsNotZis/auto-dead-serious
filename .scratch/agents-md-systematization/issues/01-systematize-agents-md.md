@@ -18,8 +18,8 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 
 ## Branch & commits
 
-- Branch: `ticket-0001-agents-md-systematization` (to be merged into main per the docs-always-on-main rule).
-- Implementation commits: f22b17d, cc2ea9c, c6896e5, 3a638ce, 709694a, 73826d6, plus this ticket's latest update commit (excluded per the self-reference rule).
+- Branch: `ticket-0001-agents-md-systematization` — merged into main as `3351bdd`, branch deleted.
+- Implementation commits: f22b17d, cc2ea9c, c6896e5, 3a638ce, 709694a, 73826d6, 06f81a4, merge 3351bdd; this ticket's latest update commit is excluded per the self-reference rule.
 
 ## Comments (change log)
 
