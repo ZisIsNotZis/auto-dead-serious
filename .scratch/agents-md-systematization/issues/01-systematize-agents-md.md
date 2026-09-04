@@ -26,6 +26,8 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 
 ## Knowhow
 
+- When appending to change logs, match the full entry line — never a prefix. Prefix-matching edits have twice glued a new entry onto the previous one's tail; both were caught by re-reading the file before commit.
+
 - Conflict resolutions applied: ask-for-information vs never-offload-work; ticket folder exempt from docs write permission; mid-session user alternation retracted in favor of per-session identity.
 - Open question flagged: README still positions Bilibili/paper materials that were removed as policy.
 
