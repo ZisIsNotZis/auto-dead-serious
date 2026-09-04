@@ -71,13 +71,13 @@
 
 **Review 与合并。** ticket 的 need-review 属性把守合并：没有它就直接合并；有它则合并前 review——用 review skill 的方法（采纳其思路，不必照搬其确切流程）；没装 skill 时，方法是对 scoped diff 做一次全新上下文的对抗性阅读，检查正确性、边界情况、与 spec 的一致性和简洁性，并 spawn 严格独立的 reviewer subagent（全新上下文，harness 允许时 fork=false；绝不使用继承了工作 Agent 记忆的 reviewer，那会毁掉独立性）。被拒绝时，在 ticket 中记录原因和修复方法，把 ticket 打回 doing。PO 审批只在重要的地方要求：改写历史的 git 操作（rebase、force-push、reset --hard）、新增第三方依赖、目录结构调整、CI 或环境变更。
 
-**Matt Pocock skill 兼容。** 追踪器逐字采用他的本地布局——`.scratch/<feature-slug>/` 配 `spec.md` 和 `issues/NN-slug.md`、`Status:` 行、`Blocked by:` 边、`## Comments`——并完全按他的惯例提交入库，使他的 `/to-tickets`、`/triage`、`/implement` 和 `/wayfinder` skills 双向都可原样工作。不可提交的临时草稿放 `.tmp/`。采用他的工作流时，把他的 skills 仓库作为 submodule vendor 进 `vendor/`，只把需要的 skills 链接入 `.agents/skills/`；本政策依赖的每个核心方法（ponytail 链、review 方法、追踪器语义）都始终内联在本文件中，绝不依赖 skill 才可用。仓库拥有正式追踪器（通过 gh 的 GitHub Issues、GitLab、Jira）时优先使用它——他的 setup skill 可在 issue-tracker-local/github/gitlab 配置间切换而不改变其 skills 的词汇；本地 `.scratch/` 追踪器是本地化或未发布阶段的退路。
+**Matt Pocock skill 兼容。** 追踪器逐字采用他的本地布局——`.scratch/<feature-slug>/` 配 `spec.md` 和 `issues/NN-slug.md`、`Status:` 行、`Blocked by:` 边、`## Comments`——并完全按他的惯例提交入库，使他的 `/to-tickets`、`/triage`、`/implement` 和 `/wayfinder` skills 双向都可原样工作。不可提交的临时草稿放 `.tmp/`。skill 遵循信息收集一节的 vendoring 规则；本政策依赖的每个核心方法（ponytail 链、review 方法、追踪器语义）都始终内联在本文件中，绝不依赖 skill 才可用。仓库拥有正式追踪器（通过 gh 的 GitHub Issues、GitLab、Jira）时优先使用它——他的 setup skill 可在 issue-tracker-local/github/gitlab 配置间切换而不改变其 skills 的词汇；本地 `.scratch/` 追踪器是本地化或未发布阶段的退路。
 
 **专注。** 不要漂移。跟踪墙钟时间：一个任务在诚实的努力之后仍然僵持，就带着记录好的状态停放它，切换到其他待办工作，并向 PO 请求决策而不是持续阻塞——只有 PO 明确授权你全权负责时才端到端兜住。工具坏了（如 pip）就绕过去；只在无关紧要时才修工具链——目标是活儿，不是工具。
 
 **工具自主。** 无需请示，自由使用包管理器和网络工具（pip、uv、npm、pnpm、nvm、fnm、curl、wget、gh 等）并通过可用的搜索/抓取工具在线调研，前提是变更留在项目内：不做系统级更改，不做破坏性操作。避免 sudo——其密码通常无从知晓——缺的工具（uv、nvm 等）自己装；仅需本地使用的，把包下载解压到本地或从 GitHub clone；确实需要 sudo 时，先尝试 pkexec 或 SUDO_ASKPASS 助手，实在不行才请 PO 代为执行命令。典型用户在中国：Google、OpenAI、Anthropic、HuggingFace 不可达，pypi/npm/GitHub 很慢；不确定是否适用时，可核查则用 IP 归属地验证。优先使用区域镜像与代理：tuna pypi、npmmirror、ali maven、HF mirror、gh 代理。你的知识有截止日期——对最新或快速演进的工具，在线核实而不是想当然。沙箱或权限门槛挡住正当工作时，询问 PO；他不在时，找安全的绕行办法而不是持续被卡——绝不以破坏性手段攻破安全机制。
 
-**信息收集。** 缺失或低置信度的信息，先本地深挖——仓库、库文档、代码注释、函数签名；其次用搜索工具；再次以 curl/wget/gh 兜底；最后才与更强的模型交叉验证。对某个领域是否够专业没有把握时，去找 skill（如 github.com/vercel-labs/skills 的 `find-skills`）：skill 是人类整理好的领域 know-how。优先选择高人气、高评分的 skill，使用前先检查——skill 可能是恶意的。skill 保持极简：只添加对这个项目真正有帮助的（链接进 `.agents/skills/`，绝不整仓库照搬），添加前先读，被证明无意义的就删除。
+**信息收集。** 缺失或低置信度的信息，先本地深挖——仓库、库文档、代码注释、函数签名；其次用搜索工具；再次以 curl/wget/gh 兜底；最后才与更强的模型交叉验证。对某个领域是否够专业没有把握时，去找 skill（如 github.com/vercel-labs/skills 的 `find-skills`）：skill 是人类整理好的领域 know-how。优先选择高人气、高评分的 skill，使用前先检查——skill 可能是恶意的。skill 保持极简：只添加对这个项目真正有帮助的，添加前先读，被证明无意义的就删除。项目/模块级的在线 skill 一律 vendor：把 skill 仓库作为 pinned submodule 加进 `vendor/`，再把所需 skill symlink 进 `.agents/skills/`——绝不用 `npx skills` 安装，它是复制而非链接，会破坏 upstream 跟踪。全局安装（`npx skills -g`）可用但要谨慎：全局 skill 会自动加载进每一个可能的 session，必须真正配得上这个门槛。
 
 **Skill 学习。** 值得保留的经验要变成 `.agents/skills/` 下的真实 skill：有典型工作流或推荐做法的程序性知识——注意事项和 knowhow 不算，那些归 docs。skill 内部同样优先脚本/自动化而非指令描述，并遵循 writing-for-agents 风格。识别到可复用模式时自动触发学习；PO 明确要求时执行；扫描记忆发现值得学的非平凡内容时执行。只有费过力气、值得花 token 记忆的材料才配成为 skill——其余留在散文里或删除。
 
