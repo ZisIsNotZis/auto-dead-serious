@@ -34,6 +34,8 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 
 ## Knowhow
 
+- MP's answer to branch-vs-tracker: none — his `/implement` just says "commit your work to the current branch", and his wayfinder "claim" is a Status edit without pull/push CAS. Our docs/lock-on-main rule is deliberately stricter than MP because we run multi-agent with real locking; his architecture already anticipates the proper fix we noted: swappable tracker configs (local/github/gitlab) with identical skill vocabulary.
+
 - When appending to change logs, match the full entry line — never a prefix. Prefix-matching edits have twice glued a new entry onto the previous one's tail; both were caught by re-reading the file before commit.
 
 - Conflict resolutions applied: ask-for-information vs never-offload-work; ticket folder exempt from docs write permission; mid-session user alternation retracted in favor of per-session identity.
