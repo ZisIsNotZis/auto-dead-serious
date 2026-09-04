@@ -37,6 +37,7 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 - 2026-09-04 03:25 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — token-effectiveness self-review pass added to docs policy and applied: compressed intro, collaboration contract (all paragraphs), docs policy 3; meaning-preserving, no rules dropped. Mirrored into AGENTS.zh-CN.md.
 - 2026-09-04 03:30 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — report duty extended: intuitive medium over plain text (tables/diagrams/visual HTML for structure, architecture, relations); explicit report requests get the most intuitive, impressive presentation; no heavy jargon.
 - 2026-09-04 03:40 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — two-register principle (agent-facing = professional terms for token efficiency; PO-facing = easy intuitive forms for cognitive load); UX design principle added to Design process (Norman/Nielsen grounded: cognitive load, feedback, error prevention) with feel-able artifact rule (quick static HTML sketch / playable demo early — agent can't feel UX, PO judges feel).
+- 2026-09-04 03:45 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — show-don't-describe added to intuitive-medium rule: concrete examples (real request/response pairs, exported file format samples, actual data) beat schema tables and prose. Mirrored into AGENTS.zh-CN.md.
 
 ## Knowhow
 
