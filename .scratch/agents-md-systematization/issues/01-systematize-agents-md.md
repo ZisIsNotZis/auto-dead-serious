@@ -1,4 +1,4 @@
-# Ticket 0001 — Systematize AGENTS.md as universal multi-user agent policy
+# Ticket 01 — Systematize AGENTS.md as universal multi-user agent policy
 
 - **Status:** doing
 - **Owner:** agent (pi, main session); requester: PO zisisnotzis
@@ -13,7 +13,7 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 - AGENTS.md is project-agnostic (no vibe-specific content; those moved to README).
 - Every PO point from all rounds is present, S.M.A.R.T.-phrased, conflict-free, ≤200 lines, one physical line per paragraph.
 - Multi-user support: git-config identity detection, docs/people.md profiles.
-- All changes ticket-tracked under docs/tickets/ with issue/AC/status/owner/updates.
+- All changes ticket-tracked in the Matt Pocock local-tracker layout (`.scratch/<feature-slug>/issues/`), committed, bi-directionally compatible with his skills.
 - CLAUDE.md symlink → AGENTS.md per standard scaffold.
 
 ## Comments (change log)
@@ -22,6 +22,7 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 - 2026-09-03 — VPO via pi coding agent, main session — migrated single-user → multi-user (git identity, people doc); replaced todo tiers with mandatory file tickets (harness tool demoted to mirror); removed anti-Matt-Pocock clause; added asking-protocol interest-bar model; repo scaffold convention; information-gathering ladder; skill minimalism; China mirror preference; sudo avoidance; subjective-artifact open review; docs/ write regimes carved into three (design truth = permission, PO info = mandatory, tickets = working state).
 - 2026-09-04 01:50 UTC — requester zisisnotzis (PO) via pi coding agent, main session, model volc2/glm-5.3-flash — renamed PM→PO everywhere (PO carries no commercial connotation; VPO = technical vice product owner); added ticket locking protocol (pull→set→push-to-confirm, exclusive lock, `Dear <owner>:` messages, "let's call it a day" wrap-up); adopted append-only `## Comments` change-log format (who, harness, model, when, what); added Matt Pocock compatibility clause (his tracker shape, kept under committed docs/tickets/); China-default + IP-verification mirror rule; intro efficiency-over-workflow clause.
 - 2026-09-04 01:55 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — lock auto-release on natural completion ("call it a day" demoted to interrupt path); ownership redefined as lock-not-identity (any free agent claims a released ticket); formalized branching: per-ticket branches, unfinished code never on main, merge only after review gate; review-and-merge gate via need-review property (independent fresh-context reviewers, fork=false); subjective-artifact rule: reviewer compares rendered targets directly, worker never mediates; self-applied: this round committed on branch ticket-0001-agents-md-systematization instead of main.
+- 2026-09-04 02:05 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — adopted MP tracker layout verbatim: ticket migrated to `.scratch/agents-md-systematization/issues/01-systematize-agents-md.md`, `.scratch/` now committed (his `.gitignore` only excludes node_modules/.claude — verified), triage roles adopted verbatim (needs-triage/needs-info/ready-for-agent/ready-for-human/wontfix) plus work states (claimed/done/deferred); transient dumps moved to git-ignored `.tmp/`; .gitignore un-ignores .scratch/.agents/.claude per scaffold; review-method fallback inlined (works without code-review skill); historical change-log entries left verbatim per append-only rule.
 
 ## Knowhow
 
