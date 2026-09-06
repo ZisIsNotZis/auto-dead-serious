@@ -36,9 +36,9 @@ git submodule status
 
 这是索引和发布边界，不是单体仓库、统一构建系统，也不保证每个实验都已达到生产级。生成依赖、凭据、私密材料和未经审核的媒体不应提交到这里。
 
-## 面向代理的工作区规则
+## 贡献
 
-本目录以 pinned submodule 的方式聚合各个子仓库：保持每个子仓库独立，保留父级 submodule 关系，并把目录名仅当作路径看待。在子仓库内工作时，优先遵循该子仓库的 `AGENTS.md`/`CLAUDE.md`；根目录 [AGENTS.md](AGENTS.md) 提供所有子仓库继承的通用政策。为子仓库准备 GitHub 发布时，由内容推导出的 slug 若以 `_private` 结尾，则表示私有仓库。
+针对相关子仓库、或针对本索引（成员与政策）提交 issue 或 PR，附上受影响路径、证据与验证命令。Agent 可协助 triage、研究、测试、文档与实现；由维护者 review 与 merge。面向 Agent 的工作区规则见 [WORKSPACE.md](WORKSPACE.md)。
 
 ## 未来愿景 🛰️
 
