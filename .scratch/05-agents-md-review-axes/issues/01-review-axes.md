@@ -1,6 +1,6 @@
 # 01 — Standing docs review axes (4)
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** VPO (main session)
 
@@ -15,10 +15,11 @@ plentiful. Then run one check round on the current file.
 
 ## Acceptance criteria
 
-- [ ] Documentation 4.2 encodes the four axes + spawn policy + verify-before-accept.
-- [ ] One fresh-context reviewer run completed; findings triaged; real ones fixed.
-- [ ] AGENTS.md ≤ 200 lines, `git diff --check` clean.
+- [x] Documentation 4.2 encodes the four axes + spawn policy + verify-before-accept.
+- [x] One fresh-context reviewer run completed; findings triaged; real ones fixed.
+- [x] AGENTS.md ≤ 200 lines, `git diff --check` clean.
 
 ## Comments
 
-- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Created and claimed from PO's review-methodology direction.
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Doc 4.2 committed (144 lines).
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Reviewer returned BLOCK: 1 P1 + 15 P2; all 16 verified against text and accepted; fixed in one 15-block batch (tool-autonomy/dependency-approval scoping; micro-fix exceptions; 6.1 merge step; 9.1 recording carve-out; ladder-vs-Routing boundary; fork=true defined; id anti-example; clarity fallback; dedupe of rejection rule + 1.3 restatement; unified skill bar; Routing home for scripts/ + kind boundaries; Stage 0.2 channel scoping; dropped dangling ≈10× figure). Verified: 144 lines, git diff --check clean.
