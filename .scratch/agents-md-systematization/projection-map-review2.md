@@ -1,0 +1,42 @@
+# Projection map — review-fix batch (2026-09-04, both reviewers merged)
+
+Each finding → destination. Coverage check happens after the edit; every row must be verifiable in the new text.
+
+- Precedence circularity (P0-1/P2 from r1) → intro precedence sentence
+- PO definition vs end users (r2 P0-3) → Collaboration 1
+- High-risk negotiation without jargon (r2 P1-6) → Collaboration 2
+- Ask one-at-a-time scope (r1 F2.2) → Collaboration 4.1
+- Go-signal class split + batch/user rules (r1 F1.3, F1.10, F2.1, F4.1, F4.4; r2 P1-2) → Collaboration 8
+- L3→L2 confirmation carve-out (r2 P0-5) → Collaboration 9.1
+- 9.2 scope + PO-absent + amendment flow (r2 P1-3, P1-10; r1 M2) → Collaboration 9.2
+- Massive-change threshold (r1 M1) → Collaboration 10
+- Four write regimes + docs-override (r1 F1.2, r2 P0-1, P1-4) → Documentation 1
+- Clarity test grounded (r2 P1-7) → Documentation 4.1
+- S.M.A.R.T. scope (r2 P1-1) → Documentation 5
+- 200-line exemptions (r2 P2-1) → Documentation 6
+- WORKSPACE definition unified (r2 P1-8) → Documentation 11
+- Ticket taxonomy + sizing gloss + Blocked-by path format (r1 F2.4, L3; r2 P1-5, P2-7) → Tickets 1.3
+- Triage ordering (r1 F2.3) → Tickets 1.4
+- Locks: confirm-before-work, backoff, lease, takeover, worktree mechanism, bare repo, Comments append (r1 F1.5, F3.1, F3.3, F3.6, F5.1, F5.3; r2 P0-4, P2-10) → Tickets 2
+- Branch naming NN + done-in-merge + docs-at-design-time (r1 F1.9, F2.5; r2 P0-4) → Tickets 3
+- Review fallback + provided materials (r1 F1.6; r2 P0-6) → Tickets 4
+- "in both directions" + fog sentence (r2 P1-9) → Tickets 5
+- Worktree-always + kill threshold + slow-vs-dead (r1 F3.2, F3.4, L8; r2 P0-2, P3.2) → Sessions 3
+- `>` gloss (r2 P2-3) → Sessions 4
+- Pairing wording (r1 L5) → Sessions 5 (already applied)
+- Commit bar scope + mechanical exemption (r1 F1.4, F2.6; r2 P2-6) → Repository files 4
+- Bootstrap glance (r1 F1.1) → Sessions 1 (already applied)
+- Task→stage mapping (r1 F6.3; r2 P1-12) → Part II intro
+- Evidence procedure (r1 F1.8; r2 P1-11) → Stage 5 rule 5
+- Test ordering (r1 F1.7) → Stage 5 rules 1/3 (entry checklist + "unless docs-only" bound)
+- Prompt-injection (r1 missing-1) → Stage 0 (already applied)
+- Vendor license (r1 missing-2) → Sessions 7.1 (already applied)
+- Amendments (r1 missing-3) → Collaboration 9.2 (this batch)
+- No-remote (r1 missing-4) → Tickets 2 (this batch)
+- Secrets (r1 missing-5) → Repository files 4 (already applied)
+- Registry scope (r2 P2-4) → Design 5
+- Security hedge (r2 P2-5) → Sessions 6.4 (already applied: "never circumvent" — verify)
+- MP layout verified note (r2 P2-8) → Tickets 1.1
+- "in both directions" (r2 P1-9) → Tickets 5
+- Safety ref + NN unify (r1 F1.9) → Sessions 10, Tickets 3
+- Rejected/kept: M8 one-line rule, L9 voice, P1-11 partial, P1-1 partial (scoped not rewritten)
