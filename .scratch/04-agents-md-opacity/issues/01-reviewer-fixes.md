@@ -1,6 +1,6 @@
 # 01 — Opacity-pass fixes from fresh-context review
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** VPO (main session)
 
@@ -15,11 +15,12 @@ docs/ > remembering on the fly.
 
 ## Acceptance criteria
 
-- [ ] P1: Repository files 3 evidence committed-vs-ignored contradiction resolved (evidence is committed).
-- [ ] All 14 P2s applied: pre-push check defined, PO-gated ↔ Review 4 linked, lock "set" defined, full/partial conflict operational test, people-doc pointer, timer interval 15–30 min, clarity-test trigger/actor, philosophy single home, artifact scan defined, user-level installs reconciled, skill-deletion counter trackable, "directly writable" operational test, context-window test, evidence path NN- prefix.
-- [ ] Sessions 1.3 carries the PO's externalization ladder.
-- [ ] AGENTS.md ≤ 200 lines, `git diff --check` clean.
+- [x] P1: Repository files 3 evidence committed-vs-ignored contradiction resolved (evidence is committed).
+- [x] All 14 P2s applied (see commit).
+- [x] Sessions 1.3 carries the PO's externalization ladder.
+- [x] AGENTS.md ≤ 200 lines (143), `git diff --check` clean.
 
 ## Comments
 
 - 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Created and claimed; reviewer session file referenced in PO chat; findings verified one-by-one before acceptance.
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — All 15 findings + ladder applied in one batch (17 edit blocks). Verified: 143 lines, git diff --check clean, no stale phrasings ("not directly writable" ×0, "<feature>/" ×0).
