@@ -40,3 +40,20 @@ Each finding → destination. Coverage check happens after the edit; every row m
 - "in both directions" (r2 P1-9) → Tickets 5
 - Safety ref + NN unify (r1 F1.9) → Sessions 10, Tickets 3
 - Rejected/kept: M8 one-line rule, L9 voice, P1-11 partial, P1-1 partial (scoped not rewritten)
+
+## Round-3 review (one reviewer, reverse framing)
+- P0-1 main-worktree scaling → detached main worktree, push HEAD:main → Tickets 2
+- P0-2 doc-update ordering → Documentation 2 (hierarchy: facts immediate / synthesis on go / review-driven at merge)
+- P0-3 park vs never-stop → Collaboration 6 rescope
+- P1-4 spec authorship class → Go-signal 8 + Process guidance 5
+- P1-5 knowhow three homes → Tickets 1.3 (provenance) + Sessions 1.1 (index) + Routing
+- P1-6 ticket cap → Documentation 6 exemption + Tickets 1.3 close-out
+- P1-7 ponytail inline promise → Design 3 "question sequence is the entire method"
+- P1-8 trigger numbers → Focus 2, Sessions 3, Design 6/14, Sessions 1.1
+- P1-9 glosses → Collaboration 4, Tickets 2, Sessions 3, Sessions 8, Cleanup 10
+- P2-10 micro-fix path → Tickets 1
+- P2-11 worktree dedupe + clarity Q&A via review rounds → Branching 3, Sessions 3, ticket
+- P2-12 rejection loop bound → Tickets 4
+- P2-13 escalation-CLI approval → Sessions 5
+- P2-14 symlink pointer file → Repository files 1
+- P2-15 develop escape → Tickets 2
