@@ -1,6 +1,6 @@
 # 01 — Cognitive-load philosophy in AGENTS.md
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** VPO (main session)
 
@@ -20,4 +20,4 @@ as deferred future refactor while we ship one file.
 
 ## Comments
 
-- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Created and claimed from PO's cognitive-load direction.
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Implemented as Sessions & tools 1.3, cross-referencing 1.1/Documentation 4-5/Design 10; stages-as-skills deferred noted. Verified: 143 lines, git diff --check clean.
