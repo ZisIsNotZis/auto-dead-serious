@@ -1,6 +1,6 @@
 # Ticket 01 — Systematize AGENTS.md as universal multi-user agent policy
 
-- **Status:** doing
+- **Status:** done
 - **Owner:** agent (pi, main session); requester: PO zisisnotzis
 - **Need review:** yes · **Need test cases:** no (policy file; gates = line limits, git diff --check, consistency audit)
 
@@ -48,6 +48,7 @@ The original AGENTS.md was a 29-line workspace file. The PO supplied a large fra
 - 2026-09-04 05:25 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — WORKSPACE.md restored as the project-specific knowledge home: scaffold rule extended (1.1 deployment logic — global install → per-repo WORKSPACE.md recommended, existing content-bearing local AGENTS.md convention respected; local install → project knowledge still in WORKSPACE.md); vibe workspace rules (submodules, child-first precedence, _private slug) moved back from README to WORKSPACE.md; both READMEs now point to WORKSPACE.md.
 - 2026-09-04 05:35 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — AGENTS.zh-CN.md rewritten to mirror the new common+stages structure (per Decisions-then-go: EN landed and PO-reviewed first); parity verified section by section.
 - 2026-09-04 05:45 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — independent reviewer (fresh context, fork=false, reviewer builtin) returned 5H/9M/9L + 5 missing topics; 22 accepted and fixed in EN: L1-archive exemption in SSOT; Go-signal scoped (recording ≠ implementing); locks commit on main + no-remote degradation; glosses (ponytail, code-review skill, fork=false); environment-profile note in intro + symlink alternative; S.M.A.R.T. numbers (massive >10 files, bootstrap threshold, deprecation waivers, meaningful→recurring-problem); 9.2 scoped to workflow rules + ticket-recorded deviations + amendment flow; ask-once via people doc; dedup (Build 2/4/6 → refs, Design 12/13 reordered); knowledge Routing rule 11; docs/people.md schema; need-review/need-test-cases semantics; handover inbox → committed .scratch/inbox.md; dead = no heartbeat >30 min after ping; Stage 0 always-on + prompt-injection rule; critique-framing trick embedded (presume flawed, reward finding, discount, multi-role). Rejected: M8 one-line rule (PO's design), L9 gendered voice (PO's style). zh pending.
+- 2026-09-04 05:55 UTC — VPO via pi coding agent, main session, model volc2/glm-5.3-flash — ticket closed. AGENTS.md survived five adversarial review rounds (BLOCK ×3 → OK-with-notes ×2, zero P0 in the final round); all accepted findings fixed; AGENTS.zh-CN.md translated to full parity (137/137 lines). Leftover open question parked to a follow-up: README still positions Bilibili/paper materials that were removed as policy — needs a PO decision (see Knowhow).
 
 ## Knowhow
 
