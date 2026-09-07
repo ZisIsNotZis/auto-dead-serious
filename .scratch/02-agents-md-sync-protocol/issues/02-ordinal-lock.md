@@ -1,6 +1,6 @@
 # 02 — Ordinal lock: two-level numbering + canonical slugs
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** VPO (main session)
 
@@ -22,4 +22,4 @@ rule, not machinery.
 
 ## Comments
 
-- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Created and claimed from PO's approval round ("others seems fine"; ship only AGENTS.md; script spec'd inline, not shipped).
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Implemented: Tickets 1.1 two-level numbering + canonical-slug/join-don't-fork rule; Sync 6.4 rewritten as ordinal lock with inline allocator spec (nothing shipped — any agent writes the script); categories migrated via git mv to 01-/02-. Verified: 142 lines, git diff --check clean.
