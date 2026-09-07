@@ -1,6 +1,6 @@
 # 01 — A2A sync protocol in AGENTS.md
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** VPO (main session)
 
@@ -15,10 +15,10 @@ collision-by-design naming; no auto-takeover (PO-mediated only).
 
 ## Acceptance criteria
 
-- [ ] Stage 0.2 rewritten: tickets are the only A2A channel; any real problem is ticket-worthy; solver greps tickets blocked on what it just solved; no message board.
-- [ ] New Tickets & git rule (Sync): eager write protocol (fetch → read mail → edit → commit → plain push; no --force/auto-rebase; non-FF rejection = race detector), fetch-based reads (no branch switch), timer poll spec, collision-by-design slug rule.
-- [ ] Locks: 24h auto-takeover replaced by PO-mediated takeover (explicit instruction only).
-- [ ] AGENTS.md stays under 200 lines; `git diff --check` clean.
+- [x] Stage 0.2 rewritten: tickets are the only A2A channel; any real problem is ticket-worthy; solver greps tickets blocked on what it just solved; no message board.
+- [x] New Tickets & git rule (Sync): eager write protocol (fetch → read mail → edit → commit → plain push; no --force/auto-rebase; non-FF rejection = race detector), fetch-based reads (no branch switch), timer poll spec, collision-by-design slug rule.
+- [x] Locks: 24h auto-takeover replaced by PO-mediated takeover (explicit instruction only).
+- [x] AGENTS.md stays under 200 lines (142); `git diff --check` clean.
 
 ## Knowhow learned
 
@@ -29,3 +29,4 @@ collision-by-design naming; no auto-takeover (PO-mediated only).
 ## Comments
 
 - 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Ticket created and claimed from PO's sync-protocol brainstorm + 3 answered decision points (event+timer polling, PO-mediated recovery, inline in AGENTS.md). zh translation deliberately deferred until EN review.
+- 2026-09-04 (VPO, pi coding agent, volc2/glm-5.3-flash) — Implemented: Stage 0.2 rewritten (tickets-only channel, solver-greps rule); Tickets & git 6 (Sync) added with write protocol / fetch-reads / timer poll / collision-by-design; Locks stale clause now PO-mediated. All AC verified: 142 lines, git diff --check clean. Board (.scratch/board.md) concept deleted — never materialized beyond a mention.
