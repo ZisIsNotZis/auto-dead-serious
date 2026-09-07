@@ -57,3 +57,30 @@ Each finding → destination. Coverage check happens after the edit; every row m
 - P2-13 escalation-CLI approval → Sessions 5
 - P2-14 symlink pointer file → Repository files 1
 - P2-15 develop escape → Tickets 2
+
+## Round-4 review (one reviewer, correctness + explicitness + redundancy)
+- P1-1 Debug budget overrides Focus timer → Collaboration/Focus + Debug
+- P1-2 slice completion legitimate → Go-signal 8
+- P1-3 design docs on write-it-down go → Branching 3
+- P1-4 cross-check approval → Info gathering 7
+- P1-5 design truth in approval list → Tickets 4
+- P1-6 heartbeat artifact → Sessions 3 + Locks 2
+- P1-7 in-flight heartbeat location → Locks 2
+- P1-8 S.M.A.R.T. exemption test + trigger numbers → Documentation 5, Stage 5.2/5.3, Sessions 7.1/8, Cleanup 10, Tickets 1.4, Design 10, Collab 1
+- P2-1 micro gates → Tickets 1
+- P2-2 evidence carve-out in .gitignore rule → Repository 3
+- P2-3 first-party warnings scope → Repository 4
+- P2-4 non-technical approvals plain-language → Collaboration 2
+- P2-5 state mapping → Tickets 1.2
+- P2-6 sizing binding constraint → Tickets 1.3
+- P2-7 interest-bar machinery cut → Collaboration 4
+- P2-8 equivalent instructions qualify → Go-signal 8
+- P2-9 tests in acceptance criteria → Tickets 1.3
+- P2-10 load-bearing defined → Documentation 4.1
+- P2-11 implementation worktree creation → Locks 2
+- P2-13 delegate threshold unified → Sessions 1.2
+- P2-16 protected-main term unified → Locks 2
+- P2-17 self-restatement cut → Sessions 9
+- P2-19 truisms trimmed → Sessions 6.4, Sessions 4
+- P2-20 run-artifacts rename → Repository 2
+- Rejected/kept: P2-12 refs not restatements, P2-14 different functions, P2-15 already scoped
