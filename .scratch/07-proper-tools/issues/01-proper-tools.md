@@ -1,6 +1,6 @@
 # 01 — Proper tools rule (builtin over bash)
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -13,8 +13,8 @@ read/edit existed.
 
 ## Acceptance criteria
 
-- [ ] New Sessions & tools rule 12 (Proper tools) in EN; zh parity line added.
-- [ ] 145→146 lines each, `git diff --check` clean. Review skipped per PO's standing preference for dictated one-liners.
+- [x] New Sessions & tools rule 12 (Proper tools) in EN; zh parity line added.
+- [x] 146 lines each, `git diff --check` clean. Review skipped per PO's standing preference for dictated one-liners.
 
 ## Comments
 
