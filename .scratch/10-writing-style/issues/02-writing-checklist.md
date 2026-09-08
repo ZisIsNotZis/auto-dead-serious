@@ -1,6 +1,6 @@
 # 02 — Writing/checking checklist (writing-for-agents levers)
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -16,9 +16,9 @@ delete-sentences-whole). References owning rules instead of restating (SSOT).
 
 ## Acceptance criteria
 
-- [ ] Doc 4.2 axes updated to the four-axis vocabulary; Doc 4.3 writing checklist added.
-- [ ] No restatement of rules owned by Doc 6/6.1/Sessions 1.3 — pointers only.
-- [ ] `git diff --check` clean.
+- [x] Doc 4.2 axes updated to the four-axis vocabulary; Doc 4.3 writing checklist added (incl. professional register per PO's addendum).
+- [x] No restatement of rules owned by Doc 6/6.1/Sessions 1.3 — pointers only.
+- [x] `git diff --check` clean (148 lines). Reviewer spawn for the prior round was aborted mid-run; the aborted review is superseded by this checklist integration per PO's redirect.
 
 ## Comments
 
