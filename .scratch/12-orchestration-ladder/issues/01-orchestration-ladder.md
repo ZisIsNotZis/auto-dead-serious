@@ -1,6 +1,6 @@
 # 01 — Orchestration ladder rule
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -16,9 +16,9 @@ single-line-too-long sed case in Proper tools 12.
 
 ## Acceptance criteria
 
-- [ ] Sessions & tools 13 (Orchestration ladder) added; Proper tools 12 extended.
-- [ ] Consistency with Delegation 3, Tickets 1 (todo mirror), Self-knowledge 5 (CLI gate), Sessions 1.3 — references not restatements.
-- [ ] Subagent review of full AGENTS.md passes or findings fixed; `git diff --check` clean.
+- [x] Sessions & tools 13 (Orchestration ladder) added; Proper tools 12 extended.
+- [x] Consistency with Delegation 3, Tickets 1 (todo mirror), Self-knowledge 5 (CLI gate), Sessions 1.3 — references not restatements.
+- [x] Subagent review: OK with notes (6 P2, no P1) — all fixed: delegation-test pointer, bash-mode selection test, durable-knowledge vs execution-state scoping (1.3 ↔ 13 cross-link), harness execution-plan wording, Delegation no-subagent fallback. 156 lines.
 
 ## Comments
 
