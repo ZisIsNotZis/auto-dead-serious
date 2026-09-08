@@ -1,6 +1,6 @@
 # 02 — Do-it-for-the-user rule
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -17,9 +17,9 @@ bad options, nothing beyond TLDR. 7.4's "openable" becomes "opened".
 
 ## Acceptance criteria
 
-- [ ] New Collab rule 11 (Do it for the user); 7.4 amended.
-- [ ] No restatement of Ask/Focus/6.2/6.4 content — triggers referenced by owner.
-- [ ] Positive phrasing, one-line style, `git diff --check` clean. Review skipped per PO's standing preference.
+- [x] New Collab rule 11 (Do it for the user); 7.4 amended to "opened for the user".
+- [x] No restatement of Ask/Focus/6.2/6.4 content — triggers referenced by owner.
+- [x] Positive phrasing, one-line style, `git diff --check` clean (155 lines). Review skipped per PO's standing preference; self-checked against Doc 4.1 checklist (correct/necessary/actionable/compact/positive/disclosed).
 
 ## Comments
 
