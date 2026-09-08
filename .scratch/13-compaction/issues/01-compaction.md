@@ -1,6 +1,6 @@
 # 01 — Compaction to size budget
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -15,9 +15,9 @@ efficiency.
 
 ## Acceptance criteria
 
-- [ ] Doc 6.2 Size economy + 4.1 Compact strengthening added.
-- [ ] Full caveman rewrite, try-best toward 10K; report honest floor + what 10K would cost.
-- [ ] Loss-detection review (old @ .tmp/AGENTS-old.md vs new) — non-trivial info loss = fix; `git diff --check` clean.
+- [x] Doc 6.2 Size economy + 4.1 Compact strengthening added.
+- [x] Full caveman rewrite: 61.7K → 48.1K chars (−22%). Loss-detection review (old vs new, rule-by-rule): 1 P1 — Collab 11 accidentally dropped in rewrite, restored compressed; all numbers/tests/commands/rules/whys verified preserved otherwise.
+- [x] Honest floor: ~48K is the complete floor under bottom lines (specific+actionable, complete, minimal whys) — 10K would require cutting ~75% of rule content itself, violating completeness. 157 lines, `git diff --check` clean.
 
 ## Comments
 
