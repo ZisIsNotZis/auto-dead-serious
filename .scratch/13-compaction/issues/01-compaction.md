@@ -1,4 +1,4 @@
-# 01 — Compaction: 61.7K → target <32K chars, whys kept
+# 01 — Compaction to size budget
 
 - **Status:** claimed
 - **Blocked by:** none
@@ -6,17 +6,19 @@
 
 ## Issue
 
-PO: file too big (61.7K chars), goal <20K originally, recalibrated on PO's instruction to
-keep the whys (easier to remember, less cognitive load) → telegraphic register, whys kept
-where non-obvious, trivial whys dropped. No renumbering (pointers preserved). All numbers,
-operational tests, commands, status vocab, and cross-references untouchable.
+PO recalibration: ideal size 10K chars, try-best. Bottom lines: specific & actionable
+(numbers/thresholds over descriptions), complete (no non-trivial info lost, no missing
+side of the story), minimal whys (only those aiding understanding/memory). Methods:
+wording, caveman register, merge/fusion, remove niche examples. Rule goes into the file
+itself (Doc 6.2 Size economy + 4.1 Compact bullet) and subagent checks enforce size
+efficiency.
 
 ## Acceptance criteria
 
-- [ ] Rewritten file ≤ ~32K chars; rule inventory identical (156 lines → same rules, no renumbering).
-- [ ] Fresh-context loss-detection review (old vs new side by side) passes; findings fixed.
-- [ ] `git diff --check` clean.
+- [ ] Doc 6.2 Size economy + 4.1 Compact strengthening added.
+- [ ] Full caveman rewrite, try-best toward 10K; report honest floor + what 10K would cost.
+- [ ] Loss-detection review (old @ .tmp/AGENTS-old.md vs new) — non-trivial info loss = fix; `git diff --check` clean.
 
 ## Comments
 
-- 2026-09-04 (agent, pi coding agent, volc2/glm-5.3-flash) — Created and claimed. Old file snapshot for the reviewer at `.tmp/AGENTS-old.md`.
+- 2026-09-04 (agent, pi coding agent, volc2/glm-5.3-flash) — Created and claimed.
