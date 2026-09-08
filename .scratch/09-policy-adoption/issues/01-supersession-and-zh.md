@@ -1,6 +1,6 @@
 # 01 — Supersession rule + zh removal
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -13,9 +13,9 @@ job, not practical use; parity maintenance ends.
 
 ## Acceptance criteria
 
-- [ ] Supersession clause added to the intro (precedence context).
-- [ ] AGENTS.zh-CN.md removed via git rm; no dangling references to it.
-- [ ] Fresh-context reviewer run completed (redo — previous two spawns aborted); findings triaged.
+- [x] Supersession clause added to the intro (precedence context); intra-file "more specific rule wins" added alongside.
+- [x] AGENTS.zh-CN.md removed via git rm; no dangling references (only README.zh-CN.md remains, a different file).
+- [x] Fresh-context reviewer run completed (redo succeeded after two aborted spawns); verdict BLOCK — 1 P1 + 14 P2, all verified and fixed in one 16-block batch; 147 lines, clean.
 
 ## Comments
 
