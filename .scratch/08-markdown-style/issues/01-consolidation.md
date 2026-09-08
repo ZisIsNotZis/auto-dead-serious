@@ -1,6 +1,6 @@
 # 01 — Markdown style consolidation + tool-bypass closure
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -15,9 +15,9 @@ edit tool (python/heredoc rewrites) outside genuine batch transformations.
 
 ## Acceptance criteria
 
-- [ ] Doc 6 split into 6 + 6.1 (Markdown style); 4.1 amended; Sessions 12 amended.
-- [ ] zh parity maintained (147 lines each expected).
-- [ ] `git diff --check` clean. Review skipped per PO's standing preference for dictated fixes.
+- [x] Doc 6 split into 6 + 6.1 (Markdown style); 4.1 amended; Sessions 12 amended.
+- [x] zh parity maintained (147 lines each).
+- [x] `git diff --check` clean. Review skipped per PO's standing preference for dictated fixes.
 
 ## Comments
 
