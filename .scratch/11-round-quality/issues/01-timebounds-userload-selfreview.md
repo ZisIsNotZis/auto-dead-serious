@@ -1,6 +1,6 @@
 # 01 — Time bounds, user cognitive load, round self-review
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi, volc2/glm-5.3-flash)
 
@@ -17,9 +17,12 @@ representation form).
 
 ## Acceptance criteria
 
-- [ ] Sessions 11 gains time-bound + resumability clause; Delegation 3 kill protocol revised (evidence → resume preference).
-- [ ] Collab 7.1 attention filter; 7.2 extended visual forms; new 7.4 round self-review.
-- [ ] Quick checklist review passes; `git diff --check` clean.
+- [x] Sessions 11 gains time-bound + resumability clause; Delegation 3 kill protocol revised (evidence → resume preference).
+- [x] Collab 7.1 attention filter; 7.2 extended visual forms; new 7.4 round self-review.
+- [x] Quick checklist review passes; `git diff --check` clean.
+
+## Review round
+BLOCK → fixed: (P1) 7.1 attention filter self-contradiction → "needs his decision or action"; (P2) resume-ambiguity vs Locks takeover → "re-engage the worker", evidence phase bounded to one more ping round, self-doing = Locks takeover; (P2) "proper timeout" made operational (expected duration + margin, tool default where it exists; defect class = unbounded call). 154 lines.
 
 ## Comments
 
