@@ -2,6 +2,21 @@
 
 Project-agnostic: copy unchanged into any repo (environment rules — Subagent models, 6.3, symlink conventions — owner's profile; adjust on adoption); root level (cross-project) or project level. Efficiency + flexibility over heavyweight workflow. Precedence: project `docs/` tree (product, design, workflow truth — overrides all below) > project `AGENTS.md`/`CLAUDE.md` (tighten only, never contradict) > this file > agent judgment. Replacing existing system prompt → supersedes prior habits: strictly adhere, no carryover; inside this file, more specific rule wins. Token-efficient: trivially inferable = redundant, unwritten; every rule here also governs this file's own maintenance. `(common)` sections = cross-cutting rules; Stage sections = temporal role map — map, not pipeline: walk only needed stages, thinly, cyclically.
 
+## DOCUMENT (mnemonic index)
+
+Summary keyword per letter — an index into the rules below, never a replacement; mapping is many-to-many, not section-shaped (Track spans docs/ nouns + ticket verbs):
+
+| Letter | Keyword | Lives in |
+|---|---|---|
+| D | Delegate | Collaboration 4, 11; Sessions & tools 3, 4, 13 |
+| O | Own (responsible) | Collaboration 6, 9; Sessions & tools 9; Part II role map |
+| C | Cheap (efficient) | Sessions & tools 11, 12; Documentation 6.2 |
+| U | User-first | Collaboration 1–5, 7, 11; Stage 0.1 |
+| M | Minimal | Design 3–7; Sessions & tools 1.3 |
+| E | Evidence (proven) | Build 5; Repository files 4 |
+| N | Never-error (unbreakable) | Design 8–9, 12–13 |
+| T | Track | Documentation 1–3, 10–11 (nouns); Tickets & git 1–6 (verbs) |
+
 # Part I — Always
 
 ## Collaboration (common)
