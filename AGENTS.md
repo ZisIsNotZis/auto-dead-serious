@@ -2,9 +2,9 @@
 
 Building software for a human user, usually alone on one machine, with whatever agents the harness provides. Flexibility over workflow, efficiency over ceremony — and every rule is a floor, not a ritual.
 
-How to use. This core is always in context; detail lives in `docs/policy/reference.md` (`R-*`) — read the section a trigger names, or the one owning a decision you are unsure about. Precedence: project `docs/` > project `WORKSPACE.md` and local `AGENTS.md` additions (tighten, never contradict) > this core > the reference > judgment; across tiers the higher wins, so a specific reference rule never overrides the core, and within a tier the more specific wins. Conflicting rules are a defect, not a choice: follow the higher tier and record it (S3). In a system prompt this supersedes prior habits; none carry over.
+How to use. This core is always in context; detail lives in `docs/policy/reference.md` (`R-*`) — read the section a trigger names, or the one owning a decision you are unsure about. Precedence: project `docs/` > project `WORKSPACE.md` and local `AGENTS.md` additions (tighten, never contradict) > this core > the reference > judgment; across tiers the higher wins, so a specific reference rule never overrides the core, and within a tier the more specific wins. Conflicting rules are a defect, not a choice: follow the higher tier and record it (S3). In a system prompt it supersedes prior habits; none carry over.
 
-Terms (the core stands alone): a **gate** is the module's test/build commands, listed in `WORKSPACE.md`, recorded per-command in the ticket (R-REP.4); **need-review** gates merging (R-TKT.2); **needs-triage** is an untriaged incoming item (R-TKT.1.2); the **PO** role owns requirements and the lifecycle (R-STG.1); the **review rubric** is R-DOC.4.1; a **ticket** lives at `.scratch/NN-<slug>/issues/NN-<slug>.md`.
+Terms: **gate** = the module's test/build commands, listed in `WORKSPACE.md`, recorded per-command in the ticket (R-REP.4); **need-review** gates merging (R-TKT.2); **needs-triage** is an untriaged incoming item (R-TKT.1.2); the **PO** role owns requirements and the lifecycle (R-STG.1); the **review rubric** is R-DOC.4.1; a **ticket** lives at `.scratch/NN-<slug>/issues/NN-<slug>.md`.
 
 ## I — Invariants
 
@@ -24,7 +24,7 @@ I12 Honest reporting. Delivered, broken and worked-around are all stated; argued
 ## M — Coordination scope
 
 M1 **local (default)** — one primary checkout plus a worktree per concurrent writer, subagents as the only other workers. Not a thing: messaging between separate agents, other developers, cross-machine or human handoff, ticket locks, takeovers, mailbox polling, ordinal races, formal trackers. A ticket is a local work log; shared state still lands on main. Worker-liveness heartbeats are local and do apply (R-DEL.3).
-M2 **remote** — on when the user says so, or when the repo has a shared remote and another writer uses the same branch. A non-empty `git remote -v` is necessary but not sufficient: ask once, then record the mode in `WORKSPACE.md`. It enables `R-REM` (cross-machine coordination and repository handoff).
+M2 **remote** — on when the user says so, or when another writer is known to use the same branch. A non-empty `git remote -v` is a reason to ask, not proof: ask once, record the mode in `WORKSPACE.md`, and use the bare-repo fallback when there is no remote (R-REM.2). It enables `R-REM` (cross-machine coordination and repository handoff).
 M3 Remote sections are not read in local mode; "when M2 applies, see R-REM.x" is formatting, not an instruction to read it now. Everything else always applies.
 
 ## T — Triggers
@@ -36,7 +36,7 @@ M3 Remote sections are not read in local mode; "when M2 applies, see R-REM.x" is
 | Before implementation | update the affected docs first — facts now, synthesis on a go | R-DOC.2 |
 | Writing docs | write regimes, structure, size | R-DOC |
 | Starting work | ticket, layout, statuses; branch only when wider than one commit and one concern | R-TKT |
-| Designing | brainstorm, ponytail chain, one name per thing | R-DSN |
+| Designing | brainstorm, ponytail chain, one name | R-DSN |
 | Environment, tooling, repo hygiene | autonomy, sudo, mirrors, skills; scaffold, README, cleanup, naming | R-ENV, R-REP |
 | Another writer appears | switch to M2, follow R-REM | R-REM |
 | Blocked, 2 attempts, ~30 min | park with status, next step and blocker; switch work; ask the user | R-SES.2 |
