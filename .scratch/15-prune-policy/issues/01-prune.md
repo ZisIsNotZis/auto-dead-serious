@@ -1,6 +1,6 @@
 # 01 — Delete the arbitrary caps; prune outdated/redundant policy content
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi)
 - **Need-review:** yes (policy change)
@@ -69,3 +69,4 @@ always" preamble contradicted by remote-marked clauses, `M2` missing its `R-REM.
 duplicate scope sentence in the new file, `R-TKT.1.4`/`R-TKT.3` push/branch clauses undecidable
 without a remote, `S1` growth needing agreement rather than quiet absorption, `R-BLD.2` citation
 after `R-DSN.13` was folded. Verdict after fixes: accept.
+- 2026-09-15 (agent, pi) — Merged to main; local-mode reading set 54,214 chars (was 58,521); 103 rules; lock released.
