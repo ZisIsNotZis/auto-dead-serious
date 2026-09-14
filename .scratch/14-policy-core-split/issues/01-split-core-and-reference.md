@@ -1,6 +1,6 @@
 # 01 — Split policy into always-on core + on-demand reference
 
-- **Status:** claimed
+- **Status:** done
 - **Blocked by:** none
 - **Assignee/lock:** agent (pi)
 - **Need-review:** yes (behavior change: the policy itself)
@@ -76,3 +76,4 @@ low-level conditional, ~1.5–2K) plus a de-duplication pass; that is a separate
 - 2026-09-15 (agent, pi) — Branch `ticket-14-policy-core-split`: `cd9c2ae` split, `1ed2dbe`
   review fixes + trim, `d28a85c` verification fixes + trim. Evidence: `mapping.md`, the
   measurements above, the subagent reviews summarised in the review record.
+- 2026-09-15 (agent, pi) — Merged to main as `82ce813` (merge commit): core 7,992 chars standing, reference 47,994, both inside the S1 caps. Lock released.
