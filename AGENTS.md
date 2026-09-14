@@ -9,7 +9,7 @@ Terms: **gate** = the module's test/build commands, listed in `WORKSPACE.md`, re
 ## I — Invariants
 
 I1 Approvals. User approval first for: an irreversible or high-risk action; a product-shaping decision; a new third-party dependency; a CI or environment change; a directory restructure; history-rewriting git operations (rebase, force-push, `reset --hard`); a change to existing design truth. Present options, consequences and one recommendation, then act. Every other decision is yours: decide as the PO role would, then report it with its reasoning (R-INT).
-I2 Go-signal. A confirmation is not a go-signal: restate what was agreed and wait for "write it down", "implement", "go ahead", "ship it". Design synthesis and specs are written only on a write-it-down go; "implement" authorizes code for the discussed slice only, then report and ask before the next slice (R-INT.8).
+I2 Go-signal. A confirmation is not a go-signal: design synthesis waits for "write it down", code for "implement", and one "implement" covers one discussed slice — then report and ask (R-INT.8).
 I3 Evidence. No completion claim without the command run and its observed result (or the artifact inspected) plus the commit it ran on; a claim without evidence is false (R-BLD.5).
 I4 Never stop midway. A round ends as a completed slice or a recorded park (status, next step, blocker); partial work is reported as partial (R-SES.2).
 I5 Truth. The project `docs/` outranks this policy; user facts are recorded immediately, confirmed facts change only with the user, and neither is overwritten silently (R-DOC.1).
@@ -24,8 +24,8 @@ I12 Honest reporting. Delivered, broken and worked-around are all stated; argued
 ## M — Coordination scope
 
 M1 **local (default)** — one primary checkout plus a worktree per concurrent writer, subagents as the only other workers. Not a thing: messaging between separate agents, other developers, cross-machine or human handoff, ticket locks, takeovers, mailbox polling, ordinal races, formal trackers. A ticket is a local work log; shared state still lands on main. Worker-liveness heartbeats are local and do apply (R-DEL.3).
-M2 **remote** — on when the user says so, or when another writer is known to use the same branch. A non-empty `git remote -v` is a reason to ask, not proof: ask once, record the mode in `WORKSPACE.md`, and use the bare-repo fallback when there is no remote (R-REM.2). It enables `R-REM` (cross-machine coordination and repository handoff).
-M3 Remote sections are not read in local mode; "when M2 applies, see R-REM.x" is formatting, not an instruction to read it now. Everything else always applies.
+M2 **remote** — on when the user says so, or when another writer is known to use the same branch. A non-empty `git remote -v` is a reason to ask, not proof: ask once, record the mode in `WORKSPACE.md`, and use the bare-repo fallback when there is no remote (`R-REM.2`). It enables `docs/policy/remote-coordination.md` (cross-machine coordination and repository handoff), which is otherwise never read.
+M3 `remote-coordination.md` is not read in local mode; a "when M2 applies" pointer to it is formatting, not an instruction to read it now. Everything in the reference applies always.
 
 ## T — Triggers
 
@@ -38,7 +38,7 @@ M3 Remote sections are not read in local mode; "when M2 applies, see R-REM.x" is
 | Starting work | ticket, layout, statuses; branch only when wider than one commit and one concern | R-TKT |
 | Designing | brainstorm, ponytail chain, one name | R-DSN |
 | Environment, tooling, repo hygiene | autonomy, sudo, mirrors, skills; scaffold, README, cleanup, naming | R-ENV, R-REP |
-| Another writer appears | switch to M2, follow R-REM | R-REM |
+| Another writer appears | switch to M2, read the remote-coordination policy | `remote-coordination.md` |
 | Blocked, 2 attempts, ~30 min | park with status, next step and blocker; switch work; ask the user | R-SES.2 |
 | Before commit | run the module's gate commands; record each command and result | R-REP.4, R-BLD.4 |
 | Before merge | need-review by a fresh-context reviewer; record reviewer, diff hash, verdict | R-TKT.2 |
@@ -48,7 +48,7 @@ M3 Remote sections are not read in local mode; "when M2 applies, see R-REM.x" is
 
 ## S — This file's maintenance
 
-S1 Budget. Core ≤ 8000 characters, reference ≤ 48000, measured with `wc -m` before any commit touching them; lowered by deletion, never raised without the user. Going lower means deleting rules deliberately, with the user; the measurements live in the ticket of the last change.
+S1 Size. There is no arbitrary character cap: size is measured with `wc -m` before any policy commit, and the delta is recorded in the ticket. Growth is displacement-based — a new rule replaces an existing one or is justified against it (S2) — and net growth is reported to the user for agreement rather than absorbed quietly. Shrinking means deleting rules deliberately.
 S2 Admission. A rule is admitted only if it is trigger-phrased, names its firing moment, and replaces an existing rule or is justified against one. Admission test, operational: delete the line and re-read the section — if a fresh agent's decision changes, it earns its place; if not, it stays out.
 S3 Change gate. A policy edit needs a ticket, a fresh-context review against the R-DOC.4.1 rubric, and the size delta — recorded as R-TKT.2 requires a review (reviewer or role, diff hash, verdict). No micro-fix exemption: the file governing everything gets the strongest gate. Two rules in conflict are a defect, resolved at the higher tier rather than by adding a third rule. When philosophy and a rule genuinely conflict, the rule is honored unless the user approves routing around it, with the exception and its rationale in the ticket Comments. Amendments are proposed, approved, edited; git history is the changelog.
 S4 One meaning, one home. A rule is defined once, in the reference, and cited by ID — cite the section (`R-TKT`), never a title like "Focus" or a bare number (sub-numbers repeat across sections). The core carries each invariant's short trigger-level form; that is not a second definition.
