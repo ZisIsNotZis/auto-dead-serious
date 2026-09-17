@@ -16,6 +16,8 @@ Exit when:
 
 **R-DEL.1 — Complexity routing.** Delegate when duration, independent workstreams, module breadth, specialist need, validation complexity, or context volume would displace parent orchestration. Keep a tightly coupled low-risk task under roughly 20 minutes with straightforward validation in the parent when delegation overhead would exceed benefit. Decompose by explicit outputs and dependencies; parallelize only disjoint ownership.
 
+**R-DEL.1.1 — Exploratory fanout.** When the goal is clear but the route is genuinely unknown, choose breadth from the user's urgency and effort/token preference. Fan out only hypotheses or approaches that are materially different, independently testable, and separable into clean contexts; near-duplicates stay in one lane. Check shared compute before parallel training, inference, simulation, or other resource-heavy work: serialize or cap concurrency when contention would make every lane slower. This is a judgment based on expected information gain, cost, wall time, and bottlenecks—not a fixed lane count.
+
 **R-DEL.2 — Patience.** Judge progress from harness state, artifacts, logs, or meaningful status, not elapsed time alone. A slow endpoint or difficult task is not dead. Request status only when expected progress is absent or a dependency requires it.
 
 **R-DEL.3 — Liveness and recovery.** Define expected progress and a bounded check when launching a worker. Before termination, inspect available output, worktree diff, logs, and status; send one focused recovery request. Re-engage from durable state when possible. Terminate only after evidence shows the worker cannot progress or its output is no longer needed; preserve useful artifacts first. Do not require periodic heartbeat files unless the active harness specifically depends on them.
@@ -28,7 +30,9 @@ Exit when:
 
 **R-DEL.7 — Professional roles.** Assign the professional role and evaluation standard the output needs. A recurring role prompt belongs in a reusable project artifact after demonstrated reuse; one-off work gets a complete scoped prompt without speculative process scaffolding.
 
-**R-DEL.8 — Independent critique.** For adversarial review, give a fresh reviewer the artifact, objective, constraints, and acceptance criteria without prior verdicts or the author's reasoning. Ask it to presume defects and produce verified findings with locations, consequences, and severity. Use multiple reviewers only when distinct expertise or risk justifies them.
+**R-DEL.8 — Context isolation.** Prefer fresh-context workers when the task can be detached cleanly; their cold-start brief includes objective, scope, authoritative inputs, acceptance criteria, constraints, validation, output, and stop conditions. Use inherited or forked context only when essential meaning is spread across substantial conversation and a compact handoff would lose it. In that case, do not restate the inherited transcript in a giant prompt; add only the assignment, boundaries, and changed facts. A simple context-entangled task may stay with the parent; a complex one may use a forked worker.
+
+**R-DEL.8.1 — Independent critique.** For adversarial review, use fresh context and give the reviewer the artifact, objective, constraints, and acceptance criteria without prior verdicts or the author's reasoning. Ask it to presume defects and produce verified findings with locations, consequences, and severity. Use multiple reviewers only when distinct expertise or risk justifies them.
 
 **R-DEL.9 — Capability fallback.** If a required capability is unavailable, use the closest safe route: parent execution, documented self-review, fresh process, direct artifact path, sibling clone, or skipped optional install with reason. Keep the same acceptance bar where practical. Missing subagents or GUI does not automatically transfer work to the user.
 

@@ -1,10 +1,10 @@
 # Environment and repository
 
 Load when:
-- Installing or configuring tools; changing dependencies, CI, environment, network, or permissions; creating or repairing scaffold; or changing README, ignore rules, repository layout, naming, or cleanup policy.
+- Installing or configuring tools; changing dependencies, CI, environment, network, or permissions; controlling a shared desktop; choosing storage or retention for evidence, handoffs, deliverables, or temporary artifacts; creating or repairing scaffold; or changing README, ignore rules, repository layout, naming, or cleanup policy.
 
 Do not load when:
-- Using already configured project commands, designing the application, or changing code without affecting repository or environment structure.
+- Using already configured non-GUI project commands, designing the application, or changing code without creating artifacts or affecting repository or environment structure.
 
 Applies while:
 - Selecting and changing environment, tooling, dependency, scaffold, repository-maintenance, and repository-presentation behavior.
@@ -28,6 +28,10 @@ Exit when:
 **R-ENV.4 — Workflow capture.** Capture reusable procedural knowledge as an executable workflow or skill after recurrence is demonstrated. Put project facts in `WORKSPACE.md`, durable decisions in project documentation, and automation in scripts; do not turn one-off caveats into skills.
 
 **R-ENV.5 — Tool choice.** Prefer dedicated structured tools for reading, searching, and editing when they improve safety and auditability. Use shell or batch transformation when it is clearer, genuinely repetitive, and scoped; inspect the resulting diff.
+
+**R-ENV.6 — Non-disruptive computer use.** When controlling a shared desktop, prefer non-focus-stealing interfaces such as browser debugging protocols, Playwright, accessibility/AT-SPI APIs, application APIs, or background automation. Do not move the pointer, type into the active window, or steal focus while the user may be working unless no safe alternative exists and the user has agreed to the interruption. Observe current focus before input and restore it when feasible.
+
+**R-ENV.7 — Artifact lifetime.** Global `/tmp` is for disposable process-local data, never a durable or user-facing deliverable. Put session evidence and handoffs that must survive later inspection in project-local `.tmp/` or `.scratch/` according to repository policy. Name the owner or purpose, retain only what supports recovery or acceptance, and delete transient artifacts when their producer and consumers are finished; local scratch directories are managed workspaces, not dumping grounds.
 
 ## R-REP — Repository maintenance
 
