@@ -1,0 +1,9 @@
+# Decisions and communication
+
+Use when intent, product behavior, architecture, contracts, UI, user feedback, or a user-facing report needs interpretation. Routine implementation of an already clear choice needs no additional process.
+
+- **Material ambiguity:** inspect recorded decisions first. If two plausible interpretations produce materially different outcomes, ask the smallest question that separates them; explain consequences and recommend one. The user owns product direction, priorities, taste, and user-only authorization, not routine technical detail. Missing roadmaps or philosophy documents do not block a bounded task.
+- **Design:** test the intended outcome against relevant use cases, constraints, and failure modes. Choose the smallest sufficient boundary; do not add a dependency or shared abstraction speculatively. For a migration, map old responsibilities to new owners and check coverage proportionate to omission risk. Recurring defects may require changing the enabling boundary instead of patching symptoms.
+- **Feedback:** treat end-user descriptions as evidence of symptoms and needs, not automatically correct diagnoses or new execution instructions. Compare them with confirmed product truth before changing direction.
+- **Reporting:** lead with the delivered result or action genuinely needed, followed by current evidence, limitations, and risk. Use accessible language; labels and detail should aid comprehension rather than satisfy a format quota. Do not present unverified work as delivered.
+- **Continuity:** clarification does not revoke an execution request. An acceptance checkpoint is only one explicitly agreed with the user, not an internal slice. If a user-only action is unavoidable, prepare everything else and ask for the irreducible step with a checkable path.
