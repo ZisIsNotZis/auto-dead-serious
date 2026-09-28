@@ -55,3 +55,60 @@
 [submodule "vibeos"]
 	path = vibeos
 	url = git@github.com:ZisIsNotZis/vibeos.git
+[submodule "agentic-animation"]
+	path = agentic-animation
+	url = git@github.com:ZisIsNotZis/agentic-animation.git
+[submodule "autofe"]
+	path = autofe
+	url = git@github.com:ZisIsNotZis/autofe.git
+[submodule "backseat"]
+	path = backseat
+	url = git@github.com:ZisIsNotZis/backseat.git
+[submodule "danmaku"]
+	path = danmaku
+	url = git@github.com:ZisIsNotZis/danmaku.git
+[submodule "expyssion"]
+	path = expyssion
+	url = git@github.com:ZisIsNotZis/expyssion.git
+[submodule "flashdb"]
+	path = flashdb
+	url = git@github.com:ZisIsNotZis/flashdb.git
+[submodule "helpagent"]
+	path = helpagent
+	url = git@github.com:ZisIsNotZis/helpagent.git
+[submodule "hfget"]
+	path = hfget
+	url = git@github.com:ZisIsNotZis/hfget.git
+[submodule "learn_draw"]
+	path = learn_draw
+	url = git@github.com:ZisIsNotZis/learn_draw.git
+[submodule "litellmgen"]
+	path = litellmgen
+	url = git@github.com:ZisIsNotZis/litellmgen.git
+[submodule "mycar"]
+	path = mycar
+	url = git@github.com:ZisIsNotZis/mycar.git
+[submodule "pathlm"]
+	path = pathlm
+	url = git@github.com:ZisIsNotZis/pathlm.git
+[submodule "pelican_bike"]
+	path = pelican_bike
+	url = git@github.com:ZisIsNotZis/pelican_bike.git
+[submodule "pushbus"]
+	path = pushbus
+	url = git@github.com:ZisIsNotZis/pushbus.git
+[submodule "raid_calc"]
+	path = raid_calc
+	url = git@github.com:ZisIsNotZis/raid_calc.git
+[submodule "resume_private"]
+	path = resume_private
+	url = git@github.com:ZisIsNotZis/resume_private.git
+[submodule "send_teams"]
+	path = send_teams
+	url = git@github.com:ZisIsNotZis/send_teams.git
+[submodule "sys_gal_rt"]
+	path = sys_gal_rt
+	url = git@github.com:ZisIsNotZis/sys_gal_rt.git
+[submodule "tokenqr"]
+	path = tokenqr
+	url = git@github.com:ZisIsNotZis/TokenQR.git

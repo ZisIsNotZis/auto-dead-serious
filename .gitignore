@@ -5,3 +5,7 @@ __pycache__
 .venv
 .pi
 worktrees
+.worktrees/
+.env
+.env.*
+!.env.example
