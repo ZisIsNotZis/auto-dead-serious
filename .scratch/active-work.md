@@ -19,5 +19,9 @@ vendor submodule deletions and expyssion/uv.lock restored.
 
 ## Pending (owner-gated)
 
-- [ ] Push the ~28 child closure commits to their remotes (publication).
-- [ ] Catch up the parent submodule pointers (34 repos currently show ` M`).
+- [x] Push the child closure commits (30 repos pushed 2026-09-29).
+- [x] Catch up the parent submodule pointers and push the parent.
+
+Excluded repos (fat_kakeya_needle, agentworld, learn_draw, flashdb, autofe,
+helpagent, backseat, sys_gal) were neither pushed nor pointer-updated; their
+local commits stay as-is.
