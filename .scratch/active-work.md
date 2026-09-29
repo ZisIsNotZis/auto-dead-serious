@@ -1,24 +1,23 @@
 # Active work — 子仓库收口 (2026-09-29)
 
-Owner decision: close out all child repos except fat_kakeya_needle, agentworld,
-learn_draw, flashdb, autofe, helpagent, backseat, sys_gal. ra2 permanent pause;
-sys_gal_rt paused (only story meaningful).
+Owner decisions: close out all child repos except fat_kakeya_needle, agentworld,
+learn_draw, flashdb, autofe, helpagent, backseat, sys_gal. ra2 = indefinite pause;
+sys_gal_rt = paused (story only). resume_img_gen/resume_improve_loop = owner
+maintains. Shared convention: `.scratch/closure-brief.md`.
 
-## Verified child verdicts (owner-confirmed)
+## Done (committed in the child repo)
 
-Closed / milestone: agentic-animation (milestone engine, rest = backlog),
-aps, auto_maintain_bench (→ helpagent successor), danmaku (pure Qt engine after
-AI removal), drive, expyssion, hfget, huaqiang_game (permanent pause),
-hyperframaker, litellmgen, pelican_bike, pushbus, tokenqr (POC), vibeos,
-resume_private, resume_img_gen, resume_improve_loop.
+Closed milestone: agentic-animation (engine usable; rest = backlog), aps,
+auto_maintain_bench (→ Help Agent successor), danmaku (AI roaster removed; pure
+Qt engine), drive, expyssion, hfget, hyperframaker, ideas, litellmgen,
+mux, npchallenge, pelican_bike, pushbus, raid_calc, timecolumn, tokenqr (POC),
+vibeos, horse_video, huaqiang_video, mycar, colleague_private, tutor_private,
+resume_private.
+Paused: huaqiang_game (indefinite), ra2 (indefinite), sys_gal_rt.
+Parent: resume_* registered as submodules; dead .gitmodules entries removed;
+vendor submodule deletions and expyssion/uv.lock restored.
 
-## Task list
+## Pending (owner-gated)
 
-- [x] Parent: remove dead .gitmodules entries (lm_gh_test, lm_paper_test, send_teams, silly_2d_animate)
-- [ ] Parent: register resume_img_gen, resume_improve_loop as submodules
-- [ ] Parent: restore vendor deletions in hyperframaker/vibeos; restore expyssion/uv.lock
-- [ ] danmaku: remove AI roaster + verify scripts + roast PNGs; close as Qt engine
-- [ ] litellmgen: commit pending work
-- [ ] agentic-animation: settle .scratch, mark milestone closed + backlog
-- [ ] Child doc/status updates to "closed/milestone" (see brief below)
-- [ ] Pointer catch-up (user: handle later, together)
+- [ ] Push the ~28 child closure commits to their remotes (publication).
+- [ ] Catch up the parent submodule pointers (34 repos currently show ` M`).
