@@ -25,12 +25,6 @@
 [submodule "ideas"]
 	path = ideas
 	url = git@github.com:ZisIsNotZis/ideas.git
-[submodule "lm_gh_test"]
-	path = lm_gh_test
-	url = git@github.com:ZisIsNotZis/ghtest.git
-[submodule "lm_paper_test"]
-	path = lm_paper_test
-	url = git@github.com:ZisIsNotZis/lm_paper_test.git
 [submodule "mux"]
 	path = mux
 	url = git@github.com:ZisIsNotZis/mux.git
@@ -40,9 +34,6 @@
 [submodule "ra2"]
 	path = ra2
 	url = git@github.com:ZisIsNotZis/iron-meridian.git
-[submodule "silly_2d_animate"]
-	path = silly_2d_animate
-	url = git@github.com:ZisIsNotZis/silly_2d_animate.git
 [submodule "sys_gal"]
 	path = sys_gal
 	url = git@github.com:ZisIsNotZis/sys_gal.git
@@ -103,12 +94,15 @@
 [submodule "resume_private"]
 	path = resume_private
 	url = git@github.com:ZisIsNotZis/resume_private.git
-[submodule "send_teams"]
-	path = send_teams
-	url = git@github.com:ZisIsNotZis/send_teams.git
 [submodule "sys_gal_rt"]
 	path = sys_gal_rt
 	url = git@github.com:ZisIsNotZis/sys_gal_rt.git
 [submodule "tokenqr"]
 	path = tokenqr
 	url = git@github.com:ZisIsNotZis/TokenQR.git
+[submodule "resume_img_gen"]
+	path = resume_img_gen
+	url = git@github.com:ZisIsNotZis/resume_img_gen.git
+[submodule "resume_improve_loop"]
+	path = resume_improve_loop
+	url = git@github.com:ZisIsNotZis/resume_improve_loop.git
