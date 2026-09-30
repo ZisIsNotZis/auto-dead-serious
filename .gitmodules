@@ -130,3 +130,27 @@
 [submodule "treui"]
 	path = treui
 	url = git@github.com:ZisIsNotZis/treui.git
+[submodule "tok"]
+	path = tok
+	url = git@github.com:ZisIsNotZis/tok.git
+[submodule "myygo"]
+	path = myygo
+	url = git@github.com:ZisIsNotZis/myygo.git
+[submodule "myminio2"]
+	path = myminio2
+	url = git@github.com:ZisIsNotZis/myminio2.git
+[submodule "http_mock"]
+	path = http_mock
+	url = git@github.com:ZisIsNotZis/http_mock.git
+[submodule "cz_noidea"]
+	path = cz_noidea
+	url = git@github.com:ZisIsNotZis/cz_noidea.git
+[submodule "beam"]
+	path = beam
+	url = git@github.com:ZisIsNotZis/beam.git
+[submodule "ygo"]
+	path = ygo
+	url = git@github.com:ZisIsNotZis/ygo.git
+[submodule "uv"]
+	path = uv
+	url = git@github.com:ZisIsNotZis/uv.git
