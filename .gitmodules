@@ -154,3 +154,6 @@
 [submodule "uv"]
 	path = uv
 	url = git@github.com:ZisIsNotZis/uv.git
+[submodule "jpi.fe"]
+	path = jpi.fe
+	url = git@github.com:ZisIsNotZis/jpi.fe.git
