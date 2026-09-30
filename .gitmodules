@@ -202,3 +202,6 @@
 [submodule "seq_autoenc"]
 	path = seq_autoenc
 	url = git@github.com:ZisIsNotZis/seq_autoenc.git
+[submodule "fat_kakeya_needle"]
+	path = fat_kakeya_needle
+	url = git@github.com:ZisIsNotZis/fat_kakeya_needle.git
