@@ -166,3 +166,6 @@
 [submodule "cz_bert"]
 	path = cz_bert
 	url = git@github.com:ZisIsNotZis/cz_bert.git
+[submodule "nn"]
+	path = nn
+	url = git@github.com:ZisIsNotZis/nn.git
