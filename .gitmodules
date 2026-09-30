@@ -205,3 +205,6 @@
 [submodule "fat_kakeya_needle"]
 	path = fat_kakeya_needle
 	url = git@github.com:ZisIsNotZis/fat_kakeya_needle.git
+[submodule "agentworld"]
+	path = agentworld
+	url = git@github.com:ZisIsNotZis/agentworld.git
