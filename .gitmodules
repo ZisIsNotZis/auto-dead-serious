@@ -187,3 +187,6 @@
 [submodule "ringsvr"]
 	path = ringsvr
 	url = git@github.com:ZisIsNotZis/ringsvr.git
+[submodule "retnet"]
+	path = retnet
+	url = git@github.com:ZisIsNotZis/retnet.git
