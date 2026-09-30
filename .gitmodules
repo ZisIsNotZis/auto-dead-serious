@@ -106,3 +106,6 @@
 [submodule "resume_improve_loop"]
 	path = resume_improve_loop
 	url = git@github.com:ZisIsNotZis/resume_improve_loop.git
+[submodule "lmlayer"]
+	path = lmlayer
+	url = git@github.com:ZisIsNotZis/lmlayer.git
