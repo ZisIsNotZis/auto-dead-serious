@@ -109,3 +109,24 @@
 [submodule "lmlayer"]
 	path = lmlayer
 	url = git@github.com:ZisIsNotZis/lmlayer.git
+[submodule "cuda"]
+	path = cuda
+	url = git@github.com:ZisIsNotZis/cuda.git
+[submodule "cvorat"]
+	path = cvorat
+	url = git@github.com:ZisIsNotZis/cvorat.git
+[submodule "myzcopy"]
+	path = myzcopy
+	url = git@github.com:ZisIsNotZis/myzcopy.git
+[submodule "dino.py"]
+	path = dino.py
+	url = git@github.com:ZisIsNotZis/dino.py.git
+[submodule "causalmlp"]
+	path = causalmlp
+	url = git@github.com:ZisIsNotZis/causalmlp.git
+[submodule "fring"]
+	path = fring
+	url = git@github.com:ZisIsNotZis/fring.git
+[submodule "treui"]
+	path = treui
+	url = git@github.com:ZisIsNotZis/treui.git
