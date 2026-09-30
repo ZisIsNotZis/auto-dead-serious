@@ -196,3 +196,6 @@
 [submodule "neuronloop"]
 	path = neuronloop
 	url = git@github.com:ZisIsNotZis/neuronloop.git
+[submodule "grammar"]
+	path = grammar
+	url = git@github.com:ZisIsNotZis/grammar.git
