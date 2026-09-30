@@ -157,3 +157,12 @@
 [submodule "jpi.fe"]
 	path = jpi.fe
 	url = git@github.com:ZisIsNotZis/jpi.fe.git
+[submodule "misc"]
+	path = misc
+	url = git@github.com:ZisIsNotZis/misc.git
+[submodule "disk"]
+	path = disk
+	url = git@github.com:ZisIsNotZis/disk.git
+[submodule "cz_bert"]
+	path = cz_bert
+	url = git@github.com:ZisIsNotZis/cz_bert.git
