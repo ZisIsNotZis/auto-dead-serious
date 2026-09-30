@@ -193,3 +193,6 @@
 [submodule "cz_einn"]
 	path = cz_einn
 	url = git@github.com:ZisIsNotZis/cz_einn.git
+[submodule "neuronloop"]
+	path = neuronloop
+	url = git@github.com:ZisIsNotZis/neuronloop.git
