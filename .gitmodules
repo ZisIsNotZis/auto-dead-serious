@@ -208,3 +208,6 @@
 [submodule "agentworld"]
 	path = agentworld
 	url = git@github.com:ZisIsNotZis/agentworld.git
+[submodule "knowledge_net"]
+	path = knowledge_net
+	url = git@github.com:ZisIsNotZis/knowledge_net.git
