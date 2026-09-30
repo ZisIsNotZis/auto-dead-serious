@@ -172,3 +172,18 @@
 [submodule "cznn"]
 	path = cznn
 	url = git@github.com:ZisIsNotZis/cznn.git
+[submodule "myminio"]
+	path = myminio
+	url = git@github.com:ZisIsNotZis/myminio.git
+[submodule "dinoseg"]
+	path = dinoseg
+	url = git@github.com:ZisIsNotZis/dinoseg.git
+[submodule "xywdisk"]
+	path = xywdisk
+	url = git@github.com:ZisIsNotZis/xywdisk.git
+[submodule "io_uring-echo-server"]
+	path = io_uring-echo-server
+	url = git@github.com:ZisIsNotZis/io_uring-echo-server.git
+[submodule "ringsvr"]
+	path = ringsvr
+	url = git@github.com:ZisIsNotZis/ringsvr.git
