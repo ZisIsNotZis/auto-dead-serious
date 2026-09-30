@@ -199,3 +199,6 @@
 [submodule "grammar"]
 	path = grammar
 	url = git@github.com:ZisIsNotZis/grammar.git
+[submodule "seq_autoenc"]
+	path = seq_autoenc
+	url = git@github.com:ZisIsNotZis/seq_autoenc.git
