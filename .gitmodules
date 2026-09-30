@@ -169,3 +169,6 @@
 [submodule "nn"]
 	path = nn
 	url = git@github.com:ZisIsNotZis/nn.git
+[submodule "cznn"]
+	path = cznn
+	url = git@github.com:ZisIsNotZis/cznn.git
