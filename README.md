@@ -55,14 +55,16 @@ each child owns its prerequisites and test command.
 
 This is an index and release boundary, not a monorepo, shared build system, or
 promise that every experiment is production-ready. Generated dependencies,
-credentials, private material, and unreviewed media do not belong here. Agent-facing workspace rules live in [WORKSPACE.md](WORKSPACE.md).
+credentials, private material, and unreviewed media do not belong here. Optional
+checkout inspection notes are in [WORKSPACE.md](WORKSPACE.md); agent permissions
+and responsibilities are in [AGENTS.md](AGENTS.md).
 
 ## Future vision 🛰️
 
 The collection should become a coherent catalogue of working ideas: every
 useful project can be tried in minutes, every innovation has measurable
-evidence, and every mature app has a release users can install. New projects
-join by following [AGENTS.md](AGENTS.md); the roadmap is driven by the next
+evidence, and every mature app has a release users can install. Projects keep
+their own documentation and release path; the roadmap is driven by the next
 meaningful project rather than a fixed inventory.
 
 ## Contributing

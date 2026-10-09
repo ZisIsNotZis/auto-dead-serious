@@ -1,24 +1,26 @@
-# Vibe workspace knowledge
+# Checkout facts
 
-Project-specific facts for the Auto Dead Serious workspace. Portable authorization and routing live in `AGENTS.md`; scoped policy lives under `docs/policy/`.
+Optional local inspection notes for this aggregator.
 
 ## Layout
 
-1. This directory aggregates independent child repositories as pinned submodules; preserve each child and the parent submodule relationship.
-2. Work inside a child follows the root-to-leaf instruction chain defined in root `AGENTS.md`; local `AGENTS.md` and platform-equivalent `CLAUDE.md` specialize the child without weakening the root safety or evidence floor.
-3. When preparing a child for GitHub, a trailing `_private` in its content-derived slug marks a private repository.
+`.gitmodules` maps child checkout paths to repository URLs; these names can
+differ (for example, `drive` maps to `suzhou-drive`). The parent index records
+pinned gitlinks, while each child has its own index and working tree. A changed
+child checkout and a changed parent pin are distinct states.
 
-## Declarations
+The existing private-project slug convention uses a trailing `_private`
+(for example, `colleague_private`). Local names do not verify remote visibility.
 
-- **Coordination mode: local.** External writers are not known to share this branch or repository. Isolated local subagents and a configured git remote do not change this mode. If an external writer becomes known or the user requests remote coordination, stop competing writes and apply `docs/policy/remote-coordination.md` safeguards immediately; record `remote` here after shared ownership is established.
-- **Harness: pi.** Subagents, workflows, and skills are available. Model and tool availability must still be verified when material.
+## Inspection
 
-## Gate commands
+From the aggregator root, replace `<child>` with the relevant checkout path:
 
-- Policy changes: use proportionate checks in `docs/policy/writing.md`; review changed references and the scoped diff. For authority or routing changes, compare `wc -m AGENTS.md WORKSPACE.md docs/policy/*.md` and record review evidence or its limitation.
-- Child repositories: use their declared test and build commands. If a child has no runner, use the smallest smoke check that exercises the change and record its observed result.
-- Bug fixes: follow the changed module's gates and risk-based validation in `docs/policy/execution.md`.
+```sh
+git submodule status -- <child>
+git -C <child> status --short
+```
 
-## Environment checks
-
-Verify current model capability, price, and any required network endpoint at the point of use; past observations are not a substitute for a current check.
+The first command reports the child's checked-out revision relative to the
+parent pin; the second reports that child's local changes. Neither changes the
+checkout or runs the child's tests.
