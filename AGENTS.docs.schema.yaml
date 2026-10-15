@@ -1,0 +1,37 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "docs@1"
+title: Standard layer file
+description: The standard a project patches. A layer file is a mapping from fact id to fact. The coordinates are change.entries.fact_record's and are closed here; the one extension point is domain, where a refinement declares the coordinates its domain adds. A refinement names the version it extends, refines domain and closes it, and never loosens or redefines anything fixed here, because a schema its own subject can edit at will constrains nothing. JSON Schema cannot see across a $ref, so a declared extension point is the only way a thing can be patchable and still closed.
+type: object
+minProperties: 1
+propertyNames:
+  pattern: "^[a-z][a-z0-9_]*$"
+additionalProperties:
+  $ref: "#/$defs/fact"
+$defs:
+  fact:
+    type: object
+    required: [_text]
+    unevaluatedProperties: false
+    properties:
+      _text:
+        type: string
+        minLength: 1
+      from:
+        type: string
+        description: the id of the fact it derives from, written file-qualified as pain.d3
+      author:
+        enum: [user, agent, measurement, third-party]
+      origin:
+        type: string
+      scope:
+        enum: [general, specific]
+      status:
+        enum: [current, provisional, disputed]
+      evidence:
+        type: string
+      producer:
+        type: string
+      domain:
+        type: object
+        description: the coordinates a domain adds beyond the standard's; the slot exists because JSON Schema cannot reopen a $ref, so a refinement declares and closes what it holds

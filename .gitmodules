@@ -211,3 +211,15 @@
 [submodule "knowledge_net"]
 	path = knowledge_net
 	url = git@github.com:ZisIsNotZis/knowledge_net.git
+[submodule "dojo"]
+	path = dojo
+	url = git@github.com:ZisIsNotZis/dojo.git
+[submodule "murderMysteryGame"]
+	path = murderMysteryGame
+	url = git@github.com:ZisIsNotZis/murderMysteryGame.git
+[submodule "pi-keys"]
+	path = pi-keys
+	url = git@github.com:ZisIsNotZis/pi-keys.git
+[submodule "local_lm_research"]
+	path = local_lm_research
+	url = git@github.com:ZisIsNotZis/tiny-llm-eval-factors.git
