@@ -1,0 +1,6 @@
+# branch.oid ed37126469886b55526909c5adcbc0cdf382b0b4
+# branch.head main
+# branch.upstream origin/main
+# branch.ab +0 -0
+! dist/
+! node_modules/

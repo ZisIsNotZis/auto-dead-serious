@@ -1,0 +1,21 @@
+{
+  "verdict": "pass",
+  "kind": "documentation acceptance closure checks, not runtime tests",
+  "policy_sha256": {
+    "AGENTS.md": "ab3afe8ebb9fdef95c650391e8e27547e3dd1f7bd1f1d8101f39329ce971fef3",
+    "docs/policy/decisions.md": "eef1f595cd494e9300df8d2d3a3fc2117394305379be7ab12c55bc32565c1b74",
+    "docs/policy/environment.md": "a0e06ce4eb8f20132b5eeb13ebf2cb10d5b4dcb617452d69288763c6c84910f9",
+    "docs/policy/execution.md": "5690696fbad291b6a0512c462414eade6495c31390b615a4997b87ff7ad32921",
+    "docs/policy/remote-coordination.md": "54fca959768ff401155a738fb97cb09b3768c30b75198d52dfaf1136061c049e",
+    "docs/policy/writing.md": "31060ba0c7387b6b1442b2467524760807e185cf68b03e014b1233591557ae0a"
+  },
+  "checks": [
+    "Accepted policy hashes unchanged after review",
+    "Active-work bytes exactly equal pre-task baseline; only completed task entry removed",
+    "Protected file hashes unchanged",
+    "Scoped git diff --check passed",
+    "Task Markdown whitespace check passed"
+  ],
+  "review": ".scratch/22-clean-context-policy/review-1.md",
+  "final": ".scratch/22-clean-context-policy/final.md"
+}

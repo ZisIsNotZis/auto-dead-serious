@@ -1,0 +1,1 @@
+PASS: 87 .git markers including root; 86 unique child records match manifest; HEAD states and root evidence are represented; no helpagent paths are inventoried.

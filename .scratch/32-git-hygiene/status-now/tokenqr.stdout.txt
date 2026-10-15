@@ -1,0 +1,8 @@
+# branch.oid 487de9e5a95d833af83eda54f3f0b56b48c9a368
+# branch.head main
+# branch.upstream origin/main
+# branch.ab +0 -0
+! .pi/
+! gateway-state.json
+! gateway/__pycache__/
+! node_modules/

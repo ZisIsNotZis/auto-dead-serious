@@ -1,0 +1,12 @@
+f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1  .scratch/31-policy-enhancement/sources/codebase-design/DEEPENING.md
+52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010  .scratch/31-policy-enhancement/sources/codebase-design/DESIGN-IT-TWICE.md
+2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2  .scratch/31-policy-enhancement/sources/codebase-design/SKILL.md
+849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d  .scratch/31-policy-enhancement/sources/diagnosing-bugs/SKILL.md
+befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15  .scratch/31-policy-enhancement/sources/grilling/SKILL.md
+985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4  .scratch/31-policy-enhancement/sources/research/SKILL.md
+d18a1fa7d9c66b6cb48ebd067c653b20218b15b4f6cf496a9425266e27303169  .scratch/31-policy-enhancement/sources/sha256.txt
+5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0  .scratch/31-policy-enhancement/sources/tdd/SKILL.md
+3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef  .scratch/31-policy-enhancement/sources/tdd/mocking.md
+859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a  .scratch/31-policy-enhancement/sources/tdd/tests.md
+551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a  .scratch/31-policy-enhancement/sources/writing-for-agents/SKILL.md
+09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357  .scratch/31-policy-enhancement/sources/code-review/SKILL.md

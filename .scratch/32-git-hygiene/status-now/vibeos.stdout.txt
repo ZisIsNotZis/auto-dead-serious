@@ -1,0 +1,13 @@
+# branch.oid b81f0e248c07bb0098b0f454d42adecaef2e8bf0
+# branch.head master
+# branch.upstream origin/master
+# branch.ab +0 -0
+! apps/server/dist/
+! apps/server/tsconfig.tsbuildinfo
+! apps/web/dist/
+! apps/web/node_modules/
+! apps/web/test-results/
+! apps/web/tsconfig.tsbuildinfo
+! node_modules/
+! packages/shared/dist/
+! packages/shared/tsconfig.tsbuildinfo

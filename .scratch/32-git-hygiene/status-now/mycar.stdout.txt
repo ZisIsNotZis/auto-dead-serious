@@ -1,0 +1,7 @@
+# branch.oid cff76453637662b11640930ec5013d20a9ef955b
+# branch.head master
+# branch.upstream origin/master
+# branch.ab +0 -0
+! .pi/
+! .tmp/
+! scripts/__pycache__/

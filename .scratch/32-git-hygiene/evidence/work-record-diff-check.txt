@@ -1,0 +1,2 @@
+Checked 15 text work-record files with git diff --no-index --check against /dev/null; expected exit 1 for differing files, no diagnostics means clean.
+Whitespace/error diagnostics: 0 files.

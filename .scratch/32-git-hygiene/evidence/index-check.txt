@@ -1,0 +1,1 @@
+Scoped staged-diff check for .scratch/32-git-hygiene: exit=0 (0 means no staged work-record paths).

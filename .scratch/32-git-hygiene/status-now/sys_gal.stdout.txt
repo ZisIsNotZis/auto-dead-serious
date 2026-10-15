@@ -1,0 +1,92 @@
+# branch.oid fe9628c5cbdfaa24a1331eb6aa74e7f0bb47542d
+# branch.head fix/v4-world-contracts
+1 .M N... 100644 100644 100644 7c7836357482a1bcda18b7c6b6c8a4e1b9692d9e 7c7836357482a1bcda18b7c6b6c8a4e1b9692d9e README.md
+1 .M N... 100644 100644 100644 7de6dca495b6979a6e392f455e720922d6625ea3 7de6dca495b6979a6e392f455e720922d6625ea3 README.zh-CN.md
+1 .M N... 100644 100644 100644 a6cb55573c4446e34d7757efe57b400f7ee2adeb a6cb55573c4446e34d7757efe57b400f7ee2adeb docs/agents/issue-tracker.md
+2 R. N... 100644 100644 100644 f8682df9dcf1f46ce9acf3bb7c8b06b93aed8501 f8682df9dcf1f46ce9acf3bb7c8b06b93aed8501 R100 docs/archive/handoff-2026-08-25-v3-monitoring.md	handoff.md
+2 R. N... 100644 100644 100644 d36781b3911f9ba752d857f537b92402bf3c3211 d36781b3911f9ba752d857f537b92402bf3c3211 R100 docs/reference/chinese-web-novel-genres.md	SILLY_NOVEL.md
+1 .M N... 100644 100644 100644 5816e3a3936ed95b89ac37997aaffca480f6c857 5816e3a3936ed95b89ac37997aaffca480f6c857 契约失效时请勿喂猫/.scratch/active-work.md
+2 R. N... 100644 100644 100644 6c8ce7478c3b3a476b49e4f3879d44bab73942f9 6c8ce7478c3b3a476b49e4f3879d44bab73942f9 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/01-knock-affordance.md	.scratch/v3-harness-followups/issues/01-knock-affordance.md
+2 R. N... 100644 100644 100644 66c8c7fb1a071b7c08bca22d6ba8bb07c86b87f7 66c8c7fb1a071b7c08bca22d6ba8bb07c86b87f7 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/02-archive-custodian.md	.scratch/v3-harness-followups/issues/02-archive-custodian.md
+2 R. N... 100644 100644 100644 bb767a733d3168f8e7bac81ba8706fd1638e6c3e bb767a733d3168f8e7bac81ba8706fd1638e6c3e R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/03-rejected-action-lifecycle.md	.scratch/v3-harness-followups/issues/03-rejected-action-lifecycle.md
+2 R. N... 100644 100644 100644 8d590856ff47b1133d56c77d244357b5f39de376 8d590856ff47b1133d56c77d244357b5f39de376 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/04-retry-message-duplication.md	.scratch/v3-harness-followups/issues/04-retry-message-duplication.md
+2 R. N... 100644 100644 100644 38149c5a08e35165b88ca0bfc5f531b10cbc0144 38149c5a08e35165b88ca0bfc5f531b10cbc0144 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/05-message-boundary-compaction.md	.scratch/v3-harness-followups/issues/05-message-boundary-compaction.md
+2 R. N... 100644 100644 100644 a007658c75b15be5c0088e51826d9cba8c3b58f3 a007658c75b15be5c0088e51826d9cba8c3b58f3 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/06-compaction-authority.md	.scratch/v3-harness-followups/issues/06-compaction-authority.md
+2 R. N... 100644 100644 100644 bed452cb170130da9a4578cafce435854fb97747 bed452cb170130da9a4578cafce435854fb97747 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/07-checkpoint-resume.md	.scratch/v3-harness-followups/issues/07-checkpoint-resume.md
+2 R. N... 100644 100644 100644 f8f09987bff600cf16e912936395c8c1d66f15d5 f8f09987bff600cf16e912936395c8c1d66f15d5 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/08-streaming-provider-transport.md	.scratch/v3-harness-followups/issues/08-streaming-provider-transport.md
+2 R. N... 100644 100644 100644 0745f6f8849760c4c00c3fdbace4c248919095d5 0745f6f8849760c4c00c3fdbace4c248919095d5 R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/issues/09-seed-romance-pressure.md	.scratch/v3-harness-followups/issues/09-seed-romance-pressure.md
+2 R. N... 100644 100644 100644 74c455b30a4042ca1ab0fb2dfbb9f346d5cb75db 74c455b30a4042ca1ab0fb2dfbb9f346d5cb75db R100 契约失效时请勿喂猫/.scratch/v3-harness-followups/spec.md	.scratch/v3-harness-followups/spec.md
+1 .M N... 100644 100644 100644 511b24d442a87eb3af09f953c89d20d76fbd73f5 511b24d442a87eb3af09f953c89d20d76fbd73f5 契约失效时请勿喂猫/.scratch/v4-first-day/issues/27-d1am-gpt6-trajectory-review.md
+1 .M N... 100644 100644 100644 78e43d84a7744559e1a6e190a43b5fbd51a3297a 78e43d84a7744559e1a6e190a43b5fbd51a3297a 契约失效时请勿喂猫/.scratch/v4-first-day/issues/28-note-single-reader.md
+1 .M N... 100644 100644 100644 e28fe98092c78d1014879f8a354246bebc70000f e28fe98092c78d1014879f8a354246bebc70000f 契约失效时请勿喂猫/.scratch/v4-first-day/issues/29-busy-chain-recovery.md
+1 .M N... 100644 100644 100644 a82af92ff49587d23838fec5e92a8886b5166ba5 a82af92ff49587d23838fec5e92a8886b5166ba5 契约失效时请勿喂猫/.scratch/v4-first-day/issues/30-note-author-self-consumption.md
+1 .M N... 100644 100644 100644 a72acd771201c9f64af3da6d55530c59289b047a a72acd771201c9f64af3da6d55530c59289b047a 契约失效时请勿喂猫/.scratch/v4-first-day/issues/31-unsafe-tool-error-repair.md
+1 .M N... 100644 100644 100644 edf2d669f2afb91139256723cfa5b4a59ec80e35 edf2d669f2afb91139256723cfa5b4a59ec80e35 契约失效时请勿喂猫/.scratch/v4-first-day/issues/32-extra-empty-question-rebrief.md
+1 .M N... 100644 100644 100644 ad124246013be2749bde48f3483d406c5eabad8a ad124246013be2749bde48f3483d406c5eabad8a 契约失效时请勿喂猫/.scratch/v4-first-day/issues/33-d1am-gpt6-replay-review.md
+1 .M N... 100644 100644 100644 dc5adfb3119a3d12226253b1193e52ff4029af5a dc5adfb3119a3d12226253b1193e52ff4029af5a 契约失效时请勿喂猫/.scratch/v4-first-day/issues/34-extra-audience-authority.md
+1 .M N... 100644 100644 100644 17f5ecfe0ca391838a2542818ef8c7e921bc36eb 17f5ecfe0ca391838a2542818ef8c7e921bc36eb 契约失效时请勿喂猫/.scratch/v4-first-day/issues/35-actionable-claim-coverage-gap.md
+1 .M N... 100644 100644 100644 e409f6ab595e78700202b2f5f94f38c87bca48fb e409f6ab595e78700202b2f5f94f38c87bca48fb 契约失效时请勿喂猫/.scratch/v4-first-day/issues/36-d1-evidence-route-checker.md
+1 .M N... 100644 100644 100644 b98a3112c8d4d56f89ee7ba5208c5e96c4d3bf84 b98a3112c8d4d56f89ee7ba5208c5e96c4d3bf84 契约失效时请勿喂猫/.scratch/v4-first-day/issues/37-d1am-world-contract-review.md
+1 .M N... 100644 100644 100644 f466f36bcb8fc121da674e1c328bbaab1c19644e f466f36bcb8fc121da674e1c328bbaab1c19644e 契约失效时请勿喂猫/.scratch/v4-first-day/issues/38-inner-channel-unreachable.md
+1 .M N... 100644 100644 100644 0308e0d7f865c337d4a1c9bda263cbf9355d38dd 0308e0d7f865c337d4a1c9bda263cbf9355d38dd 契约失效时请勿喂猫/.scratch/v4-first-day/issues/39-item-body-not-readable.md
+1 .M N... 100644 100644 100644 3f8b9038399d6f36a02882af7e6d9fb88f07091c 3f8b9038399d6f36a02882af7e6d9fb88f07091c 契约失效时请勿喂猫/.scratch/v4-first-day/issues/40-known-to-grants-remote-read.md
+1 .M N... 100644 100644 100644 51d317c7b789cf8c3be8893ca35f3c430713d0f7 51d317c7b789cf8c3be8893ca35f3c430713d0f7 契约失效时请勿喂猫/.scratch/v4-first-day/issues/42-extra-path-leaks-and-fabricates.md
+1 .M N... 100644 100644 100644 bca5642da4efb478976d9b56b69842c94d62530d bca5642da4efb478976d9b56b69842c94d62530d 契约失效时请勿喂猫/.scratch/v4-first-day/issues/43-wait-excluded-from-repetition-scan.md
+1 .M N... 100644 100644 100644 dff3cce16a62b2d3c75a805a7e96369cd18c7e3b dff3cce16a62b2d3c75a805a7e96369cd18c7e3b 契约失效时请勿喂猫/.scratch/v4-first-day/issues/44-note-silently-ineffective-when-recipient-present.md
+1 .M N... 100644 100644 100644 289e4a53cf66cb23aa80dd31cccedca9d11b920c 289e4a53cf66cb23aa80dd31cccedca9d11b920c 契约失效时请勿喂猫/.scratch/v4-first-day/issues/45-npc-wake-ignores-questions-and-reminders.md
+1 .M N... 100644 100644 100644 6f5d2724cc377a7d2d904200eba7d3865f3ca7f7 6f5d2724cc377a7d2d904200eba7d3865f3ca7f7 契约失效时请勿喂猫/.scratch/v4-first-day/issues/46-perception-snapshot-vs-submit-validation.md
+1 .M N... 100644 100644 100644 a7b7389937ccb9515d5f8c86b55ef956b443ec59 a7b7389937ccb9515d5f8c86b55ef956b443ec59 契约失效时请勿喂猫/.scratch/v4-first-day/issues/47-seed-mystery-answer-and-unreachable-guards.md
+1 .M N... 100644 100644 100644 d54d5b43499989781c5d82a56620656a078d33d7 d54d5b43499989781c5d82a56620656a078d33d7 契约失效时请勿喂猫/.scratch/v4-first-day/issues/48-unperformed-actions-asserted-as-fact.md
+1 .M N... 100644 100644 100644 d75f914018252df6dce11896a30381e030bfc33d d75f914018252df6dce11896a30381e030bfc33d 契约失效时请勿喂猫/.scratch/v4-first-day/issues/49-objective-description-and-memory-emergence.md
+1 .M N... 100644 100644 100644 694809aeb0f2a00f6470e11d1f5c267a95ed0ac0 694809aeb0f2a00f6470e11d1f5c267a95ed0ac0 契约失效时请勿喂猫/.scratch/v4-first-day/issues/50-extra-checkpoint-state-incomplete.md
+1 .M N... 100644 100644 100644 6e231d469ebcf2297961d03d65e27e8642e94160 6e231d469ebcf2297961d03d65e27e8642e94160 契约失效时请勿喂猫/.scratch/v4-first-day/issues/51-sync-runner-vs-async-engine-drift.md
+1 .M N... 100644 100644 100644 903fd09361ba6f8f7ee94b5aee3c39d98a48cf9b 903fd09361ba6f8f7ee94b5aee3c39d98a48cf9b 契约失效时请勿喂猫/.scratch/v4-first-day/issues/52-move-leave-vs-present-contradiction.md
+1 .M N... 100644 100644 100644 90666bb54d90fc4c5e051c0abceb58c774e8cb55 90666bb54d90fc4c5e051c0abceb58c774e8cb55 契约失效时请勿喂猫/.scratch/v4-first-day/issues/53-stall-budget-and-hung-decision-pins-the-run.md
+1 .M N... 100644 100644 100644 950271a51d075f9d39b963be0d04a48c43b74123 950271a51d075f9d39b963be0d04a48c43b74123 契约失效时请勿喂猫/.scratch/v4-first-day/issues/54-provider-request-has-no-wall-clock-bound.md
+1 .M N... 100644 100644 100644 f3bef046ed2341c23fcb211bf795503d81295195 f3bef046ed2341c23fcb211bf795503d81295195 契约失效时请勿喂猫/.scratch/v4-first-day/issues/55-checkpoint-keyerror-while-extra-answers.md
+1 .M N... 100644 100644 100644 c07eb756f364275e40437eec0ed055ce34c67563 c07eb756f364275e40437eec0ed055ce34c67563 契约失效时请勿喂猫/.scratch/v4-first-day/issues/56-private-reasoning-in-content-is-broadcast.md
+1 .M N... 100644 100644 100644 556297dfdd33c9f7f3deb7b270b1ca4d3499d032 556297dfdd33c9f7f3deb7b270b1ca4d3499d032 契约失效时请勿喂猫/.scratch/v4-first-day/issues/57-extras-cannot-act-only-narrate.md
+1 .M N... 100644 100644 100644 aa96d213c3d8a9f3b300ddc3e9e3754325f3dbb5 aa96d213c3d8a9f3b300ddc3e9e3754325f3dbb5 契约失效时请勿喂猫/.scratch/v4-first-day/issues/58-primer-leaks-unvisited-location-interiors.md
+1 .M N... 100644 100644 100644 53b3966c9a0b44c90dd2694ec93bd08963eba36a 53b3966c9a0b44c90dd2694ec93bd08963eba36a 契约失效时请勿喂猫/.scratch/v4-first-day/issues/59-update-memory-ergonomics.md
+1 .M N... 100644 100644 100644 31ea2496c01d69220949e72e2ae100b036364bcc 31ea2496c01d69220949e72e2ae100b036364bcc 契约失效时请勿喂猫/.scratch/v4-first-day/issues/60-location-prose-props-not-under-contract.md
+1 .M N... 100644 100644 100644 0e85ced063f4876a7a0c6f3087a1c98e8f3b6e8f 0e85ced063f4876a7a0c6f3087a1c98e8f3b6e8f 契约失效时请勿喂猫/.scratch/v4-first-day/issues/61-document-descriptions-are-world-public.md
+1 .M N... 100644 100644 100644 8baee830bf61c19e0531930fc5a4b9bca96bdc80 8baee830bf61c19e0531930fc5a4b9bca96bdc80 契约失效时请勿喂猫/.scratch/v4-first-day/issues/62-concepts-desc-carry-state-facts.md
+1 .M N... 100644 100644 100644 420b5a3ae2cdc1781b9ff2ef677bd1f0cb27a511 420b5a3ae2cdc1781b9ff2ef677bd1f0cb27a511 契约失效时请勿喂猫/.scratch/v4-first-day/issues/63-same-kind-failures-and-serve-verb-gap.md
+1 .M N... 100644 100644 100644 a9331c79d648852ebf5bed87f8d66080472b53b8 a9331c79d648852ebf5bed87f8d66080472b53b8 契约失效时请勿喂猫/.scratch/v4-first-day/issues/64-content-is-private-speak-is-the-only-speech-channel.md
+1 .M N... 100644 100644 100644 e8bce5cd8ee2ff1fda04a9a4dc2e7ca9a5970685 e8bce5cd8ee2ff1fda04a9a4dc2e7ca9a5970685 契约失效时请勿喂猫/.scratch/v4-first-day/issues/65-canteen-and-shop-have-no-items.md
+1 .M N... 100644 100644 100644 96fd639c4d6c38536ac7729bc67e17e3a327a5ee 96fd639c4d6c38536ac7729bc67e17e3a327a5ee 契约失效时请勿喂猫/.scratch/v4-first-day/issues/66-contact-and-route-dead-ends.md
+1 .M N... 100644 100644 100644 2e75b4df693810b8e8af04f79021d09656e3f1cd 2e75b4df693810b8e8af04f79021d09656e3f1cd 契约失效时请勿喂猫/.scratch/v4-first-day/issues/67-wall-deadline-starved-by-inflight-wait.md
+1 .M N... 100644 100644 100644 34ff5dd54c0b888b2b6feb35b545c73aab8cfecf 34ff5dd54c0b888b2b6feb35b545c73aab8cfecf 契约失效时请勿喂猫/.scratch/v4-first-day/issues/68-trace-private-state-misleads-reviewers.md
+1 .M N... 100644 100644 100644 21171afee9e7c2ac2833b9173e03a4a793317988 21171afee9e7c2ac2833b9173e03a4a793317988 契约失效时请勿喂猫/.scratch/v4-first-day/spec.md
+2 R. N... 100644 100644 100644 193f27e03bea6f932666e0fe97f806cd4918f77e 193f27e03bea6f932666e0fe97f806cd4918f77e R100 契约失效时请勿喂猫/.scratch/v4-memorial-notice-grounding/issues/01-presence-grounded-memorial-notices.md	.scratch/v4-memorial-notice-grounding/issues/01-presence-grounded-memorial-notices.md
+1 .M N... 100644 100644 100644 0347ea0bf87e6787fa01fb9ddfa819110b29692f 0347ea0bf87e6787fa01fb9ddfa819110b29692f 契约失效时请勿喂猫/v1/README.md
+1 .M N... 100644 100644 100644 fd6824f15e267fb7dd694a390d6f1fa6ba0ec165 fd6824f15e267fb7dd694a390d6f1fa6ba0ec165 契约失效时请勿喂猫/v2/README.md
+1 .M N... 100644 100644 100644 244dde2a51c2e62c0a2879d5676f191de14f5d98 244dde2a51c2e62c0a2879d5676f191de14f5d98 契约失效时请勿喂猫/v3/README.md
+1 .M N... 100644 100644 100644 3ed47e3d7602274d4d68f09ad36a991f8b723d0e 3ed47e3d7602274d4d68f09ad36a991f8b723d0e 契约失效时请勿喂猫/v4/checkpoints/d1-am.json
+1 .M N... 100644 100644 100644 9af0a65f9a8abfef0fe2b5651993ec243141281e 9af0a65f9a8abfef0fe2b5651993ec243141281e 契约失效时请勿喂猫/v4/docs/V4-CAST.md
+1 .M N... 100644 100644 100644 1f17b9b40373b8b5acd346b967484b03a9713c6c 1f17b9b40373b8b5acd346b967484b03a9713c6c 契约失效时请勿喂猫/v4/docs/V4-DESIGN.md
+1 .M N... 100644 100644 100644 c95742f6ae73e243b27951dec230aa97fb0ac47e c95742f6ae73e243b27951dec230aa97fb0ac47e 契约失效时请勿喂猫/v4/docs/V4-STORY-MILESTONES.md
+2 R. N... 100644 100644 100644 5dc99a64523985a61516a8dee4d1be658d909d12 5dc99a64523985a61516a8dee4d1be658d909d12 R100 契约失效时请勿喂猫/v4/docs/archive/V4-GOSSIP-CHARACTER.md	契约失效时请勿喂猫/v4/docs/V4-GOSSIP-CHARACTER.md
+1 .M N... 100755 100755 100755 5b999eb1810e89e6330be2be55e8aa0084bf16f2 5b999eb1810e89e6330be2be55e8aa0084bf16f2 契约失效时请勿喂猫/v4/scripts/half_day_flow.sh
+? CONTEXT.md
+? docs/adr/
+? docs/archive/README.md
+? docs/reference/README.md
+? 契约失效时请勿喂猫/.scratch/README.md
+? 契约失效时请勿喂猫/.scratch/v4-first-day/issues/69-oct6-interrupted-d1pm-run-unreviewed.md
+? 契约失效时请勿喂猫/.scratch/v4-first-day/issues/70-d1pm-six-anchors-unmet.md
+? 契约失效时请勿喂猫/README.md
+? 契约失效时请勿喂猫/ROADMAP.md
+? 契约失效时请勿喂猫/v4/checkpoints/d1-pm.json
+? 契约失效时请勿喂猫/v4/logs/
+? 契约失效时请勿喂猫/v4/scripts/drive_arc.sh
+! .pi/
+! 契约失效时请勿喂猫/v3/harness/__pycache__/
+! 契约失效时请勿喂猫/v3/harness/tests/__pycache__/
+! 契约失效时请勿喂猫/v4/.pi/
+! 契约失效时请勿喂猫/v4/harness/__pycache__/
+! 契约失效时请勿喂猫/v4/harness/tests/__pycache__/
+! 契约失效时请勿喂猫/v4/logs/drive-nohup.log
+! 契约失效时请勿喂猫/v4/logs/drive.log
+! 契约失效时请勿喂猫/v4/runs/
+! 契约失效时请勿喂猫/v4/scripts/__pycache__/

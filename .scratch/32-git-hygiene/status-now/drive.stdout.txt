@@ -1,0 +1,7 @@
+# branch.oid 6f803b4ca0f274f2118de0fc6aa484a5be5c5708
+# branch.head master
+# branch.upstream origin/master
+# branch.ab +0 -0
+! dist/
+! node_modules/
+! test-results/

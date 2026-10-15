@@ -1,0 +1,26 @@
+captured 2026-10-14T11:31:11Z
+--- git status (tracked) ---
+0
+--- the ten documents + root AGENTS.md (sha256) ---
+2633ca63737f7a99a9cff0b8ef106370510e3fc4e51ed6465b23e4c851a1dc84  /home/z/hf/research/AGENTS.md
+bd21240b6749c17ee0c55b41732a51ed7477c64c542b98e579d6d5600cc80237  /home/z/hf/research/docs/BACKLOG.md
+99205b6b072fd7561ae12dce7f10368494562d7b25a01482234cde182d78ad6f  /home/z/hf/research/docs/DATABASE.md
+1af1e063b3f4bf5dcdd091975c474c000c6d1e2267c38db2e5c7ad7d45a3e480  /home/z/hf/research/docs/L0-要求.md
+80196e2cdd5cea7a235d77076d72f361744764fb692662d751e23167c1be9cc5  /home/z/hf/research/docs/L2-结果.md
+7239a2050cc4640d2f10497ee8d4ae74a53d0692aa7bf234f40bde3d7c38f4d8  /home/z/hf/research/docs/L3-分析.md
+8c2c6a0842c36e91a753cb0b03a7590e27cddc67a370ff2bb075623640df422f  /home/z/hf/research/docs/METHOD.md
+77fe88ec96287366be054386f8ed6b56040b59832d691d749963783ab2bfc888  /home/z/hf/research/docs/NAMING.md
+3f5bb3174227864e2cf8327edee1731ea921046e8963bddf6388eea8d84345d0  /home/z/hf/research/docs/OPERATIONS.md
+61f3698c70ae875766889319d4c8044ca38c80ba5b0a8e4674edcc2c43c7f706  /home/z/hf/research/docs/README.md
+fcaa6022a2a1d5df94835a21caa6d7b47b6dadeed2b6d3079b5c9c908c856f48  /home/z/hf/research/docs/REPORTING.md
+--- docs/ contents before ---
+BACKLOG.md
+DATABASE.md
+L0-要求.md
+L2-结果.md
+L3-分析.md
+METHOD.md
+NAMING.md
+OPERATIONS.md
+README.md
+REPORTING.md

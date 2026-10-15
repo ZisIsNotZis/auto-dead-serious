@@ -1,0 +1,3 @@
+git diff --no-index --check /dev/null <file>; checked 18 text work-record files.
+Expected exit 1 indicates file differs; clean means no diagnostics.
+Findings: 0.

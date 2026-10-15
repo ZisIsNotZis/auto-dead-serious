@@ -1,0 +1,2 @@
+Scoped git diff --no-index --check /dev/null <file> over 21 text work-record files; binary git-markers.nul excluded.
+Whitespace/error diagnostics: 0.

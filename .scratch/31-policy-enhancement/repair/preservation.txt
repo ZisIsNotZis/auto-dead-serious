@@ -1,0 +1,5 @@
+PASS precise repair changes exactly resources.machine.advisory_limits._text; all other policy nodes/order/text unchanged from first-reviewed bytes
+PASS generated render has exactly one changed line (AGENTS.md:123), unchanged 307-line structure
+PASS HEAD unchanged; no staged files; original and pre-repair git status match current, no unrelated status drift
+PASS exact durable first-review copy SHA-256 586e81ba28217897b1b480f09c5b69fd79c134daed2d5b0cdb6db6231ede80bb
+LIMIT static prior BLOCK counterexample is failure-sensitivity evidence; no runtime admission/exclusivity mechanism exercised; independent final-delta verdict pending

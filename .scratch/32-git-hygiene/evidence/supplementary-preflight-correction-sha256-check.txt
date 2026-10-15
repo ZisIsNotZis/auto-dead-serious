@@ -1,0 +1,23 @@
+Supplementary-preflight correction checksum verification
+Date recorded: 2026-10-15 (ticket append date; no date command run)
+
+Command 1:
+sha256sum .scratch/32-git-hygiene/ticket.md .scratch/32-git-hygiene/manifest.md .scratch/32-git-hygiene/audit.md .scratch/32-git-hygiene/audit_repos.py .scratch/32-git-hygiene/remote_inventory.py .scratch/32-git-hygiene/render_blocked_audit.py .scratch/32-git-hygiene/evidence/credential-scanner-availability.txt .scratch/32-git-hygiene/evidence/remote-only.jsonl .scratch/32-git-hygiene/evidence/remote-only-summary.json > .scratch/32-git-hygiene/evidence/package-output-sha256.txt
+Exit status: 0
+Stdout: redirected to .scratch/32-git-hygiene/evidence/package-output-sha256.txt, replacing all nine pre-existing manifest entries.
+Stderr: empty.
+
+Command 2:
+sha256sum -c .scratch/32-git-hygiene/evidence/package-output-sha256.txt
+Exit status: 0
+Stdout:
+.scratch/32-git-hygiene/ticket.md: OK
+.scratch/32-git-hygiene/manifest.md: OK
+.scratch/32-git-hygiene/audit.md: OK
+.scratch/32-git-hygiene/audit_repos.py: OK
+.scratch/32-git-hygiene/remote_inventory.py: OK
+.scratch/32-git-hygiene/render_blocked_audit.py: OK
+.scratch/32-git-hygiene/evidence/credential-scanner-availability.txt: OK
+.scratch/32-git-hygiene/evidence/remote-only.jsonl: OK
+.scratch/32-git-hygiene/evidence/remote-only-summary.json: OK
+Stderr: empty.

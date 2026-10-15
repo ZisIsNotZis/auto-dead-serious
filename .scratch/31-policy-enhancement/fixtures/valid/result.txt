@@ -1,0 +1,3 @@
+command: ['/home/z/.venv/bin/python3', '/home/z/vibe/scripts/render_policy.py', '--source', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/valid/AGENTS.yaml', '--schema', '/home/z/vibe/AGENTS.schema.yaml', '--out', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/valid/AGENTS.md']
+exit: 0
+checks passed; wrote /home/z/vibe/.scratch/31-policy-enhancement/fixtures/valid/AGENTS.md (4 lines).

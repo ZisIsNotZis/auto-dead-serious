@@ -1,0 +1,56 @@
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/handoff.md', '/home/z/vibe/.scratch/31-policy-enhancement/handoff.md']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/ticket.md', '/home/z/vibe/.scratch/31-policy-enhancement/ticket.md']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/scenarios.md', '/home/z/vibe/.scratch/31-policy-enhancement/scenarios.md']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/review.md']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/policy.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/render.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/render.txt']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/policy.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/render.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/scenarios.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/diff-checks.txt']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/preservation.txt']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/handoff.diff']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/dev/null', '/home/z/vibe/.scratch/31-policy-enhancement/repair/ticket.diff']
+exit: 1
+stdout: ''
+stderr: ''

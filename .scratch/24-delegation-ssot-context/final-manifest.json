@@ -1,0 +1,15 @@
+{
+  "head": "c82765e53faa60ae04cc3ae4fd1048d1ee5ef953",
+  "files": {
+    "AGENTS.md": {
+      "lines": 37,
+      "bytes": 6687,
+      "sha256": "488316cbffd9d433d86878dd519b70ed90e56024ab25add1ef9c781ecb1f2065"
+    },
+    "docs/policy/execution.md": {
+      "lines": 46,
+      "bytes": 10481,
+      "sha256": "f6ab19fddbcf4ebcbe67320a8a90c3b4ceccc47d95bb48b3bee81d2186e48286"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Final repair evidence closure — 2026-10-15T11:00:40+08:00 — worker
+command: ['python3', 'scripts/render_policy.py', '--check']
+exit: 0
+checks passed; AGENTS.md matches AGENTS.yaml.
+command: ['git', 'diff', '--check', '--', 'AGENTS.yaml', 'AGENTS.md']
+exit: 0
+PASS no staged files and no status drift from original/pre-repair baseline
+PASS all original effort artifacts not explicitly changed remain byte-identical, including all baseline snapshots, schemas/renderer copies, source provenance and original rule-home router
+Durable exact first-review source: /home/z/.pi/agent/sessions/--home-z-vibe--/subagent-artifacts/965b9e23-6c97-4114-910f-d48566fb3d61_reviewer_output.md -> .scratch/31-policy-enhancement/review.md; SHA-256 586e81ba28217897b1b480f09c5b69fd79c134daed2d5b0cdb6db6231ede80bb
+LIMIT prior independent verdict is BLOCK on pre-repair bytes; final-delta independent review remains required; no runtime exclusivity/admission mechanism was exercised
+command: sha256sum --check .scratch/31-policy-enhancement/final-sha256.txt
+exit: 0
+PASS all current manifest content bindings matched; self-hash excluded. Rebuilt after adding this closure result and rechecked before final return.

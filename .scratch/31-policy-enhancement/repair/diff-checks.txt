@@ -1,0 +1,16 @@
+command: ['git', 'diff', '--check', '--', 'AGENTS.yaml', 'AGENTS.md']
+exit: 0
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/AGENTS.yaml', '/home/z/vibe/AGENTS.yaml']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/AGENTS.md', '/home/z/vibe/AGENTS.md']
+exit: 1
+stdout: ''
+stderr: ''
+command: ['git', 'diff', '--no-index', '--check', '--', '/home/z/vibe/.scratch/31-policy-enhancement/repair/before/scenarios.md', '/home/z/vibe/.scratch/31-policy-enhancement/scenarios.md']
+exit: 1
+stdout: ''
+stderr: ''

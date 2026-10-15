@@ -1,0 +1,28 @@
+probe=read-only; no repository paths or Git commands accessed
+/proc/self/cgroup=0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+cgroup_v2_mountpoint=/sys/fs/cgroup
+cgroup_v2_mount_root=/
+current_cgroup_directory=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+cpu_quota_cores_min_across_ancestors=unlimited_or_unknown
+cpu_quota_source=unlimited_or_unknown
+cpuset_cpus_effective=0-11
+effective_cpu_capacity_cores_from_quota_and_cpuset=12
+memory_limit_bytes_min_across_ancestors=unlimited_or_unknown
+memory_limit_source=unlimited_or_unknown
+memory_current_bytes_at_current_cgroup=29998084096
+process_limit_min_across_ancestors=143350
+process_limit_source=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+process_current_at_current_cgroup=39
+ancestor_limits=nearest-to-root traversal recorded by derived minimums above
+system_loadavg_1_5_15_and_runnable_total=1.48 1.60 1.80 6/1433 3278515
+system_MemTotal:       131734456 kB
+system_MemFree:        44730704 kB
+system_MemAvailable:   114158176 kB
+system_Buffers:          282708 kB
+system_Cached:         68828468 kB
+system_SwapTotal:             0 kB
+system_SwapFree:              0 kB
+numeric_proc_entries_observed=393
+allocator_or_admission_ledger=not established by resource-file probe; no authoritative endpoint was supplied
+scan_specific_runtime_binding=not tested; no scan/job was launched
+machine_wide_exclusivity=not established by this probe

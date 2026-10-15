@@ -1,0 +1,17 @@
+{
+  "head": "c82765e53faa60ae04cc3ae4fd1048d1ee5ef953",
+  "files": {
+    "AGENTS.md": "19c6c4995f84bc67a941d2ca6b14a3364622e2e819f3cd51f56ba32730e98dcc",
+    "docs/policy/execution.md": "d84d0b448f2879cf5fd9423b4bb91a2e2ad2a011d725e76cf4e9042dd5c31bde",
+    "README.md": "d2fa93c1ec04f5cbef1da361c19eb514f990f9b48c95fa71810a31ca23559f85",
+    "WORKSPACE.md": "6fc8dfef2ffd90abbba154e68e43a9348efe554cde40f5fc6857aa30f4939d55",
+    ".scratch/active-work.md": "d4c997cec4be5607faaacd2af63ee893bb5088f888f84c97db83dc9ba2de7c8f"
+  },
+  "retired": [
+    "docs/policy/decisions.md",
+    "docs/policy/environment.md",
+    "docs/policy/remote-coordination.md",
+    "docs/policy/writing.md"
+  ],
+  "proof_type": "documentation self-check, not runtime/independent acceptance"
+}

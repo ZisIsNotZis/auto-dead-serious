@@ -1,0 +1,38 @@
+{
+  "AGENTS.md": {
+    "lines": 34,
+    "words": 905,
+    "characters": 6694,
+    "bytes": 6694
+  },
+  "docs/policy/decisions.md": {
+    "lines": 10,
+    "words": 518,
+    "characters": 3758,
+    "bytes": 3758
+  },
+  "docs/policy/environment.md": {
+    "lines": 9,
+    "words": 260,
+    "characters": 1907,
+    "bytes": 1907
+  },
+  "docs/policy/execution.md": {
+    "lines": 28,
+    "words": 801,
+    "characters": 5664,
+    "bytes": 5664
+  },
+  "docs/policy/remote-coordination.md": {
+    "lines": 25,
+    "words": 337,
+    "characters": 2290,
+    "bytes": 2302
+  },
+  "docs/policy/writing.md": {
+    "lines": 8,
+    "words": 319,
+    "characters": 2324,
+    "bytes": 2324
+  }
+}

@@ -1,0 +1,20 @@
+ M AGENTS.md
+ m agentic-animation
+ M agentworld
+ M autofe
+ M backseat
+ M docs/policy/decisions.md
+ M docs/policy/execution.md
+ M flashdb
+ M helpagent
+ M learn_draw
+ m litellmgen
+ M pathlm
+ M resume_private
+ M ringsvr
+ M sys_gal
+?? .scratch/21-autonomous-work-policy/
+?? .scratch/22-clean-context-policy/
+?? dojo/
+?? murderMysteryGame/
+?? pi-keys/

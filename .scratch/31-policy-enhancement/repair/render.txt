@@ -1,0 +1,1 @@
+checks passed; wrote /home/z/vibe/AGENTS.md (307 lines).

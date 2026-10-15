@@ -1,0 +1,4 @@
+command: ['/home/z/.venv/bin/python3', '/home/z/vibe/scripts/render_policy.py', '--source', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/dangling_ref/AGENTS.yaml', '--schema', '/home/z/vibe/AGENTS.schema.yaml', '--out', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/dangling_ref/AGENTS.md']
+exit: 1
+checks failed:
+ - dangling @ref (not rendered into the view): missing

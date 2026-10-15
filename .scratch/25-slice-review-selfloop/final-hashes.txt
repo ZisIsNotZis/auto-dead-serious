@@ -1,0 +1,2 @@
+8c47265f304df1c05651b0d673de52bbde8c1e31c64e4e502b4a45e753c9f036  /home/z/vibe/AGENTS.md
+0f400696d80e65f632d1815717e0cf4c8d4f770e424d404b3c884bfa23092e97  /home/z/vibe/docs/policy/execution.md

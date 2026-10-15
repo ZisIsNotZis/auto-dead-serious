@@ -1,0 +1,6 @@
+# branch.oid ed4dcf0403f11aeaa47a519761174fe12b3f5764
+# branch.head master
+# branch.upstream origin/master
+# branch.ab +0 -0
+! .hypermaker/
+! node_modules/

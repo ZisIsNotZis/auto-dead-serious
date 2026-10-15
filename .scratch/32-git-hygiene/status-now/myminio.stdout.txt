@@ -1,0 +1,5 @@
+# branch.oid aee639bbd406fff85a70f706b0a282e98ddfb42e
+# branch.head master
+# branch.upstream origin/master
+# branch.ab +0 -0
+! __pycache__/

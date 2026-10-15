@@ -1,0 +1,8 @@
+# branch.oid 69d7e0aef9e462c7a11d4209406b02599d09738c
+# branch.head master
+! .pi/
+! backseat/__pycache__/
+! backseat/outlets/__pycache__/
+! backseat/sensors/__pycache__/
+! config.toml
+! tests/__pycache__/

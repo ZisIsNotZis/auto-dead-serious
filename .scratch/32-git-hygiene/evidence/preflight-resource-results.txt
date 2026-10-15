@@ -1,0 +1,429 @@
+Machine resource/admission preflight; read-only; no repository paths or Git commands accessed.
+Timestamp command: date --iso-8601=seconds
+2026-10-15T14:30:59+08:00
+Exact command: timeout 10s python3 .scratch/32-git-hygiene/evidence/preflight_resource_probe.py
+probe=read-only; no repository paths or Git commands accessed
+/proc/self/cgroup=0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+cgroup_v2_mountpoint=/sys/fs/cgroup
+cgroup_v2_mount_root=/
+current_cgroup_directory=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+cpu_quota_cores_min_across_ancestors=unlimited_or_unknown
+cpu_quota_source=unlimited_or_unknown
+cpuset_cpus_effective=0-11
+effective_cpu_capacity_cores_from_quota_and_cpuset=12
+memory_limit_bytes_min_across_ancestors=unlimited_or_unknown
+memory_limit_source=unlimited_or_unknown
+memory_current_bytes_at_current_cgroup=29999747072
+process_limit_min_across_ancestors=143350
+process_limit_source=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-surface-transient-3235732.scope
+process_current_at_current_cgroup=40
+ancestor_limits=nearest-to-root traversal recorded by derived minimums above
+system_loadavg_1_5_15_and_runnable_total=1.90 1.88 1.98 2/1440 3270458
+system_MemTotal:       131734456 kB
+system_MemFree:        45175932 kB
+system_MemAvailable:   114206412 kB
+system_Buffers:          282700 kB
+system_Cached:         68714316 kB
+system_SwapTotal:             0 kB
+system_SwapFree:              0 kB
+numeric_proc_entries_observed=394
+allocator_or_admission_ledger=not established by resource-file probe; no authoritative endpoint was supplied
+scan_specific_runtime_binding=not tested; no scan/job was launched
+machine_wide_exclusivity=not established by this probe
+exit_status=0
+Exact command: timeout 10s ps -eo pid=,ppid=,uid=,stat=,pcpu=,pmem=,rss=,comm=
+      1       0     0 Ss    0.2  0.0 11164 systemd
+      2       0     0 S     0.0  0.0     0 kthreadd
+      3       2     0 S     0.0  0.0     0 pool_workqueue_release
+      4       2     0 I<    0.0  0.0     0 kworker/R-rcu_gp
+      5       2     0 I<    0.0  0.0     0 kworker/R-sync_wq
+      6       2     0 I<    0.0  0.0     0 kworker/R-kvfree_rcu_reclaim
+      7       2     0 I<    0.0  0.0     0 kworker/R-slub_flushwq
+      8       2     0 I<    0.0  0.0     0 kworker/R-netns
+     10       2     0 I<    0.0  0.0     0 kworker/0:0H-kblockd
+     13       2     0 I<    0.0  0.0     0 kworker/R-mm_percpu_wq
+     14       2     0 S     0.0  0.0     0 ksoftirqd/0
+     15       2     0 I     0.0  0.0     0 rcu_preempt
+     16       2     0 S     0.0  0.0     0 rcu_exp_par_gp_kthread_worker/0
+     17       2     0 S     0.0  0.0     0 rcu_exp_gp_kthread_worker
+     18       2     0 S     0.0  0.0     0 migration/0
+     19       2     0 S     0.0  0.0     0 kprobe-optimizer
+     20       2     0 S     0.0  0.0     0 idle_inject/0
+     21       2     0 S     0.0  0.0     0 cpuhp/0
+     22       2     0 S     0.0  0.0     0 cpuhp/1
+     23       2     0 S     0.0  0.0     0 idle_inject/1
+     24       2     0 S     0.0  0.0     0 migration/1
+     25       2     0 S     0.0  0.0     0 ksoftirqd/1
+     27       2     0 I<    0.0  0.0     0 kworker/1:0H-kblockd
+     28       2     0 S     0.0  0.0     0 cpuhp/2
+     29       2     0 S     0.0  0.0     0 idle_inject/2
+     30       2     0 S     0.0  0.0     0 migration/2
+     31       2     0 S     0.0  0.0     0 ksoftirqd/2
+     33       2     0 I<    0.0  0.0     0 kworker/2:0H-kblockd
+     34       2     0 S     0.0  0.0     0 cpuhp/3
+     35       2     0 S     0.0  0.0     0 idle_inject/3
+     36       2     0 S     0.0  0.0     0 migration/3
+     37       2     0 S     0.0  0.0     0 ksoftirqd/3
+     39       2     0 I<    0.0  0.0     0 kworker/3:0H-kblockd
+     40       2     0 S     0.0  0.0     0 cpuhp/4
+     41       2     0 S     0.0  0.0     0 idle_inject/4
+     42       2     0 S     0.0  0.0     0 migration/4
+     43       2     0 S     0.0  0.0     0 ksoftirqd/4
+     45       2     0 I<    0.0  0.0     0 kworker/4:0H-kblockd
+     46       2     0 S     0.0  0.0     0 cpuhp/5
+     47       2     0 S     0.0  0.0     0 idle_inject/5
+     48       2     0 S     0.0  0.0     0 migration/5
+     49       2     0 S     0.0  0.0     0 ksoftirqd/5
+     51       2     0 I<    0.0  0.0     0 kworker/5:0H-kblockd
+     52       2     0 S     0.0  0.0     0 cpuhp/6
+     53       2     0 S     0.0  0.0     0 idle_inject/6
+     54       2     0 S     0.0  0.0     0 migration/6
+     55       2     0 S     0.0  0.0     0 ksoftirqd/6
+     57       2     0 I<    0.0  0.0     0 kworker/6:0H-kblockd
+     58       2     0 S     0.0  0.0     0 cpuhp/7
+     59       2     0 S     0.0  0.0     0 idle_inject/7
+     60       2     0 S     0.0  0.0     0 migration/7
+     61       2     0 S     0.0  0.0     0 ksoftirqd/7
+     63       2     0 I<    0.0  0.0     0 kworker/7:0H-kblockd
+     64       2     0 S     0.0  0.0     0 cpuhp/8
+     65       2     0 S     0.0  0.0     0 idle_inject/8
+     66       2     0 S     0.0  0.0     0 migration/8
+     67       2     0 S     0.0  0.0     0 ksoftirqd/8
+     69       2     0 I<    0.0  0.0     0 kworker/8:0H-kblockd
+     70       2     0 S     0.0  0.0     0 cpuhp/9
+     71       2     0 S     0.0  0.0     0 idle_inject/9
+     72       2     0 S     0.0  0.0     0 migration/9
+     73       2     0 S     0.0  0.0     0 ksoftirqd/9
+     75       2     0 I<    0.0  0.0     0 kworker/9:0H-kblockd
+     76       2     0 S     0.0  0.0     0 cpuhp/10
+     77       2     0 S     0.0  0.0     0 idle_inject/10
+     78       2     0 S     0.0  0.0     0 migration/10
+     79       2     0 S     0.0  0.0     0 ksoftirqd/10
+     81       2     0 I<    0.0  0.0     0 kworker/10:0H-kblockd
+     82       2     0 S     0.0  0.0     0 cpuhp/11
+     83       2     0 S     0.0  0.0     0 idle_inject/11
+     84       2     0 S     0.0  0.0     0 migration/11
+     85       2     0 S     0.0  0.0     0 ksoftirqd/11
+     87       2     0 I<    0.0  0.0     0 kworker/11:0H-kblockd
+     88       2     0 S     0.0  0.0     0 kdevtmpfs
+     89       2     0 I<    0.0  0.0     0 kworker/R-inet_frag_wq
+     90       2     0 I     0.0  0.0     0 rcu_tasks_kthread
+     91       2     0 I     0.0  0.0     0 rcu_tasks_rude_kthread
+     92       2     0 S     0.0  0.0     0 kauditd
+     93       2     0 S     0.0  0.0     0 khungtaskd
+     94       2     0 S     0.0  0.0     0 oom_reaper
+     97       2     0 I<    0.0  0.0     0 kworker/R-writeback
+     98       2     0 S     0.1  0.0     0 kcompactd0
+     99       2     0 SN    0.0  0.0     0 ksmd
+    100       2     0 SN    0.0  0.0     0 khugepaged
+    101       2     0 I<    0.0  0.0     0 kworker/R-kblockd
+    102       2     0 I<    0.0  0.0     0 kworker/R-blkcg_punt_bio
+    103       2     0 I<    0.0  0.0     0 kworker/R-kintegrityd
+    105       2     0 S     0.0  0.0     0 irq/9-acpi
+    110       2     0 I<    0.0  0.0     0 kworker/R-tpm_dev_wq
+    111       2     0 I<    0.0  0.0     0 kworker/R-ata_sff
+    112       2     0 I<    0.0  0.0     0 kworker/R-md_bitmap
+    113       2     0 I<    0.0  0.0     0 kworker/R-md_llbitmap_io
+    114       2     0 I<    0.0  0.0     0 kworker/R-md_llbitmap_unplug
+    115       2     0 I<    0.0  0.0     0 kworker/R-edac-poller
+    116       2     0 I<    0.0  0.0     0 kworker/R-devfreq_wq
+    117       2     0 S     0.0  0.0     0 watchdogd
+    119       2     0 I<    0.0  0.0     0 kworker/R-quota_events_unbound
+    120       2     0 S     0.0  0.0     0 kswapd0
+    121       2     0 S     0.0  0.0     0 ecryptfs-kthread
+    122       2     0 I<    0.0  0.0     0 kworker/R-kthrotld
+    124       2     0 S     0.0  0.0     0 irq/24-aerdrv
+    125       2     0 S     0.0  0.0     0 irq/25-aerdrv
+    126       2     0 S     0.0  0.0     0 irq/26-aerdrv
+    127       2     0 S     0.0  0.0     0 irq/27-aerdrv
+    128       2     0 I<    0.0  0.0     0 kworker/R-acpi_thermal_pm
+    129       2     0 S     0.0  0.0     0 hwrng
+    133       2     0 I<    0.0  0.0     0 kworker/R-mld
+    134       2     0 I<    0.0  0.0     0 kworker/R-ipv6_addrconf
+    135       2     0 I<    0.0  0.0     0 kworker/R-kstrp
+    140       2     0 I<    0.0  0.0     0 kworker/u49:0
+    155       2     0 I<    0.0  0.0     0 kworker/R-charger_manager
+    230       2     0 I<    0.0  0.0     0 kworker/R-nvme-wq
+    231       2     0 I<    0.0  0.0     0 kworker/R-nvme-reset-wq
+    232       2     0 I<    0.0  0.0     0 kworker/R-nvme-delete-wq
+    233       2     0 I<    0.0  0.0     0 kworker/R-nvme-auth-wq
+    258       2     0 I<    0.0  0.0     0 kworker/R-raid5wq
+    518       2     0 I<    0.0  0.0     0 kworker/R-kdmflush/252:0
+    519       2     0 I<    0.0  0.0     0 kworker/R-kcryptd_io-252:0-1
+    520       2     0 I<    0.0  0.0     0 kworker/R-kcryptd-252:0-1
+    521       2     0 S     0.0  0.0     0 dmcrypt_write/252:0
+    528       2     0 I<    0.0  0.0     0 kworker/R-kdmflush/252:1
+    557       2     0 I<    0.0  0.0     0 kworker/R-btrfs-worker
+    558       2     0 I<    0.0  0.0     0 kworker/R-btrfs-delalloc
+    559       2     0 I<    0.0  0.0     0 kworker/R-btrfs-flush_delalloc
+    560       2     0 I<    0.0  0.0     0 kworker/R-btrfs-cache
+    561       2     0 I<    0.0  0.0     0 kworker/R-btrfs-fixup
+    562       2     0 I<    0.0  0.0     0 kworker/R-btrfs-endio
+    563       2     0 I<    0.0  0.0     0 kworker/R-btrfs-endio-meta
+    564       2     0 I<    0.0  0.0     0 kworker/R-btrfs-rmw
+    565       2     0 I<    0.0  0.0     0 kworker/R-btrfs-endio-write
+    566       2     0 I<    0.0  0.0     0 kworker/R-btrfs-freespace-write
+    567       2     0 I<    0.0  0.0     0 kworker/R-btrfs-delayed-meta
+    568       2     0 I<    0.0  0.0     0 kworker/R-btrfs-qgroup-rescan
+    569       2     0 S     0.0  0.0     0 btrfs-cleaner
+    570       2     0 S     0.1  0.0     0 btrfs-transaction
+    592       2     0 I<    0.0  0.0     0 kworker/1:1H-kblockd
+    593       2     0 I<    0.0  0.0     0 kworker/2:1H-kblockd
+    602       2     0 I<    0.0  0.0     0 kworker/8:1H-kblockd
+    604       2     0 I<    0.0  0.0     0 kworker/6:1H-kblockd
+    609       2     0 I<    0.0  0.0     0 kworker/4:1H-kblockd
+    614       2     0 I<    0.0  0.0     0 kworker/5:1H-kblockd
+    621       2     0 I<    0.0  0.0     0 kworker/3:1H-kblockd
+    629       2     0 I<    0.0  0.0     0 kworker/10:1H-kblockd
+    630       2     0 I<    0.0  0.0     0 kworker/0:1H-kblockd
+    636       2     0 I<    0.0  0.0     0 kworker/7:1H-kblockd
+    644       1     0 S<s   0.0  0.1 135576 systemd-journal
+    663       2     0 I<    0.0  0.0     0 kworker/9:1H-kblockd
+    665       2     0 I<    0.0  0.0     0 kworker/11:1H-kblockd
+    708       1     0 Ss    0.0  0.0  7160 systemd-udevd
+    713       2     0 S     0.0  0.0     0 psimon
+    776       2     0 I<    0.0  0.0     0 kworker/R-ext4-rsv-conversion
+    858       2     0 I<    0.0  0.0     0 kworker/R-cfg80211
+    860       2     0 S     0.0  0.0     0 irq/64-mei_me
+    887       2     0 S     0.0  0.0     0 jbd2/nvme1n1p2-8
+    888       2     0 I<    0.0  0.0     0 kworker/R-ext4-rsv-conversion
+    925       1   998 Ss    0.0  0.0 10268 systemd-network
+   1091       2     0 S     0.0  0.0     0 nv_queue
+   1092       2     0 S     0.0  0.0     0 nv_queue
+   1093       2     0 S     0.0  0.0     0 nv_open_q
+   1096       2     0 S     0.0  0.0     0 nvidia-modeset/kthread_q
+   1097       2     0 S     0.0  0.0     0 nvidia-modeset/deferred_close_kthread_q
+   1099       2     0 S     0.0  0.0     0 irq/66-nvidia
+   1100       2     0 S     0.0  0.0     0 nvidia
+   1101       2     0 S     0.0  0.0     0 nv_queue
+   1210       2     0 S     0.0  0.0     0 UVM global queue
+   1211       2     0 S     0.0  0.0     0 UVM deferred release queue
+   1212       2     0 S     0.0  0.0     0 UVM Tools Event Queue
+   1223       1   985 Ss    0.2  0.0  3724 systemd-oomd
+   1224       1   992 Ss    0.0  0.0  9232 systemd-resolve
+   1230       1   107 Ss    0.0  0.0  2140 avahi-daemon
+   1231       1   101 Ss    0.1  0.0  7100 dbus-daemon
+   1238       1     0 Ss    0.0  0.0 15396 networkd-dispat
+   1241       1   991 Ssl   0.0  0.0 10816 polkitd
+   1242       1     0 Ssl   0.0  0.0   824 power-profiles-
+   1244       1     0 Ss    0.0  0.0  5608 sssd
+   1245       1     0 Ssl   0.0  0.0   568 switcheroo-cont
+   1251       1     0 Ssl   0.0  0.0  9704 udisksd
+   1259    1230   107 S     0.0  0.0   372 avahi-daemon
+   1297       1     0 Ssl   0.0  0.0 22168 NetworkManager
+   1299       1     0 Ssl   0.0  0.0  3276 wpa_supplicant
+   1313       1   112 Ssl   0.0  0.0  3912 rsyslogd
+   1332       1     0 Ssl   0.0  0.0  6576 ModemManager
+   1333       1     0 Ssl   0.0  0.0  3176 boltd
+   1360    1244     0 S     0.0  0.0 15508 sssd_be
+   1381    1244     0 S     0.0  0.0  4104 sssd_pac
+   1384       1     0 Ssl   0.0  0.0  5608 accounts-daemon
+   1388       1     0 S     0.0  0.0  2020 cron
+   1389       1     0 Ss    0.0  0.0  5656 systemd-logind
+   1414       1     0 Ss    0.0  0.0  7396 sssd_nss
+   1449    1388  1000 Ss    0.0  0.0   108 sh
+   1451    1449  1000 S     0.0  0.0  2928 bash
+   1452       1  1000 S     0.0  0.0  3616 bash
+   1453       1  1000 S     0.0  0.0  3616 bash
+   1571       1     0 Ssl   0.0  0.0  9420 unattended-upgr
+   1579       1  1000 Ss    0.0  0.0  8536 systemd
+   1608    1579  1000 S     0.0  0.0  2600 (sd-pam)
+   1615       1     0 Ssl   0.0  0.0  5060 gdm3
+   1650    1579  1000 Ssl   0.0  0.0 12272 pipewire
+   1652    1579  1000 Ssl   0.0  0.0   900 pipewire
+   1653    1579  1000 Ssl   0.0  0.0 14488 wireplumber
+   1654    1579  1000 Ssl   0.0  0.0 18516 pipewire-pulse
+   1655    1579  1000 Ssl   0.0  0.0 14756 MainThread
+   1657    1579  1000 Ss    0.0  0.0  6244 dbus-daemon
+   1679       1   102 SNsl  0.0  0.0  2516 rtkit-daemon
+   1791       1   123 Ssl   0.0  0.0  4976 colord
+   1842       1     0 Ssl   0.0  0.0  5372 upowerd
+   1979       1     0 Ssl   0.0  0.0  6180 pcscd
+   2149    1615     0 Sl    0.0  0.0  8628 gdm-session-wor
+   2157    1579  1000 SLsl  0.0  0.0 21712 gnome-keyring-d
+   2178    2149  1000 Ssl+  0.0  0.0  3392 gdm-x-session
+   2180    2178  1000 Sl+   0.5  0.0 75876 Xorg
+   2198       2     0 S     0.0  0.0     0 nvidia-drm/timeline-9
+   2208    2178  1000 Sl+   0.0  0.0  1940 gnome-session-b
+   2314    1579  1000 Ssl   0.0  0.0  3828 at-spi-bus-laun
+   2321    2314  1000 S     0.0  0.0  2932 dbus-daemon
+   2327    1579  1000 Ssl   0.0  0.0   704 gcr-ssh-agent
+   2328    1579  1000 Ssl   0.0  0.0   476 gnome-session-c
+   2342    1579  1000 Ssl   0.0  0.0  4996 gvfsd
+   2350    1579  1000 Sl    0.0  0.0  3996 gvfsd-fuse
+   2353    1579  1000 Ssl   0.0  0.0  7228 gnome-session-b
+   2385    1579  1000 Ssl   1.0  0.4 623016 gnome-shell
+   2421       2     0 S     0.0  0.0     0 nvidia-drm/timeline-b
+   2422    2385  1000 Sl    0.0  0.0 56652 mutter-x11-fram
+   2425    1579  1000 Sl    0.0  0.0  4652 at-spi2-registr
+   2449    1579  1000 Ssl   0.0  0.0  3756 xdg-permission-
+   2451    1579  1000 Sl    0.0  0.0  7060 gnome-shell-cal
+   2463    1579  1000 Ssl   0.0  0.0 11196 evolution-sourc
+   2478    1579  1000 Sl    0.0  0.0 18432 gjs
+   2502    1579  1000 Ssl   0.0  0.0  3724 gsd-a11y-settin
+   2505    1579  1000 Ssl   0.0  0.0 12128 gsd-color
+   2507    1579  1000 Ssl   0.0  0.0  4364 gsd-datetime
+   2510    1579  1000 Ssl   0.0  0.0  5204 gsd-housekeepin
+   2519    1579  1000 Ssl   0.0  0.0 11380 gsd-keyboard
+   2520    1579  1000 Ssl   0.0  0.0 13776 gsd-media-keys
+   2523    1579  1000 Ssl   0.0  0.0 12948 gsd-power
+   2526    1579  1000 Ssl   0.0  0.0  5180 gsd-print-notif
+   2528    1579  1000 Ssl   0.0  0.0  3784 gsd-rfkill
+   2530    1579  1000 Ssl   0.0  0.0  3588 gsd-screensaver
+   2531    1579  1000 Ssl   0.0  0.0  5384 gsd-sharing
+   2536    1579  1000 Ssl   0.0  0.0  5072 gsd-smartcard
+   2537    1579  1000 Ssl   0.0  0.0  4268 gsd-sound
+   2545    1579  1000 Ssl   0.0  0.0 12184 gsd-wacom
+   2553    1579  1000 Ssl   0.0  0.0 12680 gsd-xsettings
+   2572    2353  1000 Sl    0.0  0.0  4584 gsd-disk-utilit
+   2580    2353  1000 Sl    0.0  0.0 22592 evolution-alarm
+   2587    1579  1000 Ssl   0.0  0.0  6096 gvfs-udisks2-vo
+   2611    1579  1000 Sl    0.0  0.0 12648 goa-daemon
+   2697    1579  1000 Sl    0.0  0.0  4392 goa-identity-se
+   2703    1579  1000 Ssl   0.0  0.0 11732 evolution-calen
+   2734    1579  1000 Ssl   0.0  0.0 13344 evolution-addre
+   2740    1579  1000 Ssl   0.0  0.0  3752 gvfs-mtp-volume
+   2748    1579  1000 Ssl   0.0  0.0  3976 gvfs-gphoto2-vo
+   2765    1579  1000 Ssl   0.0  0.0  3676 gvfs-goa-volume
+   2773    1579  1000 Ssl   0.0  0.0  3916 gvfs-afc-volume
+   2784    1579  1000 Sl    0.0  0.0 18452 gjs
+   2802    1579  1000 SNsl  0.0  0.0 35560 tracker-miner-f
+   2849    1579  1000 Ssl   0.0  0.0  3872 dconf-service
+   2860    1579  1000 Sl    0.0  0.0  5624 gsd-printer
+   3229    2342  1000 Sl    0.0  0.0  4672 gvfsd-trash
+   3245    1579  1000 Ssl   0.0  0.0 15108 xdg-desktop-por
+   3251    1579  1000 Ssl   0.0  0.0  4536 xdg-document-po
+   3257    3251     0 Ss    0.0  0.0   128 fusermount3
+   3262    1579  1000 Ssl   0.0  0.0 34240 xdg-desktop-por
+   3276    1579  1000 Ssl   0.0  0.0 12344 xdg-desktop-por
+   3548       1     0 Ssl   0.0  0.0  1536 intune-daemon
+   3549       1   988 Ssl   0.2  4.0 5333624 java
+   3553       1     1 Ssl   0.2  0.0 13720 CmWebAdmin
+   3554       1     1 Ssl   4.8  0.0 56640 CodeMeterLin
+   3588       1     0 Ssl   0.0  0.0 28020 containerd
+   4019    1579  1000 Ssl  28.1  0.8 1131920 ghostty
+   4125       2     0 S     0.0  0.0     0 nvidia-drm/timeline-10
+   4963    1579  1000 Ssl   0.0  0.0  3844 gvfsd-metadata
+   4971    2353  1000 Sl    0.0  0.0 21816 update-notifier
+   6765       1     0 Ssl   0.0  0.0 103488 puppet
+   6768       1   115 Ss    0.0  0.0  1560 kerneloops
+   6777       1   115 Ss    0.0  0.0  1652 kerneloops
+   7181       2     0 I<    0.0  0.0     0 kworker/R-tls-strp
+  11830    1579  1000 Ssl   0.5  1.2 1603548 java
+  11916       2     0 S     0.0  0.0     0 nvidia-drm/timeline-15
+  23988    1579  1000 Sl    0.0  0.1 142248 fcitx5
+  28598       1     0 Ssl   2.1  0.1 184632 wdavdaemon
+  28784   28598     0 Sl    1.2  0.0 104728 wdavdaemon
+  30677       1     0 Ssl   0.0  0.0 47100 dockerd
+ 121555    2342  1000 Sl    0.0  0.0  4840 gvfsd-recent
+ 144655       1     0 Sl    0.0  0.0  7436 containerd-shim
+ 144678  144655   999 Ss    0.0  0.0 15832 postgres
+ 144717  144678   999 Ss    0.0  0.0 70632 postgres
+ 144718  144678   999 Ss    0.0  0.0  9956 postgres
+ 144720  144678   999 Ss    0.0  0.0  8040 postgres
+ 144721  144678   999 Ss    0.0  0.0  6448 postgres
+ 144722  144678   999 Ss    0.0  0.0  5716 postgres
+ 345740       1   106 S     0.0  0.0  2172 chronyd
+ 345741  345740   106 S     0.0  0.0   652 chronyd
+ 436829    1579  1000 Ss    0.2  0.0 29420 python3
+1444621       2     0 I     0.0  0.0     0 kworker/6:0-mm_percpu_wq
+1451134    2157  1000 S     0.0  0.0   860 ssh-agent
+1638574    4019  1000 Ss    0.0  0.0   108 sh
+1638576 1638574  1000 S     0.0  0.0  8192 zsh
+1693352    2342  1000 Sl    0.0  0.0  4404 gvfsd-network
+1693360    2342  1000 Sl    0.0  0.0  4508 gvfsd-dnssd
+1868586    1579  1000 Sl    0.0  0.0 98472 nautilus
+1868685       2     0 S     0.0  0.0     0 nvidia-drm/timeline-30
+2240041       2     0 I     0.0  0.0     0 kworker/7:1-events
+2246192       2     0 I     0.0  0.0     0 kworker/5:3-events
+2373170    2342  1000 Sl    0.0  0.0  9828 gvfsd-http
+2650365    1579  1000 S     0.0  0.0  2076 bash
+2650367 2650365  1000 Ss    0.0  0.0  3588 bash
+2650404    1579  1000 S     0.0  0.0  2076 bash
+2650406 2650404  1000 Ss    0.0  0.0  3680 bash
+2659619       1     0 Ss    0.0  0.0 12976 cupsd
+2659621       2     0 I     0.0  0.0     0 kworker/11:3-mm_percpu_wq
+2693093       2     0 I     0.0  0.0     0 kworker/3:2-events
+2856168       2     0 S     0.0  0.0     0 psimon
+2857748   28598   996 Sl    6.9  0.2 270464 wdavdaemon
+2874988       2     0 I     0.0  0.0     0 kworker/2:1-mm_percpu_wq
+2887502       2     0 I     0.0  0.0     0 kworker/9:2-mm_percpu_wq
+2943309       2     0 I     0.0  0.0     0 kworker/1:2-cgroup_free
+2960739       2     0 I     0.0  0.0     0 kworker/8:2-mm_percpu_wq
+2968035       1     0 Ssl   0.0  0.0 27552 zsaservice
+2968079       1     0 Ssl   2.1  0.1 194176 zstunnel
+2968233    1579  1000 Ssl   1.2  0.2 296616 ZSTray
+2968307       2     0 S     0.0  0.0     0 nvidia-drm/timeline-33
+2968310 2968233  1000 S     0.0  0.0 56084 QtWebEngineProc
+2968311 2968233  1000 S     0.0  0.0 56372 QtWebEngineProc
+2968313 2968311  1000 S     0.0  0.0 12992 QtWebEngineProc
+2968373 2968233  1000 Sl    0.0  0.0  5920 dconf
+2968384 2968313  1000 Sl    0.0  0.0 73640 QtWebEngineProc
+3094452       2     0 I     0.0  0.0     0 kworker/u48:18-btrfs-endio
+3095472 1638576  1000 Sl+   2.6  0.2 392172 pi
+3101658       1     0 Ss    0.0  0.0  2824 cron
+3101664       1     0 Ssl   0.0  0.0 48000 fwupd
+3101666       1   120 Ssl   0.0  0.0 20752 cups-browsed
+3101669       2     0 I     0.0  0.0     0 kworker/4:3-mm_percpu_wq
+3106002       2     0 I     0.0  0.0     0 kworker/10:0-mm_percpu_wq
+3135192       2     0 I     0.0  0.0     0 kworker/u48:1-btrfs-endio-write
+3185173       2     0 I     0.0  0.0     0 kworker/u48:4-btrfs-endio-write
+3193797       2     0 I     0.0  0.0     0 kworker/0:2-events
+3220914       2     0 I     0.0  0.0     0 kworker/u48:10-writeback
+3235732    4019  1000 Ss    0.0  0.0  1972 sh
+3235734 3235732  1000 S     0.0  0.0  9552 zsh
+3236770       2     0 I     0.1  0.0     0 kworker/u48:23-flush-btrfs-1
+3238181       2     0 I     0.0  0.0     0 kworker/u48:29-btrfs-endio-write
+3240048    1452  1000 Sl    0.0  0.0 105264 npm exec screen
+3240109 3240048  1000 S     0.0  0.0  1980 sh
+3240111 3240109  1000 Sl    0.0  0.0 60604 MainThread
+3240145 3240111  1000 Sl    0.5  0.1 157560 screenpipe
+3240469 3235734  1000 Sl+   5.4  0.3 407436 pi
+3252461       2     0 I     0.0  0.0     0 kworker/u48:2-btrfs-endio-meta
+3254883       2     0 I     0.0  0.0     0 kworker/u48:0-btrfs-endio-meta
+3258053       2     0 I     0.0  0.0     0 kworker/u48:5-btrfs-endio-meta
+3259353       2     0 I     0.0  0.0     0 kworker/u48:6-kcryptd-252:0-1
+3262703       2     0 I     0.0  0.0     0 kworker/9:1-cgroup_free
+3262850       2     0 I     0.0  0.0     0 kworker/1:0-mm_percpu_wq
+3263021       2     0 I     0.0  0.0     0 kworker/7:2-events
+3263951       2     0 I     0.0  0.0     0 kworker/6:2-cgroup_free
+3265280       2     0 I     0.0  0.0     0 kworker/4:1-cgroup_free
+3266300       2     0 I     0.0  0.0     0 kworker/0:1-cgroup_free
+3266563       2     0 I     0.0  0.0     0 kworker/10:2-cgroup_free
+3266754       2     0 S     0.0  0.0     0 vidmem lazy free
+3266755       2     0 S     0.0  0.0     0 UVM GPU1 BH
+3266756       2     0 S     0.0  0.0     0 UVM GPU1 KC
+3266780 2650367  1000 Sl    100  1.6 2161636 python3
+3266824       2     0 I     0.0  0.0     0 kworker/5:1-cgroup_free
+3266927       2     0 I     0.0  0.0     0 kworker/11:0-cgroup_free
+3267270       2     0 I     0.0  0.0     0 kworker/2:2-cgroup_free
+3267715       2     0 I     0.0  0.0     0 kworker/3:0-cgroup_free
+3268155       2     0 I     0.0  0.0     0 kworker/u48:3-flush-btrfs-1
+3268230       2     0 I     0.0  0.0     0 kworker/8:1-cgroup_free
+3268472       2     0 I     0.0  0.0     0 kworker/9:0-cgroup_free
+3268640       2     0 I     0.0  0.0     0 kworker/6:1-events_freezable
+3268885       2     0 I     0.0  0.0     0 kworker/7:0-cgroup_free
+3269087    1579  1000 S     0.0  0.0  1704 xsel
+3269407       2     0 I     0.0  0.0     0 kworker/4:0-cgroup_free
+3269451       2     0 I     0.0  0.0     0 kworker/10:1-cgroup_free
+3269456       2     0 I     0.0  0.0     0 kworker/0:0-cgroup_free
+3269475 3240469  1000 Ssl   9.1  0.1 219220 MainThread
+3269901       2     0 I     0.0  0.0     0 kworker/5:0-cgroup_free
+3269940    1451  1000 S     0.0  0.0  1968 sleep
+3269989    1453  1000 Sl    1.7  0.1 161696 npm exec wechat
+3270016 3269989  1000 S     0.0  0.0  1980 sh
+3270017 3270016  1000 Sl    1.4  0.1 148612 MainThread
+3270093       2     0 I     0.0  0.0     0 kworker/2:0
+3270164       2     0 I     0.0  0.0     0 kworker/11:1
+3270286       2     0 I     0.0  0.0     0 kworker/1:1
+3270379    4019  1000 Ss    0.3  0.0  1980 sh
+3270381 3270379  1000 S+    0.9  0.0  8184 zsh
+3270419    2802  1000 SNl   0.4  0.0 30140 tracker-extract
+3270430 2650406  1000 Sl   34.3  0.5 715552 python3
+3270455 3269475  1000 Ss    0.0  0.0  3556 bash
+3270459 3270455  1000 S     0.0  0.0  2044 timeout
+3270460 3270459  1000 R     0.0  0.0  4556 ps
+3440638    1579  1000 SLsl  0.0  0.0 26436 intune-agent
+3674924       1   983 Ssl   0.0  0.0  2540 gnome-remote-de
+3778951       1  1000 Ss    0.0  0.0  3172 ssh
+exit_status=0

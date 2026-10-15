@@ -1,0 +1,11 @@
+# Remote coordination
+
+Trigger: user-requested remote coordination or discovery of an external writer sharing state. Stop competing writes immediately on discovery. A configured remote alone is not a trigger; isolated local workers use the execution rules. Main routes ownership/status; an assigned worker performs shared-state operations within granted authority.
+
+- **Ownership:** identify the existing shared record and synchronization method before claiming work. Claim exclusive ownership against fresh shared state; begin implementation/handoff writes only after the claim succeeds. A local file edit alone is not a lock. If no reliable record/agreement exists, avoid competing writes and record the infrastructure blocker. A stale owner's work requires an authorized recorded transition, not takeover by assumption.
+- **Isolation and handoff:** use separate branches/worktrees. Make authorized shared tracker changes from a clean checkout without disturbing implementation state. A durable handoff names owner, revision, completed evidence, remaining work, blocker, and next action, then releases ownership. Coordinate through shared records and minimal status/artifact signals, not agent conversation dumps.
+- **Races and publication:** refresh and inspect shared changes at ownership transitions and before authorized publication. Use normal fast-forward/push, never force-push shared state. On rejection, refresh and compare ownership/touched files; resolve the race before retrying, not blind retry or sleep. Technical acceptance alone is not publication authority.
+- **Observation:** prefer supported notifications; otherwise use bounded checks at transitions while coordination is active. Every wait needs a deadline and observable state change. Do not poll a remote merely because it exists.
+- **Allocation:** if the project has shared numeric ticket IDs, allocate from current shared state and check collisions before publication. Reuse native ownership/status conventions instead of inventing a tracker.
+
+Exit after shared state is synchronized and ownership released; return to local mode only when no external handoff remains. No workspace-specific document is required for coordination.

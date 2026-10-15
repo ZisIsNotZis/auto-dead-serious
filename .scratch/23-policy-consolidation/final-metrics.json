@@ -1,0 +1,44 @@
+{
+  "AGENTS.md": {
+    "sha256": "19c6c4995f84bc67a941d2ca6b14a3364622e2e819f3cd51f56ba32730e98dcc",
+    "bytes": 5408,
+    "characters": 5402,
+    "words": 633,
+    "lines": 37
+  },
+  "docs/policy/execution.md": {
+    "sha256": "d84d0b448f2879cf5fd9423b4bb91a2e2ad2a011d725e76cf4e9042dd5c31bde",
+    "bytes": 9859,
+    "characters": 9859,
+    "words": 1233,
+    "lines": 46
+  },
+  "README.md": {
+    "sha256": "d2fa93c1ec04f5cbef1da361c19eb514f990f9b48c95fa71810a31ca23559f85",
+    "bytes": 3383,
+    "characters": 3351,
+    "words": 417,
+    "lines": 80
+  },
+  "WORKSPACE.md": {
+    "sha256": "6fc8dfef2ffd90abbba154e68e43a9348efe554cde40f5fc6857aa30f4939d55",
+    "bytes": 890,
+    "characters": 890,
+    "words": 131,
+    "lines": 26
+  },
+  "core": {
+    "bytes": 5408,
+    "characters": 5402,
+    "words": 633,
+    "lines": 37,
+    "files": 1
+  },
+  "package": {
+    "bytes": 15267,
+    "characters": 15261,
+    "words": 1866,
+    "lines": 83,
+    "files": 2
+  }
+}

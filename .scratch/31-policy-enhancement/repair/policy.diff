@@ -1,0 +1,11 @@
+--- .scratch/31-policy-enhancement/repair/before/AGENTS.yaml
++++ AGENTS.yaml
+@@ -208,7 +208,7 @@
+     bounded_calibration:
+       _text: When resource estimates are unknown, run one conservatively bounded representative instance, measure peaks and internal parallelism, and revise the request with margin before multiplying it. If a safe bound cannot be established, queue or report the missing capacity/control rather than fabricate an estimate. @absent
+     advisory_limits:
+-      _text: Where coordinated admission or runtime controls are unavailable, state exactly which limits are advisory and restrict launch to a conservative bounded instance with calibration, monitoring and a stop/queue route; require coordinated admission before scaling. Do not label advisory caps enforced or compensate for missing controls by silently escaping them. @bounded_calibration @runtime_binding
++      _text: Where coordinated admission or runtime controls are unavailable, state exactly which limits are advisory. Before even the first advisory calibration or heavy launch, establish and record observable machine-wide exclusivity under one identifiable owner or an already-authorized exclusive-use mechanism; if exclusivity cannot be established, queue or report the coordination blocker and do not launch. A requester-local one-instance limit is insufficient. Under that exclusivity, restrict launch to one conservative bounded instance with calibration, monitoring and a stop/queue route; require coordinated admission before scaling. Do not label advisory caps enforced or compensate for missing controls by silently escaping them. @bounded_calibration @runtime_binding
+   effort:
+     _text: Reasoning is the scarcest budget of all, so it is allocated before the work rather than discovered during it.
+     earned_budget:

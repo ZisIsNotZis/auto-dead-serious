@@ -1,0 +1,22 @@
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/ticket.md
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/audit.md
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/evidence/package-output-sha256.txt
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/evidence/repair-package-initial-sha256-check.txt
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/evidence/repair-package-first-final-sha256-check.txt
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/evidence/repair-package-final-sha256-check.txt
+result: passed (exit 1; no whitespace diagnostics)
+
+$ git diff --no-index --check /dev/null .scratch/32-git-hygiene/evidence/repair-package-scope-check.txt
+result: passed (exit 1; no whitespace diagnostics)
+
+summary: all scoped work-record artifacts passed

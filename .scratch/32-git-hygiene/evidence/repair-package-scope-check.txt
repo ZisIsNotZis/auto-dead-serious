@@ -1,0 +1,41 @@
+$ git diff --cached --quiet -- .scratch/32-git-hygiene
+exit status: 0 (0 means no staged work-record paths)
+
+$ git status --short --untracked-files=all -- .scratch/32-git-hygiene
+?? .scratch/32-git-hygiene/audit.md
+?? .scratch/32-git-hygiene/audit_repos.py
+?? .scratch/32-git-hygiene/evidence/credential-scanner-availability.txt
+?? .scratch/32-git-hygiene/evidence/diff-check-log-self-check.txt
+?? .scratch/32-git-hygiene/evidence/diff-check-probe.txt
+?? .scratch/32-git-hygiene/evidence/final-diff-check.txt
+?? .scratch/32-git-hygiene/evidence/git-discovery.stderr
+?? .scratch/32-git-hygiene/evidence/git-markers.jsonl
+?? .scratch/32-git-hygiene/evidence/git-markers.nul
+?? .scratch/32-git-hygiene/evidence/index-check.txt
+?? .scratch/32-git-hygiene/evidence/manifest-validation.txt
+?? .scratch/32-git-hygiene/evidence/package-output-sha256.txt
+?? .scratch/32-git-hygiene/evidence/remote-only-summary.json
+?? .scratch/32-git-hygiene/evidence/remote-only.jsonl
+?? .scratch/32-git-hygiene/evidence/repair-package-diff-check.txt
+?? .scratch/32-git-hygiene/evidence/repair-package-final-sha256-check.txt
+?? .scratch/32-git-hygiene/evidence/repair-package-first-final-sha256-check.txt
+?? .scratch/32-git-hygiene/evidence/repair-package-initial-sha256-check.txt
+?? .scratch/32-git-hygiene/evidence/repair-package-scope-check.txt
+?? .scratch/32-git-hygiene/evidence/repo-metadata-errors.txt
+?? .scratch/32-git-hygiene/evidence/repo-metadata-run.txt
+?? .scratch/32-git-hygiene/evidence/repo-metadata.jsonl
+?? .scratch/32-git-hygiene/evidence/repo-metadata.stderr
+?? .scratch/32-git-hygiene/evidence/root-head.stderr
+?? .scratch/32-git-hygiene/evidence/root-head.txt
+?? .scratch/32-git-hygiene/evidence/root-status-summary.json
+?? .scratch/32-git-hygiene/evidence/root-status.stderr
+?? .scratch/32-git-hygiene/evidence/root-status.txt
+?? .scratch/32-git-hygiene/evidence/ticket-diff-check.raw
+?? .scratch/32-git-hygiene/evidence/ticket-diff-check.txt
+?? .scratch/32-git-hygiene/evidence/work-record-diff-check-final.txt
+?? .scratch/32-git-hygiene/evidence/work-record-diff-check.txt
+?? .scratch/32-git-hygiene/manifest.md
+?? .scratch/32-git-hygiene/remote_inventory.py
+?? .scratch/32-git-hygiene/render_blocked_audit.py
+?? .scratch/32-git-hygiene/ticket.md
+exit status: 0

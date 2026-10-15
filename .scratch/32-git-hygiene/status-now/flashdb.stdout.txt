@@ -1,0 +1,15 @@
+# branch.oid 7d40cdb55ed94182f8c105859f854cca135d1815
+# branch.head master
+! .pi/settings.json
+! .pi/tasks/01a0a53e-e275-71a1-acf7-f852270cff6f-6637/bd03ff8dd.json
+! .pi/tasks/01a0a53e-e275-71a1-acf7-f852270cff6f-6637/bd03ff8dd.output
+! .pi/tasks/session-501405-501405/
+! .scratch/05-engine-v0/evidence/0a-redo/run.log
+! .scratch/44-first-trustworthy-curve/attempt1-default-cadence-abort/run.log
+! .scratch/44-first-trustworthy-curve/run.log
+! harness/.pytest_cache/
+! harness/.venv/
+! harness/__pycache__/
+! harness/flashdb_harness/__pycache__/
+! harness/tests/__pycache__/
+! target/

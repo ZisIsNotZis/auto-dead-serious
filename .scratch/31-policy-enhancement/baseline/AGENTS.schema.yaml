@@ -1,0 +1,20 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "policy@5"
+title: Policy SSOT schema
+description: Every node is an object carrying its own line under _text, so a node can take new fields later without reshaping. Keys are snake_case, globally unique and space-free, and the file is English; a trailing * marks a key that is not rendered and is never written to AGENTS.md. A secondary cause appears inline as @key, which is rendered as written and must resolve to a key that is.
+type: object
+minProperties: 1
+additionalProperties:
+  $ref: "#/$defs/node"
+$defs:
+  node:
+    type: object
+    required: [_text]
+    properties:
+      _text:
+        type: string
+        minLength: 1
+    patternProperties:
+      "^[a-z][a-z0-9_]*\\*?$":
+        $ref: "#/$defs/node"
+    additionalProperties: false
