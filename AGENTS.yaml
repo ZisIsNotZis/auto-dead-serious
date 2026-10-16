@@ -4,7 +4,7 @@
 laws:
   _text: The root. Each node here is a law, and the branches after this one are the expansion of the laws rather than their siblings.
   ssot:
-    _text: 'Single source of truth: every fact has exactly one home, decided by the decision it serves, and a home holds exactly one fact. Which parts hold only the present - the docs, the code and their schemas; the work record, scratch and temp lie outside it, where the past is the point, so dated, append-only and chronological is right there, and that is where tickets, logs and evidence live.'
+    _text: 'Single source of truth: every fact has exactly one home, decided by the decision it serves, and a home holds exactly one fact. Which parts hold only the present - the docs and the code; the work record, scratch and temp lie outside it, where the past is the point, so dated, append-only and chronological is right there, and that is where tickets, logs and evidence live.'
     partition:
       _text: A sibling set is the values of one field, and the values are of one kind, so a home is decided rather than chosen.
     atomic:
@@ -322,11 +322,11 @@ change:
   entries:
     _text: 'What is written is written to be read: one entry, one line, one thing said.'
     fact_record:
-      _text: Each fact carries its own coordinates so a conflict can be judged without guessing - from, the id of the fact it derives from, which closes the chain; author, being user, agent, measurement or third-party; origin, the occasion it was said or derived in; scope, being general or specific; status, being current, provisional or disputed; evidence; and producer, for a derived fact, the script or query that yields it.
+      _text: Each fact carries its own coordinates so a conflict can be judged without guessing - from, the fact it derives from, which closes the chain; author, being user, agent, measurement or third-party; origin, the occasion it was said or derived in; scope, being general or specific; status, being current, provisional or disputed; evidence; and producer, for a derived fact, the script or query that yields it.
     fact_provenance:
       _text: Mark the confirmation status of what you record about the user, and take the other coordinates from @fact_record. Never promote inference to confirmation and never stereotype.
     split_authorship:
-      _text: Write the user's sentence as one fact and your conclusion from it as another, with from pointing at the first. Mixed authorship then cannot exist, and every inference is visible in the file.
+      _text: Write the user's sentence as one fact and your conclusion from it as another, the second pointing at the first. Mixed authorship then cannot exist, and every inference is visible in the file.
     no_mood_labels:
       _text: 'Record the occasion and the evidence, never a psychological label: weight is derived at judgement time, never stored.'
     citation:
@@ -338,7 +338,7 @@ change:
     retraction:
       _text: 'A retraction is a current fact rather than history: the claim is recorded as withdrawn together with the reason it died, because that reason is the only thing that stops the same mistake returning. @current_fact'
     people:
-      _text: PEOPLE.yaml beside this policy holds the one user as facts of the same shape - his wording, his preferences, his knowledge range and what he cares about. It is the only cross-layer memory. It is a store, validated against AGENTS.schema.yaml.
+      _text: PEOPLE.md beside this policy holds the one user as facts of the same shape - his wording, his preferences, his knowledge range and what he cares about. It is the only cross-layer memory, and it is authored Markdown like every other document here.
     defined_terms:
       _text: 'Define a term only when the reader cannot resolve it from what they already hold: a universal word or a common abbreviation is left alone, and redefining what everyone knows is noise, not rigour.'
     no_manual_wrap:
@@ -350,45 +350,37 @@ change:
     layout:
       _text: 'The chain is also the folder layout - one folder per layer under docs/, and a file inside a layer only when that layer is cut by a key every fact in it has exactly one value of. @layer_and_source The set sits where the work happens rather than at a fixed root: a node that only holds other work, like a repository of projects, carries little or none of its own, and every node that does the work carries its own.'
     files:
-      _text: The whole set is this policy in AGENTS.yaml with its render AGENTS.md and its schemas AGENTS.schema.yaml and AGENTS.docs.schema.yaml, PEOPLE.yaml beside them, the layer folders under docs/, and the tickets in a work record that defaults to .scratch/ with one folder per effort. A node that only holds other work carries little of that set itself, and the parts a given node does not do yet are simply absent there rather than owed.
+      _text: The whole set is this policy in AGENTS.yaml with its render AGENTS.md, PEOPLE.md beside them, the layer folders under docs/, and the tickets in a work record that defaults to .scratch/ with one folder per effort. A node that only holds other work carries little of that set itself, and the parts a given node does not do yet are simply absent there rather than owed.
     file_shape:
-      _text: A layer file is a YAML mapping from fact id to fact, so a fact is addressable, is rewritten in place and never moves. An id is unique inside its file and is written file-qualified, as pain.d3, when another layer points at it.
+      _text: A layer document is Markdown, so a fact is addressable by its heading, is rewritten in place and never moves. A fact is cited by its path and heading when another layer points at it.
     layer_and_source:
       _text: Every fact lives in its layer's file, so its layer is never written twice, and no fact exists without a source.
-    field_admission:
-      _text: One name per thing, with type, requiredness and meaning; every enum value documented; producer and consumer marked; anything derivable is not stored separately.
     granularity:
       _text: "Cover concepts top-down and merge near concepts; each child specializes its parent's subject, with cross-references only where another home contributes. A node is one independently actionable point; keep its definition, rule and caveat together. Split only when it reduces decision ambiguity, and reject catch-all homes such as notes, other or misc. @no_op"
     file_kind:
-      _text: Every file says what it is - a render, which is fully generated and never hand-edited; an authored document, whose judgement and voice are the author's while its facts are injected and never invented; a store, which is machine-readable and carries a schema; or a router, which holds no fact of its own and only points at the file that owns each one. The kinds are never mixed.
-    forward_compatible:
-      _text: Leave room to grow. A node whose subject may later need sibling fields keeps its text in a field rather than a bare scalar, so new fields can be added without reshaping anything.
+      _text: Every file says what it is - a render, which is fully generated and never hand-edited; an authored document, whose judgement and voice are the author's while its facts are injected and never invented; or a router, which holds no fact of its own and only points at the file that owns each one. The kinds are never mixed.
     stereotype:
-      _text: A file pattern is a stereotype, not a schema. A layer file, a store, a router and a render are four kinds, and within a kind a project takes the pattern that fits its domain rather than stretching one pattern over every file. The catalogue of patterns is ours; a project instantiates one and refines it.
+      _text: A file pattern is a stereotype. A layer document, a router and a render are three kinds, and within a kind a project takes the pattern that fits its domain rather than stretching one pattern over every file. The catalogue of patterns is ours; a project instantiates one and refines it.
     rollup:
-      _text: 'A roll-up is computed across doc sets, never gathered by reading them one at a time, and that is what the standard is for: the same layer names, fact ids and field names everywhere, so the same question answered in two nodes can be joined. A hand-written summary of other nodes is a second home.'
+      _text: 'A roll-up is computed across doc sets, never gathered by reading them one at a time, and that is what the standard is for: the same layer names and headings everywhere, so the same question answered in two nodes can be joined. A hand-written summary of other nodes is a second home.'
   upkeep:
     _text: The record is true because a check says so, not because someone wrote it down.
-    schema:
-      _text: 'Each doc set is validated against a schema, by a check that runs with the work rather than apart from it, the way this policy uses AGENTS.schema.yaml, and a data store is checked the same way. A document that fails validation does not exist. The schema is owned here rather than by the project it governs: a project patches the standard, naming the version it extends, and may add fields while never loosening or redefining one, because a schema its own subject can edit at will constrains nothing. A project refines rather than replaces: a coarse field may become a structure, but it keeps its name and keeps its text, so a fact always has somewhere to go and nothing is homeless. The check for a refinement is mechanical - where the standard says a string, the refinement is an object carrying that same string under _text. A departure from the standard is itself a fact, written in the layer that owns its subject, with the reason it departs. A schema is more specific than the policy and holds facts the policy does not, so it is the store of shape rather than something rendered out of the text: the policy says what a fact is, and the schema fixes the fields and the values they may take. Neither restates the other, and the vocabulary they share is single-homed by reference.'
     checklist:
       _text: "The questions this document must answer, each pointing at its rule: one home? @ssot Real tree and auditable moves? @projection Consequential trigger and action? @no_op Able to distinguish failure? @falsifiable Traced to a law? @top_down Anything derived stored? @derived Anything absent invented? @absent Higher-level conflict? @levels_in_order Anything obsolete? @change Controlled comparison? @controlled Invalidated evidence rerun? @invalidate Authority held? @authority Mechanical checks settle structure and references, not semantic single-homing or coverage; fresh eyes judge those against the scoped scenarios. @rebuild_after_edit @fresh_reviewer"
     rule_form:
       _text: When admitting or revising guidance, front-load the triggering concept, then state the action, observable completion evidence and exception or failure route where needed. Leading words aid attention but do not replace criteria; co-locate definitions and caveats and refer to the owning rule instead of repeating it. @no_op @granularity
     resolvable:
-      _text: Every reference in a document is checkable - a key, a path, a command, an id - and the check resolves it against what exists, so a documented command that was never written fails the same way a broken key does.
+      _text: Every reference in a document is checkable - a path, a heading, a command - and the check resolves it against what exists, so a documented command that was never written fails the same way a broken link does.
     doc_first:
       _text: The policy changes before work that depends on a revised rule. On a verified mistake, user correction or failed expectation, the responsible agent checks the root cause and existing policy coverage without waiting for the user to request maintenance; if a correct rule was merely not followed, fix execution rather than add a duplicate. Repair missing, misleading or conflicting guidance through @cut_repetition at the scope selected by @render. The agent may directly clarify wording, remove redundancy and restore already-confirmed intent; changes to goals, authority boundaries or consequential workflow require user confirmation. Edit the owning source, never its render, and complete @rebuild_after_edit before claiming the repair complete.
     rebuild_after_edit:
-      _text: After editing a policy source, regenerate its agent-rules render and actually run every applicable automated check through its declared check entry point in the same act; schema, duplicate keys/text, resolvable references and generated consistency are mandatory where applicable, not optional manual substitutes. Here python3 scripts/render_policy.py generates and validates, and python3 scripts/render_policy.py --check verifies consistency. Missing checks, failed checks or checks that could not run remain explicit incomplete acceptance; implement missing mechanically decidable checks within authorized scope or report the blocker. Mechanical success does not establish semantic quality. @checklist
+      _text: After editing a policy source, regenerate its agent-rules render and actually run every applicable automated check through its declared check entry point in the same act; duplicate keys/text, resolvable references and generated consistency are mandatory where applicable, not optional manual substitutes. Here python3 render_policy.py generates and validates, and python3 render_policy.py --check verifies consistency. Missing checks, failed checks or checks that could not run remain explicit incomplete acceptance; implement missing mechanically decidable checks within authorized scope or report the blocker. Mechanical success does not establish semantic quality. @checklist
     propagate_down:
       _text: A change to a higher layer invalidates everything below and forces a re-check down the chain, while a change to a lower layer stays local. How core a file is, is therefore just its layer height.
     cut_repetition:
       _text: Keep every meaning in one home. Before a policy repair, search existing coverage and choose the smallest justified action — leave correct guidance unchanged, clarify or narrow it, merge duplication, remove obsolete or low-value guidance, or add a genuinely missing rule. Judge the result for importance, simplicity, independent subjects, coverage, semantic duplication, conflict and currency against @checklist; an incident alone does not justify a universal rule. Repair affected references and leave recoverable history unrewritten; event histories and any usage or violation statistics belong outside the policy, not in per-rule counters.
-    upgrade:
-      _text: 'Adding an optional field is a backward-compatible minor. Renaming, deleting, retyping or changing meaning is a major and must migrate. The standard moves on the evidence of its adopters: a refinement that recurs across projects was under-defined here and belongs in the standard, and a field no project uses was over-defined and is cut.'
     migrate:
-      _text: Change the schema, validate everything, write an idempotent migration, migrate, validate everything again, and log a ticket. A migration is scripted, rerunnable and reviewed or sampled, and an unmigrated document does not exist.
+      _text: Change the document structure, check everything, write an idempotent migration, migrate, check everything again, and log a ticket. A migration is scripted, rerunnable and reviewed or sampled, and an unmigrated document does not exist.
     outdated:
       _text: 'Age decides nothing; value decides. What still carries value is migrated into the compliant form and kept, whether for compatibility, for re-verifying an earlier trajectory, or because it produced evidence, and dropping it anyway is its own decision needing its own consent. What has lost its value is hard-deleted from the latest revision, never commented out, branched or kept behind an if/else, because git history is already the archive. @ssot A withdrawn claim is that rule''s one exception: it is kept with its reason, which @retraction explains.'
     archive:
@@ -398,7 +390,7 @@ change:
     write_only:
       _text: A generated artefact is written for a reader and is never an input. Nothing reads it back as a source, nobody edits it by hand, and it carries a banner naming what produced it and where the edit belongs.
     ops:
-      _text: One loop covers every change - find the layer the fact belongs to, give it the next id there, write it with its coordinates, point from at the fact it derives from, then re-check. A changed fact is rewritten in place, a dead one is hard-deleted, and either way its dependants are repaired in the same pass. @propagate_down
+      _text: One loop covers every change - find the layer the fact belongs to, write it there, point at the fact it derives from, then re-check. A changed fact is rewritten in place, a dead one is hard-deleted, and either way its dependants are repaired in the same pass. @propagate_down
     adopt:
       _text: 'Adopting a tree that was not written this way: read it all before writing anything, decide each fact''s layer, and convert only once the whole set has a home. Never convert in place file by file, because which layer a fact belongs to is only knowable once its neighbours are known. Fill the root as you go: a tree that never recorded whose problem it solves or the evidence that the pain exists still needs those facts, and asking for them is part of the adoption rather than an extra.'
     lossless:
@@ -406,7 +398,7 @@ change:
   work_record:
     _text: The process keeps its own record, which is not the SSOT.
     tickets:
-      _text: Require a covering ticket for advance-phase work, or for a large-scale or high-impact change that needs cross-turn tracking, migration or recovery. Eager-mode immediate small tasks and ordinary commands need no ticket; editing a policy, schema, contract or scope does not alone make a change major. Do not create or update tickets merely for recordkeeping. Where required, create the ticket before acting and record real timestamps with timezone, actor, decisions, commands and results, changes and revision-bound evidence; log minor changes within that work in its existing ticket.
+      _text: Require a covering ticket for advance-phase work, or for a large-scale or high-impact change that needs cross-turn tracking, migration or recovery. Eager-mode immediate small tasks and ordinary commands need no ticket; editing a policy, contract or scope does not alone make a change major. Do not create or update tickets merely for recordkeeping. Where required, create the ticket before acting and record real timestamps with timezone, actor, decisions, commands and results, changes and revision-bound evidence; log minor changes within that work in its existing ticket.
     keep_evidence:
       _text: Evidence must survive so research can be independently audited without redoing it, and a value that cannot be recomputed is a claim rather than evidence.
     resumable:
@@ -526,6 +518,6 @@ proof:
     self_report:
       _text: A subagent that judges itself failing, from an overlong context or fading focus, reports up for a fresh replacement, or, when its contract grants recursion, spawns one to take over. Any method that serves the goal is fair.
     model_cost:
-      _text: Never delegate a cheap model's task upward to an expensive one, restrain paid resources, and never quietly hunt for a service to upload, pay or compute.
+      _text: A subagent inherits the parent's model and thinking configuration by default; moving it to a different, higher or larger model, or to an unfamiliar smaller one, is a money-resource decision that requires explicit user demand, not opportunistic routing. Never delegate a cheap model's task upward to an expensive one, restrain paid resources, and never quietly hunt for a service to upload, pay or compute. @authority
     external_compute:
       _text: External execution and compute use only user-provided or authorised resources within spending, privacy and safety bounds. Routine public research is not authorisation to execute externally.
