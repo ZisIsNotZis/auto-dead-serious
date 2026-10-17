@@ -1,7 +1,0 @@
-# branch.oid b94c66aa3f8c2e6d076de415ff7a511a6c89e6fb
-# branch.head main
-# branch.upstream origin/main
-# branch.ab +0 -0
-! log/
-! scenarios/disk/DISK-002/src/var/log/
-! scenarios/logs/

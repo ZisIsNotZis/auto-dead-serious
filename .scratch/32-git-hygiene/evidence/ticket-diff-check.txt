@@ -1,1 +1,0 @@
-updated ticket git diff --no-index --check: exit=1 (expected 1 for differing file), diagnostic_bytes=0

@@ -1,3 +1,0 @@
-   37  6687 AGENTS.md
-   46 10481 docs/policy/execution.md
-   83 17168 total

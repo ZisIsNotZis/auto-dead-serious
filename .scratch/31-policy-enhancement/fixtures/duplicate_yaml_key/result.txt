@@ -1,4 +1,0 @@
-command: ['/home/z/.venv/bin/python3', '/home/z/vibe/scripts/render_policy.py', '--source', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/duplicate_yaml_key/AGENTS.yaml', '--schema', '/home/z/vibe/AGENTS.schema.yaml', '--out', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/duplicate_yaml_key/AGENTS.md']
-exit: 1
-checks failed:
- - AGENTS.yaml: YAML error (line 3): duplicate key '_text' (first seen at line 2)

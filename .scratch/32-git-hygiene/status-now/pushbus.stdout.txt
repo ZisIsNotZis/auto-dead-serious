@@ -1,4 +1,0 @@
-# branch.oid 4a3886af5c0da4541a806cf6b6a61dff8132f1d2
-# branch.head master
-! .pi/
-! __pycache__/

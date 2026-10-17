@@ -1,6 +1,0 @@
-# branch.oid fbb527c6a8f6f31f041fc0520285ab7835b54776
-# branch.head master
-! .pytest_cache/
-! .venv/
-! src/expyssion/__pycache__/
-! tests/__pycache__/

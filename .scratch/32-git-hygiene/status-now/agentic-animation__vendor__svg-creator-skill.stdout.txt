@@ -1,5 +1,0 @@
-# branch.oid 1eb83d602a992b69a1771c4e0116a9f7de6ffaa2
-# branch.head main
-# branch.upstream origin/main
-# branch.ab +0 -0
-! scripts/__pycache__/

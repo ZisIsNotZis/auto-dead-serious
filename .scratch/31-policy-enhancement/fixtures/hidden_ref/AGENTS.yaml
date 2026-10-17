@@ -1,4 +1,0 @@
-root:
-  _text: Fixture @hidden
-  hidden*:
-    _text: Hidden node

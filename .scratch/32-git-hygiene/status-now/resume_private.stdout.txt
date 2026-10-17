@@ -1,7 +1,0 @@
-# branch.oid ff06ff4532ebd25a6e0b58d541a5807e874aa0db
-# branch.head master
-? experiments.sqlite
-! .pi/
-! .scratch/
-! dist/
-! scripts/__pycache__/

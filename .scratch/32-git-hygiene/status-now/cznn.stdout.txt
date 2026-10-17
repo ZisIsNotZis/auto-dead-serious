@@ -1,5 +1,0 @@
-# branch.oid 0498a4c6e98b8d699c1a7a7588a7bc11316065a7
-# branch.head master
-# branch.upstream origin/master
-# branch.ab +0 -0
-! cznn/__pycache__/

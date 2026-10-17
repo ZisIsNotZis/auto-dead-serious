@@ -1,3 +1,0 @@
-command: ['/home/z/.venv/bin/python3', '/home/z/vibe/scripts/render_policy.py', '--source', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/stale_render/AGENTS.yaml', '--schema', '/home/z/vibe/AGENTS.schema.yaml', '--out', '/home/z/vibe/.scratch/31-policy-enhancement/fixtures/stale_render/AGENTS.md', '--check']
-exit: 1
-AGENTS.md is out of sync with AGENTS.yaml; re-run without --check.

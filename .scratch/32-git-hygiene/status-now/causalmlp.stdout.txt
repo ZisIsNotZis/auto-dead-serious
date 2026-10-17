@@ -1,4 +1,0 @@
-# branch.oid a6495d95ed4b3df27055e0c9ef54f3f8cfef63ad
-# branch.head master
-# branch.upstream origin/master
-# branch.ab +0 -0

@@ -1,8 +1,0 @@
-root:
-  _text: First
-  child:
-    _text: Second
-other:
-  _text: Third
-  child:
-    _text: Fourth

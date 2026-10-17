@@ -1,9 +1,0 @@
-ed499dceffc1e221bbf42dab4f8a70c607bba4214b89445334a5d2dab887e475  .scratch/32-git-hygiene/ticket.md
-23e69ee52c9b64de223c1baab41e2c257933a3ec217bd91b2a4dd0083d8ca850  .scratch/32-git-hygiene/manifest.md
-3f69da92f1d04c82f8d4bcb41cbeafcdd8d50b53432f2e5585589e12e8482bef  .scratch/32-git-hygiene/audit.md
-ab70b58514b7641bbad9c4166b607035591818dbf8a699570f33fa32809e585c  .scratch/32-git-hygiene/audit_repos.py
-e41a9a0ae98b238debe2b5bb94cc7c0ea7b70fb398d61e77c190a9dbb5e5320a  .scratch/32-git-hygiene/remote_inventory.py
-ec76ebcadbb7deb270534210d52cc2a86aa5db99330d18e377def4b87d810009  .scratch/32-git-hygiene/render_blocked_audit.py
-d3bdcefbf0ea3d15697c23926213742043718d58282405bedc59c052ce34f38e  .scratch/32-git-hygiene/evidence/credential-scanner-availability.txt
-d8797894384f2465d37fad07ee0af019f18ad109d1d32b5d9d9ec3c2f9b2640c  .scratch/32-git-hygiene/evidence/remote-only.jsonl
-eef277bef4e8293395554ace77d29508b6530dbf8fbe1597e0f71d27f7a0e1ea  .scratch/32-git-hygiene/evidence/remote-only-summary.json

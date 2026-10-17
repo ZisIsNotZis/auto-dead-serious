@@ -1,6 +1,0 @@
-# branch.oid 6f5644cd14d349e4a323f73a458d80d185f7d62a
-# branch.head main
-# branch.upstream origin/main
-# branch.ab +0 -0
-! __pycache__/
-! db/__pycache__/

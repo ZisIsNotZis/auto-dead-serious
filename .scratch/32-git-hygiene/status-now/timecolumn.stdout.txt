@@ -1,5 +1,0 @@
-# branch.oid d73a5225c45e0c1b1a8753f462a76bfb3c24dcfa
-# branch.head master
-# branch.upstream origin/master
-# branch.ab +0 -0
-! .pytest_cache/

@@ -1,5 +1,0 @@
-# branch.oid b318e8f405d17555e981be8aa505a42fbaf5deef
-# branch.head master
-! .pi/
-! .tmp/
-! cmd/foodflow/.tmp/
