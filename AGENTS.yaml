@@ -21,6 +21,8 @@ laws:
     _text: A rule is derived from this root through the story that motivates it, never collected from an incident. Before adding one, tell the whole story - where it comes from, how the thing ran before, and why that stopped working.
   derived:
     _text: What is derived from something else drifts from it, so a derived thing is generated from its source or carries no fact of its own.
+    inferable:
+      _text: 'A statement the reader would already derive from a home it can reach is a duplicate even when no word matches, whether it restates two claims as one or states their obvious sum; the second home points at the first and carries at most the locator a reader needs, and restatement is admitted only where that home cannot be reached from where the question is asked - @no_op deciding whether a fact is said at all and this deciding where.'
   absent:
     _text: Absence is a state, not a gap to fill. A missing value is declared missing, and an invented value is worse than a missing one, because it cannot be told from a measured one.
   controlled:
@@ -414,7 +416,7 @@ change:
     propagate_down:
       _text: A change to a higher layer invalidates everything below and forces a re-check down the chain, while a change to a lower layer stays local. How core a file is, is therefore just its layer height.
     cut_repetition:
-      _text: Keep every meaning in one home. Before a policy repair, search existing coverage and choose the smallest justified action — leave correct guidance unchanged, clarify or narrow it, merge duplication, remove obsolete or low-value guidance, or add a genuinely missing rule. Judge the result for importance, simplicity, independent subjects, coverage, semantic duplication, conflict and currency against @checklist; an incident alone does not justify a universal rule. Repair affected references and leave recoverable history unrewritten; event histories and any usage or violation statistics belong outside the policy, not in per-rule counters.
+      _text: Keep every meaning in one home. Before a policy repair, search existing coverage and choose the smallest justified action — leave correct guidance unchanged, clarify or narrow it, merge duplication, remove obsolete or low-value guidance, or add a genuinely missing rule. Judge the result for importance, simplicity, independent subjects, coverage, semantic duplication, conflict and currency against @checklist; an incident alone does not justify a universal rule. Repair affected references and leave recoverable history unrewritten; event histories and any usage or violation statistics belong outside the policy, not in per-rule counters. @inferable
     migrate_on_touch:
       _text: 'Default repair is progressive: whatever you touch leaves compliant in the same act, expanding to the smallest neighbour set that can be compliant, while an untouched path needs no sweep; list the touched paths as the completion evidence, and a whole-tree conversion runs only on the user''s explicit request under @migrate. @migrate @projection'
     migrate:
