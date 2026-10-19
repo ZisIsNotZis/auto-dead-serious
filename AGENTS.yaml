@@ -196,7 +196,7 @@ resources:
     commits:
       _text: 'A worker commits on its own branch as it goes, and the integrator merges it into main and refreshes the main area; serial work commits straight to main, one cohesive step at a time, because a commit is the only checkpoint a kill cannot take back. A commit is local and reversible, so it needs no permission. @worktree @checkpoint'
     pushes:
-      _text: 'Pushing leaves the machine, so it is not implied by committing; at a safe point it is standing-authorised, because a local commit is not yet safe, and outside one it needs the user. A repository with no remote is a defect: it gets one, private unless he says otherwise, and its branches are pushed, because a local-only project is one disk away from nothing. Never push what @track_or_ignore keeps out, and when the remote is unreachable say so rather than let the loss stay unnamed. @safe_point @durability @secrets'
+      _text: 'Pushing leaves the machine, so it is not implied by committing; at a safe point it is standing-authorised, because a local commit is not yet safe, and outside one it needs the user. A repository with no remote is a defect: it gets one, private unless he says otherwise, and its branches are pushed, because a local-only project is one disk away from nothing. An audit compares git ls-remote with HEAD, because a narrow fetch refspec makes a pushed branch look local. Never push what @track_or_ignore keeps out, and when the remote is unreachable say so rather than let the loss stay unnamed. @safe_point @durability @secrets'
     preserve_state:
       _text: Preserve existing branches and dirty work; never force a reset or checkout. @preserve_work
     untrack:
