@@ -95,14 +95,14 @@ Ordinal estimates from written evidence, not measurements: no build, test, rende
 ## What to show first
 One per family, so a portfolio is not six variants of the same idea. Order is showcase score.
 
-- **helpagent** (7.6, delivered-once) — The completed results are specific to one model, 40-task corpus, and protocol, and do not establish generally superior coding agents.
+- **helpagent** (7.6, delivered-once) — A completed research campaign and harness measuring a fixed small local model in bounded plan/implement/verify/claim workflows against a mature agent CLI and blind external grader; the proposed user-facing repository-fixing command does not exist.
 - **auto_maintain_bench** (6.8, working) — A benchmark for small language models diagnosing and maintaining Linux hosts through constrained bash interactions in isolated scenarios.
-- **agentic-animation** (6.8, working) — The README reports three demos, not finished films or a stable public API, and owner-reported use is not independently verified.
+- **agentic-animation** (6.8, working) — A local, project-agnostic pipeline for structured-story input, code-driven 2D puppet motion, replaceable media adapters, and narrated animation rendering.
 - **murderMysteryGame** (6.5, delivered-once) — 《寿宴》 is a printable six-player-and-host mystery-game POC with role booklets, host instructions, clue cards, a specification and playthrough records.
-- **fat_kakeya_needle** (6.3, prototype) — The asymptotic theorem is source-reported and distinct from the exact certificates and numerical candidates; independent proof review remains necessary.
+- **fat_kakeya_needle** (6.3, prototype) — A mathematical and computational research workbench on minimizing the swept area of a 1×ε rectangle during a continuous half-turn with unrestricted planar motion.
 - **raid_calc** (5.9, delivered-once) — Offline browser calculator for expected data loss over time in arbitrarily nested storage pools, with a CTMC solver, Monte Carlo cross-check, editor and deterministic optimizer, as described by the pinned README.
-- **aps** (5.8, prototype) — The reported scenario correctness is project-specific, and cross-solver semantic equivalence and production value remain unverified.
-- **dojo** (5.8, prototype) — The local store is concrete, but the broader discussion product and the value of real disagreement retrieval are not established.
+- **aps** (5.8, prototype) — An experimental local planning workbench that models manufacturing item flows, compiles constraints, dispatches solver strategies, and presents schedules in a browser.
+- **dojo** (5.8, prototype) — A local CLI and SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives, objections, unknowns and relations; its intended network-level product is not implemented.
 - **ra2** (5.7, working) — Iron Meridian is a data-driven, deterministic, browser-playable RTS prototype with YAML-authored content and a complete V1 match loop.
 - **expyssion** (5.7, delivered-once) — A Python-hosted expression language with a frozen v1 specification and interpreter; expressions and calls are the central design, with control structures represented as functions of callables.
 - **pathlm** (5.7, prototype) — A research wiki and experiment workbench for language-model compute-path design, with a structured research tree, shared engine, methodology, evidence rules and a playbook of bounded findings.
@@ -117,7 +117,7 @@ A completed research campaign and harness measuring a fixed small local model in
 
 **State** delivered-once · **Showcase** 7.6 · **Gate** 1 — A newcomer can inspect the campaign and results, but reproducing them requires the specific model, task corpus, baseline, and withheld grader. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Researchers comparing verification workflows and coding-agent evaluation methods under a fixed model and task corpus.
-**Why it is interesting** The completed results are specific to one model, 40-task corpus, and protocol, and do not establish generally superior coding agents.
+**What to keep in mind** The completed results are specific to one model, 40-task corpus, and protocol, and do not establish generally superior coding agents.
 **Strongest reusable thing inside** Blind-grader claim gate with pristine-copy, machine-readable test evidence
 
 **What you see**
@@ -194,7 +194,7 @@ A local, project-agnostic pipeline for structured-story input, code-driven 2D pu
 
 **State** working · **Showcase** 6.8 · **Gate** 1 — Three demos are reported, but a newcomer needs workspace and adapter setup and the episodes are not finished-film releases. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** A creator or agent authoring narrated, repeatable 2D animation; owner use is reported testimony.
-**Why it is interesting** The README reports three demos, not finished films or a stable public API, and owner-reported use is not independently verified.
+**What to keep in mind** The README reports three demos, not finished films or a stable public API, and owner-reported use is not independently verified.
 **Strongest reusable thing inside** Assets-first animation pipeline with audio-authoritative timing
 
 **What you see**
@@ -271,7 +271,7 @@ A mathematical and computational research workbench on minimizing the swept area
 
 **State** prototype · **Showcase** 6.3 · **Gate** 1 — A newcomer can inspect the research notes and certificates, but reproducing the computational paths requires the documented environment and the theorem needs mathematical review. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Geometric-measure researchers and computational geometers investigating continuous thin-rectangle motion.
-**Why it is interesting** The asymptotic theorem is source-reported and distinct from the exact certificates and numerical candidates; independent proof review remains necessary.
+**What to keep in mind** The asymptotic theorem is source-reported and distinct from the exact certificates and numerical candidates; independent proof review remains necessary.
 **Strongest reusable thing inside** Continuous low-area transition bridge for unrestricted needle motion
 
 **What you see**
@@ -346,7 +346,7 @@ An experimental local planning workbench that models manufacturing item flows, c
 
 **State** prototype · **Showcase** 5.8 · **Gate** 1 — A newcomer can inspect a local planning UI and scenarios, but needs the Python, Node.js, and solver dependencies to run them. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** A planner or learner inspecting finite manufacturing schedules; not an ERP/MES buyer seeking production readiness.
-**Why it is interesting** The reported scenario correctness is project-specific, and cross-solver semantic equivalence and production value remain unverified.
+**What to keep in mind** The reported scenario correctness is project-specific, and cross-solver semantic equivalence and production value remain unverified.
 **Strongest reusable thing inside** Typed item-flow model compiled to immutable solver-neutral planning representation
 
 **What you see**
@@ -385,7 +385,7 @@ A local CLI and SQLite proof of concept for storing revisable, sourced discussio
 
 **State** prototype · **Showcase** 5.8 · **Gate** 1 — The scripted local CLI demo is showable with setup, but it is a proof of concept with lexical rather than semantic retrieval. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Researchers or small teams who need inspectable, revisable discussion candidates; current artifact is local CLI/store users.
-**Why it is interesting** The local store is concrete, but the broader discussion product and the value of real disagreement retrieval are not established.
+**What to keep in mind** The local store is concrete, but the broader discussion product and the value of real disagreement retrieval are not established.
 **Strongest reusable thing inside** Sourced claim lifecycle with revision, withdrawal, split/merge, and objections
 
 **What you see**
@@ -569,7 +569,7 @@ Closed proof-of-concept for a client-first token-authorization protocol, a singl
 
 **State** prototype · **Showcase** 5.5 · **Gate** 1 — The closed proof of concept is reported demonstrable, but camera, WebCrypto, provider compatibility, and relay setup are caveats. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Users authorizing a provider token for a local application; provider and relay support are necessary and user outcomes are unverified.
-**Why it is interesting** This is a closed proof of concept; security properties and provider-dependent enforcement need independent validation.
+**What to keep in mind** This is a closed proof of concept; security properties and provider-dependent enforcement need independent validation.
 **Strongest reusable thing inside** Ephemeral-key QR token authorization flow
 
 **What you see**
@@ -607,7 +607,7 @@ Evolving Chinese narrative-simulation research workspace for autonomous characte
 
 **State** prototype · **Showcase** 5.4 · **Gate** 1 — A newcomer can inspect the versioned research workspace, but seeing a provider-backed run requires configuration and setup. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Researchers exploring narrative-agent behavior and inspectable causal trajectories; audience is stated as a goal, not proven demand.
-**Why it is interesting** The packet describes an active research prototype, not evidence of human-level story quality.
+**What to keep in mind** The packet describes an active research prototype, not evidence of human-level story quality.
 **Strongest reusable thing inside** Objective/subjective knowledge separation with replayable causal traces
 
 **What you see**
@@ -1146,7 +1146,7 @@ A single-user programmatic-drawing research project aiming to build explainable 
 
 **State** prototype · **Showcase** 4.5 · **Gate** 1 — The legacy renderer and visibility module are prototype material, while the target architecture and accepted artwork are not present. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** The owner as a single learner/researcher developing explainable vector drawing and eventual reference-free illustration skill.
-**Why it is interesting** The existing SVG resolver is legacy, and the proposed spatial architecture is not yet the current engine.
+**What to keep in mind** The existing SVG resolver is legacy, and the proposed spatial architecture is not yet the current engine.
 **Strongest reusable thing inside** Depth-based vector visibility geometry module
 
 **What you see**
@@ -1508,7 +1508,7 @@ Paused design for a general real-time narrative-simulation engine and first stor
 
 **State** design-only · **Showcase** 3.5 · **Gate** 1 — The story material is complete, but the engine design is paused and the proposed runtime is not implemented. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Potential players or researchers for a real-time narrative simulator; no audience outcome is evidenced.
-**Why it is interesting** The real-time engine is design-only at this pin; the completed story material is not evidence of engine behavior.
+**What to keep in mind** The real-time engine is design-only at this pin; the completed story material is not evidence of engine behavior.
 **Strongest reusable thing inside** Wall-clock-to-world-time factor with turn-based compatibility point
 
 **What you see**
@@ -1904,7 +1904,7 @@ An archived C systems-programming experiment combining multicall file/RAID utili
 
 **State** archive · **Showcase** 2.7 · **Gate** 1 — Standalone programs and a Makefile are present, but Linux-specific setup and unverified behavior are caveats. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Readers studying a historical Linux systems-programming experiment
-**Why it is interesting** The README explicitly warns that the HTTP server is unsafe and that the archive has no tests.
+**What to keep in mind** The README explicitly warns that the HTTP server is unsafe and that the archive has no tests.
 **Strongest reusable thing inside** Linux zero-copy and io_uring benchmark source
 
 **What you see**
@@ -2006,7 +2006,7 @@ A frozen research archive exploring learned key-value memory for toy binding/poi
 
 **State** archive · **Showcase** 2.4 · **Gate** 1 — A newcomer can inspect the module and notebooks, but the frozen archive lacks a package or entry point and needs missing data and setup. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Researchers studying explicit memory for synthetic binding/pointer tasks or byte-level sequence prediction.
-**Why it is interesting** The packet explicitly presents this as an incomplete archive of a known architecture family, not a validated finding.
+**What to keep in mind** The packet explicitly presents this as an incomplete archive of a known architecture family, not a validated finding.
 **Strongest reusable thing inside** kb.py Notice, Bitention, and Kb memory components
 
 **What you see**
@@ -2151,7 +2151,7 @@ Archived personal Yu-Gi-Oh! deck/art experiments covering standalone scripts and
 
 **State** archive · **Showcase** 2.3 · **Gate** 1 — A newcomer can inspect individual scripts or notebooks, but the archived tasks require separate data and dependencies and have no single entry point. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** The owner's Yu-Gi-Oh! hobby workflow; no external user is evidenced.
-**Why it is interesting** This is a migrated hobby archive, not a unified publishable tool or a reported result.
+**What to keep in mind** This is a migrated hobby archive, not a unified publishable tool or a reported result.
 **Strongest reusable thing inside** DINOv2-based replay-frame selection experiment
 
 **What you see**
@@ -2288,7 +2288,7 @@ A personal archive of hand-written CUDA tensor-core, attention, convolution, red
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — There is no single entrypoint or committed profiling output to show a newcomer working. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** A reader studying CUDA kernel source or past hardware-tuning attempts.
-**Why it is interesting** This is an unmaintained source archive, and some experiments depend on external build context and missing profiling outputs.
+**What to keep in mind** This is an unmaintained source archive, and some experiments depend on external build context and missing profiling outputs.
 **Strongest reusable thing inside** Hand-written CUDA kernel experiment source
 
 **What you see**
@@ -2320,7 +2320,7 @@ A deprecated personal deep-learning sandbox containing old Transformer, data-ker
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — Missing corpora and checkpoints plus the lack of an entrypoint prevent a newcomer from seeing a working result. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** A reader of a historical personal deep-learning archive; no current product audience is evidenced.
-**Why it is interesting** The cited experiments are thin historical work, and the required data and checkpoints are absent.
+**What to keep in mind** The cited experiments are thin historical work, and the required data and checkpoints are absent.
 **Strongest reusable thing inside** Sorted/memmap data-kernel experiment
 
 **What you see**
@@ -2352,7 +2352,7 @@ A deprecated personal scratch archive of heterogeneous notebooks/scripts probing
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The archive has no entrypoint or included benchmark corpus to show a working result. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** No coherent current audience beyond a reader of a personal experiment archive is established.
-**Why it is interesting** The packet describes a disconnected archive and the owner no longer recognizes its contents.
+**What to keep in mind** The packet describes a disconnected archive and the owner no longer recognizes its contents.
 
 **What you see**
 - Unpackaged Python/Jupyter archive.
@@ -2460,7 +2460,7 @@ An archived second-pass object-storage plumbing experiment involving custom asyn
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The README identifies no working entrypoint and says the intended multi-process topology is unverified. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Readers studying a historical storage-server experiment
-**Why it is interesting** The source describes an experimental storage topology, not a verified runnable system.
+**What to keep in mind** The source describes an experimental storage topology, not a verified runnable system.
 **Strongest reusable thing inside** XOR-sharded object-storage gateway sketch
 
 **What you see**
@@ -2491,7 +2491,7 @@ An archived sketch of a nine-slot Yu-Gi-Oh! card-effect DSL and two unfinished c
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The consuming engine is absent, neither script runs as-is, and one script has a parse error. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** A hypothetical author integrating card effects into the absent rules engine
-**Why it is interesting** This is a historical design fragment; its intended host engine is not in the repository.
+**What to keep in mind** This is a historical design fragment; its intended host engine is not in the repository.
 **Strongest reusable thing inside** Nine-slot card-effect DSL sketch
 
 **What you see**
@@ -2522,7 +2522,7 @@ An abandoned personal experiment directory of notebooks, a local neural-layer fo
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The packet reports no runnable entrypoint, reproducibility, or experiment conclusion. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Readers tracing the provenance of an abandoned neural-network idea
-**Why it is interesting** The per-neuron-gating idea is only described as two notebook cells with no conclusion.
+**What to keep in mind** The per-neuron-gating idea is only described as two notebook cells with no conclusion.
 **Strongest reusable thing inside** Per-neuron-gating hypothesis
 
 **What you see**
@@ -2553,7 +2553,7 @@ An archived set of personal neural-network and attention notebooks from approxim
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The notebooks have empty outputs and the archive has no supported project entrypoint. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Readers tracing historical neural-network experiments
-**Why it is interesting** The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.
+**What to keep in mind** The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.
 **Strongest reusable thing inside** Neural-network and attention experiment notebooks
 
 **What you see**
@@ -2619,7 +2619,7 @@ Notebook-only byte-level language-model research archive exploring RetNet-style 
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — There is no single entry point or corpus, and no notebook or model was executed. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Researcher studying byte-level sequence mixers; audience is implied by the stated question, no consumer is reported.
-**Why it is interesting** The packet identifies this as an unbenchmarked archive with no surviving research result.
+**What to keep in mind** The packet identifies this as an unbenchmarked archive with no surviving research result.
 **Strongest reusable thing inside** Archived notebook and local neural-layer code, including a Retention/Decay implementation
 
 **What you see**
@@ -2691,7 +2691,7 @@ Archived one-shot script and bench-data record for a private thermal-control exp
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The packet describes a one-off hardware archive with a broken control path and no reproducible entry point. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
 **Who it is for** Original owner with access to the private thermal bench; no wider audience is stated.
-**Why it is interesting** The packet reports hardware capture but does not establish an interpretable measurement or reusable control method.
+**What to keep in mind** The packet reports hardware capture but does not establish an interpretable measurement or reusable control method.
 **Strongest reusable thing inside** The pinned status reports surviving hardware capture files, but this assessment inspected no data
 
 **What you see**

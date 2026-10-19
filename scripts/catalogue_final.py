@@ -96,7 +96,7 @@ def render(data):
         lines.append(f"| [{a['path']}](#{anchor(a['path'])}) | {d['what']} | {d['state']} | " + " | ".join(cell(a)) + f" | {d['asset'] or '—'} |")
     lines += ["", "## What to show first", "One per family, so a portfolio is not six variants of the same idea. Order is showcase score.", ""]
     for fam, a in sorted(best_in_family.items(), key=lambda kv: -kv[1]["_x"]["showcase"])[:12]:
-        lines.append(f"- **{a['path']}** ({a['_x']['showcase']:.1f}, {a['display']['state']}) — {a['display'].get('hook') or a['display']['what']}")
+        lines.append(f"- **{a['path']}** ({a['_x']['showcase']:.1f}, {a['display']['state']}) — {a['display']['what']}")
     lines += ["", "## Appendix", "One section per project: what you see, how each number was reached, what is unverified, and how the rating moved."]
     for a in order:
         d = a["display"]
@@ -105,7 +105,7 @@ def render(data):
                   f"**State** {d['state']} · **Showcase** {x['showcase']:.1f} · **Gate** {x['gate']:g} — {d['showability']['reason']}",
                   f"**Who it is for** {d['for']}"]
         if d.get("hook"):
-            lines.append(f"**Why it is interesting** {d['hook']}")
+            lines.append(f"**What to keep in mind** {d['hook']}")
         if d.get("asset"):
             lines.append(f"**Strongest reusable thing inside** {d['asset']}")
         lines.append("")
