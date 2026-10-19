@@ -15,6 +15,27 @@ Auto Dead Serious 把持续增长的实验目录变成可浏览的作品集。�
 
 **优势：** 一个入口发现全部作品，**不抹平任何历史**，并对文档、证据、发布、媒体和研究设定明确质量标准。
 
+## 作品概览
+
+<!-- BEGIN GENERATED SHOWCASE -->
+| 项目 | 是什么 | 状态 | 推荐度 | 想法 | 已实现 | 潜力 | 完成度 |
+|---|---|---|---:|---:|---:|---:|---:|
+| [helpagent](helpagent/) | A completed research campaign and harness measuring a fixed small local model in bounded… | 单次交付 | 7.6 | 7.7 | 7 | 7.2 | 9 |
+| [auto_maintain_bench](auto_maintain_bench/) | A benchmark for small language models diagnosing and maintaining Linux hosts through constrained bash… | 可用 | 6.8 | 7.0 | 6 | 6.4 | 8 |
+| [agentic-animation](agentic-animation/) | A local, project-agnostic pipeline for structured-story input, code-driven 2D puppet motion, replaceable… | 可用 | 6.8 | 6.3 | 7 | 6.0 | 7 |
+| [murderMysteryGame](murderMysteryGame/) | 《寿宴》 is a printable six-player-and-host mystery-game POC with role booklets, host instructions, clue cards,… | 单次交付 | 6.5 | 7.0 | 6 | 5.2 | 7 |
+| [fat_kakeya_needle](fat_kakeya_needle/) | A mathematical and computational research workbench on minimizing the swept area of a 1×ε rectangle during a… | 原型 | 6.3 | 7.3 | 5 | 5.6 | 6 |
+| [raid_calc](raid_calc/) | Offline browser calculator for expected data loss over time in arbitrarily nested storage pools, with a CTMC… | 单次交付 | 5.9 | 6.0 | 6 | 4.5 | 8 |
+| [aps](aps/) | An experimental local planning workbench that models manufacturing item flows, compiles constraints,… | 原型 | 5.8 | 5.3 | 6 | 5.2 | 7 |
+| [dojo](dojo/) | A local CLI and SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives,… | 原型 | 5.8 | 6.3 | 5 | 4.9 | 6 |
+
+项目描述沿用各仓库的英文原文，避免同一事实出现两份译文。
+
+全部 73 个固定版本项目，每项都写明能实际看到什么、每个数字怎么来的、哪些尚未验证、评分如何变化：[**打开作品总览**](docs/result/catalogue-redesign/README.md)。所有分数是基于书面证据的 0–10 序数判断估计，不是测量，量表定义见该页。
+
+<!-- 由 scripts/catalogue_final.py 从 assessments.json 生成。请改评分，不要改这段。 -->
+<!-- END GENERATED SHOWCASE -->
+
 ## 快速开始
 
 ```sh
