@@ -9,5 +9,4 @@ The repository's product is the policy in AGENTS.yaml, rendered to AGENTS.md and
 
 ## Open questions
 
-- Split attention.communication, whose children mix asking, reporting, presenting and prose craft, into four named groups: ask, report, present, prose. Proposed, not applied, because the current names still retrieve and a wide move would hide the semantic diff.
-- Enforce the record rules mechanically as well as by policy: a check that fails when docs/ names .scratch or a ticket, or when the main area leaves main. Proposed, not written, because it is new code rather than a policy gap.
+None.
