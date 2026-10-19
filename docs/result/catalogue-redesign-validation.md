@@ -1,0 +1,27 @@
+# Catalogue redesign integration validation
+Status: WP3 integration is structurally complete as a draft; M1 is not accepted. Public-A evidence remains incomplete, public-B produced no comparison evidence, and the fresh independent package review is pending.
+## Source and projection
+The canonical integrated source is `catalogue-redesign/assessments.json`, produced by `scripts/catalogue_redesign.py` from four validated WP2 lane handoffs at root source revision `f465e9bcbedb615d14f4d58873eff771aca7f357`.
+The source contains one assessment for each of the 73 contract-pinned paths, with 68 project-linked contribution cards nested in their project assessment; the script checks exact unique coverage, source pins, per-record evidence references, contribution references, separate unknowns, and the generated projection.
+The generated human-facing view is `catalogue-redesign/README.md`; it gives a searchable coverage/value index, linked project anchors, project judgement summaries, and contribution score summaries, with full rationales, evidence, uncertainty reasons, metadata, limitations and next steps left in the canonical JSON source.
+A separate self-contained filtered application was not produced because the searchable Markdown index and detail table expose the same records without adding a second interface.
+The older 0–4 assessment records and their view remain unchanged as disputed legacy evidence and are not presented as current nine-judgement ratings.
+## Calibration and provenance review
+The six owner calibration examples were compared with the approved anchors and provenance rules; no bell curve or aggregate was introduced.
+For `auto_maintain_bench` versus APS, contribution depth is estimated at 6 (plausible 5–7) versus 5 (plausible 4–6); the overlapping bounds preserve uncertainty and do not establish model or benchmark superiority.
+For agentic-animation, the lane handoff rated a bounded deterministic puppet-motion method; the pinned README and `docs/PIPELINE.md` were also inspected at source pin `8e7a5520dce956e409ddd45415a09cc3bcd12f4d` and support a separately linked, documented story-pipeline practice. The added card rates non-obviousness 4 (3–5), depth 6 (5–7), transferability 5 (4–6), and current/future contribution value 4 (3–5); it describes documented process, not an executed end-to-end workflow. The owner's asynchronous/pre/post claims remain testimony, not independent verification.
+Hyperframaker's source handoff omitted the owner's calibration statement, so the integrated source preserves it as `owner_testimony` without turning its output into a transferable-practice card or filling unknown output judgements.
+Owner testimony about horse_video and huaqiang_video remains distinct from observation; their current/future product values and output contribution judgements remain unknown because the videos were not viewed or quality-assessed.
+Public-A is preserved byte-for-byte and remains incomplete; its missing commands-run evidence is not synthesized. The public-B handoff is preserved byte-for-byte and explicitly blocked; its successful preflight requests are not treated as comparison research.
+## Commands and observations
+All four commands `python3 scripts/catalogue.py --validate-redesign-handoff <lane-file> --lane lane-01` through `lane-04` passed exact contract coverage, provenance and root-pin validation before integration.
+`python3 scripts/catalogue_redesign.py --integrate <runtime-handoff-directory>` integrated all 73 validated assessments at the contract root revision.
+`python3 scripts/catalogue_redesign.py --render` generated the Markdown view; `python3 scripts/catalogue_redesign.py --check` passed 73 project assessments and 68 linked contributions with consistent contract shape, evidence references, uncertainty, pins, exact coverage and projection freshness.
+`python3 scripts/catalogue_redesign.py --self-test` passed safe negative controls for missing coverage, malformed assessment container, duplicate coverage, wrong source pin, forbidden aggregate and dangling evidence reference; unknowns and separate contribution cards remained accepted.
+`python3 -m py_compile scripts/catalogue_redesign.py tests/test_catalogue_redesign_integration.py` passed.
+`python3 -m unittest discover -s tests -p 'test_catalogue_redesign_integration.py'` passed 5 tests for registry coverage, pins, project/contribution separation, status disclosure and owner provenance.
+A local PDF preview of the generated Markdown was rendered with the already-installed `pandoc` and `xelatex` and inspected with image-capable read on the index and card pages. The index and value columns are legible, project anchors and separate judgement sections render, and contribution summaries wrap without the previous wide-table collisions; this checks only the generated catalogue view, not project runtime, media quality or M1 acceptance.
+## Preserved limits
+Public comparisons do not yet meet the complete WP2 evidence state: public-A is incomplete and public-B is blocked; no further public calls were made.
+No project runtime, benchmark, model, video or visual artifact was executed or assessed as part of this integration. Root-pinned source identity comes from the WP2 contract; live submodule checkout HEADs were not substituted for pins.
+Pre-existing `pathlm` and `resume_private` dirty states remain untouched; their private/live contents were not inspected. The final independent review must cover WP1, each WP2 package and WP3 with per-package verdicts before the single M1 user gate.
