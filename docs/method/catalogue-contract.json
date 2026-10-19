@@ -1,0 +1,1308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:catalogue:wp2-contract-v1",
+  "title": "Catalogue WP2 investigator handoff",
+  "description": "WP2 source assessment output. This JSON Schema validates handoff shape; scripts/catalogue.py also checks cross-field constraints, pinned-source coverage and lane membership.",
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": 1
+    },
+    "lane": {
+      "$ref": "#/$defs/text"
+    },
+    "root_source_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40,64}$"
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assessment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "contract_version",
+    "lane",
+    "root_source_revision",
+    "assessments"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/text"
+      },
+      "uniqueItems": true
+    },
+    "rating": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "estimated"
+            },
+            "estimate": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "plausible_range": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "rationale": {
+              "$ref": "#/$defs/text"
+            },
+            "evidence_refs": {
+              "$ref": "#/$defs/evidence_refs"
+            }
+          },
+          "required": [
+            "status",
+            "estimate",
+            "plausible_range",
+            "rationale",
+            "evidence_refs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "unknown"
+            },
+            "reason": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "feasibility": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "range"
+            },
+            "probability_range": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "constraints": {
+              "$ref": "#/$defs/text"
+            },
+            "horizon": {
+              "$ref": "#/$defs/text"
+            },
+            "rationale": {
+              "$ref": "#/$defs/text"
+            },
+            "evidence_refs": {
+              "$ref": "#/$defs/evidence_refs"
+            }
+          },
+          "required": [
+            "status",
+            "probability_range",
+            "constraints",
+            "horizon",
+            "rationale",
+            "evidence_refs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "unknown"
+            },
+            "reason": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/text"
+        },
+        "provenance": {
+          "enum": [
+            "owner_testimony",
+            "independent_observation",
+            "agent_inference"
+          ]
+        },
+        "claim": {
+          "$ref": "#/$defs/text"
+        },
+        "source": {
+          "$ref": "#/$defs/text"
+        },
+        "locator": {
+          "$ref": "#/$defs/text"
+        },
+        "revision": {
+          "$ref": "#/$defs/revision"
+        }
+      },
+      "required": [
+        "id",
+        "provenance",
+        "claim",
+        "source",
+        "locator",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "effort": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "described"
+            },
+            "quantity": {
+              "$ref": "#/$defs/text"
+            },
+            "source": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": [
+            "status",
+            "quantity",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "unknown"
+            },
+            "reason": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "project_judgements": {
+      "type": "object",
+      "properties": {
+        "current_product_value": {
+          "$ref": "#/$defs/rating"
+        },
+        "future_product_value": {
+          "$ref": "#/$defs/rating"
+        },
+        "technical_feasibility": {
+          "$ref": "#/$defs/feasibility"
+        },
+        "delivery_feasibility": {
+          "$ref": "#/$defs/feasibility"
+        }
+      },
+      "required": [
+        "current_product_value",
+        "future_product_value",
+        "technical_feasibility",
+        "delivery_feasibility"
+      ],
+      "additionalProperties": false
+    },
+    "contribution_judgements": {
+      "type": "object",
+      "properties": {
+        "non_obviousness": {
+          "$ref": "#/$defs/rating"
+        },
+        "depth_of_thought": {
+          "$ref": "#/$defs/rating"
+        },
+        "transferability": {
+          "$ref": "#/$defs/rating"
+        },
+        "current_contribution_value": {
+          "$ref": "#/$defs/rating"
+        },
+        "future_contribution_value": {
+          "$ref": "#/$defs/rating"
+        }
+      },
+      "required": [
+        "non_obviousness",
+        "depth_of_thought",
+        "transferability",
+        "current_contribution_value",
+        "future_contribution_value"
+      ],
+      "additionalProperties": false
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/text"
+        },
+        "intended_scope": {
+          "$ref": "#/$defs/text"
+        },
+        "judgements": {
+          "$ref": "#/$defs/project_judgements"
+        },
+        "inside_value_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "description",
+        "intended_scope",
+        "judgements",
+        "inside_value_refs"
+      ],
+      "additionalProperties": false
+    },
+    "contribution": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/text"
+        },
+        "kind": {
+          "enum": [
+            "transferable_practice_insight",
+            "internal_module",
+            "output"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/text"
+        },
+        "reuse_scope": {
+          "$ref": "#/$defs/text"
+        },
+        "judgements": {
+          "$ref": "#/$defs/contribution_judgements"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "description",
+        "reuse_scope",
+        "judgements"
+      ],
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "maturity": {
+          "enum": [
+            "idea",
+            "partial",
+            "usable",
+            "complete",
+            "unknown"
+          ]
+        },
+        "evidence_strength": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        },
+        "audience": {
+          "$ref": "#/$defs/text"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "uniqueItems": true
+        },
+        "delivery_form": {
+          "$ref": "#/$defs/text"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        },
+        "reuse_extraction_burden": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "maturity",
+        "evidence_strength",
+        "audience",
+        "tags",
+        "delivery_form",
+        "requirements",
+        "reuse_extraction_burden"
+      ],
+      "additionalProperties": false
+    },
+    "assessment": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/text"
+        },
+        "source_pin": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        "project": {
+          "$ref": "#/$defs/project"
+        },
+        "contributions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contribution"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "effort": {
+          "type": "object",
+          "properties": {
+            "human": {
+              "$ref": "#/$defs/effort"
+            },
+            "ai": {
+              "$ref": "#/$defs/effort"
+            }
+          },
+          "required": [
+            "human",
+            "ai"
+          ],
+          "additionalProperties": false
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        },
+        "next_decisive_step": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "path",
+        "source_pin",
+        "project",
+        "contributions",
+        "evidence",
+        "effort",
+        "metadata",
+        "limitations",
+        "next_decisive_step"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "x_wp1": {
+    "contract_version": 1,
+    "root_source_revision": "f465e9bcbedb615d14f4d58873eff771aca7f357",
+    "registry_pins": [
+      {
+        "path": "agentic-animation",
+        "source_pin": "8e7a5520dce956e409ddd45415a09cc3bcd12f4d"
+      },
+      {
+        "path": "agentworld",
+        "source_pin": "6a48a7b54cf6568a3328fc7ccde9ea807f5797d4"
+      },
+      {
+        "path": "aps",
+        "source_pin": "5c87e1d1e96632ec91f9af73968c6065a87a36f6"
+      },
+      {
+        "path": "auto_maintain_bench",
+        "source_pin": "bfac5612d25faced3f8c6f646f35299688072e44"
+      },
+      {
+        "path": "autofe",
+        "source_pin": "0f9857c7bfaee060aadb49f16af5f6b889c3d458"
+      },
+      {
+        "path": "backseat",
+        "source_pin": "46abf0d522e0df0e4bcbf41050eeb470f2c6175e"
+      },
+      {
+        "path": "beam",
+        "source_pin": "c91e21a0600af47507f6da3a3e97201c87e3cb3b"
+      },
+      {
+        "path": "causalmlp",
+        "source_pin": "2f36945a011727140d8a326f86abd5b2828a26bc"
+      },
+      {
+        "path": "colleague_private",
+        "source_pin": "300edf162a7db706043f4cf1abe3b995d25bc4bb"
+      },
+      {
+        "path": "cuda",
+        "source_pin": "c374c1972af681c2220d7592d25fa44c1252ff0d"
+      },
+      {
+        "path": "cvorat",
+        "source_pin": "00738900dd8f8ae55d09b0a980c43b31dfaf06f9"
+      },
+      {
+        "path": "cz_bert",
+        "source_pin": "f7eed5e5be2da86b2885760f5d50aa5ed5110c88"
+      },
+      {
+        "path": "cz_einn",
+        "source_pin": "dcf87a7f873da388d50f39a3b3b646d730a0fd45"
+      },
+      {
+        "path": "cz_noidea",
+        "source_pin": "3272f57ed6261b58147418d9ea4de00556008475"
+      },
+      {
+        "path": "cznn",
+        "source_pin": "dd1a8a8a616cf73ed0b694ae8f624392fcc39573"
+      },
+      {
+        "path": "danmaku",
+        "source_pin": "4382c344e064b1e3276e923c8659bddc1d243d90"
+      },
+      {
+        "path": "dino.py",
+        "source_pin": "dcaf49ee9fcacbbd476b9f1084b8b260f7514846"
+      },
+      {
+        "path": "dinoseg",
+        "source_pin": "a44f86b643aec150e59ec65335eeba44843f1049"
+      },
+      {
+        "path": "disk",
+        "source_pin": "d14016ad4758af05ba0cde66c775b7c8c0ae3f15"
+      },
+      {
+        "path": "dojo",
+        "source_pin": "4de25eb438e05209560513da2cece1c26c76733a"
+      },
+      {
+        "path": "drive",
+        "source_pin": "6f803b4ca0f274f2118de0fc6aa484a5be5c5708"
+      },
+      {
+        "path": "expyssion",
+        "source_pin": "fbb527c6a8f6f31f041fc0520285ab7835b54776"
+      },
+      {
+        "path": "fat_kakeya_needle",
+        "source_pin": "35b721a10c034d9bedddb7553121ac24c0173134"
+      },
+      {
+        "path": "flashdb",
+        "source_pin": "f020672a581f5a35c301e44d392cfe7f24159f46"
+      },
+      {
+        "path": "fring",
+        "source_pin": "ea519d126a2edb9d4299584f392257e78e93a29c"
+      },
+      {
+        "path": "grammar",
+        "source_pin": "a9ad62375c470ce783c30f5fd410ec30fcf2dd38"
+      },
+      {
+        "path": "helpagent",
+        "source_pin": "999ea9a55a1ff98b40923e5180f122e9fc9c28d7"
+      },
+      {
+        "path": "hfget",
+        "source_pin": "3b4bc96a465a166bc20d8773c1bb233d0a87d5df"
+      },
+      {
+        "path": "horse_video",
+        "source_pin": "465b41f74d51d839510e74acc356b383157b6c71"
+      },
+      {
+        "path": "http_mock",
+        "source_pin": "3bc962cfdc52b3523393cd5a82b411417351f638"
+      },
+      {
+        "path": "huaqiang_game",
+        "source_pin": "77878f00f8dc93c69b4b9cf67adf33de06536d0d"
+      },
+      {
+        "path": "huaqiang_video",
+        "source_pin": "af86cc715f955e72a86342f0753b2a784a48d99c"
+      },
+      {
+        "path": "hyperframaker",
+        "source_pin": "ed4dcf0403f11aeaa47a519761174fe12b3f5764"
+      },
+      {
+        "path": "ideas",
+        "source_pin": "fbde8f6b5382acc646acc960784400394b915d50"
+      },
+      {
+        "path": "jpi.fe",
+        "source_pin": "a1f38da4437f6f1579b2eeac17b569ef38db021d"
+      },
+      {
+        "path": "knowledge_net",
+        "source_pin": "9cb11dd2ecd85921e1d46569544a028e68bc76b2"
+      },
+      {
+        "path": "learn_draw",
+        "source_pin": "9bc2392a2e01631ac297aed8e14deb27cebf14b7"
+      },
+      {
+        "path": "litellmgen",
+        "source_pin": "2611bcdaaab8b35566d3ee14d7140502bd2c7a69"
+      },
+      {
+        "path": "lmlayer",
+        "source_pin": "69497e914f5941bf4a66a1a48451e58d203faaed"
+      },
+      {
+        "path": "local_lm_research",
+        "source_pin": "c56c887b7022948fa96daf7b379dab285a8dc418"
+      },
+      {
+        "path": "misc",
+        "source_pin": "1d406f0661a2d427bd27174a4942d4f71ab48c7d"
+      },
+      {
+        "path": "murderMysteryGame",
+        "source_pin": "9d4f5690d86bd61057d0595107c14b346fd41597"
+      },
+      {
+        "path": "mycar",
+        "source_pin": "b56e99bf67d7c640628eca0e73e2cbca99ece368"
+      },
+      {
+        "path": "myminio",
+        "source_pin": "7f84e0c4ab5d97a8d65a881fc5fa087a0f8fe0d2"
+      },
+      {
+        "path": "myminio2",
+        "source_pin": "96bf9d178c926941386ae18c9bc038c7dd6f8ec6"
+      },
+      {
+        "path": "myygo",
+        "source_pin": "ce461d921f10c3ad70f8418647948512c3b8ad31"
+      },
+      {
+        "path": "myzcopy",
+        "source_pin": "bc64707a13e9955cfb9505be15ec3f22d53f027e"
+      },
+      {
+        "path": "neuronloop",
+        "source_pin": "325189012b220f9fb48cdccaa9359ca6e9ce7f1e"
+      },
+      {
+        "path": "nn",
+        "source_pin": "67f65bed3ee5b98a70590c7e66571f156316108a"
+      },
+      {
+        "path": "npchallenge",
+        "source_pin": "006033ca36d92b8b769f5a6a1e4f655a630a4a5b"
+      },
+      {
+        "path": "pathlm",
+        "source_pin": "62c60d36f56668a115ca90c871ae62c0a375e277"
+      },
+      {
+        "path": "pelican_bike",
+        "source_pin": "cc0da5b2eba298cf15a01210a0c5f5df3111d8f8"
+      },
+      {
+        "path": "pi-keys",
+        "source_pin": "a526471b016563513b20596c9866d64ab2277269"
+      },
+      {
+        "path": "pushbus",
+        "source_pin": "4a3886af5c0da4541a806cf6b6a61dff8132f1d2"
+      },
+      {
+        "path": "ra2",
+        "source_pin": "ed37126469886b55526909c5adcbc0cdf382b0b4"
+      },
+      {
+        "path": "raid_calc",
+        "source_pin": "01d874f61b01731918acdc574fa2866e08846dcd"
+      },
+      {
+        "path": "resume_img_gen",
+        "source_pin": "1ce58702d4a84d9134371209871bd4579a0181ca"
+      },
+      {
+        "path": "resume_improve_loop",
+        "source_pin": "177613f15c51128aea1dc6f6f1d5d03bf94e546b"
+      },
+      {
+        "path": "resume_private",
+        "source_pin": "a3d36d46050a7bb10890fb8da142127359b87f79"
+      },
+      {
+        "path": "retnet",
+        "source_pin": "405e4b76d8c6fd35503d438471c7f4bd847befed"
+      },
+      {
+        "path": "ringsvr",
+        "source_pin": "333102e33b0016ad34a2e5344165737b642a239c"
+      },
+      {
+        "path": "seq_autoenc",
+        "source_pin": "df008e9562397e4ef9bcf2b568346efe90df55a3"
+      },
+      {
+        "path": "sys_gal",
+        "source_pin": "219cafdc05eee14ceafb2d2239715df3a23a786b"
+      },
+      {
+        "path": "sys_gal_rt",
+        "source_pin": "32c6c1059a74e7ae9fab08d05b30c96ba19a33b1"
+      },
+      {
+        "path": "timecolumn",
+        "source_pin": "d73a5225c45e0c1b1a8753f462a76bfb3c24dcfa"
+      },
+      {
+        "path": "tok",
+        "source_pin": "03b6f3f10f080a9ac9f039763bab66ae6a5fb446"
+      },
+      {
+        "path": "tokenqr",
+        "source_pin": "487de9e5a95d833af83eda54f3f0b56b48c9a368"
+      },
+      {
+        "path": "treui",
+        "source_pin": "4fc2db2ac9539a0e867e596b0862aea5208cdc05"
+      },
+      {
+        "path": "tutor_private",
+        "source_pin": "c39847a2a4c2dbd544b0c9a3127324f60dcc4bf4"
+      },
+      {
+        "path": "uv",
+        "source_pin": "7d58e5986767c7e65aeffdb138a7cdb0c20f308c"
+      },
+      {
+        "path": "vibeos",
+        "source_pin": "b81f0e248c07bb0098b0f454d42adecaef2e8bf0"
+      },
+      {
+        "path": "xywdisk",
+        "source_pin": "d792e6ac0f74daec9022233c89a6d4cc813dd712"
+      },
+      {
+        "path": "ygo",
+        "source_pin": "71101a9129a76461ab57e3c049a317d0135da010"
+      }
+    ],
+    "lanes": [
+      {
+        "key": "lane-01",
+        "paths": [
+          "agentic-animation",
+          "agentworld",
+          "aps",
+          "auto_maintain_bench",
+          "autofe",
+          "backseat",
+          "beam",
+          "causalmlp",
+          "colleague_private",
+          "cuda",
+          "cvorat",
+          "cz_bert",
+          "cz_einn",
+          "cz_noidea",
+          "cznn",
+          "danmaku",
+          "dino.py",
+          "dinoseg",
+          "disk"
+        ]
+      },
+      {
+        "key": "lane-02",
+        "paths": [
+          "dojo",
+          "drive",
+          "expyssion",
+          "fat_kakeya_needle",
+          "flashdb",
+          "fring",
+          "grammar",
+          "helpagent",
+          "hfget",
+          "horse_video",
+          "http_mock",
+          "huaqiang_game",
+          "huaqiang_video",
+          "hyperframaker",
+          "ideas",
+          "jpi.fe",
+          "knowledge_net",
+          "learn_draw"
+        ]
+      },
+      {
+        "key": "lane-03",
+        "paths": [
+          "litellmgen",
+          "lmlayer",
+          "local_lm_research",
+          "misc",
+          "murderMysteryGame",
+          "mycar",
+          "myminio",
+          "myminio2",
+          "myygo",
+          "myzcopy",
+          "neuronloop",
+          "nn",
+          "npchallenge",
+          "pathlm",
+          "pelican_bike",
+          "pi-keys",
+          "pushbus",
+          "ra2"
+        ]
+      },
+      {
+        "key": "lane-04",
+        "paths": [
+          "raid_calc",
+          "resume_img_gen",
+          "resume_improve_loop",
+          "resume_private",
+          "retnet",
+          "ringsvr",
+          "seq_autoenc",
+          "sys_gal",
+          "sys_gal_rt",
+          "timecolumn",
+          "tok",
+          "tokenqr",
+          "treui",
+          "tutor_private",
+          "uv",
+          "vibeos",
+          "xywdisk",
+          "ygo"
+        ]
+      }
+    ],
+    "partition_policy": "Sort .gitmodules paths lexically and divide into four balanced contiguous chunks; lane names and chunk positions schedule work only and are not semantic categories.",
+    "judgements": {
+      "non_obviousness": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "Directly obvious or merely repeated; no meaningful departure from routine practice."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "Familiar small variation; ordinary alternatives solve the same problem similarly."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "Some non-obvious choices, but the main move follows a familiar pattern."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "A consequential design choice is not the obvious default and follows from stated constraints."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "A notably non-obvious reusable practice or insight removes a recurring difficulty."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "An unusually powerful, precisely differentiated way to address the declared problem, supported by strong comparison evidence."
+          }
+        ]
+      },
+      "depth_of_thought": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "No evidenced reasoning beyond naming an output or copying a default."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "Surface-level choices with little treatment of constraints or failure."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "Competent implementation reasoning addresses the immediate case."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "Reasoning connects constraints, alternatives, tradeoffs and failure modes."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "Systematic reasoning anticipates interacting failure modes and yields a reusable method."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "Deep, coherent treatment of the problem boundary and alternatives is evidenced, not inferred from complexity."
+          }
+        ]
+      },
+      "transferability": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "No plausible use outside the original instance."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "Transfer requires substantial redesign or depends on undocumented context."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "A bounded adjacent use is plausible with significant adaptation."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "A named adjacent context can reuse the idea with explicit adaptation."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "A reusable practice transfers across multiple contexts with clear boundaries."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "The contribution provides a broadly reusable method while documenting the contexts where it fails."
+          }
+        ]
+      },
+      "current_product_value": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "No evidenced worthwhile outcome for a named current user."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "Minor or one-off convenience with a simpler adequate alternative."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "A bounded current workflow benefit is plausible but materially limited."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "A named user obtains a worthwhile current outcome with evidenced use or output."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "A consequential current workflow benefit is supported for its audience."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "A strong, repeated current outcome is independently corroborated against relevant alternatives."
+          }
+        ]
+      },
+      "future_product_value": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "Even the explicitly stated completed scope has no identifiable worthwhile outcome."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "The stated completed scope offers only a minor or narrow benefit."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "A bounded benefit follows if the stated scope is completed."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "The completed scope enables a worthwhile outcome for a named audience."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "The completed scope would enable a consequential capability or workflow benefit."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "The completed scope addresses a well-evidenced important need with a strong value mechanism."
+          }
+        ]
+      },
+      "current_contribution_value": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "No evidenced useful transferable practice or insight is available now."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "A small reusable idea has limited value beyond its original setting."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "A bounded practice or insight can help an adjacent use with adaptation."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "A concrete current reusable contribution removes a meaningful difficulty."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "A strongly useful transferable practice or insight addresses recurring pain."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "An exceptionally valuable current contribution has a clear boundary and strong evidence of reuse value."
+          }
+        ]
+      },
+      "future_contribution_value": {
+        "kind": "integer_estimate",
+        "range": [
+          0,
+          10
+        ],
+        "plausible_bounds": true,
+        "unknown_allowed": true,
+        "anchors": [
+          {
+            "range": [
+              0,
+              0
+            ],
+            "description": "Even when the stated contribution goal is met, no worthwhile reusable value is identifiable."
+          },
+          {
+            "range": [
+              1,
+              2
+            ],
+            "description": "The completed contribution would add a narrow or minor reusable benefit."
+          },
+          {
+            "range": [
+              3,
+              4
+            ],
+            "description": "The completed contribution would offer a bounded practice or insight."
+          },
+          {
+            "range": [
+              5,
+              6
+            ],
+            "description": "The completed contribution would remove a meaningful difficulty in a named context."
+          },
+          {
+            "range": [
+              7,
+              8
+            ],
+            "description": "The completed contribution would offer a strong reusable method across named contexts."
+          },
+          {
+            "range": [
+              9,
+              10
+            ],
+            "description": "The completed contribution would provide unusually high reusable value with a specified evidence path."
+          }
+        ]
+      },
+      "technical_feasibility": {
+        "kind": "subjective_probability_range",
+        "range": [
+          0,
+          1
+        ],
+        "requires": [
+          "constraints",
+          "horizon",
+          "rationale"
+        ],
+        "unknown_allowed": true
+      },
+      "delivery_feasibility": {
+        "kind": "subjective_probability_range",
+        "range": [
+          0,
+          1
+        ],
+        "requires": [
+          "constraints",
+          "horizon",
+          "rationale"
+        ],
+        "unknown_allowed": true
+      }
+    },
+    "source_rules": {
+      "root_pin": "Use each source_pin from the root_source_revision gitlink only. Never infer a source pin from a live checkout. If live state differs, record the difference without modifying it or silently accepting it.",
+      "provenance": [
+        "owner_testimony",
+        "independent_observation",
+        "agent_inference"
+      ],
+      "effort": "Human and AI effort are separate descriptions with source provenance or explicit unknown. Never infer effort from Git history, file counts, commits or elapsed checkout age.",
+      "inside_value": "Project inside_value_refs cite contribution ids of kind transferable_practice_insight; do not store independent project-level contribution ratings.",
+      "aggregation": "No total, mean, average, weighted score, or artificial tie-break is allowed. Preserve genuine ties and unknowns."
+    },
+    "output": {
+      "file": "<runtime-managed-output>/<lane>.json",
+      "encoding": "UTF-8 JSON object conforming to this schema and scripts/catalogue.py --validate-redesign-handoff --lane <lane> <file>.",
+      "exact_coverage": "One assessment for each and only each path assigned to the declared lane, no duplicates.",
+      "handoff_fields": [
+        "contract_version",
+        "lane",
+        "root_source_revision",
+        "assessments"
+      ],
+      "per_assessment_fields": [
+        "path",
+        "source_pin",
+        "project",
+        "contributions",
+        "evidence",
+        "effort",
+        "metadata",
+        "limitations",
+        "next_decisive_step"
+      ]
+    }
+  }
+}

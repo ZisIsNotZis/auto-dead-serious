@@ -1,0 +1,111 @@
+{
+  "path": "fixture-failed-product",
+  "source_pin": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "project": {
+    "description": "Synthetic validation case only; not a catalogue entry.",
+    "intended_scope": "A hypothetical delivered product that fails its target workflow.",
+    "judgements": {
+      "current_product_value": {
+        "status": "estimated",
+        "estimate": 0,
+        "plausible_range": [0, 1],
+        "rationale": "Synthetic case: the delivered product provides no worthwhile outcome.",
+        "evidence_refs": ["independent-example"]
+      },
+      "future_product_value": {
+        "status": "unknown",
+        "reason": "The hypothetical completed scope is not established."
+      },
+      "technical_feasibility": {
+        "status": "unknown",
+        "reason": "No constraints or technical horizon are established."
+      },
+      "delivery_feasibility": {
+        "status": "unknown",
+        "reason": "No delivery plan or horizon is established."
+      }
+    },
+    "inside_value_refs": ["practice-1"]
+  },
+  "contributions": [
+    {
+      "id": "practice-1",
+      "kind": "transferable_practice_insight",
+      "description": "Synthetic reusable practice that remains valuable despite product failure.",
+      "reuse_scope": "A bounded adjacent context; example only.",
+      "judgements": {
+        "non_obviousness": {
+          "status": "estimated",
+          "estimate": 7,
+          "plausible_range": [6, 8],
+          "rationale": "Synthetic case: the practice differs meaningfully from the stated ordinary approach.",
+          "evidence_refs": ["owner-example"]
+        },
+        "depth_of_thought": {
+          "status": "estimated",
+          "estimate": 6,
+          "plausible_range": [5, 7],
+          "rationale": "Synthetic case: the practice accounts for constraints and a failure mode.",
+          "evidence_refs": ["owner-example"]
+        },
+        "transferability": {
+          "status": "estimated",
+          "estimate": 8,
+          "plausible_range": [7, 9],
+          "rationale": "Synthetic case: the practice can be adapted to a named adjacent setting.",
+          "evidence_refs": ["independent-example"]
+        },
+        "current_contribution_value": {
+          "status": "estimated",
+          "estimate": 9,
+          "plausible_range": [8, 10],
+          "rationale": "Synthetic case: this reusable practice has value independent of the failed product.",
+          "evidence_refs": ["owner-example", "independent-example"]
+        },
+        "future_contribution_value": {
+          "status": "unknown",
+          "reason": "No completed contribution scope is established."
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "owner-example",
+      "provenance": "owner_testimony",
+      "claim": "Synthetic example of owner-attributed testimony; this is not a real owner statement.",
+      "source": "WP1 synthetic fixture",
+      "locator": "tests/fixtures/catalogue_redesign_failed_product.json",
+      "revision": "unknown"
+    },
+    {
+      "id": "independent-example",
+      "provenance": "independent_observation",
+      "claim": "Synthetic example of independent observation; this is not a project observation.",
+      "source": "WP1 synthetic fixture",
+      "locator": "tests/fixtures/catalogue_redesign_failed_product.json",
+      "revision": "unknown"
+    }
+  ],
+  "effort": {
+    "human": {
+      "status": "unknown",
+      "reason": "Synthetic fixture makes no effort measurement."
+    },
+    "ai": {
+      "status": "unknown",
+      "reason": "Synthetic fixture makes no effort measurement."
+    }
+  },
+  "metadata": {
+    "maturity": "unknown",
+    "evidence_strength": "unknown",
+    "audience": "unknown",
+    "tags": [],
+    "delivery_form": "unknown",
+    "requirements": [],
+    "reuse_extraction_burden": "unknown"
+  },
+  "limitations": ["Synthetic fixture only; do not use as project evidence."],
+  "next_decisive_step": "Replace synthetic values only within an authorized WP2 assessment."
+}
