@@ -1,0 +1,74 @@
+{
+  "path": "cvorat",
+  "parent_pin": "00738900dd8f8ae55d09b0a980c43b31dfaf06f9",
+  "child_head": "00738900dd8f8ae55d09b0a980c43b31dfaf06f9",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Notebooks and GPU workflows were not run; source inspection was selective.",
+  "description": "A notebook research log for small byte-level language models, with custom layer variants including grouped/windowed attention, dynamic convolution, cumulative-state layers, low-rank factorization, and RoPE.",
+  "scope_audience": "Personal exploratory research archive comparing short next-byte training passes; the byte corpus is absent and README states results were not written up.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The custom layer combination is an interesting experiment set, but no cross-project or public prior-art comparison establishes originality.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Custom code is inspectable, but missing corpus, unpinned environment, and no retained result write-up prevent a usable comparative conclusion.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated training comparisons were made reproducible, they could yield bounded architectural evidence; the current archive does not establish outcomes.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "`nn2.py` implements nontrivial modules such as dynamic convolution and cumulative averages, alongside notebooks that instantiate/train variants; no measured results are recorded.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README calls it an unmaintained scratch log with no results, pinned environment, or included corpus; setup needs GPU dependencies and a missing input.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and shared layer implementation inspected; no notebook or training execution.",
+  "evidence": [
+    {
+      "path": "cvorat/README.md",
+      "locator": "What; Why it exists; How to run; Status"
+    },
+    {
+      "path": "cvorat/nn2.py",
+      "locator": "Cnv; Dycnv; Cumavg; Cummax; Cumdecay"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "Custom layer implementations and multiple experimental instantiations demonstrate a real research attempt, not evidence that any variant is better.",
+  "alternatives_question": "Which byte-level LM experiments publish matched, reproducible comparisons for cumulative-state layers, dynamic convolution, and grouped/window attention at similar scale?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "the exploration archive is preserved, but its intended model comparisons need absent data and a pinned GPU environment."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial implementation supports keeping the research archive; without recorded results, current utility and comparative claims remain weak.",
+  "next_step": "Choose one mechanism and retain a small pinned corpus/config/seed, matched baseline, and result record before expanding the notebook set.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

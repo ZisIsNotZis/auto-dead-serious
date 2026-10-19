@@ -1,0 +1,86 @@
+{
+  "path": "causalmlp",
+  "parent_pin": "e4046d7b3b158911e5e59a38a26390d7917c955b",
+  "child_head": "e4046d7b3b158911e5e59a38a26390d7917c955b",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Reused the prior local assessment after matching its child pin; no rerun.",
+  "description": "A synthetic-data research experiment on cumulative hidden-unit-prefix logits and whether predictions improve as more units contribute.",
+  "scope_audience": "Research archive testing a narrow early-exit/prefix-prediction hypothesis; report leaves real-data validation and adaptive-compute savings unresolved.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Cumulative-mean prefix prediction is an interesting local mechanism, but related nested-capacity work exists and exact novelty is unsettled.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The model emits all prefixes, but no saved-compute or deployment benefit is demonstrated; the existing report/results have metric and provenance limits.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "If its stated research question is completed, the likely outcome is narrow evidence about one synthetic prefix model; real-task value is not grounded yet.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Model, synthetic train/test generator, width sweep, report, and saved result form a genuine research attempt; current headline comparison is not reliable.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README describes the question, results, limits, and archival state, but there is no package, tests, or revision-bound run metadata.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "high",
+  "verification": "Prior local investigator record and current source/report/result inspected; no experiment rerun.",
+  "evidence": [
+    {
+      "path": "docs/result/catalogue-pilot.md",
+      "locator": "heading `causalmlp` and metric-comparability finding"
+    },
+    {
+      "path": "causalmlp/causal_mlp.py",
+      "locator": "CausalHiddenMLP.forward; causal_accuracy"
+    },
+    {
+      "path": "causalmlp/experiment.py",
+      "locator": "width comparison experiment"
+    },
+    {
+      "path": "causalmlp/results.json",
+      "locator": "stored score fields"
+    },
+    {
+      "path": "causalmlp/report.md",
+      "locator": "reported results and limitations"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The model, sweep, and documented mixed/negative findings are meaningful research work; no successful early-exit utility or originality claim follows.",
+  "alternatives_question": "Which nested-capacity or early-exit models emit useful predictions at hidden-unit prefixes, and do they show saved compute on the same task? Compare the mechanism, not only the problem family.",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "an archived synthetic experiment is complete enough to inspect, but resolving the metric mismatch and real-task question requires new work."
+  },
+  "verdict": "repair",
+  "reason": "Parent calibration: substantive research work supports retention, but the investigator's source-level metric-comparability finding undermines the current headline accuracy gap. Repair or retract that claim before promoting results; no child repair or rerun occurred here.",
+  "next_step": "Use a common top-1 metric and held-out examples, bind config/seed/revision in results, and rerun before making an efficacy claim.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "path": "disk",
+  "parent_pin": "d14016ad4758af05ba0cde66c775b7c8c0ae3f15",
+  "child_head": "d14016ad4758af05ba0cde66c775b7c8c0ae3f15",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No original bench, data, private host, hardware, or camera workflow was accessed; notebook source only inspected.",
+  "description": "An archive combining thermal-control modeling/optimization experiments with unrelated industrial-camera and object-storage integration fragments.",
+  "scope_audience": "Reference archive rather than maintained project; the thermal work depends on original bench data/hardware, while one closed-form notebook is described as independently useful for ground truth.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The combination of a thermal simulator, surrogate fitting, and iterative set-point adjustment is an interesting engineering experiment; results and originality are not established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Most workflows need absent hardware/config/data; only the analytic notebook is described as self-contained and was not executed.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "The declared archive scope offers narrow reference value, not a grounded future product outcome; the original control workflow lacks reproducible inputs.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "`disk.py` contains a thermal plant simulator and an iterative Modbus/sensor feedback loop, while the remaining workflow and outcomes cannot be reconstructed here.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README clearly labels the archive and dependencies, but no runnable full entrypoint, package, tests, or input bundle exists.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README/status, representative control script, and analytic notebook source inspected; no hardware, data, or notebook execution.",
+  "evidence": [
+    {
+      "path": "disk/README.md",
+      "locator": "two threads; Status; How to run"
+    },
+    {
+      "path": "disk/disk.py",
+      "locator": "Sim; F; feedback loop"
+    },
+    {
+      "path": "disk/closed_form.ipynb",
+      "locator": "cell 0: `temperature`"
+    },
+    {
+      "path": "disk/docs/project-status.md",
+      "locator": "Evidence; Reproducibility"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The actual thermal feedback loop and analytic reference equation are substantive engineering/research artifacts; absent bench inputs prevent outcome validation.",
+  "alternatives_question": "Which reproducible thermal-control research examples use an analytic diffusion-decay reference plus 47 actuator/34 sensor surrogate optimization, and what measured control outcome is comparable?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "archive preservation is complete; reproducing the original lab run is blocked by absent inputs and hardware."
+  },
+  "verdict": "incubate",
+  "reason": "Substantive historical code supports retaining the archive; no current executable result or verified operational usefulness is available.",
+  "next_step": "Keep it explicitly archival; if a result is to be featured, reproduce the closed-form notebook independently and leave hardware-linked claims unverified until inputs are available.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "path": "http_mock",
+  "parent_pin": "3bc962cfdc52b3523393cd5a82b411417351f638",
+  "child_head": "3bc962cfdc52b3523393cd5a82b411417351f638",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Notebook cells were extracted read-only; no notebook was run.",
+  "description": "Notebook experiments generate toy protocol traces and train a character-level GRU encoder-decoder to imitate mock server responses, including cycle losses and a request/response grid variant.",
+  "scope_audience": "Archived research scratchpad asking whether a sequence model can simulate a tiny stateful protocol from synthetic examples; not a shipped mock server or maintained model.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The cross-grid model and triple reconstruction/translation loss make an interesting small experiment, but global novelty is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "It serves as a narrow notebook reference; README reports no saved outputs, metrics, checkpoint or demonstrated learned server behavior.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If completed as a controlled toy study, it could answer a bounded question about learned protocol imitation; the current corpus and evaluation do not do so.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "A GRU seq2seq, synthetic mock and training path are implemented, but there is no reproducible measurement and one notebook is described as truncated.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "The README precisely explains the archive, CUDA limitation, missing outputs and lack of runner/dependency metadata; it is not a fresh-user runnable package.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and representative notebook model/training cells inspected via read-only extraction; no CUDA execution, outputs, checkpoints or metrics verified.",
+  "evidence": [
+    {
+      "path": "http_mock/README.md",
+      "locator": "What; Why it exists; Status"
+    },
+    {
+      "path": "http_mock/http_mock_3.ipynb",
+      "locator": "Seq2Seq; Seq2Rnn2Seq; los"
+    },
+    {
+      "path": "http_mock/http_mock_3.ipynb",
+      "locator": "training loop after Seq2Rnn2Seq"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "Implemented protocol generators and a multi-loss GRU experiment show a real research attempt, while no recorded metric establishes that the model learned the protocol.",
+  "alternatives_question": "Which current learned state-machine or protocol-imitation studies test the same request-to-response task with held-out state transitions, and would that comparison change this experiment's interest?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The archive is explicitly deprecated; no training outputs or maintained execution path are available in the repository."
+  },
+  "verdict": "incubate",
+  "reason": "The notebook work supports retention as a research attempt, but it has no result to showcase and its practical utility is unestablished.",
+  "next_step": "Keep the archived interpretation; if revived, add saved, reproducible held-out behavior metrics before claiming protocol learning.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

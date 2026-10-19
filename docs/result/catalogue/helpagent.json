@@ -1,0 +1,80 @@
+{
+  "path": "helpagent",
+  "parent_pin": "999ea9a55a1ff98b40923e5180f122e9fc9c28d7",
+  "child_head": "999ea9a55a1ff98b40923e5180f122e9fc9c28d7",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Benchmark record files were not opened or rerun.",
+  "description": "A deterministic software-engineering research harness that uses a small local model in bounded plan/implement/verify/claim steps and a blind external grader.",
+  "scope_audience": "Completed research campaign for people evaluating verification workflows with a fixed 4B model and 40-task corpus; the hoped-for repository-fixing CLI is not implemented.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The blind grader, machine-readable evidence gate and measured workflow ablations form an interesting integration; global originality is not established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The harness and negative findings can inform research, but the consumer-facing helpagent command is absent and findings are tied to one setup.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the scoped engineering workflow achieved its stated goals, evidence-backed repository repair would be important; this rating is conditional, not a success forecast.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The campaign harness, structural gate and recorded head-to-head/ablation results are integrated; goals remain unresolved and product CLI is absent.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README and STATUS explain protocol, conditions, estimates, negative results and limits clearly, though no product command is available to a fresh user.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, STATUS and representative leaf-loop source inspected; measured numbers are project-reported at the stated revision, not independently recomputed or executed here.",
+  "evidence": [
+    {
+      "path": "helpagent/README.md",
+      "locator": "What it does; Final measured results; Conclusion"
+    },
+    {
+      "path": "helpagent/docs/STATUS.md",
+      "locator": "Fair comparison precondition; The three requirements"
+    },
+    {
+      "path": "helpagent/harness/leaf.py",
+      "locator": "Leaf loop contract; claim gate and test-report checks"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A research campaign that documents inconclusive parity, mixed verification effects and a negative result for its current decomposition bundle, with explicit limits against overgeneralization.",
+  "alternatives_question": "Which current coding-agent evaluation harnesses use the same blind task-level grader and delivery-revision audit, and what evidence would show this protocol adds a distinct capability?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The campaign is closed and the proposed user-facing repository-fixing CLI does not exist; no continuation is planned."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial, candid experimental work supports keeping the research record; unresolved product goals and narrow evaluation scope do not support a product showcase claim.",
+  "next_step": "Preserve the scoped negative findings; any revived product claim needs a separate unseen-repository end-to-end evaluation.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

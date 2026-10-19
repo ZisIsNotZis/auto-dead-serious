@@ -1,0 +1,74 @@
+{
+  "path": "dinoseg",
+  "parent_pin": "a44f86b643aec150e59ec65335eeba44843f1049",
+  "child_head": "a44f86b643aec150e59ec65335eeba44843f1049",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No local DINO checkout/checkpoint, image data, GUI, or metrics were accessed/run.",
+  "description": "A click-to-label segmentation tool that reuses frozen DINOv3 patch embeddings with nearest-neighbor or linear-probe masks over a set of images.",
+  "scope_audience": "A narrow industrial inspection/vision workflow with few available masks; README labels it a private-archive salvage, not a released product.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The few-click interface over frozen semantic features is an interesting practical combination, though underlying kNN/linear probes are familiar and novelty unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Canonical source implements annotation, feature cache, prediction, and GUI navigation; no measured segmentation quality or output export exists.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If a small labeled-pixel workflow generalizes, it could reduce annotation effort for a bounded batch, but the archive has no dataset or accuracy evidence.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The canonical script contains cached embeddings, editable labels, kNN and trained linear probe; README lists no packaging/tests and a major missing batch-export path.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README provides setup, controls, cache behavior, known rough edges, and limitations; required checkpoint and external checkout are not included.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and representative canonical script inspected; no inference, GUI, or segmentation metric run.",
+  "evidence": [
+    {
+      "path": "dinoseg/README.md",
+      "locator": "Problem; How to run; Implemented vs. not"
+    },
+    {
+      "path": "dinoseg/dinoseg3.py",
+      "locator": "Emb; Xy; LinModel; KnnPrd; LinPrd"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The annotation/cache/prediction workflow is implemented beyond a README claim; whether it yields acceptable masks or exceeds alternatives is unmeasured.",
+  "alternatives_question": "Which open-source interactive segmentation systems use frozen DINO features and a few clicks across an image batch, and what annotation effort/IoU comparison exists?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "the prototype is integrated in one script, but absent model files and no quality measurement leave use unverified."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial implementation and a specific low-label use case support retention, but performance and output path gaps block showcase claims.",
+  "next_step": "Evaluate a small authorized image batch with fixed held-out masks, measure IoU/annotation effort, and add a safe mask export only if this scope is still intended.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

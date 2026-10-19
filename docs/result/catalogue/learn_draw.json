@@ -1,0 +1,80 @@
+{
+  "path": "learn_draw",
+  "parent_pin": "9bc2392a2e01631ac297aed8e14deb27cebf14b7",
+  "child_head": "9bc2392a2e01631ac297aed8e14deb27cebf14b7",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. No reference image, artwork, private payload or live work record was opened; only structural status and source were assessed.",
+  "description": "A programmatic-drawing research project whose current architecture aims to place independently drawn components on 2D/3D supports and derive visibility geometrically.",
+  "scope_audience": "A long-running single-user learning/research effort targeting reference-based illustration and then original creation; current evidence separates geometry tooling from accepted art outcomes.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "Deriving component visibility from support depth rather than author-labeled occlusion is an interesting technical direction; global novelty and artistic merit are not assessed.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The inspected visibility algorithm is a slow structural renderer, while status says current 2D implementation is legacy and no current art gate is passed here.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the approved drawing-learning scope succeeds, geometry-derived visibility could support a meaningful programmatic illustration workflow; this is conditional on art and transfer gates.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "A geometric visibility algorithm and testable drawing tooling exist, but status distinguishes these technical artifacts from current architecture and accepted artworks.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README/STATUS provide architecture, roadmap and entry points, but no current artwork was reviewed and the forward work remains incomplete.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "Structural README/STATUS and vector visibility source inspected only; no target imagery or personal payload, renders, builds, tests or human review.",
+  "evidence": [
+    {
+      "path": "learn_draw/README.md",
+      "locator": "Where this project is right now; Invariants"
+    },
+    {
+      "path": "learn_draw/STATUS.md",
+      "locator": "Current project state; Current architecture contract"
+    },
+    {
+      "path": "learn_draw/scripts/vector_visibility.py",
+      "locator": "depth_plane; visible_fragments"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The local technical contribution is geometry-computed visibility for projected triangles, with a stated boundary between that proof-of-mechanism and accepted artwork.",
+  "alternatives_question": "Which current vector/3D illustration systems derive visibility from component depth for this same drawing-learning goal, and how would an independent art/transfer test distinguish value?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "A meaningful architecture and implementation exist, but current visual acceptance, transfer and full objective gates remain open."
+  },
+  "verdict": "incubate",
+  "reason": "Interesting mechanism and substantial research work support retention; current user-facing drawing value is not established and private visual material was excluded.",
+  "next_step": "At an authorized milestone, evaluate only the specified current candidate through its independent structural and image-only gates.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

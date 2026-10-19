@@ -1,0 +1,82 @@
+{
+  "path": "resume_improve_loop",
+  "parent_pin": "177613f15c51128aea1dc6f6f1d5d03bf94e546b",
+  "child_head": "177613f15c51128aea1dc6f6f1d5d03bf94e546b",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No real resume data was read and no agent command was executed.",
+  "description": "A driver for repeated multi-persona document critique, score aggregation and a plateau stop condition, with a human applying accepted edits between rounds.",
+  "scope_audience": "The intended user is someone iteratively improving a resume or document with an agent CLI that reads stdin and writes stdout. The tool does not itself edit the document or guarantee truthful reviewer judgments.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Independent adversarial reviewer personas plus a trend-based stopping rule are an interesting workflow composition; comparisons to other critique loops were not searched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The inspected driver runs reviewers, parses scores, aggregates rounds and stops on plateau, but no real agent interaction, reviewer accuracy or output record was verified.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the intended scope succeeds, a user can expose different document weaknesses and see whether revisions move rubric scores; those scores are not an objective quality measure.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "loop.py implements prompt/run/retry/aggregation/plateau control and README/RUBRIC define the contract, but there is no local test suite or recorded run inspected.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README explains persona roles, workflow, commands and stop behavior; agent CLI and prompt-quality limits are made explicit.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The local driver is present, but useful output depends on an externally supplied agent command and reviewer quality; no run evidence was retained in the inspected root."
+  },
+  "confidence": "medium",
+  "verification": "README, loop.py flow and rubric contract; executed=false; No resume or personal document was opened; no external agent was launched; no score quality was assessed.",
+  "evidence": [
+    {
+      "path": "resume_improve_loop/README.md",
+      "locator": "lines 7-25, multi-reviewer workflow; lines 38-71, agent contract and stopping"
+    },
+    {
+      "path": "resume_improve_loop/loop.py",
+      "locator": "lines 36-52, score parsing; lines 180-260, rounds, aggregation and plateau flow"
+    },
+    {
+      "path": "resume_improve_loop/RUBRIC.md",
+      "locator": "reviewer score contract"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A controlled human-in-the-loop critique cycle rather than a single score prompt: personas see a common text/rubric, results are aggregated, and the user decides which edits to accept. The scoring trend is a proxy, not proof of better hiring outcomes.",
+  "alternatives_question": "Which document-review loops support independent persona critiques, exact quoted findings and human-selected edits across rounds, and how do they prevent score convergence from becoming rubric gaming?",
+  "verdict": "incubate",
+  "reason": "The driver is implemented and its bounded workflow is understandable, but agent quality, usefulness and score validity have no local result evidence.",
+  "next_step": "Use a fictional document with known seeded defects, check whether each persona identifies its assigned issue with accurate quotations, and report score changes only as proxy observations.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

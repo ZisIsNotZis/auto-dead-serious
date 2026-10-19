@@ -1,0 +1,76 @@
+{
+  "path": "ideas",
+  "parent_pin": "fbde8f6b5382acc646acc960784400394b915d50",
+  "child_head": "fbde8f6b5382acc646acc960784400394b915d50",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. No experiments or external literature searches were performed.",
+  "description": "A compact collection of speculative notes about temporal/world models, memory and language; the README explicitly treats them as hypotheses rather than validated designs.",
+  "scope_audience": "A seed bank for researchers who want to challenge an idea and turn one claim into a minimal experiment, not a paper or implemented system.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The notes combine concrete hypotheses and mechanisms and openly engage nearby research; this supports interestingness, not global originality.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The repository is useful as an organized prompt for future investigation, but no validated finding or implemented tool is supplied.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the notes prompt a falsifiable experiment, they can save framing effort for a researcher; no downstream experiment or audience outcome is evidenced.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "The intended artifact is a notebook of speculative designs; no implementation or experiment validates its mechanisms.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README indexes the ideas, explains how to use them and labels speculation clearly; it does not supply execution evidence or a showcase artifact.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and one representative idea note inspected; no implementation, experiment, or external comparison performed.",
+  "evidence": [
+    {
+      "path": "ideas/README.md",
+      "locator": "Index; How to use this repo"
+    },
+    {
+      "path": "ideas/docs/designs/world-01.md",
+      "locator": "Temporal Order Verification; Generate-and-Verify Inference Paradigms"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "unsupported"
+  },
+  "contribution": "A deliberately speculative seed bank that identifies a verifier-centered world-model hypothesis and discusses related lines; the notes do not establish research novelty or a working mechanism.",
+  "alternatives_question": "Which current research already tests a temporal verifier as the primary world-model interface, rather than an auxiliary task, and is the hypothesized distinction consequential?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The repository is a complete notes artifact, but whether any idea yields a useful experiment or result is unknown."
+  },
+  "verdict": "incubate",
+  "reason": "Interestingness supports the creativity route even though implementation and usefulness are not established; no global novelty claim is made.",
+  "next_step": "Select one hypothesis and specify a discriminator against its documented neighboring research before investing in implementation.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

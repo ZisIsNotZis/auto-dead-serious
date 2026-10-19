@@ -1,0 +1,78 @@
+{
+  "path": "beam",
+  "parent_pin": "c91e21a0600af47507f6da3a3e97201c87e3cb3b",
+  "child_head": "c91e21a0600af47507f6da3a3e97201c87e3cb3b",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No llama.cpp checkout/build or inference run was available or attempted.",
+  "description": "A set of hand-written beam-search decoder experiments layered on llama.cpp example infrastructure, focused on retaining candidate continuations through KV sequence copy/removal.",
+  "scope_audience": "Historical implementation experiment for llama.cpp users; README explicitly labels it deprecated and not a standalone reproducible build.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "KV-cache sequence reuse is a technically interesting beam-search implementation detail, but the technique itself is familiar and global novelty is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The source is a reference fragment tied to unstable internal APIs with no self-contained build, so present operational use is highly limited.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "As an archive it offers narrow learning/reference value; a current usable decoder would require porting and measured comparison, neither is the archive's stated current scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Source implements candidate scoring, KV sequence copying/removal, token ancestry, and output reconstruction, but lacks tests and reproducible integration.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README clearly states dependencies, deprecation, and missing build recipe, but there is no runnable entry point.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, status document, and representative beam implementation inspected; no build or inference.",
+  "evidence": [
+    {
+      "path": "beam/README.md",
+      "locator": "Why it exists; How to run; Status"
+    },
+    {
+      "path": "beam/beam8.cpp",
+      "locator": "BeamSearch.step; BeamSearch.get"
+    },
+    {
+      "path": "beam/docs/project-status.md",
+      "locator": "Classification; Boundaries"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A concrete implementation of KV-backed branching and reconstruction is preserved, but there is no evidence it works against a current llama.cpp revision or outperforms alternatives.",
+  "alternatives_question": "Which current llama.cpp-compatible decoders expose genuine beam search and sequence/KV reuse, and what comparable workload could validate this archived approach?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "archive preservation is complete, but a current runnable decoder needs an API port and absent upstream checkout."
+  },
+  "verdict": "incubate",
+  "reason": "An inspectable experimental implementation supports retaining the archive; current-user utility and reproducibility are weak.",
+  "next_step": "Only if renewed use is intended, port one version to a pinned llama.cpp API and add a deterministic decoding comparison; otherwise retain as explicitly archived reference.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

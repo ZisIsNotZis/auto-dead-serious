@@ -1,0 +1,78 @@
+{
+  "path": "cz_bert",
+  "parent_pin": "f7eed5e5be2da86b2885760f5d50aa5ed5110c88",
+  "child_head": "f7eed5e5be2da86b2885760f5d50aa5ed5110c88",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Only public README and representative owned source were inspected; no missing corpora/models or notebook execution.",
+  "description": "A 2019–2020 personal deep-learning sandbox preserving transformer, custom data-kernel, and neural-calculator experiments after deliberately excluding unrelated/private and upstream material.",
+  "scope_audience": "Historical learning/research archive, not maintained software; README says datasets/checkpoints and a runnable entrypoint are absent.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Custom Mixer/data-kernel explorations are interesting historical adaptations, but no novelty or comparative results are claimed.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Saved notebooks/code may inform readers, but the original environment/data are absent and modern execution is explicitly not expected.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "The declared archive scope offers narrow historical learning value, not a future operational capability.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The archive includes owned model/data helpers and notebook experiments; this establishes an attempt, not an integrated or reproducible outcome.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README clearly bounds era, missing inputs, provenance, and non-runnable status; no reproducible entrypoint exists.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, project status, and representative `mybert` source inspected; no execution or private-payload review.",
+  "evidence": [
+    {
+      "path": "cz_bert/README.md",
+      "locator": "What this tree is; Removed before publication; Reproduction command"
+    },
+    {
+      "path": "cz_bert/mybert/nn.py",
+      "locator": "Res; Mixer; BatchNorm"
+    },
+    {
+      "path": "cz_bert/mybert/dat.py",
+      "locator": "Corpus; Class"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The retained owner-authored model/data experiments have narrow historical and learning interest; missing corpus and environment block reproduction.",
+  "alternatives_question": "For historical context only, which open-source transformer/data-pipeline projects provide comparable custom Mixer, sorted/memmap, or intranet-retrieval examples, and are any distinctions more than period-specific adaptation?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "the stated archive-preservation scope is present; reproducing the original experiments is not currently supported by the tree."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial historical implementation supports archive retention, while no current operational use or reproducible research result is evidenced.",
+  "next_step": "Keep the scope explicitly archival; if a claim is to be featured, identify one saved result and verify provenance without adding missing private or third-party payloads.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

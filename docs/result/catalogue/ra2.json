@@ -1,0 +1,90 @@
+{
+  "path": "ra2",
+  "parent_pin": "ed37126469886b55526909c5adcbc0cdf382b0b4",
+  "child_head": "ed37126469886b55526909c5adcbc0cdf382b0b4",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Source and committed status/tests were inspected but no build, test, browser, or visual review was run.",
+  "description": "Iron Meridian, a data-driven browser RTS prototype with deterministic simulation, YAML-authored content, a scripted opponent and a complete V1 match loop.",
+  "scope_audience": "The stated audience is game designers/developers exploring a serious RTS loop through a single-map skirmish. The project is paused pending an interesting positioning; campaigns, multiplayer, saves and broad content are explicitly out of V1.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The command/simulation/observation boundary and content-data separation are an interesting local design, but RTS prototypes are a broad category and no public comparison was performed.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 3,
+      "reason": "Committed project status describes a full playable match loop and prior headless/browser checks; inspected simulation and AI source support that the implementation is substantive, but runtime was not reproduced.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "A finished deterministic single-map RTS slice gives designers a meaningful testbed for rules and content; wider game/product value is not part of the stated scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Simulation code, deterministic finite-state AI and self-checks cover economy, production, combat, fog and victory; prior validation records are not fresh test results.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README provides prerequisites, quickstart, product boundary and validation commands, with screenshots referenced; this assessment did not inspect those images or start the client.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The documented V1 vertical slice and prior evidence exist; further development is paused rather than promised."
+  },
+  "confidence": "medium",
+  "verification": "README, project-status, Simulation, scripted AI and self-check source; executed=false; Prior test/browser statements are documentary evidence; no runtime compatibility, visual quality or performance was independently measured.",
+  "evidence": [
+    {
+      "path": "ra2/README.md",
+      "locator": "lines 9-46, product shape and V1 status; lines 48-64, verification and deferred scope"
+    },
+    {
+      "path": "ra2/docs/project-status.md",
+      "locator": "What is implemented; Validation evidence; Boundaries"
+    },
+    {
+      "path": "ra2/src/sim/simulation.ts",
+      "locator": "createSimulationFromManifest; Simulation.submit; Simulation.step"
+    },
+    {
+      "path": "ra2/src/sim/ai.ts",
+      "locator": "scriptedOpponent, deterministic state-driven opponent"
+    },
+    {
+      "path": "ra2/tests/sim/self-check.ts",
+      "locator": "construction, economy, combat, fog, victory and scripted-AI assertions"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A completed, inspectable deterministic simulation/content slice rather than only an RTS concept. The prior record claims a browser-playable loop, while the inspected source verifies the system boundary and match mechanics are implemented.",
+  "alternatives_question": "Which small RTS prototypes expose deterministic simulation, editable authored content and a complete single-map match loop, and what design task is easier here than in those projects?",
+  "verdict": "showcase_candidate",
+  "reason": "The implementation and prior end-to-end evidence support a coherent showcase slice, while positioning and current browser experience still deserve fresh verification and comparison.",
+  "next_step": "On an authorized verification pass, run the documented headless checks and one fresh browser match; compare the same designer task with public RTS prototypes before asserting differentiation.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

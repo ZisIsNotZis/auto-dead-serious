@@ -1,0 +1,84 @@
+{
+  "path": "hfget",
+  "parent_pin": "3b4bc96a465a166bc20d8773c1bb233d0a87d5df",
+  "child_head": "3b4bc96a465a166bc20d8773c1bb233d0a87d5df",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. No Hugging Face network calls or downloads were made.",
+  "description": "A one-file Python utility that searches Hugging Face model repositories, ranks GGUF quantizations and shards, selects companion files and downloads the chosen set.",
+  "scope_audience": "A small personal workflow helper for choosing preferred GGUF variants and companions; search, ranking and retry parameters are configured in source.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "Opinionated quantization and companion selection is a minor workflow adaptation; global novelty and meaningful differentiation are unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Source implements search, shard grouping, ranking, companion selection and download flow, but current Hub compatibility and safe runtime behavior were not exercised.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If its stated selection workflow is complete, it saves decisions for a narrow user task; wider demand or advantage over alternatives is ungrounded.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The script implements real selection and download mechanisms, but has no tests, CLI packaging or CI and does not record a representative run.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README identifies dependencies, invocation, editable settings and large-download caution, but offers no output example or tested setup path.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, project status, implementation and revision-aligned prior pilot record inspected; no execution, download, or public comparison performed in this lane.",
+  "evidence": [
+    {
+      "path": "hfget/README.md",
+      "locator": "Configuration and use; Requirements"
+    },
+    {
+      "path": "hfget/hfget.py",
+      "locator": "score_main_quant; group_shards; select_best_main_quant; select_mmproj"
+    },
+    {
+      "path": "hfget/docs/project-status.md",
+      "locator": "Evidence; Boundaries"
+    },
+    {
+      "path": "docs/result/catalogue-pilot.md",
+      "locator": "hfget — personal Hugging Face GGUF selector/downloader"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The script's meaningful scoped behavior is preference-based selection across GGUF candidates, shards and companions; downloading by itself is not the claimed differentiator.",
+  "alternatives_question": "For the same repository set, do existing Hub tools expose the same opinionated GGUF, MTP/DSpark2 and mmproj selection policy, and how many choices does hfget remove?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The small intended utility is present and marked closed; no compatibility claim is made for current external APIs."
+  },
+  "verdict": "incubate",
+  "reason": "A small completed implementation supports the substantial-work route, but differentiation and usefulness without duplicating existing tools remain unresolved.",
+  "next_step": "Compare selected filenames and required user choices against an official Hub workflow on a harmless metadata fixture before promoting usefulness.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

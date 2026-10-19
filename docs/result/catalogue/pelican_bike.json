@@ -1,0 +1,82 @@
+{
+  "path": "pelican_bike",
+  "parent_pin": "cc0da5b2eba298cf15a01210a0c5f5df3111d8f8",
+  "child_head": "cc0da5b2eba298cf15a01210a0c5f5df3111d8f8",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. HTML, images and video were not visually reviewed or played.",
+  "description": "A finished single-page cycling animation showing a pelican rider across changing speed modes, with a deterministic frame-recording helper.",
+  "scope_audience": "The declared scope is a browser visual demo for a viewer, explicitly not calibrated cycling physics or a training tool; README lists preview and ride-capture artifacts.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The speed-mode cycling presentation is a playful, locally distinctive demo concept, but its visual realization and global novelty were not assessed.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "A committed interactive HTML page and capture helper support a bounded presentation use; no appearance or interaction quality is claimed without viewing it.",
+      "confidence": "low"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "A successful visual demo can communicate changing ride speeds to viewers, but the repository explicitly excludes calibrated modeling or training outcomes.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "HTML contains speed controls and animation code, and record3.js provides a controlled capture pipeline; no fresh render or output review was performed.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README gives an immediate browser entry point and names preview artifacts while clearly limiting the claim; the human-facing visual result remains unreviewed.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The declared finished demo and capture artifacts are present, although their current rendering quality is unknown."
+  },
+  "confidence": "low",
+  "verification": "README, HTML speed-control source and record3.js capture workflow; executed=false; Images and video were not opened, and no browser rendering or recording was performed.",
+  "evidence": [
+    {
+      "path": "pelican_bike/README.md",
+      "locator": "status and single-page visual demo description"
+    },
+    {
+      "path": "pelican_bike/pelican_bike.html",
+      "locator": "speed control markup and animation code near lines 410-567"
+    },
+    {
+      "path": "pelican_bike/record3.js",
+      "locator": "lines 1-20, deterministic capture design"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A self-contained visual presentation with a controlled recording mechanism, not a physics model. Its local merit is the finished, narrow demo surface and the explicit boundary on what its motion means.",
+  "alternatives_question": "Which interactive cycling demos communicate speed changes with synchronized animation and capture, and what does a viewer understand here that a simpler animation does not convey?",
+  "verdict": "showcase_candidate",
+  "reason": "Parent calibration: a finite self-contained browser demo and recorded capture path merit the same visual-verification queue as the other finite animation artifacts. No artistic, interaction or physical quality is accepted without that review.",
+  "next_step": "Have a human review the page and recorded ride for clarity and polish; keep any presentation explicitly framed as animation rather than measured cycling behavior.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

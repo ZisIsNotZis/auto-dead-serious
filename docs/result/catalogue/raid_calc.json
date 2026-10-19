@@ -1,0 +1,90 @@
+{
+  "path": "raid_calc",
+  "parent_pin": "01d874f61b01731918acdc574fa2866e08846dcd",
+  "child_head": "01d874f61b01731918acdc574fa2866e08846dcd",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Engine, tests and README were inspected; no test, build, UI or numerical calculation was run.",
+  "description": "An offline hierarchical storage-reliability calculator combining CTMC loss expectations, Monte Carlo cross-checks and a visual pool editor.",
+  "scope_audience": "The target user is a storage designer comparing nested disk/pool layouts under failure, rebuild, workload, spare and delay assumptions. V1 explicitly excludes IOPS/latency and aging models.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The composition of nested pool semantics, rigorous/partial loss accounting, rebuild hazards, optimizer and interactive editor is locally interesting; global novelty is unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The CTMC evaluator, optimizer and closed-form tests provide a concrete analysis workflow, but outputs and numerical correctness were not exercised in this pass.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "A finished calculator can help compare reliability/capacity tradeoffs under explicit assumptions; its value is bounded by the stated failure model and non-goals.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The inspected evaluator builds a model and returns expected loss curves, and tests compare the solver with analytic cases and optimizer feasibility; no suite was run here.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README gives an offline artifact quickstart, model capabilities, limitations, docs and a Playwright smoke command; no visual review or browser path was performed.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The project is declared at a closed v1 milestone with source, tests and an offline artifact; resource-heavy large-state cases are explicitly bounded."
+  },
+  "confidence": "medium",
+  "verification": "README, CTMC/evaluate implementation and engine/optimizer tests; executed=false; No CTMC result, optimizer output, Monte Carlo agreement, build, or UI interaction was independently reproduced.",
+  "evidence": [
+    {
+      "path": "raid_calc/README.md",
+      "locator": "Quickstart; What it does; Status / limitations; Development"
+    },
+    {
+      "path": "raid_calc/src/core/ctmc.js",
+      "locator": "buildKilled; integrate; loss-curve solver"
+    },
+    {
+      "path": "raid_calc/src/core/evaluate.js",
+      "locator": "evaluate, model-to-curves output"
+    },
+    {
+      "path": "raid_calc/tests/engine.test.js",
+      "locator": "solver vs closed forms and RAID5 hazard comparisons"
+    },
+    {
+      "path": "raid_calc/tests/optimizer.test.js",
+      "locator": "feasible design and determinism checks"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A substantial model-and-interface attempt at making nested storage reliability assumptions visible, including two loss modes and optimization. The presence of tests is evidence of intended checks, not a claim they pass at this revision.",
+  "alternatives_question": "Which storage planners model nested pools with state-transition reliability, workload-dependent rebuild risk and optimizer constraints, and do they expose the same assumptions to users?",
+  "verdict": "showcase_candidate",
+  "reason": "A concrete user task is linked to a substantial engine, validation fixtures and offline UI path; numerical and visual verification should precede stronger operational claims.",
+  "next_step": "Run analytic and Monte Carlo checks plus one documented offline scenario, then record assumptions and uncertainty next to the resulting curves.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

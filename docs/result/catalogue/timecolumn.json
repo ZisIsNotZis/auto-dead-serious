@@ -1,0 +1,83 @@
+{
+  "path": "timecolumn",
+  "parent_pin": "d73a5225c45e0c1b1a8753f462a76bfb3c24dcfa",
+  "child_head": "d73a5225c45e0c1b1a8753f462a76bfb3c24dcfa",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. No package install, pytest, REST run, or benchmark was performed.",
+  "description": "Timetable is a Python time-sequence database that stores polynomial fits plus zstd-compressed quantized residuals, allowing approximate interval reads without decoding all residuals.",
+  "scope_audience": "The stated audience is engineers storing sensor or telemetry series who need compact chunks and approximate interval sampling as well as exact selection.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Separating a polynomial trend from a quantized residual correction for approximate queries is an interesting, explainable storage tradeoff; global novelty is unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Source exposes insert/select/aggregate APIs and chunk encode/decode; tests specify round-trip and query behavior, but they were not run and the README's throughput snapshot is explicitly machine-specific.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If completed for representative telemetry workloads, the stated scope could trade some approximation for lower-cost range sampling; no storage-ratio, latency, or comparative advantage is established here.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "A coherent package, REST server, chunk codec, and focused API/accuracy tests exist; lack of runtime verification and the documented non-distributed/non-hostile-filesystem limits preclude a stronger claim.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README explains audience, quickstart, API examples, a measured snapshot, status, license, and limitations; the command and snapshot were not independently verified.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "A milestone is documented closed and the repository has a usable-looking package surface, but no fresh test, consumer run, or representative benchmark was performed."
+  },
+  "confidence": "medium",
+  "verification": "Inspected README, chunk codec, API tests, and round-trip/accuracy test definitions. Tests, package installation, REST behavior, and performance were not executed.",
+  "evidence": [
+    {
+      "path": "timecolumn/README.md",
+      "locator": "Quickstart; Design and measured snapshot; Future vision and limits"
+    },
+    {
+      "path": "timecolumn/timetable/_chunk.py",
+      "locator": "encode_chunk; decode_chunk; _decode_col"
+    },
+    {
+      "path": "timecolumn/tests/test_chunk.py",
+      "locator": "test_chunk_roundtrip; test_accuracy_linear; test_accuracy_time_column_exact"
+    },
+    {
+      "path": "timecolumn/tests/test_api.py",
+      "locator": "test_insert_and_select; test_select_filter_time; test_time_monotonicity_violation"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A small database prototype joins trend fitting, residual correction, compression, and direct approximate-query paths in one time-series chunk format.",
+  "alternatives_question": "Which time-series stores offer polynomial or model-based chunk compression with approximate interval queries, and what accuracy/storage/query tradeoff do they demonstrate on the same telemetry trace?",
+  "verdict": "showcase_candidate",
+  "reason": "The API, codec, tests, and clear usage surface make this bounded utility worth fresh verification; this candidate status does not validate benchmark claims or establish non-duplication.",
+  "next_step": "Run the documented tests and a representative, reproducible telemetry comparison that reports compression ratio, query error, and elapsed time against a simple baseline.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

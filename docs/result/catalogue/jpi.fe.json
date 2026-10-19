@@ -1,0 +1,80 @@
+{
+  "path": "jpi.fe",
+  "parent_pin": "a1f38da4437f6f1579b2eeac17b569ef38db021d",
+  "child_head": "a1f38da4437f6f1579b2eeac17b569ef38db021d",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Backend and user data are outside the submodule and were not inspected.",
+  "description": "An unfinished Vue 3 front end for editing nested JSON as recursive tables, expecting a separately hosted paginated REST API.",
+  "scope_audience": "A personal front-end experiment for browsing and mutating nested entities; its README says the backend is not included and the application was never shipped.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "Recursive tables are a familiar editor pattern with a limited adaptation; no distinctive user workflow is established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The component edits recursive data locally, but entity loading/saving depends on a missing hard-coded backend, so the documented workflow is incomplete.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If paired with a compatible API, a recursive nested-JSON editor could help a narrow data-browsing user; backend behavior and demand are not evidenced.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "Recursive array/object/scalar editing exists in Vue components, but backend integration is absent and no tests or complete app acceptance are reported.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README explains the concept and missing backend but the run command leads to an empty/broken UI without a separate service.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, recursive component and API-calling front-end source inspected; no backend, build, or UI execution; no payload data inspected.",
+  "evidence": [
+    {
+      "path": "jpi.fe/README.md",
+      "locator": "One-line; How to run; Status"
+    },
+    {
+      "path": "jpi.fe/src/components/Trees.vue",
+      "locator": "recursive Trees v-model; array/object/scalar branches"
+    },
+    {
+      "path": "jpi.fe/src/App.vue",
+      "locator": "created; setname; setpage; save; del"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A real recursive JSON editor component is present, but the declared paginated API contract and working user path are outside this repository.",
+  "alternatives_question": "Which current nested-JSON editors support the same recursive table editing against a paginated REST backend, and what caller benefit is distinct?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The project is explicitly deprecated and its required backend is absent from the repository."
+  },
+  "verdict": "incubate",
+  "reason": "The implementation supports a modest substantial-work route, but the missing service blocks current utility and no differentiated outcome is established.",
+  "next_step": "If reused, document or supply the API contract and prove one complete read-edit-save round trip on non-sensitive fixture data.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "path": "fring",
+  "parent_pin": "ea519d126a2edb9d4299584f392257e78e93a29c",
+  "child_head": "ea519d126a2edb9d4299584f392257e78e93a29c",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Untracked ignored files and kernel-specific behavior were not assessed.",
+  "description": "Personal Linux/Python experiments implementing io_uring servers and clients through raw loops, asyncio/uvloop integration and a hand-written coroutine scheduler.",
+  "scope_audience": "A learning/archive project for systems programmers exploring how much event-loop machinery is necessary; README explicitly disclaims a maintained library.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Comparing three abstraction levels against similar server/client tasks is an interesting experiment; novelty versus other io_uring wrappers is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Scripts provide narrow reference and learning value, but no packaging, pinning, test suite or supported release path is present.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "Completing the stated comparison can teach a bounded systems lesson to Python/Linux learners, but it promises no maintained service or general library.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Raw, asyncio and custom-scheduler paths include runnable-looking servers; no comparative result or test evidence supports performance or correctness claims.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains generations, prerequisites and a terminal example candidly, while lack of dependency pinning/tests and scratch layout limits reproducibility.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and representative zring scheduler/server source inspected; nothing was installed or run, and Linux/kernel compatibility is unverified.",
+  "evidence": [
+    {
+      "path": "fring/README.md",
+      "locator": "What; Notable techniques; How to run; Status"
+    },
+    {
+      "path": "fring/zring.py",
+      "locator": "Ring; Future; Task; Sqe; run; stat"
+    },
+    {
+      "path": "fring/zhellosvr.py",
+      "locator": "con; accept worker; reporting task"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A compact, source-inspectable comparison of direct io_uring calls, a standard async bridge and a minimal custom coroutine loop, without measured speed claims.",
+  "alternatives_question": "Which maintained Python io_uring libraries or loop integrations exercise the same accept/send workload, and what comparison would distinguish this archive's learning value?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The README classifies the investigation as archived and unmaintained; further project delivery is not planned."
+  },
+  "verdict": "incubate",
+  "reason": "The implementation is more than a sketch and supports an archive/learning use, but no evidence justifies showcasing utility or uniqueness.",
+  "next_step": "If the archive is surfaced, add a small recorded comparison or preserve the current explicit non-performance-claim boundary.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

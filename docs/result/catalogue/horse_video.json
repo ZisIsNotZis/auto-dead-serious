@@ -1,0 +1,84 @@
+{
+  "path": "horse_video",
+  "parent_pin": "465b41f74d51d839510e74acc356b383157b6c71",
+  "child_head": "465b41f74d51d839510e74acc356b383157b6c71",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. The checked-in MP4 was not played or visually reviewed; no render was run.",
+  "description": "A code-authored 15-second horse-running animation made with Remotion, SVG and Three.js primitives, seeded procedural scenery and a local soundtrack.",
+  "scope_audience": "A closed art experiment for exploring deterministic, inspectable motion design without an imported horse rig; it is not an animation framework.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "A procedural horse scene assembled from code-authored shapes is an interesting single-artifact experiment; originality and visual quality are not globally established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "A bounded creative artifact and source workflow are reported, but the render was not visually inspected and its audience response is unknown.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the finished-art scope succeeds, it demonstrates one reproducible code-authored scene to animation learners; no general framework benefit is intended.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Composition source and a checked-in render are reported for the stated 450-frame scope; this assessment did not reproduce or review the rendered output.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README states dimensions, rate, duration, prerequisites, commands, caveats and a render link; compelling visual presentation is unverified here.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, status, Remotion root and representative scene source inspected; no npm install, render, playback or human visual review.",
+  "evidence": [
+    {
+      "path": "horse_video/README.md",
+      "locator": "What it is; How it works; Goals and non-goals"
+    },
+    {
+      "path": "horse_video/src/Root.tsx",
+      "locator": "HorseRun Composition"
+    },
+    {
+      "path": "horse_video/src/HorseRun.tsx",
+      "locator": "seeded; legPoint; Background"
+    },
+    {
+      "path": "horse_video/docs/project-status.md",
+      "locator": "Evidence; Deferred"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A finite procedural animation experiment with a composition and checked-in render; it demonstrates a local creative attempt, not reusable horse animation or verified artistic quality.",
+  "alternatives_question": "Which code-authored animation examples solve the same short-scene learning goal, and does a side-by-side human review find a meaningful distinction?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The README and status identify a completed, checked-in render for the closed scope; fresh reproduction and visual acceptance remain unverified."
+  },
+  "verdict": "showcase_candidate",
+  "reason": "A bounded user-facing artwork exists and merits fresh visual verification; this is a candidate for review, not an assertion of high artistic quality.",
+  "next_step": "Review the exact checked-in render at normal playback and confirm its audio/media provenance before any public feature.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

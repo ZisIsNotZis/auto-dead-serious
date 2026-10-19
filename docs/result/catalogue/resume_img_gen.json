@@ -1,0 +1,82 @@
+{
+  "path": "resume_img_gen",
+  "parent_pin": "1ce58702d4a84d9134371209871bd4579a0181ca",
+  "child_head": "1ce58702d4a84d9134371209871bd4579a0181ca",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Fictional examples and renderer source were inspected; no rendering or PDF conversion was run.",
+  "description": "A small Python package that separates structured resume content from reusable templates and emits HTML, PNG or PDF through three stages.",
+  "scope_audience": "The named user is an individual producing resume presentation documents; examples are explicitly fictional, and browser/PDF tooling is required only for the applicable export stages.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The multi-stage, data/template-separated workflow and small nested-section renderer are a useful local composition, but generic template-rendering novelty is not established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The inspected CLI and renderer support a concrete JSON/template-to-HTML task; PNG/PDF output depends on external tools and was not produced here.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "A completed renderer/template library can make repeat resume-layout changes less manual for an individual; value is narrow and dependent on template fit.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The dependency-light renderer, CLI stages and bundled templates are integrated as a closed package, but output quality and installed package behavior were not verified.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README has installation, fictional quickstart inputs, template syntax and truthful unescaped-data/external-tool limits; no rendered example was visually reviewed.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The small package and example-driven workflow are present at a closed milestone; browser and PDF backends are scoped dependencies, not missing product design."
+  },
+  "confidence": "medium",
+  "verification": "README, render.py and CLI code; executed=false; No package installation, sample rendering, browser screenshot, or PDF conversion was performed.",
+  "evidence": [
+    {
+      "path": "resume_img_gen/README.md",
+      "locator": "lines 7-37, stages and dependencies; lines 39-87, fictional quickstart and syntax"
+    },
+    {
+      "path": "resume_img_gen/resume_img_gen/render.py",
+      "locator": "lines 36-60, data lookup/context; lines 83-115, template rendering"
+    },
+    {
+      "path": "resume_img_gen/resume_img_gen/cli.py",
+      "locator": "lines 20-58, render and browser-shot commands"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A compact package with separate content, design template and output stages, plus a small custom template language. Its local contribution is a usable workflow boundary, not a claim to a new resume format or guaranteed rendering fidelity.",
+  "alternatives_question": "Which open resume/template tools separate structured content from reusable designs and export the same HTML, image and PDF artifacts, and which repeated user step remains simpler here?",
+  "verdict": "showcase_candidate",
+  "reason": "The package has a concrete bounded workflow, documented sample and visible implementation; a fictional end-to-end render is the decisive missing evidence for a stronger showcase claim.",
+  "next_step": "Use only the fictional sample to verify HTML, PNG and PDF paths on a clean environment and review whether text/layout separation holds across two templates.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

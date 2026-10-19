@@ -1,0 +1,86 @@
+{
+  "path": "backseat",
+  "parent_pin": "46abf0d522e0df0e4bcbf41050eeb470f2c6175e",
+  "child_head": "46abf0d522e0df0e4bcbf41050eeb470f2c6175e",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No screen capture, model call, desktop run, or tests executed.",
+  "description": "A local-first desktop companion that turns screen/system observations into a provenance-aware memory hierarchy and optional persona/outlet interactions.",
+  "scope_audience": "A single user seeking cross-session personal context and low-interruption reactions; current release scope is perception plus danmaku output, not the future help/automation layer.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The separation of observation, fact-oriented memory, personality, and output channels is an interesting composition; public alternatives are unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Witnessing, memory, and outlet code plus fake-model contract tests support a concrete prototype, but actual desktop/model quality is not verified.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If its stated personal memory scope works reliably, it could reduce repeated context-setting; value depends on real-use quality and privacy boundaries.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "A complete observation-to-memory-to-output path is implemented and M0-M5 have focused tests; real-use acceptance and fresh-machine install are still open.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README has Linux/X11 setup and limitations, but configured model/privacy details and a fresh install were not exercised.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, roadmap, representative storage/witness implementation, and fake-outlet tests inspected; no runtime verification.",
+  "evidence": [
+    {
+      "path": "backseat/README.md",
+      "locator": "Why; Architecture; Status"
+    },
+    {
+      "path": "backseat/backseat/store.py",
+      "locator": "SCHEMA and Store"
+    },
+    {
+      "path": "backseat/backseat/witness.py",
+      "locator": "Witness.process and parse_mini"
+    },
+    {
+      "path": "backseat/tests/test_m5.py",
+      "locator": "trigger, provenance, deduplication, throttle, silence checks"
+    },
+    {
+      "path": "backseat/docs/ROADMAP.md",
+      "locator": "M1-M6 status and real-use confirmation gates"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The layered memory and channel-independent outlet design are locally distinctive; neither long-term usefulness nor advantage over personal-agent/memory alternatives is settled.",
+  "alternatives_question": "Which local desktop assistants combine screen observation, attributable multi-level memory, privacy controls, and a separately gated interaction outlet? Compare one cross-session task and data boundaries.",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "implementation milestones exist, while real desktop acceptance, user-quality judgement, and fresh-machine install remain open."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial work supports keeping the prototype; a privacy-sensitive real-use demonstration is needed before showcase.",
+  "next_step": "Complete a user-authorized, privacy-bounded real desktop trial and measure useful recall, false observations, storage, and interaction frequency.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

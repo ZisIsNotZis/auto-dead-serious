@@ -1,0 +1,87 @@
+{
+  "path": "uv",
+  "parent_pin": "7d58e5986767c7e65aeffdb138a7cdb0c20f308c",
+  "child_head": "7d58e5986767c7e65aeffdb138a7cdb0c20f308c",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. This is a migrated private archive; no network service, benchmark, or load test was run.",
+  "description": "A small archived playground compares event-loop HTTP servers and load generators on hello/zero-stream workloads, with an asyncio/uvloop client and toy server variants.",
+  "scope_audience": "The README frames this as an author's scratch comparison of event-loop scaling on a deliberately trivial workload, not a maintained server or benchmark product.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "The scope is a familiar hello/stream throughput comparison and no unusual method or result is documented; broader novelty is unknown, not disproved.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The inspected client reconnects and reports byte throughput while a server counts requests, so the code can support a narrow experiment; there is no recorded comparison result or controlled benchmark protocol.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the same workload is implemented and measured fairly across event loops, it could teach an engineer about a bounded scaling question; the repository gives no measured outcome or reproducible conditions.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "There are concrete server, client, and load-generator scripts, but source inspection shows only simple counters/throughput reporting and no tests, run records, or verified matched comparison.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "The README is one sentence and provides no setup, run recipe, baseline conditions, output example, or interpretation; status docs say it is not maintained.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The source is small and the archive is inspectable, but it is not maintained and no evidence shows the comparative benchmark can be reproduced as stated."
+  },
+  "confidence": "low",
+  "verification": "Inspected README, archive status, and representative server/client/load-generator code. No execution, dependencies, network use, or performance measurement.",
+  "evidence": [
+    {
+      "path": "uv/README.md",
+      "locator": "one-line project purpose"
+    },
+    {
+      "path": "uv/docs/project-status.md",
+      "locator": "Classification; Boundaries"
+    },
+    {
+      "path": "uv/hello/server/__main__.py",
+      "locator": "MyProtocol.connection_made; main"
+    },
+    {
+      "path": "uv/hello/client/__main__.py",
+      "locator": "MyProtocol.data_received; main"
+    },
+    {
+      "path": "uv/cli.py",
+      "locator": "MyProtocol; main throughput report"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The archive contains a small runnable-in-principle harness for stressing simple event-loop servers, but no comparative outcome or control evidence is preserved.",
+  "alternatives_question": "Which small open benchmarks compare asyncio, uvloop, uvicorn, and liburing on the same hello/stream workload while reporting equal concurrency, correctness, and elapsed throughput conditions?",
+  "verdict": "incubate",
+  "reason": "The implementation is enough to show a real attempt at a narrow benchmark, but the missing results and minimal project surface leave its value and claims unestablished.",
+  "next_step": "Only if this question remains useful, define one matched workload and retain reproducible run conditions and results for each implementation.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

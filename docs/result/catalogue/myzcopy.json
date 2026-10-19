@@ -1,0 +1,82 @@
+{
+  "path": "myzcopy",
+  "parent_pin": "bc64707a13e9955cfb9505be15ec3f22d53f027e",
+  "child_head": "bc64707a13e9955cfb9505be15ec3f22d53f027e",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No compilation, benchmark, or file operation was run.",
+  "description": "An archived Linux systems-programming toolkit combining zero-copy file operations, RAID commands, and an io_uring echo benchmark pair.",
+  "scope_audience": "The stated scope is an experimental Linux utility and learning snapshot for systems programmers, not a portable or maintained package. README marks its HTTP server unsafe by construction and its Python FFI stub nonfunctional.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The multi-call file/RAID tools combine copy_file_range, splice and fallback paths in one inspectable experiment; this is locally interesting, with global novelty unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The source implements concrete file-copy and RAID operations, but there are no tests, no current build validation, and parts are explicitly unsafe or stubs.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "As a completed learning snapshot it can show Linux I/O mechanisms and fallback design; utility as a dependable file tool is not established.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "basic.c has actual zero-copy/fallback operations and a RAID creation path, while the README identifies missing tests, unsafe HTTP code and a nonfunctional FFI stub.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README inventories source files and gives sample commands and Linux prerequisites, but does not demonstrate a verified build or protect users from the unsafe server beyond warning.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The archive contains substantial source, but current buildability and behavior are unknown and the project is unmaintained."
+  },
+  "confidence": "medium",
+  "verification": "README and basic.c zero-copy/RAID code paths; executed=false; No source outside representative functions was audited for safety; no binary or benchmark was produced.",
+  "evidence": [
+    {
+      "path": "myzcopy/README.md",
+      "locator": "Why it exists; What's here; Status"
+    },
+    {
+      "path": "myzcopy/basic.c",
+      "locator": "lines 192-245, copy_file_range/splice fallback; line 806, raid_create_from_fd"
+    },
+    {
+      "path": "myzcopy/README.md",
+      "locator": "What's here, hellosvr.c description"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A technically rich snapshot of Linux file-plumbing and RAID implementation attempts. It is worth distinguishing this educational source from the unsafe toy HTTP server and from the declared nonfunctional Python binding.",
+  "alternatives_question": "Which Linux file/RAID tools expose zero-copy operations plus explicit fallback behavior, and does this toolkit solve a concrete copy or recovery task better than simpler utilities?",
+  "verdict": "incubate",
+  "reason": "Substantial source and an interesting systems-learning angle are supported; useful maintained tooling, safety and comparative differentiation are not.",
+  "next_step": "Choose one core file-copy or RAID operation, validate it against a small temporary fixture and fallback path, and keep unsafe HTTP code out of any quickstart claim.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

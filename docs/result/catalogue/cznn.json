@@ -1,0 +1,78 @@
+{
+  "path": "cznn",
+  "parent_pin": "dd1a8a8a616cf73ed0b694ae8f624392fcc39573",
+  "child_head": "dd1a8a8a616cf73ed0b694ae8f624392fcc39573",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Tests/example were inspected, not run.",
+  "description": "A small point-free PyTorch composition library for combining layers and choosing model variants by parameter budget, preserving divergent historical forks explicitly.",
+  "scope_audience": "Researchers wanting concise small-model experiments; README labels it an extracted research archive, not a packaged maintained library.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The composition DSL and budget-based `MinModel` selection are an interesting personal adaptation, though composition libraries are a familiar category.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The importable core and example expose concrete composition behavior; dependencies/tests were not exercised and packaging/CI are absent.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If used for its stated experiments, compact model-family construction can save bounded effort; broader demand or advantages are not evidenced.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Core combinators, layer factories, parameter counting, an example, and focused shape/behavior tests are present; no test run here.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README gives an example, provenance, and direct test command, while the API is explicitly unpolished and un-packaged.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, representative library implementation, test cases, and example inspected; not executed.",
+  "evidence": [
+    {
+      "path": "cznn/README.md",
+      "locator": "What; Provenance; Status"
+    },
+    {
+      "path": "cznn/cznn/__init__.py",
+      "locator": "Seq; Add; Mul; Res; size; sized; MinModel"
+    },
+    {
+      "path": "cznn/tests/test_core.py",
+      "locator": "test_seq_forward; test_res_identity; test_add_parallel_branches"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A real compositional layer interface has documented archival reuse and focused behavior tests; task-level advantage versus other PyTorch composition APIs is not established.",
+  "alternatives_question": "Which maintained PyTorch composition libraries support point-free residual/branch composition and parameter-budget model choice for the same small-model experiment?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "README documents a lightweight smoke-test/example path, but no test or installation was run."
+  },
+  "verdict": "incubate",
+  "reason": "Substantive implementation and focused tests support retention as a useful research artifact; public differentiation and maintenance intent are limited.",
+  "next_step": "Run the documented smoke tests on a clean environment and compare one model-construction task against a maintained composition library.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

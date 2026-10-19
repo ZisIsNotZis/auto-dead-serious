@@ -1,0 +1,90 @@
+{
+  "path": "npchallenge",
+  "parent_pin": "006033ca36d92b8b769f5a6a1e4f655a630a4a5b",
+  "child_head": "006033ca36d92b8b769f5a6a1e4f655a630a4a5b",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Correctness/benchmark scripts were inspected but not run.",
+  "description": "A closed educational challenge with inspectable NumPy implementations of causal attention and 2D convolution plus correctness/benchmark scripts.",
+  "scope_audience": "The stated user is a learner who wants readable, dependency-light operator implementations and small comparisons, not a GPU framework or production accelerator.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The attention code dispatches between full and blocked causal kernels, and convolution uses shape-dependent methods; this is an interesting educational optimization path, not a global novelty claim.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The implementation files and runnable correctness/benchmark scripts support a concrete learning/reference use, though documented timings are not reproduced in this investigation.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "A complete NumPy teaching set can give learners a bounded way to study operator algorithms and tradeoffs; the README explicitly excludes optimized-library replacement.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Core attention and convolution implementations, benchmark scripts, and correctness checks are present and the project is closed at that scope; no tests were executed here.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README states the goal, gives simple commands, names source files and limits, and links version/status information; hardware-specific timings are correctly caveated.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The compact teaching scope and its implementation/scripts are present; remaining uncertainty concerns live compatibility and measured performance, not a missing roadmap."
+  },
+  "confidence": "medium",
+  "verification": "README, project-status, attention.py, conv2d.py and benchmark source; executed=false; No correctness script or benchmark was run; source docstring speedups remain author-recorded claims.",
+  "evidence": [
+    {
+      "path": "npchallenge/README.md",
+      "locator": "Quickstart; Contents; limits"
+    },
+    {
+      "path": "npchallenge/attention.py",
+      "locator": "module description and causal_attention dispatch"
+    },
+    {
+      "path": "npchallenge/conv2d.py",
+      "locator": "module strategy description and FFT/einsum paths"
+    },
+    {
+      "path": "npchallenge/bench_final.py",
+      "locator": "baseline implementations and benchmark runner"
+    },
+    {
+      "path": "npchallenge/docs/project-status.md",
+      "locator": "Evidence and limits"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A compact teaching artifact that exposes how causality and problem size can change implementation strategy in NumPy. Its strongest value is inspectable code and comparisons, not an unverified claim of beating optimized libraries.",
+  "alternatives_question": "Which NumPy reference-operator projects teach causal attention and 2D convolution with small correctness checks, and what task-specific learning benefit remains distinct here?",
+  "verdict": "showcase_candidate",
+  "reason": "The completed small educational scope is clearly explained and implemented; a fresh verification of examples and benchmark conditions would make an appropriate showcase check.",
+  "next_step": "Run the correctness fixtures and record one controlled benchmark against the included baselines on named hardware before repeating any speed claim.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

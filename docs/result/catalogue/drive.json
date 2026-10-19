@@ -1,0 +1,86 @@
+{
+  "path": "drive",
+  "parent_pin": "6f803b4ca0f274f2118de0fc6aa484a5be5c5708",
+  "child_head": "6f803b4ca0f274f2118de0fc6aa484a5be5c5708",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Reused prior local report after pin match; no commands or visual checks run.",
+  "description": "An offline browser driving simulator over a checked-in Suzhou OSM extract, combining lane-aware navigation, traffic, weather, collisions, hazards, and roadside decoration.",
+  "scope_audience": "A local demo/learning experience for one-city browser driving; version 0.1.0 is a closed milestone, with map expansion/multiplayer explicitly outside scope.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Lane metadata and turn-aware guidance within an offline city driving slice are locally interesting, but a close public OSM browser-driving comparator exists and equivalence is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Navigation/simulation modules and focused tests support a coherent slice; README's recorded test/build/E2E evidence was not re-run or visually reviewed.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated single-city demo is polished, it offers a bounded interactive driving/route experience; city specificity alone does not establish a wider advantage.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Navigation, simulation, and focused route/lane/collision tests form an integrated prototype; no current build/runtime acceptance was independently repeated.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README includes quickstart, controls, recorded gates, limitations, and license/data caveat; screenshots and fresh-user operation were not reviewed.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "Prior local assessment, current README and navigation source/tests inspected; no quickstart, E2E, or visual check run.",
+  "evidence": [
+    {
+      "path": "docs/result/catalogue-pilot.md",
+      "locator": "heading `drive`"
+    },
+    {
+      "path": "docs/result/catalogue-comparison.md",
+      "locator": "Suzhou Drive comparison with Jev Drive Lab"
+    },
+    {
+      "path": "drive/README.md",
+      "locator": "Quickstart; What is measured; Future vision"
+    },
+    {
+      "path": "drive/src/navigation.ts",
+      "locator": "LaneRoute; laneTurns; route guidance"
+    },
+    {
+      "path": "drive/src/navigation.test.ts",
+      "locator": "route and lane behavior assertions"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A substantive one-city integration is real; the closest comparison makes city/data differences insufficient by themselves to establish a creative or usefulness route.",
+  "alternatives_question": "Against the browser OSM driving comparator already identified, does the same route task reveal distinctive lane guidance, offline operation, or interaction that users value beyond a different city extract?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "the project records a closed milestone and a documented test/build/E2E path, though this run did not repeat it."
+  },
+  "verdict": "incubate",
+  "reason": "Substantial implementation supports retention; local utility is plausible but the closest alternative leaves differentiation unsettled.",
+  "next_step": "Run the pinned quickstart and inspect one representative route against the closest comparator, including offline behavior and OSM data attribution.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

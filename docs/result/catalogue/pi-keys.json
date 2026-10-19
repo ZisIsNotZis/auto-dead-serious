@@ -1,0 +1,82 @@
+{
+  "path": "pi-keys",
+  "parent_pin": "a526471b016563513b20596c9866d64ab2277269",
+  "child_head": "a526471b016563513b20596c9866d64ab2277269",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Tests and extension source were inspected but not run.",
+  "description": "A Pi extension that rotates among environment-backed API-key pools after assistant errors while leaving retry policy to Pi.",
+  "scope_audience": "The target audience is Pi users whose configured provider reads a singular environment variable. The stated scope is sequential credential rotation, not alternate provider selection, outer-workflow recovery, or uncoordinated concurrent requests.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Using Pi’s resolved failed credential as the rotation cursor is a neat local adaptation that avoids separate index state; global novelty against extensions was not searched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The source handles assistant-error rotation and the tracked unit test covers cycling and ignored events, but compatibility is documented for Pi 1.1.0 and was not exercised here.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "For the named environment-auth workflow, automatic key failover is a concrete narrow convenience; caller preconditions and quota-classification limits are explicit.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "A concise extension and tests cover successful rotation, non-error events and unmanaged/auth-failure paths; test execution and real provider compatibility remain unverified in this pass.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README gives install/usage, provider constraints, retry interaction, failure limits, and a local fake-server smoke-test description.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The extension and its tracked test suite implement the stated narrow contract; broader provider and concurrent-call behavior are expressly excluded."
+  },
+  "confidence": "medium",
+  "verification": "README, index.js, package.json and rotation test; executed=false; No Pi process or smoke test ran; compatibility claim remains tied to the README’s named version.",
+  "evidence": [
+    {
+      "path": "pi-keys/README.md",
+      "locator": "lines 1-30, usage and input contract; lines 48-80, limits and tests"
+    },
+    {
+      "path": "pi-keys/index.js",
+      "locator": "lines 1-23, message_end rotation hook"
+    },
+    {
+      "path": "pi-keys/test/rotation.test.js",
+      "locator": "rotation cycle and ignored-event assertions"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A small extension that composes with the host agent’s retry lifecycle rather than rewriting errors or scheduling retries. It makes its auth assumptions and concurrency limits unusually explicit.",
+  "alternatives_question": "Which Pi extensions or provider-auth patterns rotate environment key pools on the same retryable failures while preserving native retry, abort and conversation-recovery behavior?",
+  "verdict": "showcase_candidate",
+  "reason": "A clear, narrow user problem maps directly to implemented hook behavior and inspected tests; a version-specific smoke test is the remaining acceptance check before stronger compatibility claims.",
+  "next_step": "Run the unit and opt-in local fake-server tests on the supported Pi version, then verify one custom environment-backed provider without exposing real credentials.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

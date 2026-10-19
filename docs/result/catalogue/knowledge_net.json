@@ -1,0 +1,80 @@
+{
+  "path": "knowledge_net",
+  "parent_pin": "9cb11dd2ecd85921e1d46569544a028e68bc76b2",
+  "child_head": "9cb11dd2ecd85921e1d46569544a028e68bc76b2",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. No notebooks, training, private corpus or GPU execution was accessed.",
+  "description": "A research archive exploring explicit learned key-value memory read/write modules for toy binding and pointer tasks and byte-level prediction.",
+  "scope_audience": "Personal exploratory research on whether a small memory bank can preserve and retrieve bindings; README states it is incomplete, unpublished and not maintained.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The memory-bank experiment is an interesting adaptation, but the project itself identifies a known architecture family and does not establish novelty.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "A self-contained toy notebook is documented, but it is impractically slow and no reproducible converged result or baseline is supplied.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If completed on exactly computable tasks with baselines, the experiment could answer a bounded memory-learning question; intended positive outcomes are not assumed.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "Memory cells and data/training paths are implemented, but notebooks lack saved execution outputs, held-out metrics and several required corpora.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README provides a reading order, architecture description and candid replay limits; there is no packaged or reproducible research result.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and representative kb.py implementation inspected; notebooks, embedded images, training curves and corpora were not read or run.",
+  "evidence": [
+    {
+      "path": "knowledge_net/README.md",
+      "locator": "The architecture, concretely; What is here vs. not"
+    },
+    {
+      "path": "knowledge_net/kb.py",
+      "locator": "Notice; Bitention; Kb"
+    },
+    {
+      "path": "knowledge_net/README.md",
+      "locator": "Self-contained alternative: Untitled.ipynb"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "Source defines read/write memory and toy-task paths, showing an actual research attempt; it does not establish convergence, task benefit or novelty.",
+  "alternatives_question": "Which established external-memory or recurrent-memory approaches solve the same exact binding and pointer-chain tasks, and what controlled result would distinguish this implementation?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The archive is frozen, main training data is unavailable and the documented self-contained run is prohibitively slow without changes."
+  },
+  "verdict": "incubate",
+  "reason": "The implemented experiment supports retaining a research attempt, while useful outcome and novelty remain unknown and the recorded limitations are substantial.",
+  "next_step": "If revived, choose one synthetic task, add a tractable implementation and baseline, and save revision-bound held-out results.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "path": "mycar",
+  "parent_pin": "cff76453637662b11640930ec5013d20a9ef955b",
+  "child_head": "cff76453637662b11640930ec5013d20a9ef955b",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No browser, audit, rendering, or geometry checks were run.",
+  "description": "A parameterized browser blueprint for a compact variable-form cabin crossover, paired with a written vehicle design and geometry constraints.",
+  "scope_audience": "The closed v13 scope is a concept-design workspace and interactive side-profile tool for an individual designer; it is not a validated vehicle engineering package, prototype, or supply-chain plan.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The compact-body claim combines commuting, viewing, camping and sleeping states with geometry-bound interactive exploration; this is locally interesting, while market and global novelty remain unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The committed HTML contains a parameterized interactive profile interface, so it can support concept exploration; no engineering feasibility or current browser behavior was independently checked.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "Completing the stated concept-design scope yields a meaningful way to explore cabin layouts and constraints; the README explicitly leaves 3D/engineering drawings, sample vehicle and supply chain out of scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "A large v13 HTML blueprint and design records are present, but the documented default check scripts target v12, so the claimed 11/11 result does not establish v13 acceptance.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README offers an opening path and describes controls, but its summarized verification is version-misaligned and some rendering tools depend on a machine-specific Playwright location.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The v13 artifact exists, but its actual browser behavior and its 47-rule geometry acceptance have not been checked against the v13 file in this assessment."
+  },
+  "confidence": "medium",
+  "verification": "README, project status, v13 HTML surface, check.mjs and audit.mjs defaults; executed=false; The scripts are written to default to v12; no inference is made that the v13 design itself fails. No 3D or physical validation was inspected.",
+  "evidence": [
+    {
+      "path": "mycar/README.md",
+      "locator": "v13 claim; 打开蓝图; 渲染 / 验收; 后续（暂缓）"
+    },
+    {
+      "path": "mycar/蓝图-参数化-v13.html",
+      "locator": "lines 1-50, interactive blueprint markup and parameter panel"
+    },
+    {
+      "path": "mycar/docs/project-status.md",
+      "locator": "证据; 暂缓"
+    },
+    {
+      "path": "mycar/scripts/check.mjs",
+      "locator": "lines 1-6, default input is 蓝图-参数化-v12.html"
+    },
+    {
+      "path": "mycar/scripts/audit.mjs",
+      "locator": "lines 1-9, default input is v12"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "An interactive geometry-linked concept blueprint rather than only a prose vehicle sketch. The strongest local contribution is parameter-driven cabin-state exploration with explicit geometric checks; it does not establish buildable engineering or market differentiation.",
+  "alternatives_question": "Which parametric small-vehicle or camper concept tools represent several cabin states and validate human, bed and body clearances in the same model?",
+  "verdict": "repair",
+  "reason": "The artifact has substantial concept-design merit, but the evidence path misstates its tested revision: the shipped check defaults to v12 while the project claim is v13.",
+  "next_step": "Run the documented check and probe specifically against v13 in an authorized future verification, or update the script/docs so the reported evidence is bound to the current artifact; do not imply physical validation.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

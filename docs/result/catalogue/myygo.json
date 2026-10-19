@@ -1,0 +1,78 @@
+{
+  "path": "myygo",
+  "parent_pin": "ce461d921f10c3ad70f8418647948512c3b8ad31",
+  "child_head": "ce461d921f10c3ad70f8418647948512c3b8ad31",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No parser, engine, or card effect was run.",
+  "description": "A Yu-Gi-Oh! card-effect DSL sketch with unfinished Galaxy/Photon and Horus effect-definition scripts.",
+  "scope_audience": "README frames it as a personal card-authoring layer for an external rules engine, but the host engine and the required symbols are absent from this repository; the intended audience is a rules-engine author.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The fixed effect-hook tuple plus chainable Cards operations is an interesting local schema for describing card behavior, but no engine or external comparison establishes novelty.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The scripts can be read as design examples, but they cannot be used as card implementations in isolation and README documents a syntax error.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If paired with a compatible host engine, the intended scope could make effect authoring more structured; no integration contract or working consumer is supplied.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "script.py contains substantial card-effect data and hook sketches, but its line 90 parse error and absent host symbols prevent an executable slice.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README clearly labels the project as deprecated and not runnable, with a useful DSL description; it does not provide a self-contained demo.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The target host engine is absent and the principal script has a documented syntax error, so an end-to-end effect cannot be delivered from this repository alone."
+  },
+  "confidence": "medium",
+  "verification": "README and representative effect data in script.py; executed=false; The documented parser issue and absent globals were assessed statically, not confirmed by running a parser or engine.",
+  "evidence": [
+    {
+      "path": "myygo/README.md",
+      "locator": "lines 7-45, DSL contract, missing engine and status"
+    },
+    {
+      "path": "myygo/script.py",
+      "locator": "lines 1-16, DSL hooks; lines 84-94, effect data and documented parse-error region"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A domain-specific effect-data sketch that makes condition, cost, target and operation stages explicit and pairs them with card text. It is a prototype of an authoring model, not a working card library.",
+  "alternatives_question": "Which card-effect DSLs or rules engines represent trigger, cost, target and operation stages in data, and how would the same card effect compare in authoring effort and correctness?",
+  "verdict": "incubate",
+  "reason": "The unusual authoring schema and body of effect sketches support a bounded experimental-work route; practical usefulness remains conditional on an absent host engine and repaired syntax.",
+  "next_step": "Either connect one effect to a compatible engine and validate it against the printed card text, or preserve the repository explicitly as a non-runnable DSL sketch.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

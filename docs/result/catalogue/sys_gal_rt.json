@@ -1,0 +1,83 @@
+{
+  "path": "sys_gal_rt",
+  "parent_pin": "32c6c1059a74e7ae9fab08d05b30c96ba19a33b1",
+  "child_head": "32c6c1059a74e7ae9fab08d05b30c96ba19a33b1",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. README declares the project paused; tracked current files inspected were design/story docs, not executable engine source.",
+  "description": "A paused design for a real-time narrative simulator whose model latency, fast-forward, and world clock are intended to share one causal model, paired with a first story concept.",
+  "scope_audience": "The stated goal is a reusable story-neutral engine plus an implemented story package for a researcher or author exploring real-time agent behavior; the README says the engine is not started.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "Making provider latency part of story-world physics, while preserving information boundaries and replay, is an interesting coherent design; no global novelty comparison was done.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The design and story documents can guide an experiment, but the README explicitly says the engine and real-time simulation have not begun and identifies only the story design as meaningful completed work.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the engine and one story work end to end, the result could provide a bounded platform for studying latency-driven narrative behavior; the intended outcome is clear but untested.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 0,
+      "reason": "Parent calibration: the intended core deliverable is an engine, and positive project evidence says it has not been started; current material is specification/story design only. This meets the rubric's zero anchor, not unknown or an implemented fragment.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README routes readers to design, engine, and story docs and honestly labels the pause and implementation gap; no runnable entry point or result is offered.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "Development is explicitly paused pending a sys_gal engine migration, while the planned engine is not yet implemented."
+  },
+  "confidence": "medium",
+  "verification": "Inspected README, DESIGN.md, and the engine/story design docs; tracked-file discovery found no current executable engine source. No simulation or tests were run.",
+  "evidence": [
+    {
+      "path": "sys_gal_rt/README.md",
+      "locator": "状态"
+    },
+    {
+      "path": "sys_gal_rt/DESIGN.md",
+      "locator": "目标; 非目标; 下一步"
+    },
+    {
+      "path": "sys_gal_rt/docs/engine.md",
+      "locator": "核心循环; 节拍策略; 双包验收"
+    },
+    {
+      "path": "sys_gal_rt/docs/story.md",
+      "locator": "故事设计; TODO"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "unsupported"
+  },
+  "contribution": "The design makes simulated time a configurable function of wall-clock/model latency and separates a generic engine from story facts; this is a design contribution, not a working simulator.",
+  "alternatives_question": "Which open-source narrative simulation projects model agent response latency as in-world time while retaining causal replay and per-character knowledge limits?",
+  "verdict": "incubate",
+  "reason": "The idea is interesting enough to preserve, but positive project evidence says the engine is unimplemented and the work is paused; implementation and experiment routes do not currently support membership.",
+  "next_step": "If resumed, first establish the planned factor=0 compatibility and factor>0 story-loop proof; otherwise preserve the design without presenting it as a functioning engine.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

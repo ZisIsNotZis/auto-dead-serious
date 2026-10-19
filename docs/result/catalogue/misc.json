@@ -1,0 +1,78 @@
+{
+  "path": "misc",
+  "parent_pin": "1d406f0661a2d427bd27174a4942d4f71ab48c7d",
+  "child_head": "1d406f0661a2d427bd27174a4942d4f71ab48c7d",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No code was run.",
+  "description": "An archive of heterogeneous personal experiments and one-off utilities, explicitly described as neither a coherent library nor an application.",
+  "scope_audience": "The stated finished scope is a public reading archive for people studying prior experiments; there is no maintained product audience or common entry point. README identifies a stdlib virtual-terminal server as the one dependency-free runnable utility.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "The collection has no stated unifying thesis; the terminal-server fragment is an individual implementation, not evidence of a distinctive project-level synthesis. Global novelty is unassessed.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The README supports narrow reference value and names one standalone utility, but explicitly says the rest are context-dependent and lack a shared reproducible entry point.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "If preserved as an archive, it may serve as a narrow learning/reference resource; no broader workflow or future product scope is specified.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The inspected VirtualScreen implementation maintains a cursor and bounded screen buffer with editing operations; this is real implementation evidence within a heterogeneous archive, not proof every archived experiment is useful.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README candidly labels the archive, explains its limits and license concern, and names the one simple run path; it does not orient readers across the many unrelated files.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The declared archive state already exists; no unfinished integrated deliverable or maintenance commitment is stated."
+  },
+  "confidence": "medium",
+  "verification": "README and the VirtualScreen implementation in misc/term.py; executed=false; No scripts, notebooks, or terminal interaction were run; archive contents were not exhaustively inspected.",
+  "evidence": [
+    {
+      "path": "misc/README.md",
+      "locator": "Why it exists; How to run; Status; Dependency list"
+    },
+    {
+      "path": "misc/term.py",
+      "locator": "VirtualScreen; get_winsize; cursor editing methods"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A preserved personal experiment archive that includes a nontrivial virtual-terminal implementation, but no unified application or maintained API. The archive’s value is chiefly historical/reference use, not a claim that all entries are runnable.",
+  "alternatives_question": "Which public experiment archives or small terminal utilities serve the same reader task better, and does a curated subset offer meaningfully more reusable value than this mixed collection?",
+  "verdict": "incubate",
+  "reason": "The archive route is supported by inspected implementation and explicit preservation intent, while usefulness beyond narrow reference value is uncertain; do not present it as a cohesive product.",
+  "next_step": "If prominence matters, identify one recurring reader task and compare a curated path for it; otherwise retain the honest archive description without claiming project-wide reproducibility.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

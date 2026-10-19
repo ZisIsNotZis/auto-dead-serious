@@ -1,0 +1,78 @@
+{
+  "path": "dino.py",
+  "parent_pin": "dcaf49ee9fcacbbd476b9f1084b8b260f7514846",
+  "child_head": "dcaf49ee9fcacbbd476b9f1084b8b260f7514846",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Model weights, GGML bindings, converters, and image/video workflows were not run.",
+  "description": "An experimental DINOv2/v3 visual-feature extractor that constructs inference graphs with ggml FFI rather than PyTorch, with smart-crop and keyframe tools.",
+  "scope_audience": "Developers extracting DINO visual features or converting models; scripts are explicitly an un-packaged archive with hard-coded local model paths and no included weights.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "A manually expressed DINO transformer graph in ggml alongside crop/keyframe use is an interesting integration; equivalent tools and novelty are unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The graph and conversion/application code are present, but weights, stable setup, and execution evidence are absent.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated extraction/conversion path works, it offers bounded feature extraction without PyTorch inference; target deployment value is not demonstrated.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "`dino3.run` builds patch embedding and transformer layer operations and returns features; no tests, packaged interface, or output record were inspected.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README summarizes purpose, dependencies, applications, and limits, but no lockfile, model artifact, or clean quickstart exists.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, project status, and representative ggml graph source inspected; no model execution.",
+  "evidence": [
+    {
+      "path": "dino.py/README.md",
+      "locator": "project summary; How to run"
+    },
+    {
+      "path": "dino.py/dino3.py",
+      "locator": "run"
+    },
+    {
+      "path": "dino.py/docs/project-status.md",
+      "locator": "archive classification"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The custom GGML forward graph and model converters are substantive code; actual supported model compatibility and practical advantage are unverified.",
+  "alternatives_question": "Which current projects run DINOv2/v3 feature extraction through ggml without PyTorch at inference, and do they support the same crop/keyframe workflow?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "implementation is present, but hard-coded model assumptions and missing weights/bindings prevent a verified run."
+  },
+  "verdict": "incubate",
+  "reason": "Interesting custom inference code supports archival retention; no evidence supports functional compatibility or an operational benefit yet.",
+  "next_step": "Pin one model format, toolchain, and small image fixture; compare output against a trusted DINO implementation before making compatibility claims.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

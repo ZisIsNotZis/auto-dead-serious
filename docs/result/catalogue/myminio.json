@@ -1,0 +1,82 @@
+{
+  "path": "myminio",
+  "parent_pin": "7f84e0c4ab5d97a8d65a881fc5fa087a0f8fe0d2",
+  "child_head": "7f84e0c4ab5d97a8d65a881fc5fa087a0f8fe0d2",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No tests or services were run.",
+  "description": "An archived first-generation local object-store experiment with XOR sharding, versioned reads, quota placement and a partial Flask API.",
+  "scope_audience": "The stated scope is a small educational/learning store whose internals are hand-built, not production or S3-compatible storage. README calls it the predecessor to myminio2, which moves the same idea across network backends.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "A locally interesting learning implementation combines quota-aware placement, time-based versions and single-parity repair; the README frames it as a hand-built MinIO-inspired experiment, not a novelty claim.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The EC core has a committed migration verification record for round-trip, lost-shard repair and version operations, but the HTTP layer has broken routes and writes RAID-0 through POST.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "As a finished educational prototype it can teach local parity and quota mechanics; the documented bespoke API and one-shard limit preclude a production-storage interpretation.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Inspected EC.set/get/split/cat implement shard storage and reconstruction, and project-status records a prior bounded smoke check; the HTTP routes remain partially broken.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README clearly distinguishes the unrelated stock MinIO compose setup from the custom store and candidly documents broken endpoints and deployment limits.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The archived educational core and its prior migration smoke evidence are present; no promise of a production API is made."
+  },
+  "confidence": "medium",
+  "verification": "README, ec4 implementation and committed project-status evidence; executed=false; Prior verification is documentary evidence, not reproduced here; network service and MinIO deployment were not run.",
+  "evidence": [
+    {
+      "path": "myminio/README.md",
+      "locator": "lines 5-23, purpose and status; lines 85-127, HTTP/API and implemented operations"
+    },
+    {
+      "path": "myminio/ec4.py",
+      "locator": "EC.set; EC.get; split; cat"
+    },
+    {
+      "path": "myminio/docs/project-status.md",
+      "locator": "Status; Evidence; Boundaries"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A compact, inspectable local-storage experiment that exposes parity math, placement and repair rather than wrapping MinIO. Its independent learning value is clearer than any claim to S3 behavior or production durability.",
+  "alternatives_question": "Which educational local object-store implementations expose quota placement, point-in-time versions and XOR shard repair, and what part of that task remains meaningfully different here?",
+  "verdict": "incubate",
+  "reason": "The implementation and prior verification support retaining it as a learning artifact, while non-repetition and usefulness beyond that bounded audience require comparison.",
+  "next_step": "For any public showcase, reproduce the EC smoke test in temporary directories and state plainly that the HTTP adapter and compose cluster are not the verified core.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

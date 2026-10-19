@@ -1,0 +1,71 @@
+{
+  "path": "tutor_private",
+  "parent_pin": "c39847a2a4c2dbd544b0c9a3127324f60dcc4bf4",
+  "child_head": "c39847a2a4c2dbd544b0c9a3127324f60dcc4bf4",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. Privacy-limited: inspected README for structural/product intent only; did not open scripts, lesson payloads, media, environment files, or assets.",
+  "description": "A private tutorial-production workspace with a declared closed production snapshot; content and rendered materials were not inspected.",
+  "scope_audience": "The README identifies a private tutorial-production purpose, but intended learner audience, content quality, and the useful scope of the finished artifact cannot be assessed without reading private payloads.",
+  "scores": {
+    "creativity": {
+      "value": null,
+      "reason": "No safe evidence about the authored content or production method was gathered; privacy-limited unknown, not a negative originality judgement.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": null,
+      "reason": "The README says a production snapshot exists, but its instructional content and rendered output were deliberately not inspected.",
+      "confidence": "low"
+    },
+    "expected_usefulness": {
+      "value": null,
+      "reason": "The intended learner benefit and finished acceptance scope cannot be grounded from the permitted structural evidence alone.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": null,
+      "reason": "The README names a build script and generated media, but implementation and result payloads were not inspected because this is a private project.",
+      "confidence": "low"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "The README gives a quick-start command and clearly states that rendering prerequisites are not packaged; the intended user path and media quality remain privacy-limited unknowns.",
+      "confidence": "low"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The existing snapshot is declared closed, but its build environment is intentionally un-packaged and deliverability was not checked."
+  },
+  "confidence": "low",
+  "verification": "README-only structural inspection. No private lesson, media, script, dataset, credential, or environment content was opened; no build was run.",
+  "evidence": [
+    {
+      "path": "tutor_private/README.md",
+      "locator": "Quick start; Status and policy"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "unknown"
+  },
+  "contribution": "No distinctive contribution can be safely stated from structural evidence alone; private content was not inspected.",
+  "alternatives_question": "With explicit authorization for a sanitized comparison, which private tutorial-production workflows provide reproducible rendering without exposing lesson or learner content?",
+  "verdict": "undecided",
+  "reason": "The project's private status and restricted inspection prevent evidence-backed route decisions; unknown is not evidence against retaining it.",
+  "next_step": "Keep private; do not publish or compare payloads. Reassess only if the owner authorizes a narrowly scoped, privacy-preserving review.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

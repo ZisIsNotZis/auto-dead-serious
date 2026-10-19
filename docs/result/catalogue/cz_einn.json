@@ -1,0 +1,78 @@
+{
+  "path": "cz_einn",
+  "parent_pin": "dcf87a7f873da388d50f39a3b3b646d730a0fd45",
+  "child_head": "dcf87a7f873da388d50f39a3b3b646d730a0fd45",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Notebook contents were selectively parsed as text only; nothing was executed.",
+  "description": "An archived Einstein-notation neural-network experiment that translates textual tensor-dimension expressions into PyTorch operations and layer factories.",
+  "scope_audience": "A one-person 2020-era research sketch retained as a record, not working software; notebooks also pivoted to Chinese classification and character-level autoencoding.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "A compact tensor-equation DSL and shared recursive reduction are an interesting way to express architecture; global novelty is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The canonical notebook contains a real parser/layer registry, but no pinned corpus or runnable package and CUDA/local data assumptions prevent direct use.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated architecture-expression experiment were made reproducible, it could support small bounded model experiments; no result establishes that advantage.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Notebook source includes DSL dispatch, einsum layer construction, custom layer families, and later task experiments; integration and results are not reproduced.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README provides a careful archive explanation but says it cannot run as-is and lacks a package, pinned environment, or corpus.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and canonical notebook source cells inspected as text; no model/data execution.",
+  "evidence": [
+    {
+      "path": "cz_einn/README.md",
+      "locator": "What EINN actually is; How to run"
+    },
+    {
+      "path": "cz_einn/einn.ipynb",
+      "locator": "code cell 0: `net`, `Dot`, and layer registry"
+    },
+    {
+      "path": "cz_einn/einn.ipynb",
+      "locator": "code cell 1: canonical DSL training expression"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The text-defined tensor program and its actual layer-construction machinery are more than a sketch, but current fitness and comparative benefit are unproven.",
+  "alternatives_question": "Which neural-network libraries let users express tensor equations/architecture families as text and search them, and how do they compare for the same variable-length model task?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "archival record is preserved, but recreating the original training runs needs unpinned dependencies, GPU, and missing data."
+  },
+  "verdict": "incubate",
+  "reason": "Interesting, substantive research material supports retention as an archive; no runnable current user path is evidenced.",
+  "next_step": "If the idea warrants revival, extract one minimal DSL example into a pinned test fixture and compare expressiveness against ordinary PyTorch code.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

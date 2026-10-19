@@ -1,0 +1,82 @@
+{
+  "path": "autofe",
+  "parent_pin": "0f9857c7bfaee060aadb49f16af5f6b889c3d458",
+  "child_head": "0f9857c7bfaee060aadb49f16af5f6b889c3d458",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. README labels the current round a WIP checkpoint; no pipeline or visual review run.",
+  "description": "An intent-driven, multi-renderer frontend engine using a business/intent model as an intermediate representation for HTML, text, and Markdown projections.",
+  "scope_audience": "Closed, single-user curation gallery for reviewing faithful renderings of a stated 40-site corpus; not an external product or general website builder.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "Shared semantic decisions across render targets and a closed declarative model are an interesting architecture; prior-art novelty remains unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The current source contains real model/renderer decisions and a capture/evaluation pipeline, but README explicitly calls the latest visual repair an incomplete gate.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the finite gallery scope passes source-faithfulness and visual acceptance, it provides the stated user a substantial review surface; value beyond that user is out of scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Engine and many self-tests exist, but latest round is explicitly not M4 acceptance and overall user milestone remains unverified.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README documents status and gate commands; no current gallery output or fresh evaluation was inspected.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, product scope, shared engine code, and contract code inspected; no gate or screenshot execution/review.",
+  "evidence": [
+    {
+      "path": "autofe/README.md",
+      "locator": "Status; gate commands"
+    },
+    {
+      "path": "autofe/docs/product.md",
+      "locator": "Commitment; acceptance; unique user milestone"
+    },
+    {
+      "path": "autofe/m1/axis.mjs",
+      "locator": "selectForm; shared target-neutral decisions"
+    },
+    {
+      "path": "autofe/m1/contract.mjs",
+      "locator": "contract"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A substantial rendering pipeline and consistent semantic model are present, but neither the final 40-page experience nor differentiation from comparable model-driven rendering is verified.",
+  "alternatives_question": "Which tools use a declarative business-intent intermediate representation to render the same captured site facts consistently to HTML, text, and Markdown while enforcing source fidelity?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "most pipeline stages are described, but README marks current work as a WIP with an incomplete acceptance gate."
+  },
+  "verdict": "incubate",
+  "reason": "Interesting and substantial work supports retention, but the user-facing acceptance milestone is not evidenced as complete.",
+  "next_step": "Run the current documented gates and review the complete gallery against source pages at the declared viewport widths before assessing finished value.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

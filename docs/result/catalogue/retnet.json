@@ -1,0 +1,82 @@
+{
+  "path": "retnet",
+  "parent_pin": "405e4b76d8c6fd35503d438471c7f4bd847befed",
+  "child_head": "405e4b76d8c6fd35503d438471c7f4bd847befed",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Representative Ret/Decay source was inspected; no notebook, dataset, training run, or output was executed/read.",
+  "description": "A scratch archive of byte-level language-model experiments using RetNet-style retention layers, causal convolution and Ray Tune searches.",
+  "scope_audience": "README states the research question: whether a recurrent-at-inference retention mixer can replace attention/dilated convolution at lower cost, and which layer topology performs better. The stated archive has no saved results, corpus, tests or package.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "The RetNet-style decay/retention kernel is explicitly related to published 2023 work; no new result or independently distinctive mechanism is established locally.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The layer and notebook implementations are inspectable research fragments, but corpora, checkpoints, saved results and environment pins are absent.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "A completed matched experiment could answer a meaningful small-LM cost/quality question; current records do not ground an outcome or a reproducible benchmark.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "nn.py implements learned decayed cumulative aggregation and Ret composition, with a notebook research line, but no result write-up or reproducible dataset closes the experiment.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README is unusually candid about the archive, dependencies, absent results and undefined notebook references, but gives no reliable fresh execution path.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The experiment needs a corpus, runnable notebook, controlled baseline and retained outcome; the repository states that these result artifacts are absent."
+  },
+  "confidence": "medium",
+  "verification": "README, Decay/Ret implementation and research archive description; executed=false; No notebook outputs, datasets or model files were examined; no result is claimed.",
+  "evidence": [
+    {
+      "path": "retnet/README.md",
+      "locator": "lines 1-20, research question; lines 40-90, missing artifacts and notebook map"
+    },
+    {
+      "path": "retnet/nn.py",
+      "locator": "Decay.forward; Ret constructor"
+    },
+    {
+      "path": "retnet/README.md",
+      "locator": "Notebook map, ray3.ipynb description and missing-results limits"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A hands-on retention/causal-convolution model search preserved in code. The implementation demonstrates an attempt to explore a published architecture family, but not a quality or speed improvement.",
+  "alternatives_question": "Which public byte-level retention experiments compare quality, sequence length and measured compute against attention and causal convolution under matched data and budgets?",
+  "verdict": "incubate",
+  "reason": "The source constitutes a real research attempt, while the absence of results and reproducible inputs means neither current value nor a novel finding is supported.",
+  "next_step": "Select one model and baseline, supply a reproducible corpus/configuration, define a matched cost/quality criterion and retain the result—including a negative result—in a committed report.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "path": "dojo",
+  "parent_pin": "9026a02ddb89b15f232a330e35093cf7c69110f9",
+  "child_head": "9026a02ddb89b15f232a330e35093cf7c69110f9",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Reused prior local report after pin match; no test/demo run.",
+  "description": "A local CLI/SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives, objections, unknowns, and relations.",
+  "scope_audience": "The current artifact is a local CLI/store and scripted demo. The finished scope in docs/product.md is a conversational truth-distillation network: a host guides ordinary-language discussion and background agents classify, challenge, connect and bring bounded sourced conclusions into later sessions. A hosted social platform, truth certification and federation are explicit non-goals.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The explicit separation of discussability from truth, provenance, reversible disagreement, and lexical retrieval is an interesting synthesis; global novelty remains unknown.",
+      "confidence": "high"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Store operations and retrieval support a practical structured-note experiment, but retrieval is explicitly lexical and the demo is simulated.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "Parent calibration against the current product document: if the conversational guidance and cross-session knowledge loop achieve their stated goals without false agreement, they offer a substantial reasoning/knowledge-reuse capability. This conditional value does not establish adoption or delivery likelihood; no game-changing reach claim is evidenced.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Versioned state/events, source relations, lexical retrieval, and a focused fake-model conversation test exist; no tests were run here.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README offers a standard-library demo, usage examples, privacy notes, and limitations, but points toward a current direction that needs alignment with the implemented CLI.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "high",
+  "verification": "Prior local assessment, current README, retrieval implementation, and tests inspected; no execution.",
+  "evidence": [
+    {
+      "path": "docs/result/catalogue-calibration.md",
+      "locator": "heading `dojo`"
+    },
+    {
+      "path": "dojo/README.md",
+      "locator": "Current product direction; existing demo; retrieval limitations"
+    },
+    {
+      "path": "dojo/dojo/storage.py",
+      "locator": "retrieve"
+    },
+    {
+      "path": "dojo/tests/test_conversation.py",
+      "locator": "mocked conversation lifecycle"
+    },
+    {
+      "path": "dojo/docs/product.md",
+      "locator": "current product and unresolved false-accept risk"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A careful claim lifecycle and inspectable retrieval model are locally interesting, but the intended network-level benefit is not demonstrated by a fixed demo.",
+  "alternatives_question": "Which chat-first personal-knowledge or argument systems preserve explicit source/evidence status, objections, revisions, reversible merges, and cross-session retrieval? Compare the same discussion task.",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "the CLI/store proof of concept exists; the broader product direction and real-user discussion quality remain open."
+  },
+  "verdict": "repair",
+  "reason": "Parent calibration: keep the sourced claim-lifecycle implementation and interesting thesis, but reconcile the README's current-direction pointer with the newer product document before showcasing it. A fixed simulation is not live-user evidence, and the envisioned chat/network product remains incomplete.",
+  "next_step": "Align the front door to the current product direction and test one real objection that must remain distinct from agreement before featuring the workflow.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

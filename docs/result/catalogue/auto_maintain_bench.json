@@ -1,0 +1,82 @@
+{
+  "path": "auto_maintain_bench",
+  "parent_pin": "bfac5612d25faced3f8c6f646f35299688072e44",
+  "child_head": "bfac5612d25faced3f8c6f646f35299688072e44",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No model, Docker, or scenario execution.",
+  "description": "A deterministic benchmark of small language models diagnosing and maintaining Linux hosts through a constrained bash loop in isolated Docker sandboxes.",
+  "scope_audience": "Researchers comparing local model maintenance behavior on explicit operational scenarios; not an autonomous host-repair daemon or general intelligence benchmark.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "Observable deterministic scoring for fix, durability, safety, and terminal behavior without an LLM judge is an interesting evaluation design; public benchmark overlap is unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The committed benchmark table contains multi-model/scenario outcomes and the catalog defines concrete validators; actual rerun/reproducibility was not checked.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the benchmark's stated corpus and runner remain usable, it can expose safe-fix and escalation gaps in small local models; broad external validity is not shown.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The maintenance loop and extensive scenario corpus implement bounded commands and deterministic scoring; no test or benchmark was executed.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README explains workflow, scoring, sandbox, setup and limitations, with recorded results, but model/runtime prerequisites and results need fresh verification.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, representative loop, scenario catalog, and committed benchmark rows inspected; not executed.",
+  "evidence": [
+    {
+      "path": "auto_maintain_bench/README.md",
+      "locator": "In 30 seconds; How it works; Caveats"
+    },
+    {
+      "path": "auto_maintain_bench/harness/maintenance_loop.py",
+      "locator": "MaintenanceLoop.run_wakeup"
+    },
+    {
+      "path": "auto_maintain_bench/docs/scenario_catalog.md",
+      "locator": "Scoring Hierarchy; Implementation Rules"
+    },
+    {
+      "path": "auto_maintain_bench/BENCHMARKS.md",
+      "locator": "Overall Results"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "Its safety-aware, validator-based scoring is more interesting than a free-form model-judge score; usefulness relative to existing repair-agent benchmarks remains for public comparison.",
+  "alternatives_question": "Which public benchmarks test small local models on host maintenance with sandboxed bash, deterministic fix/durability/safety validators, and explicit escalation scoring rather than model judging?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "a closed research milestone and benchmark artifacts are present; current model and Docker compatibility remain unverified."
+  },
+  "verdict": "showcase_candidate",
+  "reason": "Parent calibration: the validator-based benchmark and committed outcome table merit a bounded research-demonstration verification queue, not an automatic public feature. Fresh reproduction, protocol comparison and external validity remain unverified.",
+  "next_step": "Reproduce one small-model scenario from the pinned instructions, including safety and durability checks, then compare protocol and scenario overlap with public benchmarks.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

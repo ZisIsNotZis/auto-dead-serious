@@ -1,0 +1,79 @@
+{
+  "path": "treui",
+  "parent_pin": "4fc2db2ac9539a0e867e596b0862aea5208cdc05",
+  "child_head": "4fc2db2ac9539a0e867e596b0862aea5208cdc05",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. No frontend build, server request, or browser check was run.",
+  "description": "A Vue/vis-network prototype represents a chat as editable graph nodes and edges, with a blank child node filled from its parent-message chain through an OpenAI-compatible endpoint.",
+  "scope_audience": "The README describes a prototype for one local user with a compatible server; it is explicitly not presented as a product and has no persistence.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Treating graph topology as conversation state is an interesting interaction model, but the README gives no evidence of a distinctive or globally novel contribution.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Graph editing and response generation are implemented in the component, but the code hardcodes the endpoint, does not persist state, and its own README lists incomplete streaming/API seams.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If completed with reliable branching, persistence, and configurable generation, the graph could help a user explore alternate chat paths; no tested advantage over linear/threaded chat is established.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Graph creation, editing, edge linking, subtree deletion, and ancestor-message requests exist in GraphCanvas.vue; no tests, persistence, backend, or executed UI evidence was found.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README explains purpose and setup but labels the project deprecated, with no persistence/tests/configuration and a fixed local endpoint; no visual demo was inspected.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The prototype is archived and has no active roadmap; the basic interaction exists, but persistence and reliable response handling are not evidenced."
+  },
+  "confidence": "medium",
+  "verification": "Inspected README and GraphCanvas component only; no build, tests, API call, or browser session.",
+  "evidence": [
+    {
+      "path": "treui/README.md",
+      "locator": "What; Why it exists; How to run; Status"
+    },
+    {
+      "path": "treui/src/components/GraphCanvas.vue",
+      "locator": "createBubble; deleteBubbleAndChildren; triggerGeneration; saveEdit; onMounted graph handlers"
+    },
+    {
+      "path": "treui/src/api.js",
+      "locator": "generateAIResponse"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A graph-native chat sketch makes branches, edits, and parent context visible as editable edges and nodes rather than a transcript-only interface.",
+  "alternatives_question": "Which chat products or open-source interfaces use an editable node graph as the conversation state, and do they preserve branch context and make alternate reasoning easier on the same task?",
+  "verdict": "incubate",
+  "reason": "The core interaction is implemented and worth preserving as a prototype, but there is no evidence of durable or dependable use and the archive status is explicit.",
+  "next_step": "If the graph-chat idea remains in scope, validate one end-to-end branching task and decide whether persistence and endpoint configuration are required before further polish.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

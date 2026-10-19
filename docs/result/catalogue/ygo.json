@@ -1,0 +1,83 @@
+{
+  "path": "ygo",
+  "parent_pin": "71101a9129a76461ab57e3c049a317d0135da010",
+  "child_head": "71101a9129a76461ab57e3c049a317d0135da010",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. Personal data, card/deck corpora, model weights, image/video payloads, credentials, and environment files were not inspected.",
+  "description": "A personal Yu-Gi-Oh! experiment archive contains small card-database, deck, image/video, and GGUF inference tools; the tools have no shared entry point.",
+  "scope_audience": "The README frames the audience as the author or hobbyists with local card databases, decklists, GPU/model assets, and related external tooling; those inputs are not bundled.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The domain-specific combination of card statistics, deck experiments, visual selection/cropping, and a low-level GGUF wrapper is an interesting personal toolkit; global novelty is unknown.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Source includes real small utilities such as database-derived archetype statistics and tensor operations, but required databases, corpora, weights, and outputs are absent and the archive has no maintained workflow.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated hobby workflows are made reproducible for an owner with the required local data, they could save effort in card/deck analysis and media selection; no broader user benefit is established.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Inspected scripts include card-stat aggregation and a substantial GGUF/ggml tensor wrapper, alongside notebooks and media helpers; no tests, data-backed result, or end-to-end workflow was run.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README inventories individual tools, prerequisites, missing inputs, and status honestly, but there is no single install/run path or demonstrated output.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The archive is not maintained and depends on external private/local data and model assets; the individual scripts may remain usable with those inputs, but this was not exercised."
+  },
+  "confidence": "low",
+  "verification": "Inspected README and generic implementation in stat.py and gg.py only. No card/deck/media payload, model, external module, tests, or execution was accessed.",
+  "evidence": [
+    {
+      "path": "ygo/README.md",
+      "locator": "What; How to run; Status"
+    },
+    {
+      "path": "ygo/stat.py",
+      "locator": "SQLite card-stat aggregation and YAML output"
+    },
+    {
+      "path": "ygo/gg.py",
+      "locator": "Tensor; view/shape operations; backend tensor access"
+    },
+    {
+      "path": "ygo/docs/project-status.md",
+      "locator": "Classification; Boundaries"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A collection of independent hobby tools applies model inference, card statistics, deck experiments, and media selection to one domain; it is an archive rather than an integrated product.",
+  "alternatives_question": "Which open tools support local card/deck analysis, representative replay-frame selection, and card-art cropping, and which of these tasks still require bespoke work for the author's intended workflow?",
+  "verdict": "incubate",
+  "reason": "The inspected source establishes meaningful personal implementation, but missing inputs, no unified workflow, and no comparative evidence keep current utility and differentiation provisional.",
+  "next_step": "If public or repeat use is intended, isolate one representative task, provide a privacy-safe fixture and expected output, and document a reproducible entry point without sharing private datasets or weights.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

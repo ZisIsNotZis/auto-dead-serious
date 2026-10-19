@@ -1,0 +1,80 @@
+{
+  "path": "grammar",
+  "parent_pin": "a9ad62375c470ce783c30f5fd410ec30fcf2dd38",
+  "child_head": "a9ad62375c470ce783c30f5fd410ec30fcf2dd38",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. The external training corpus and ignored notebook state were not inspected.",
+  "description": "A notebook research attempt at masked-token reconstruction of Python source using convolutional U-Net encoder-decoders without recurrence or attention.",
+  "scope_audience": "Personal research archive intended to compare topology, skip connections and down/up-sampling on a 90-token code corpus; no library or production model is claimed.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Adapting segmentation-style U-Nets to masked code-token reconstruction is an interesting architectural question; global novelty remains unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The notebooks show a research/reference artifact, but missing corpus, cleared outputs and minimal annotations prevent checking the reported outcome.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the intended controlled architecture study were completed, it could yield a bounded code-model finding; the present data and evaluation gaps are material.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "The canonical notebook implements a U-Net and training loop, but depends on absent data and has no reproducible evaluation or saved model outputs.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README candidly maps notebooks, data, logs and limitations; setup is notebook-only and cannot be replayed from this repository alone.",
+      "confidence": "high"
+    }
+  },
+  "confidence": "medium",
+  "verification": "Canonical notebook implementation inspected via read-only extraction of its cells; no notebook was run and numeric logs were not independently analyzed.",
+  "evidence": [
+    {
+      "path": "grammar/README.md",
+      "locator": "The model; The training loop; The data; The only written results"
+    },
+    {
+      "path": "grammar/Untitled-Copy2.ipynb",
+      "locator": "EncDec; masked-token training loop"
+    },
+    {
+      "path": "grammar/Untitled-Copy10.ipynb",
+      "locator": "SwiGLU; sequence-length scaling annotation"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "An implemented architecture experiment with recorded traces but no available corpus or interpretable held-out result; evidence supports trying the question, not a model-quality conclusion.",
+  "alternatives_question": "Which contemporary code-token denoising studies test convolutional U-Nets under comparable data, masking and held-out metrics, and would their evaluation change the question's value?",
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The project is archived; its required corpus is outside the repository and unavailable for replay from this checkout."
+  },
+  "verdict": "incubate",
+  "reason": "The model/training attempt is substantive relative to a research scratchpad, but missing data and outputs rule out a claim of useful or novel results.",
+  "next_step": "Only if the research question is revived, recover an authorized corpus and publish a controlled result with held-out metrics and a baseline.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

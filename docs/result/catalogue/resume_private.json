@@ -1,0 +1,78 @@
+{
+  "path": "resume_private",
+  "parent_pin": "a3d36d46050a7bb10890fb8da142127359b87f79",
+  "child_head": "a3d36d46050a7bb10890fb8da142127359b87f79",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Inspection was privacy-limited to README and generic renderer code; no personal payload, credentials, environment, rendered document, or database contents were read.",
+  "description": "A private owner-managed resume-rendering workspace with reusable templates and a small Python renderer; personal content is explicitly present and intentionally private.",
+  "scope_audience": "The only declared audience is the repository owner. This assessment addresses structural intent and generic renderer behavior only; it makes no claim about personal content or rendered artifacts.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "The inspected renderer uses a small Mustache-like template model also seen in the adjacent public resume_img_gen package; no distinctive private-only behavior was established, and no payload was inspected.",
+      "confidence": "low"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "README and generic source show an owner-facing data/template render path, but its actual private data and artifacts were deliberately not reviewed and it was not run.",
+      "confidence": "low"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated private workspace scope succeeds, rendering owner-controlled templates is a bounded personal convenience; no public audience or broader benefit is claimed.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The generic renderer implements lookup, nested sections and template expansion, and README describes a closed workspace; private outputs and whether they meet the owner’s needs are unknown.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "Parent calibration: judge the stated owner-only audience, not public visibility. The inspected README provides private-workspace orientation; payload and rendered-output quality remain deliberately unassessed.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The private renderer and its stated use are present; fit and artifact quality remain deliberately unassessed."
+  },
+  "confidence": "low",
+  "verification": "Privacy notice and generic rendering logic only; executed=false; Personal data, private rendered artifacts and environment information were not read, copied, summarized or searched.",
+  "evidence": [
+    {
+      "path": "resume_private/README.md",
+      "locator": "lines 1-8, private scope and privacy boundary"
+    },
+    {
+      "path": "resume_private/scripts/render_resume.py",
+      "locator": "render; _lookup; _find_close, generic template implementation"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A private owner-specific workspace around a generic template renderer. Any user value is necessarily personal and cannot be demonstrated without inspecting private material, which was intentionally out of scope.",
+  "alternatives_question": "For the owner’s private workflow only, does this workspace provide a necessary behavior beyond the generic resume_img_gen renderer while keeping all personal data private?",
+  "verdict": "incubate",
+  "reason": "Parent calibration: the investigator supports the substantial-work route from generic renderer source, which is sufficient under the OR rule. Unassessed private utility does not override that supported route or justify public exposure; retain without featuring private content.",
+  "next_step": "Let the owner decide whether the private workspace remains useful; if comparison is needed, compare generic renderer behavior without opening or exporting personal data.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

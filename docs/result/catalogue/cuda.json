@@ -1,0 +1,74 @@
+{
+  "path": "cuda",
+  "parent_pin": "c374c1972af681c2220d7592d25fa44c1252ff0d",
+  "child_head": "c374c1972af681c2220d7592d25fa44c1252ff0d",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No CUDA compilation, GPU execution, or Nsight profiling.",
+  "description": "Personal CUDA kernel experiments in tensor-core matrix operations, warp-level transforms, fused operations, and parameterized tile/configuration sweeps.",
+  "scope_audience": "A reference/learning archive for CUDA programming and hardware-specific experimentation; README says it is not a library and has no consumers.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Hand-written PTX/tensor-core paths and warp-shuffle layouts are technically interesting; global novelty is not assessed.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "It can serve as code-reading material, but benchmark outputs are absent and variants require the matching CUDA/Nsight environment.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "The stated archive scope yields narrow learning/reference value rather than a supported reusable kernel or measured performance advantage.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The implementation contains device-level loads, lane shuffles, and `mma.sync` tensor-core operations, but no independent result or regression evidence was inspected.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains the archive, commands, hardware requirements, and non-library status; no reproducible full environment or result is supplied.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README and representative CUDA header implementation inspected; no compile, run, or profile.",
+  "evidence": [
+    {
+      "path": "cuda/README.md",
+      "locator": "What; How to run; Status"
+    },
+    {
+      "path": "cuda/test6/1/m.h",
+      "locator": "e2828::shf; e2828::mm; load/store templates"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "Concrete lower-level CUDA kernel craftsmanship and experiment variants are present; without result artifacts, performance value is unknown.",
+  "alternatives_question": "Which public educational CUDA kernel collections cover these WMMA/MMA, warp-shuffle, and asynchronous-copy patterns with reproducible per-device correctness/performance results?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "archival code is present, but source-local build commands depend on omitted CUDA and profiler setup and no measurements were inspected."
+  },
+  "verdict": "incubate",
+  "reason": "Retain as an inspectable technical archive through substantive implementation; no evidence supports a performance or reusable-library claim.",
+  "next_step": "If performance is claimed, pin a target GPU/toolchain and retain a correctness fixture plus measured baseline for one representative kernel.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

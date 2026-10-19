@@ -1,0 +1,78 @@
+{
+  "path": "nn",
+  "parent_pin": "67f65bed3ee5b98a70590c7e66571f156316108a",
+  "child_head": "67f65bed3ee5b98a70590c7e66571f156316108a",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. Notebook source was read only; no environment or notebook was run.",
+  "description": "An archived set of PyTorch notebooks hand-implementing neural-network and attention experiments from primitives.",
+  "scope_audience": "README defines the scope as a 2021–2022 study/reference archive, not a library. Readers may inspect individual notebooks, but many need CUDA, machine-local paths or assets that are not included.",
+  "scores": {
+    "creativity": {
+      "value": 1,
+      "reason": "The inspected notebook implements a small self-attention blend, but README frames the set as hand-rolling familiar neural-network primitives; novelty is not established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Some notebooks can be read as study material, but there is no supported project entrypoint and many cells depend on absent assets, data or deprecated APIs.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 1,
+      "reason": "Preserved examples can offer narrow historical learning value; no current package, dataset or future research scope is stated.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "SelfAttentionNn has an actual gated blend implementation, but the archive has no reproducible dataset, tests or integrated experiment acceptance.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 1,
+      "reason": "README openly explains limitations and redaction, yet roughly one-third duplicate/dead-end notebooks and many local assumptions make navigation and use difficult.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The declared archive is already complete as an archival study set; no unfinished product deliverable is promised."
+  },
+  "confidence": "medium",
+  "verification": "README and SelfAttentionNn notebook source; executed=false; No notebook, local asset, private backend or environment was accessed or executed.",
+  "evidence": [
+    {
+      "path": "nn/README.md",
+      "locator": "Why it exists; How to run; Status; Sanitisation"
+    },
+    {
+      "path": "nn/SelfAttentionNn.ipynb",
+      "locator": "lines 32-46, SelfAttentionNn and SelfMultiAttentionNn forward methods"
+    }
+  ],
+  "routes": {
+    "creativity": "unknown",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A preserved study record of building network and attention components directly on PyTorch. One inspected attention notebook has executable model logic, but no claim is made about the whole set’s quality or reproducibility.",
+  "alternatives_question": "Which curated educational notebooks teach the same from-primitives attention and network-building tasks with reproducible inputs and clear progression, and what unique lesson is preserved here?",
+  "verdict": "incubate",
+  "reason": "The archive has evidence of real study implementation but only narrow reference value; it is not ready to represent a maintained neural-network library.",
+  "next_step": "Select one historically useful notebook, document its exact data/environment contract without private payloads, and leave duplicate or unreproducible material clearly labeled as archive.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

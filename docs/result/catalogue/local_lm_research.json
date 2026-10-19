@@ -1,0 +1,64 @@
+{
+  "kind": "authored_assessment",
+  "path": "local_lm_research",
+  "parent_pin": "c5ecd05a9bc02366254ea45e437859932867bfaf",
+  "child_head": "c5ecd05a9bc02366254ea45e437859932867bfaf",
+  "observation_time": "2026-10-19T10:51:01+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "parent:gpt-6.1-sol",
+    "role": "parent local-evidence assessment correcting an availability inference",
+    "reference": "docs/plan/catalogue.md, catalogue-full availability finding; direct read-only Git and named-file inspection"
+  },
+  "state_limits": "The child has a valid standalone Git root and HEAD matching its parent pin, with empty tracked-only status. git submodule status prints a leading minus, which is a registration signal rather than absent source here. No initialization, fetching, database access, live-output inspection or experiment execution occurred.",
+  "description": "A local language-model inference research workbench recording comparisons of quantization, model size, decoding protocols and benchmark behavior, with a database-backed report producer.",
+  "scope_audience": "Researchers and local-model operators choosing inference settings from controlled, protocol-bound measurements. The stated scope is research evidence, not a model release or a claim that every comparison is complete.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Jointly treating bit width, model family, task protocol and decoding as controlled research variables is an interesting local study design; the framework or broad question is not claimed novel.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Tracked findings and a report producer provide bounded research/reference value, but measurements were not queried from the database or independently audited and several evidence locators point at retired scratch records.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "Completing the stated matched inference-factor study could substantially improve an operator's model/quantization/protocol choices; this is conditional value, not endorsement of current numerical findings.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The repository contains structured question/result records and an actual read-only SQLite-to-table/figure report producer with protocol-specific queries. The database, report generation, statistical claims and complete input recovery were not verified.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains the question and source homes honestly, but offers no fresh-clone environment recipe, while result provenance and the report producer depend on scratch-era references or machine-local support inputs.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "Parent inspected README, docs/plan/plan.yaml, docs/result/result.yaml and the first representative report-query/plot/protocol source section in make_report.py. No database, raw run output, generated report, model, corpus, live process or child code was executed or opened for result verification.",
+  "inspection_limits": [
+    "The scout's uninitialized-equals-unavailable inference was invalidated by direct read-only confirmation of the standalone child root, matching HEAD and readable tracked files.",
+    "Reported effects and confidence intervals are project-authored claims, not reproduced measurements in this assessment.",
+    "No changes were made to child files, submodule registration or running work."
+  ],
+  "evidence": [
+    {"path": "local_lm_research/README.md", "locator": "opening research scope; Source of truth"},
+    {"path": "local_lm_research/docs/plan/plan.yaml", "locator": "plan2-plan7: scoped hypotheses and declared unmeasured questions"},
+    {"path": "local_lm_research/docs/result/result.yaml", "locator": "res1-res14: attributed findings, explicit non-measurements and provenance limits"},
+    {"path": "local_lm_research/make_report.py", "locator": "CON read-only SQLite connection; BENCH/CANON protocol mapping; raw_scores; tag_bpw; representative source in lines 1-122"},
+    {"path": "docs/result/catalogue-comparison.md", "locator": "Local LM research and evaluation frameworks"}
+  ],
+  "routes": {"creativity": "supported", "usefulness": "unknown", "substantial_work": "supported"},
+  "contribution": "A concrete protocol-aware empirical study and database-backed reporting pipeline. Reusing an established evaluation harness is compatible with producing distinct local evidence; neither current numerical validity nor global originality is established by this source inspection.",
+  "alternatives_question": "Which existing evaluations provide the same matched quantization/family/protocol comparisons for a local operator, and can the recorded evidence be independently reconstructed from the declared database and inputs?",
+  "delivery_likelihood": {"status": "uncertain", "reason": "Research/reporting code and claimed results exist; some questions remain explicitly blocked or unmeasured, and reproduction inputs/evidence references need verification."},
+  "verdict": "repair",
+  "reason": "Retain through substantive research/reporting work and an interesting bounded study; repair the evidence path and reproduce a representative database-derived table before featuring numerical conclusions. The leading-minus registration status is not evidence against project merit.",
+  "next_step": "In a separately authorized child-evidence pass, validate one declared result against a read-only database query, resolve its source/configuration/protocol references into current homes and exercise report setup without launching new model experiments."
+}

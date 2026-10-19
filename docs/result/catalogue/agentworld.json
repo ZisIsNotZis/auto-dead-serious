@@ -1,0 +1,82 @@
+{
+  "path": "agentworld",
+  "parent_pin": "6a48a7b54cf6568a3328fc7ccde9ea807f5797d4",
+  "child_head": "6a48a7b54cf6568a3328fc7ccde9ea807f5797d4",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. No commands or real-model calls were run.",
+  "description": "An event-driven civilization simulator that reserves costly model reasoning for selected uncertain or high-impact decisions and records simulation evidence.",
+  "scope_audience": "Research workbench for testing causal fidelity and value-based allocation under finite model-call budgets; active vertical slices and the larger self-evolving-world target are distinct scopes.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The combination of actor-local observation, audited interventions, and selective reasoning is an interesting research thesis; novelty versus simulators/agent societies is unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Substantial deterministic simulation and hermetic mechanisms are described, but the real-model arm is blocked and the central selective-spending claim is explicitly unaccepted.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the scoped allocation/fidelity question is answered, it could give researchers a testable way to budget cognition; the evidence may also remain honestly null.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "An allocation record is hash-ledgered and a focused round-trip test checks policy, budget, selected actors, and chain verification; the full roadmap remains far from completion.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README provides reproduction commands, declared synthetic evidence limits, and an active plan, while no quickstart was exercised here.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, active plan, source, and tests inspected; all runtime/model-result statements remain document-backed, not freshly executed.",
+  "evidence": [
+    {
+      "path": "agentworld/README.md",
+      "locator": "Goal; Status; synthetic pilot limits"
+    },
+    {
+      "path": "agentworld/docs/VERTICAL-SLICES.md",
+      "locator": "VS1 and VS2 status; unaccepted central claim"
+    },
+    {
+      "path": "agentworld/internal/cognition/allocation.go",
+      "locator": "AppendAllocationIntervention"
+    },
+    {
+      "path": "agentworld/internal/cognition/allocation_test.go",
+      "locator": "TestAllocationInterventionRoundTripAndChain"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The audit trail and selective-allocation mechanism are locally interesting, and implementation is substantive; useful differentiation from public simulation and agent-evaluation projects remains unverified.",
+  "alternatives_question": "Which open-source civilization/agent simulators let researchers compare selective model-call allocation with equal-budget uniform or periodic policies under actor observation boundaries and auditable replay?",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "mechanism slices exist, but the main empirical claim has not been accepted and real-model execution requires unresolved spend authority."
+  },
+  "verdict": "incubate",
+  "reason": "The substantial-work route is supported; the central product claim remains unaccepted, so the promising research mechanism is not yet a demonstrated useful outcome.",
+  "next_step": "Resolve the documented open question about a reasoning premium and obtain authority for the bounded real-model comparison before interpreting allocation value.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

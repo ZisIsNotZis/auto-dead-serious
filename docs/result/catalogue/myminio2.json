@@ -1,0 +1,82 @@
+{
+  "path": "myminio2",
+  "parent_pin": "96bf9d178c926941386ae18c9bc038c7dd6f8ec6",
+  "child_head": "96bf9d178c926941386ae18c9bc038c7dd6f8ec6",
+  "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No server, network, or test code was run.",
+  "description": "A second object-store learning experiment with custom asynchronous HTTP plumbing and a three-backend XOR gateway.",
+  "scope_audience": "The README states a learning goal—raw sockets, HTTP transfer behavior and erasure coding—not a maintained storage product. The intended gateway/backend topology is explicitly marked not verified runnable as-is.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The local combination of custom HTTP/socket code and XOR gateway repair is an interesting systems-learning attempt; no comparison establishes global novelty.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "Source contains HTTP and gateway fragments, but README says no single working entrypoint is identified and there are no tests or packaging.",
+      "confidence": "high"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the stated topology worked, it could provide a bounded distributed-storage learning demonstration; its user advantage over the earlier local prototype is not evidenced.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 1,
+      "reason": "myminios.py contains parity split/reconstruction and myhttp.py contains HTTP parsing/streaming pieces, but the documented runnable topology is only intended and unverified.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains the concept and labels the run commands unverified, but gives no reproducible setup or working validation route.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "There is no identified working entrypoint and no test evidence; substantial glue and dependency gaps may remain."
+  },
+  "confidence": "medium",
+  "verification": "README and representative myminios.py/myhttp.py source; executed=false; No endpoints, storage directories, socket paths, or dependency compatibility were tested.",
+  "evidence": [
+    {
+      "path": "myminio2/README.md",
+      "locator": "lines 5-34, purpose, unverified topology and status"
+    },
+    {
+      "path": "myminio2/myminios.py",
+      "locator": "lines 57-89, XOR reconstruction and parity writes"
+    },
+    {
+      "path": "myminio2/myhttp.py",
+      "locator": "lines 32-50, request parsing; lines 87-88, HTTP handler boundary"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "More than an idea: it contains a backend server/gateway attempt and explicit shard repair logic. The current evidence supports learning effort, not an available or reliable multi-node object store.",
+  "alternatives_question": "Which small storage-learning projects combine hand-written HTTP transfer paths with remote parity shards, and can any be compared on the same single-backend-loss recovery task?",
+  "verdict": "incubate",
+  "reason": "The systems work merits preserving as an experiment, while its advertised topology is not presently an inspectable end-to-end workflow and its practical differentiation is unknown.",
+  "next_step": "A future owner should first demonstrate one isolated three-backend write, one-backend loss, read reconstruction and repair, then keep only the components needed for that trace.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:25:09+08:00",
+  "parent_revision": "def867a3b3e7449c06e63b83861ea9fca10ae937",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-m-r"
+  },
+  "inspection_limits": [
+    "Assessed exactly the 22 assigned child paths; no other child was assessed. All parent gitlink pins equal observed child HEADs.",
+    "No project code, tests, builds, installs, network requests, commits or writes were performed. Verification is source/document inspection only, except that committed prior result records are cited where identified.",
+    "Child git status was bounded to tracked-only status; untracked and ignored paths were not enumerated. pathlm was tracked-dirty; its dirty contents, live logs, mutable outputs and processes were not inspected.",
+    "No public alternatives research was done by this investigator. All alternatives_question fields are generic comparison prompts; global novelty and non-repetition remain unresolved pending parent research.",
+    "resume_private was limited to its privacy notice and generic renderer; no personal payload, credential, environment, database, or rendered document was inspected or reproduced.",
+    "Visual claims about Pelican Bike, MyCar, and browser applications were not visually reviewed. All ratings are provisional source-inspection judgements, not independent acceptance or a claim of runtime success.",
+    "Parent revision def867a3b3e7449c06e63b83861ea9fca10ae937 and all assigned gitlinks were captured at investigation start. Before report completion the parent HEAD advanced to ca6ae15e46e022e716c9474f16926838a9c50074; a read-only recheck confirmed all 22 assigned gitlinks were unchanged. The initial bounded parent status showed M docs/plan/catalogue.md and m pathlmmain; final status showed only m pathlm. No parent or child source was modified by this investigator."
+  ]
+}

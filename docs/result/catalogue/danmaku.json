@@ -1,0 +1,82 @@
+{
+  "path": "danmaku",
+  "parent_pin": "4382c344e064b1e3276e923c8659bddc1d243d90",
+  "child_head": "4382c344e064b1e3276e923c8659bddc1d243d90",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. X11 visual/CPU verification script and demo were not run.",
+  "description": "A self-contained PyQt5/X11 scrolling-comment overlay engine with one-shot, engine, and storm experiments; AI behavior moved to a separate project.",
+  "scope_audience": "Linux/X11 desktop users seeking an always-on-top click-through danmaku overlay; closed milestone, not portable across all display servers.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "Rasterizing each comment once in a small transparent window and moving it, rather than repainting a fullscreen canvas, is an interesting concrete optimization; novelty is not searched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Engine implements placement, transparent input, playback and push interfaces; existing captures/scripts suggest an evaluable slice but were not independently verified.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "A completed X11 overlay provides a bounded desktop feature for a narrow audience; broader platform reach is explicitly out of scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "The engine has lane allocation, timed movement, per-comment windows, and verification assets/scripts; execution and target desktop behavior remain unverified.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README states requirements, demo command, portability limits, and project status; no current visual output was reviewed.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, engine implementation, and verification script inspected; no X11 or visual execution.",
+  "evidence": [
+    {
+      "path": "danmaku/README.md",
+      "locator": "description; Requirements; status"
+    },
+    {
+      "path": "danmaku/danmaku_engine.py",
+      "locator": "CommentWindow; Engine._can_enter; Engine._do_push"
+    },
+    {
+      "path": "danmaku/verify_engine.sh",
+      "locator": "capture and CPU measurement procedure"
+    },
+    {
+      "path": "danmaku/docs/project-status.md",
+      "locator": "status and evidence limits"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A concrete performance-motivated overlay implementation and measured-check recipe are present; external task advantage and current X11 compatibility are not established.",
+  "alternatives_question": "Which open-source Linux/X11 overlay engines provide click-through scrolling comments, and can the same comment timeline reveal a measurable repaint/CPU or placement difference?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "the README describes a closed self-contained milestone and runnable demo, but this environment-specific path was not run."
+  },
+  "verdict": "incubate",
+  "reason": "The local implementation and optimization are interesting and substantive; freshness, visual quality, and differentiation require a bounded demo.",
+  "next_step": "On an authorized X11 desktop, run the timeline verification and inspect one screenshot before promoting the engine.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

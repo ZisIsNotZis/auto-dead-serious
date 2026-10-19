@@ -1,0 +1,80 @@
+{
+  "path": "hyperframaker",
+  "parent_pin": "ed4dcf0403f11aeaa47a519761174fe12b3f5764",
+  "child_head": "ed4dcf0403f11aeaa47a519761174fe12b3f5764",
+  "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Ignored node_modules and local workspaces were not assessed; no app or browser tests were run.",
+  "description": "A local-first browser canvas for connecting, generating, inspecting and regenerating artifact nodes through a filesystem-backed registry and agent scripts.",
+  "scope_audience": "Closed experimental application for an agent or creator composing text, image, audio and video artifacts as inspectable files; authenticated Codex CLI is required for real generation.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The node graph joins prompts, named inputs, scripts, manifests and actual artifacts in a local-first workflow; global novelty versus other agent canvases is unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "Source and UI describe useful graph editing and generation paths, but real authenticated generation and user workflow were not exercised.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the stated composition workflow works reliably, inspectable artifact lineage and repair/regeneration provide a meaningful creator capability; collaboration is out of scope.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Server routes, registry, workspace persistence, UI and tests are present; project status records local test entry points, but none ran here.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README has a canvas illustration, requirements, quickstart, mental model and test commands and discloses the Codex requirement; fresh-user execution is unverified.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, status and representative HTTP/server/workspace generation route inspected; no npm commands, authenticated Codex use or browser review.",
+  "evidence": [
+    {
+      "path": "hyperframaker/README.md",
+      "locator": "What you can do today; Quick start; Mental model"
+    },
+    {
+      "path": "hyperframaker/server/index.mjs",
+      "locator": "/api/workspace; /api/link; /api/generate"
+    },
+    {
+      "path": "hyperframaker/docs/project-status.md",
+      "locator": "Evidence; Boundaries; Deferred"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The concrete differentiating thesis is inspectable, manifest-backed artifact composition and lineage on a local canvas; reliability and breadth are not independently demonstrated here.",
+  "alternatives_question": "Which current local agent-artifact graph tools support the same manifest-backed inputs, reproducible scripts and repair/resume cycle, and what task outcome differs?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "The project records a completed experimental milestone with source and tests, but real generation still depends on an authenticated external CLI."
+  },
+  "verdict": "showcase_candidate",
+  "reason": "The documented app is a coherent inspectable user-facing slice and merits fresh workflow verification; no superiority or production claim is made.",
+  "next_step": "On a safe local workspace, verify one generation, inspect its manifest/artifact and test a failed-generation recovery before featuring it.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:32+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane e-l"
+  },
+  "inspection_limits": [
+    "No source projects were changed, installed, built, executed, tested, or accessed over a network; no child commits or pushes were made.",
+    "All initialized child repositories matched their parent gitlink and had empty `git status --short --untracked-files=all`; this does not inspect ignored/generated data. The local_lm_research submodule was reported uninitialized and left unknown.",
+    "The parent repository revision advanced during this investigation; `parent_revision` records the observed revision at report completion. Assigned child gitlink pins remained unchanged.",
+    "No public alternatives research or global novelty claim is included. All implementation/runtime, visual, security and performance claims are limited to inspected source or explicitly attributed project documentation; the parent owns external comparisons and synthesis.",
+    "For learn_draw, only structural product intent and source were inspected; private/personal payloads, target imagery, artwork and live work records were excluded."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "path": "tokenqr",
+  "parent_pin": "487de9e5a95d833af83eda54f3f0b56b48c9a368",
+  "child_head": "487de9e5a95d833af83eda54f3f0b56b48c9a368",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. No browser, Relay, Provider, or Gateway interaction was executed.",
+  "description": "A closed browser POC and protocol draft for client-first token authorization: a one-time QR describes the request, a temporary key protects the payload, and a replaceable Relay carries it.",
+  "scope_audience": "The stated target is application developers and users who want to authorize a local application without manually copying a Provider token; the current artifact is explicitly a POC.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The open, client-first authorization flow separates Provider choice, consent, ephemeral encryption, and Relay transport; that is an interesting protocol composition, not evidence of global novelty.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The browser code implements QR handoff, ECDH/AES-GCM, Provider configuration, and a local Relay path, but no flow was run and the Relay is in-memory, wildcard-CORS, and has no visible expiry cleanup.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If completed as an interoperable protocol, explicit user consent and encrypted transfer could remove a real secret-copying step across local apps; enforcement, revocation, and provider interoperability remain unresolved.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "A single-file browser POC and Python Relay implement the main handoff, while independent implementations/interoperability tests are roadmap extensions and security properties were not tested.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README provides the workflow, QR diagram, two-tab quickstart, protocol boundaries, and explicit policy/security limits; the advertised flow was not independently exercised.",
+      "confidence": "medium"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "The POC is marked closed, while interoperability and security review remain unverified and further work is not planned absent changed goals."
+  },
+  "confidence": "medium",
+  "verification": "Inspected README, protocol draft, browser encryption/authorization functions, and Relay handler. No tests or live provider/relay/browser use.",
+  "evidence": [
+    {
+      "path": "tokenqr/README.md",
+      "locator": "当前 POC; 安全边界; 路线图"
+    },
+    {
+      "path": "tokenqr/tokenqr.html",
+      "locator": "async function enc; async function dec; $('make').onclick; $('confirm').onclick"
+    },
+    {
+      "path": "tokenqr/server.py",
+      "locator": "class H; do_POST; do_GET"
+    },
+    {
+      "path": "tokenqr/docs/protocol.md",
+      "locator": "QR payload; Encrypted payload; Relay contract; Policy semantics"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A local-first consent and transfer protocol concept is embodied in a browser POC with temporary-key encryption and a minimal replaceable-message Relay; the POC is not a security guarantee.",
+  "alternatives_question": "Which open protocols or applications let a user authorize a local client to receive a Provider secret by consent-based, encrypted handoff without a central token broker, and how do they handle expiry and revocation?",
+  "verdict": "incubate",
+  "reason": "A meaningful protocol/workflow and implementation exist, but no interoperability or security validation supports a showcase claim, and the code exposes explicit prototype limits.",
+  "next_step": "Before broader use, obtain independent protocol/security review and an interoperability test across separately implemented client, provider, and relay roles.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

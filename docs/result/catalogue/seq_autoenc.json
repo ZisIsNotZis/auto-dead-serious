@@ -1,0 +1,75 @@
+{
+  "path": "seq_autoenc",
+  "parent_pin": "df008e9562397e4ef9bcf2b568346efe90df55a3",
+  "child_head": "df008e9562397e4ef9bcf2b568346efe90df55a3",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. Corpus, checkpoints, and notebook results were not executed or re-created.",
+  "description": "Notebook research compares multi-resolution sequence autoencoders with autoregressive decoding and n-gram/suffix-array predictability baselines.",
+  "scope_audience": "The stated scope is a personal research question about reconstruction accuracy by down-sampling resolution, for an ML researcher; its required corpora are not in this repository.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Predicting the full sequence at every encoder scale and placing n-gram/suffix-array baselines beside it is an interesting experimental combination; no comparison establishes global novelty.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The notebooks contain real training loops and saved accuracy plots, useful as a narrow research record, but the plots lack recorded configurations/numeric logs and the corpus/checkpoints are missing.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If completed with recoverable data, controlled baselines, and a written analysis, the stated comparison could give researchers bounded evidence about how reconstruction changes with context scale; no broader product benefit is claimed.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "Notebook cells implement EncDec and DecR training loops, and four result images are embedded; absent data and checkpoints prevent reproduction, and there are no tests or importable package.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains the question, architecture, notebook sequence, missing inputs, and limits, but the project has no single entry point or reproducible data/results handoff.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "blocked",
+    "reason": "The stated experiments depend on absent corpora; one source corpus is described as no longer recoverable, and no checkpoints or numeric logs are present."
+  },
+  "confidence": "medium",
+  "verification": "Read README and the representative notebook training/model cells; source and stored plots were inspected, not executed. No tests, install, or data access.",
+  "evidence": [
+    {
+      "path": "seq_autoenc/README.md",
+      "locator": "Architecture; The baselines and predictability analysis; What is here vs. not; How to run"
+    },
+    {
+      "path": "seq_autoenc/Untitled-Copy1.ipynb",
+      "locator": "cell 1, EncDec.forward; cell 2, cross_entropy training loop; cells 3 and 5, embedded result plots"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A coarse-to-fine reconstruction experiment supervises every scale and keeps classical n-gram/suffix-array predictors as explicit context baselines. This is an interesting local contribution, not a global novelty claim.",
+  "alternatives_question": "Which public sequence-modeling studies compare multi-scale autoencoding, autoregressive decoding, and n-gram or suffix-array baselines on reproducible corpora with per-scale metrics?",
+  "verdict": "incubate",
+  "reason": "The implementation and recorded plots support keeping the research attempt, but missing inputs, unlabelled results, and absent written conclusions make it unsuitable as a reproducible showcase.",
+  "next_step": "Recover or replace the corpus with a distributable fixture, then record configuration, numeric metrics, and a controlled baseline comparison before drawing a result.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

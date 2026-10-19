@@ -1,0 +1,79 @@
+{
+  "path": "tok",
+  "parent_pin": "03b6f3f10f080a9ac9f039763bab66ae6a5fb446",
+  "child_head": "03b6f3f10f080a9ac9f039763bab66ae6a5fb446",
+  "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. Corpus inputs are external; no source was compiled and no notebook or model ran.",
+  "description": "A tokenizer research scratchpad experiments with capped n-gram vocabulary construction, count/reduction heuristics, a CUDA port, and notebook conversion to HuggingFace tokenizer JSON.",
+  "scope_audience": "The stated audience is the author exploring bounded-vocabulary token construction rather than a maintained tokenizer library or existing consumer.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "Reducing an overfull n-gram set by shortening low-value grams is an interesting alternative to iterating a standard merge loop; global novelty and comparative quality remain unknown.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 1,
+      "reason": "The C++ implementations and JSON-export notebook are concrete research material, but the README says there are no consumers, required corpora/intermediates are absent, and one listed source is not buildable.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 2,
+      "reason": "If the bounded-vocabulary method yields a correct, reproducible tokenizer pipeline, it could be useful to researchers with a fixed vocabulary budget; no quality or speed benefit is demonstrated.",
+      "confidence": "low"
+    },
+    "impl_progress": {
+      "value": 2,
+      "reason": "The CPU code implements threaded gram counting and heap-based reduction, with a CUDA counterpart and conversion notebooks; no tests, build system, or inspected output establishes end-to-end correctness.",
+      "confidence": "high"
+    },
+    "presentability": {
+      "value": 2,
+      "reason": "README explains the intent, command forms, notebook order, missing corpora, and archive limits, but lacks a unified build or reproducible example.",
+      "confidence": "high"
+    }
+  },
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "Some files have direct compile commands, but input corpora are absent, several variants are scratch code, and no build or output has been checked."
+  },
+  "confidence": "medium",
+  "verification": "Inspected README and representative C++ counting/reduction implementations. No compilation, corpus access, tests, or notebook execution.",
+  "evidence": [
+    {
+      "path": "tok/README.md",
+      "locator": "What; Why it exists; How to run; Status"
+    },
+    {
+      "path": "tok/tok.cpp",
+      "locator": "Gram; grams_reduce; main"
+    },
+    {
+      "path": "tok/unigram.cpp",
+      "locator": "reduce; count; main"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A family of experiments bounds a working n-gram lexicon by pruning and shortening low-scoring entries, then attempts to emit a tokenizer model representation.",
+  "alternatives_question": "Which tokenizer-building systems use bounded n-gram counting and reduction rather than iterative BPE or unigram training, and how do they compare on token quality and resource use with the same corpus and vocabulary cap?",
+  "verdict": "incubate",
+  "reason": "The authored algorithm is more than an idea, but missing inputs, absent validation, and no comparative result keep its utility and readiness provisional.",
+  "next_step": "Use a small distributable corpus and independently check count/reduction invariants, tokenizer export, and quality against standard baselines at the same vocabulary cap.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:26:02+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane catalogue-s-z"
+  },
+  "inspection_limits": [
+    "Read-only local assessment of the 12 assigned paths; no network/public searches, installs, builds, project-code execution, tests, provider calls, or browser/runtime checks were performed.",
+    "Every assigned child HEAD matched its parent gitlink; each bounded normal child status was clean. Parent revision was ca6ae15e46e022e716c9474f16926838a9c50074; parent status showed pathlm modified, which was not inspected because it is outside this shard and has live-work restrictions.",
+    "Local evidence supports implementation existence, not runtime correctness, effectiveness, global originality, or non-duplication. Public comparison and integration remain parent-owned.",
+    "Privacy limits: tutor_private was README-only; ygo and xywdisk raw/personal payloads, credentials, and environment files were not inspected. No sensitive payload information is included in these records."
+  ]
+}

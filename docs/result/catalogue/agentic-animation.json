@@ -1,0 +1,86 @@
+{
+  "path": "agentic-animation",
+  "parent_pin": "8e7a5520dce956e409ddd45415a09cc3bcd12f4d",
+  "child_head": "8e7a5520dce956e409ddd45415a09cc3bcd12f4d",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Linked media was not viewed and no project commands were run.",
+  "description": "A local story-to-animation pipeline using structured YAML, authored puppet motion and replaceable image, speech, lip-sync, and rendering adapters.",
+  "scope_audience": "For a creator or agent producing narrated, repeatable 2D animation; README and status distinguish the closed engine milestone from unfinished generalization and finished-film scope.",
+  "scores": {
+    "creativity": {
+      "value": 3,
+      "reason": "The synthesis of constraint-checked deterministic puppet motion and swappable media stages is interesting; global novelty is not established.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 3,
+      "reason": "README records three end-to-end demo episodes and a canonical check/make/preview/render path; no fresh render or visual judgement was made.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "If the stated authoring/rendering scope succeeds, users gain inspectable motion control rather than an opaque generated-video result; breadth beyond existing episodes remains open.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Motor/compiler code and focused physical-motion tests support a coherent slice; remaining scenario generalization and film work preclude full-scope completion.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README explains workflow, commands, constraints, and links episode previews, but the linked outputs were not reviewed.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "Source and prior committed investigator report inspected; tests, renders, and media not executed/viewed.",
+  "evidence": [
+    {
+      "path": "docs/result/catalogue-calibration.md",
+      "locator": "heading `agentic-animation`"
+    },
+    {
+      "path": "agentic-animation/README.md",
+      "locator": "Workflow; Status; Running a project"
+    },
+    {
+      "path": "agentic-animation/packages/core/src/motor/index.ts",
+      "locator": "module contract and motor implementation"
+    },
+    {
+      "path": "agentic-animation/packages/core/test/hangingSwing.test.ts",
+      "locator": "hanging swing assertions"
+    },
+    {
+      "path": "agentic-animation/docs/STATUS.md",
+      "locator": "current slices and blockers"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "A real code-driven motion and adapter pipeline with recorded demos; creative interest is locally evident, but comparable public workflows and global novelty were not searched.",
+  "alternatives_question": "Which open-source tools support the same structured story-to-narrated-puppet-animation workflow with deterministic editable motion and replaceable media adapters? Compare a short output and editing task, not feature labels.",
+  "delivery_likelihood": {
+    "status": "uncertain",
+    "reason": "a bounded engine slice is recorded, while generalization and finished-film checks remain open."
+  },
+  "verdict": "showcase_candidate",
+  "reason": "Parent calibration: the coherent pipeline and recorded end-to-end episodes merit the same fresh-verification queue as other output-backed prototypes. Candidate status does not approve featuring unreviewed films or establish comparative advantage.",
+  "next_step": "Render one new representative episode through the normal-size visual gate, then compare that task against the closest public alternatives.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}

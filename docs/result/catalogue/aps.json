@@ -1,0 +1,82 @@
+{
+  "path": "aps",
+  "parent_pin": "5c87e1d1e96632ec91f9af73968c6065a87a36f6",
+  "child_head": "5c87e1d1e96632ec91f9af73968c6065a87a36f6",
+  "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Benchmarks and tests were inspected only, not run.",
+  "description": "An experimental local planning workbench that models manufacturing item flows, compiles constraints, dispatches among solver plugins, and displays schedules in a browser.",
+  "scope_audience": "A planner or learner inspecting and comparing finite production schedules; explicitly not a production ERP/MES or hosted multi-tenant service.",
+  "scores": {
+    "creativity": {
+      "value": 2,
+      "reason": "The inspectable unified model plus interchangeable greedy, CP-SAT, and fluid solvers is an interesting adaptation, but originality is unsearched.",
+      "confidence": "medium"
+    },
+    "current_usefulness": {
+      "value": 2,
+      "reason": "The solver interface and recorded nine-scenario benchmark provide bounded planning/learning value; the benchmark is historical and not freshly reproduced.",
+      "confidence": "medium"
+    },
+    "expected_usefulness": {
+      "value": 3,
+      "reason": "A completed transparent scheduling workbench could help users inspect constraints and solver tradeoffs, while applicability to real calendars, safety, and capacity is expressly limited.",
+      "confidence": "medium"
+    },
+    "impl_progress": {
+      "value": 3,
+      "reason": "Schema/compiler/solver dispatch and behavior-level tests form an integrated prototype; no application run or current benchmark validation occurred.",
+      "confidence": "medium"
+    },
+    "presentability": {
+      "value": 3,
+      "reason": "README has purpose, quickstart, interface examples, scenario guidance, caveats, and license; fresh-user success is unverified.",
+      "confidence": "medium"
+    }
+  },
+  "confidence": "medium",
+  "verification": "README, solver dispatch, focused tests, and committed benchmark report inspected; no execution.",
+  "evidence": [
+    {
+      "path": "aps/README.md",
+      "locator": "Why APS; Quick start; Goals and non-goals"
+    },
+    {
+      "path": "aps/backend/aps/unified/_solve.py",
+      "locator": "solve"
+    },
+    {
+      "path": "aps/backend/tests/test_unified_solve.py",
+      "locator": "TestSolve"
+    },
+    {
+      "path": "aps/docs/benchmark-results.md",
+      "locator": "Correctness; Solver characteristics"
+    }
+  ],
+  "routes": {
+    "creativity": "supported",
+    "usefulness": "unknown",
+    "substantial_work": "supported"
+  },
+  "contribution": "The coherent, inspectable scheduling prototype is locally interesting; its differentiated advantage over established scheduling tools requires task-level public comparison.",
+  "alternatives_question": "Which open-source or commercial planning tools expose a typed item-flow model, compiler/evaluator, interchangeable discrete and fluid solvers, and inspectable browser schedule for the same small manufacturing scenario?",
+  "delivery_likelihood": {
+    "status": "evidenced",
+    "reason": "README records a closed runnable-prototype milestone, but this checkout's quickstart and current solver behavior were not verified."
+  },
+  "verdict": "showcase_candidate",
+  "reason": "Parent calibration: an integrated scheduling workbench, caller-level tests and a committed scenario benchmark merit a fresh-verification queue. This is not approved prominence, independent runtime acceptance or superiority over frePPLe.",
+  "next_step": "Run the documented quickstart and one frozen scenario, then compare the same model and schedule-inspection task with relevant alternatives.",
+  "kind": "authored_assessment",
+  "observation_time": "2026-10-19T10:27:17+08:00",
+  "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
+  "producer": {
+    "model": "github_copilot/gpt-6-luna:high",
+    "role": "scout; parent-integrated source-inspection judgement",
+    "reference": "workflow d7f2894e-ccc7-4a2f-aa85-b798dbb5939b, lane a-d"
+  },
+  "inspection_limits": [
+    "All 21 assigned children were initialized; each parent gitlink equals child HEAD. Bounded child `git status --short --untracked-files=no` was clean for each; untracked paths were not enumerated. Parent was on main with pre-existing `m pathlm`; that child was not inspected in this shard.",
+    "Local README/docs and representative source/tests or committed records were inspected; no child tests, builds, applications, models, notebooks, or benchmarks were executed. No network/public comparison or visual review was performed; differentiation questions are left for the parent.",
+    "Prior local assessments were reused for agentic-animation, causalmlp, dojo, and drive only after confirming current child HEADs still matched their assessed pins. Global novelty remains unknown. Private colleague material was limited to root structural/product intent; no persona payloads were opened."
+  ]
+}
