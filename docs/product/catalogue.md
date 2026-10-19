@@ -10,7 +10,9 @@ Assess creativity, current usefulness, expected usefulness, impl progress and pr
 Expected usefulness rates value conditional on completing an explicitly stated intended scope; delivery likelihood and evidence confidence are separate, not hidden penalties for unfinished work or archive status.
 Creativity considers both novelty and interestingness; bounded public research can establish overlap, not global originality or equivalence of implementations.
 Each project needs a short description, distinctive contribution, evidence, membership reason and next decisive step; runtime verification, source inspection and forecast must remain distinguishable.
+## Calibration status
+The owner disputes the creativity/current-usefulness judgement behind the existing numbers; [the calibration discussion](catalogue-calibration.md) owns his corrections and the provisional redesign. Existing ratings are draft evidence, not a trusted ranking; no complete rescore or replacement scale is approved yet.
 ## Boundaries
-Authorized scope is full-collection assessment and membership recommendations, preserving private information and pre-existing work; no installs, project execution, README modification, submodule removal, cleanup, child repairs, remote changes or published-history rewriting are included.
+The assessment mandate covers investigation and recommendations, not implied cleanup or implementation fixes. The separately authorized issue-recording and named removal actions are scoped in ../plan/catalogue-curation.md; private information, pre-existing work, remote repositories and published history remain protected. Parent README generation and broad project repair are not included.
 Removal requires a separately approved operation preserving unique work, local modifications, unpushed commits and valuable untracked files.
 The README presentation remains provisional: an authored front door and generated showcase linking to an evidence-backed full catalogue.

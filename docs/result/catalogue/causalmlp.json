@@ -1,7 +1,9 @@
 {
   "path": "causalmlp",
-  "parent_pin": "e4046d7b3b158911e5e59a38a26390d7917c955b",
-  "child_head": "e4046d7b3b158911e5e59a38a26390d7917c955b",
+  "parent_pin": "2f36945a011727140d8a326f86abd5b2828a26bc",
+  "child_head": "2f36945a011727140d8a326f86abd5b2828a26bc",
+  "implementation_assessed_at": "e4046d7b3b158911e5e59a38a26390d7917c955b",
+  "followup_note": "Documentation-only follow-up records the metric issue; implementation ratings remain the prior draft, not a rerun or numeric recalibration. Original authorship era and retention value remain unresolved by the owner's feedback.",
   "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Reused the prior local assessment after matching its child pin; no rerun.",
   "description": "A synthetic-data research experiment on cumulative hidden-unit-prefix logits and whether predictions improve as more units contribute.",
   "scope_audience": "Research archive testing a narrow early-exit/prefix-prediction hypothesis; report leaves real-data validation and adaptive-compute savings unresolved.",
@@ -35,6 +37,7 @@
   "confidence": "high",
   "verification": "Prior local investigator record and current source/report/result inspected; no experiment rerun.",
   "evidence": [
+    {"path": "causalmlp/docs/plan/evaluation.md", "locator": "Finding; Required action; Retention question"},
     {
       "path": "docs/result/catalogue-pilot.md",
       "locator": "heading `causalmlp` and metric-comparability finding"
@@ -69,7 +72,7 @@
   },
   "verdict": "repair",
   "reason": "Parent calibration: substantive research work supports retention, but the investigator's source-level metric-comparability finding undermines the current headline accuracy gap. Repair or retract that claim before promoting results; no child repair or rerun occurred here.",
-  "next_step": "Use a common top-1 metric and held-out examples, bind config/seed/revision in results, and rerun before making an efficacy claim.",
+  "next_step": "Resolve whether this archive retains a distinctive contribution before authorizing repair work; the child issue record explains the metric/provenance proof required if any efficacy claim is retained. No rerun is implied.",
   "kind": "authored_assessment",
   "observation_time": "2026-10-19T10:27:17+08:00",
   "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",

@@ -1,6 +1,7 @@
 # Catalogue assessment
 Authored method document derived from ../product/catalogue.md; anchors are agent-designed implementation of the approved assessment scope, not user-supplied measurements.
 ## Scales
+The existing 0–4 creativity/current-usefulness calibration is disputed; ../product/catalogue-calibration.md owns the owner's corrections and provisional replacement. These anchors document how the draft records were assessed, not a newly approved ranking standard; do not add decimal places or silently rescore the collection.
 Scores are ordinal judgements, not measured intervals; use integers 0–4 or unknown, independently per aspect, with a reason, evidence confidence and inspection level. Missing evidence is unknown, never zero. Four requires unusually strong supporting evidence, not excitement or volume.
 | Aspect | 0 | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|---|

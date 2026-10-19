@@ -1,5 +1,6 @@
 {
   "path": "tutor_private",
+  "owner_feedback": {"source": "docs/plan/catalogue-curation.md, Authority", "status": "Owner describes an LLM tutorial-generation test without meaningful thought/effort and proposes possible removal; no deletion is authorized yet."},
   "parent_pin": "c39847a2a4c2dbd544b0c9a3127324f60dcc4bf4",
   "child_head": "c39847a2a4c2dbd544b0c9a3127324f60dcc4bf4",
   "state_limits": "Parent gitlink equals child HEAD; bounded git status --short --untracked-files=normal was clean. Privacy-limited: inspected README for structural/product intent only; did not open scripts, lesson payloads, media, environment files, or assets.",
@@ -53,7 +54,7 @@
   "alternatives_question": "With explicit authorization for a sanitized comparison, which private tutorial-production workflows provide reproducible rendering without exposing lesson or learner content?",
   "verdict": "undecided",
   "reason": "The project's private status and restricted inspection prevent evidence-backed route decisions; unknown is not evidence against retaining it.",
-  "next_step": "Keep private; do not publish or compare payloads. Reassess only if the owner authorizes a narrowly scoped, privacy-preserving review.",
+  "next_step": "Recommend removal given the owner's account, pending an explicit removal decision and preservation checks; do not inspect or publish private tutorial payloads to settle a catalogue rating.",
   "kind": "authored_assessment",
   "observation_time": "2026-10-19T10:26:02+08:00",
   "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",

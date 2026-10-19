@@ -1,7 +1,9 @@
 {
   "path": "mycar",
-  "parent_pin": "cff76453637662b11640930ec5013d20a9ef955b",
-  "child_head": "cff76453637662b11640930ec5013d20a9ef955b",
+  "parent_pin": "b56e99bf67d7c640628eca0e73e2cbca99ece368",
+  "child_head": "b56e99bf67d7c640628eca0e73e2cbca99ece368",
+  "implementation_assessed_at": "cff76453637662b11640930ec5013d20a9ef955b",
+  "followup_note": "Documentation-only follow-up qualifies the status-page evidence and records the version-binding repair. The required precommit renderer exercised v13 and reported no console errors; check/audit and full visual/geometry acceptance were not performed, and prior ratings were not recalibrated.",
   "state_limits": "Parent pin matches child HEAD. Tracked-only child status was clean; untracked and ignored paths were not enumerated. No browser, audit, rendering, or geometry checks were run.",
   "description": "A parameterized browser blueprint for a compact variable-form cabin crossover, paired with a written vehicle design and geometry constraints.",
   "scope_audience": "The closed v13 scope is a concept-design workspace and interactive side-profile tool for an individual designer; it is not a validated vehicle engineering package, prototype, or supply-chain plan.",
@@ -39,6 +41,7 @@
   "confidence": "medium",
   "verification": "README, project status, v13 HTML surface, check.mjs and audit.mjs defaults; executed=false; The scripts are written to default to v12; no inference is made that the v13 design itself fails. No 3D or physical validation was inspected.",
   "evidence": [
+    {"path": "mycar/docs/plan/蓝图验收.md", "locator": "已确认的问题; 待执行工作与验收; 本次记录的限制"},
     {
       "path": "mycar/README.md",
       "locator": "v13 claim; 打开蓝图; 渲染 / 验收; 后续（暂缓）"

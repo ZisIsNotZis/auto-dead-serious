@@ -25,9 +25,6 @@
 [submodule "ideas"]
 	path = ideas
 	url = git@github.com:ZisIsNotZis/ideas.git
-[submodule "mux"]
-	path = mux
-	url = git@github.com:ZisIsNotZis/mux.git
 [submodule "npchallenge"]
 	path = npchallenge
 	url = git@github.com:ZisIsNotZis/npchallenge.git
@@ -181,9 +178,6 @@
 [submodule "xywdisk"]
 	path = xywdisk
 	url = git@github.com:ZisIsNotZis/xywdisk.git
-[submodule "io_uring-echo-server"]
-	path = io_uring-echo-server
-	url = git@github.com:ZisIsNotZis/io_uring-echo-server.git
 [submodule "ringsvr"]
 	path = ringsvr
 	url = git@github.com:ZisIsNotZis/ringsvr.git

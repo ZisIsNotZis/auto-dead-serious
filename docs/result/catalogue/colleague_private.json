@@ -1,5 +1,6 @@
 {
   "path": "colleague_private",
+  "owner_feedback": {"source": "docs/plan/catalogue-curation.md, Authority", "status": "Owner describes a fun mature-skill distillation with nothing worthy; removal is proposed, not yet explicitly authorized."},
   "parent_pin": "300edf162a7db706043f4cf1abe3b995d25bc4bb",
   "child_head": "300edf162a7db706043f4cf1abe3b995d25bc4bb",
   "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Privacy-limited: inspected only root README and directory structure; role files and knowledge payloads were not opened.",
@@ -57,7 +58,7 @@
   },
   "verdict": "undecided",
   "reason": "All membership routes remain unknown because the privacy boundary prevented inspecting the work that would support them; this is not evidence against the project.",
-  "next_step": "If needed, ask the owner for a sanitized structural review or explicit safe excerpts; otherwise leave membership undecided rather than inspect private payloads.",
+  "next_step": "Recommend removal based on the owner's account, pending an explicit removal decision and the normal preservation checks; do not spend attention inspecting private payloads merely to improve a score.",
   "kind": "authored_assessment",
   "observation_time": "2026-10-19T10:27:17+08:00",
   "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",

@@ -1,9 +1,11 @@
 {
   "path": "flashdb",
-  "parent_pin": "94a36ac21033d30ccc77b1292a0449ebb550f6f1",
-  "child_head": "94a36ac21033d30ccc77b1292a0449ebb550f6f1",
+  "parent_pin": "f020672a581f5a35c301e44d392cfe7f24159f46",
+  "child_head": "f020672a581f5a35c301e44d392cfe7f24159f46",
+  "implementation_assessed_at": "94a36ac21033d30ccc77b1292a0449ebb550f6f1",
+  "followup_note": "Documentation-only follow-up withdraws the false no-engine sentence and records a broader README/design/roadmap implementation-and-measurement conflict. The roadmap contains adaptation-result claims not reconciled by the original assessment; do not treat its learner-status conclusion as established. Existing scores remain disputed drafts.",
   "state_limits": "Child HEAD equals parent pin; git status --short --untracked-files=all was empty. Ignored build output and benchmarks were not assessed or run.",
-  "description": "An experimental single-node Rust document store with WAL, memtable, tile storage and a narrowly scoped inventory-order-flow adapter; workload-learned layout is the research goal, not implemented capability.",
+  "description": "An experimental single-node Rust document store and workload-driven physical-layout research project; documents disagree about the boundary between its prototype, adaptation mechanism and measured results.",
   "scope_audience": "Database researchers studying IO-bound single-node workloads, initially one-node/data-heavy traces; general query DAGs, SQL and production LSM guarantees are expressly outside the current prototype.",
   "scores": {
     "creativity": {
@@ -13,7 +15,7 @@
     },
     "current_usefulness": {
       "value": 2,
-      "reason": "A source-backed bounded order-flow path and storage engine exist, but no benchmark or user-facing API was exercised and the learned-layout engine is absent.",
+      "reason": "A bounded order-flow storage path exists, but no benchmark or API was exercised. Learner-status claims conflict with the roadmap's adaptation results and require the child's evidence reconciliation; this draft score is not a settled capability verdict.",
       "confidence": "medium"
     },
     "expected_usefulness": {
@@ -23,18 +25,20 @@
     },
     "impl_progress": {
       "value": 2,
-      "reason": "The engine contains WAL, memtable, tile and commit code and an integration test, but arbitrary request programs, automatic maintenance and learned layout are absent.",
+      "reason": "The inspected substrate includes WAL, memtable, tile, commit and integration-test code. The scope and producer of the roadmap's adaptation measurements require reconciliation before judging overall learner completion; this is an unrecalibrated draft.",
       "confidence": "high"
     },
     "presentability": {
       "value": 2,
-      "reason": "README documents limits and test commands, but the project design document still says no engine is implemented, conflicting with source and README and weakening orientation.",
+      "reason": "The false no-engine sentence is withdrawn, but README and roadmap still require reconciliation of implemented prototype, adaptation mechanism and measured results; the current child work record owns that issue.",
       "confidence": "high"
     }
   },
   "confidence": "medium",
-  "verification": "README, Rust engine source and an order-flow integration test inspected; tests, benchmark and runtime recovery were not executed. The design document's implementation-status statement conflicts with source/README.",
+  "verification": "Original README, engine source and order-flow test were inspected without execution; follow-up directly inspected design/roadmap/README and documented their implementation-status conflict. No benchmark or runtime result was reproduced.",
   "evidence": [
+    {"path": "flashdb/docs/plan/evidence.md", "locator": "Confirmed conflict; Required work; Acceptance and limits"},
+    {"path": "flashdb/docs/roadmap.md", "locator": "Where we are; Milestone status (current)"},
     {
       "path": "flashdb/README.md",
       "locator": "Current state; Reference target"
@@ -57,15 +61,15 @@
     "usefulness": "unknown",
     "substantial_work": "supported"
   },
-  "contribution": "The implemented storage substrate is a bounded order-flow prototype; the stronger learned-layout contribution remains a testable research thesis, not an existing engine feature.",
+  "contribution": "The storage substrate is substantive. The actual implemented adaptation mechanism and its measurements must be traced before asserting either a working general learner or complete absence of learned behavior; source documents presently disagree.",
   "alternatives_question": "Which current single-node stores or learned physical-design systems handle this same trace-driven, tile-level adaptation problem, and where does this implementation differ in measured workload outcome?",
   "delivery_likelihood": {
     "status": "uncertain",
     "reason": "The prototype is real, but the central learner is absent and several request, objective, durability and measurement contracts remain open."
   },
   "verdict": "repair",
-  "reason": "Parent calibration: substantial engine work and an interesting research thesis support retention, but the design document's no-engine status conflicts with the implemented prototype and README. Reconcile that claim while preserving the central learned-layout feature as unimplemented; no operational quality is established.",
-  "next_step": "Resolve the README/design implementation-status conflict, then measure the bounded order-flow path against a stated baseline before extending the engine.",
+  "reason": "Retain substantive work; reconcile prototype, adaptation and measured-status claims through the child evidence work record. The no-engine statement is withdrawn, while the broader learner-status verdict remains unresolved rather than defaulting to either source.",
+  "next_step": "Trace existing roadmap adaptation/baseline claims to their producer, revision and durable evidence before changing capability statements or launching any new measurements; the child plan owns the reconciliation.",
   "kind": "authored_assessment",
   "observation_time": "2026-10-19T10:26:32+08:00",
   "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",

@@ -1,7 +1,9 @@
 {
   "path": "dojo",
-  "parent_pin": "9026a02ddb89b15f232a330e35093cf7c69110f9",
-  "child_head": "9026a02ddb89b15f232a330e35093cf7c69110f9",
+  "parent_pin": "4de25eb438e05209560513da2cece1c26c76733a",
+  "child_head": "4de25eb438e05209560513da2cece1c26c76733a",
+  "implementation_assessed_at": "9026a02ddb89b15f232a330e35093cf7c69110f9",
+  "followup_note": "Documentation-only follow-up records the current-direction and trace-privacy description conflicts in the child's plan. Implementation, model behavior and prior draft scores were not changed or rerun.",
   "state_limits": "Gitlink equals child HEAD; bounded tracked status clean. Reused prior local report after pin match; no test/demo run.",
   "description": "A local CLI/SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives, objections, unknowns, and relations.",
   "scope_audience": "The current artifact is a local CLI/store and scripted demo. The finished scope in docs/product.md is a conversational truth-distillation network: a host guides ordinary-language discussion and background agents classify, challenge, connect and bring bounded sourced conclusions into later sessions. A hosted social platform, truth certification and federation are explicit non-goals.",
@@ -35,6 +37,7 @@
   "confidence": "high",
   "verification": "Prior local assessment, current README, retrieval implementation, and tests inspected; no execution.",
   "evidence": [
+    {"path": "dojo/docs/plan.md", "locator": "文档一致性待修复"},
     {
       "path": "docs/result/catalogue-calibration.md",
       "locator": "heading `dojo`"

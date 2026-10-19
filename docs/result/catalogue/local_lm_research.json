@@ -1,8 +1,10 @@
 {
   "kind": "authored_assessment",
   "path": "local_lm_research",
-  "parent_pin": "c5ecd05a9bc02366254ea45e437859932867bfaf",
-  "child_head": "c5ecd05a9bc02366254ea45e437859932867bfaf",
+  "parent_pin": "c56c887b7022948fa96daf7b379dab285a8dc418",
+  "child_head": "c56c887b7022948fa96daf7b379dab285a8dc418",
+  "implementation_assessed_at": "c5ecd05a9bc02366254ea45e437859932867bfaf",
+  "followup_note": "Documentation-only follow-up records evidence_repair in the owning YAML plan. YAML syntax/duplicate-key checks pass, but the full doc-set checker exits 2 because its referenced docs@1 schema is absent; no database, model or report execution was performed.",
   "observation_time": "2026-10-19T10:51:01+08:00",
   "parent_revision": "ca6ae15e46e022e716c9474f16926838a9c50074",
   "producer": {
@@ -48,6 +50,7 @@
     "No changes were made to child files, submodule registration or running work."
   ],
   "evidence": [
+    {"path": "local_lm_research/docs/plan/plan.yaml", "locator": "evidence_repair"},
     {"path": "local_lm_research/README.md", "locator": "opening research scope; Source of truth"},
     {"path": "local_lm_research/docs/plan/plan.yaml", "locator": "plan2-plan7: scoped hypotheses and declared unmeasured questions"},
     {"path": "local_lm_research/docs/result/result.yaml", "locator": "res1-res14: attributed findings, explicit non-measurements and provenance limits"},
