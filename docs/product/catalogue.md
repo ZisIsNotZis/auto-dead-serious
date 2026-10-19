@@ -8,6 +8,10 @@ Membership and prominence are separate decisions; qualifying for retention does 
 Agent proposal, provisional: assess creativity, current usefulness, expected usefulness, impl progress and presentability independently on anchored 0–4 scales with unknown distinct from zero, citing evidence and assessment revision.
 Agent proposal, provisional: record description, distinctive contribution, evidence, verdict reason and next decisive step, distinguishing source inspection from executed checks and forecasts from observations.
 Agent proposal, provisional: use showcase, incubate, repair and remove candidate as editorial categories, not automatic consequences of an average score.
+## Calibration proposals
+Agent proposal, provisional: expected usefulness rates value conditional on completing the agreed scope; delivery likelihood and evidence confidence are separate text, not hidden penalties for unfinished work or archive status.
+Agent proposal, provisional: creativity reasons cover both novelty and interestingness; public comparison bounds novelty claims but does not replace judgement of an interesting synthesis.
+Agent proposal, provisional: use aspect-specific anchors rather than one generic maturity scale; missing evidence is unknown, not zero, and substantial-work membership judges meaningful substance relative to scope rather than size or test-suite presence.
 ## Boundaries
 The pilot proposes ratings and calibrates the rubric; it authorizes neither full-collection scoring nor README modification, submodule removal, file cleanup, remote changes or published-history rewriting.
 Removal requires a separately approved operation preserving unique work, local modifications, unpushed commits and valuable untracked files.
