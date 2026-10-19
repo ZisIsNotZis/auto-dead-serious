@@ -109,14 +109,21 @@ def readme_block(records, lang):
 
 def update_readmes(records):
     begin, end = "<!-- BEGIN GENERATED SHOWCASE -->", "<!-- END GENERATED SHOWCASE -->"
+    private = sum(1 for a in records if a["display"]["state"] == "private")
+    unaudited = sum(1 for a in records if not any(t.startswith("audit re-score") for t in a["display"]["trajectory"]))
+    tokens = {"{{projects}}": str(len(records)), "{{public}}": str(len(records) - private),
+              "{{private}}": str(private), "{{unaudited}}": str(unaudited)}
     for name, lang in (("README.md", "en"), ("README.zh-CN.md", "zh")):
         path = ROOT / name
-        text = path.read_text()
-        assert begin in text and end in text, f"{name} is missing the generated showcase markers"
+        original = path.read_text()
+        assert begin in original and end in original, f"{name} is missing the generated showcase markers"
+        text = original
+        for token, value in tokens.items():
+            text = text.replace(token, value)
         head, rest = text.split(begin, 1)
         _, tail = rest.split(end, 1)
         updated = head + begin + "\n" + readme_block(records, lang) + "\n" + end + tail
-        if updated != text:
+        if updated != original:
             path.write_text(updated)
             print(f"updated {name}")
 

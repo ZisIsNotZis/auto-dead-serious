@@ -7,7 +7,7 @@
 **适合谁：** 想判断作者到底能不能把东西做出来的人——合作者、招聘方的读者、只想看源码不想看推销的工程师。
 **不适合谁：** 这不是包仓库，不是统一构建的 monorepo，也不承诺任何项目可用在生产环境。每个子项目拥有自己的工具链、许可证、测试和发布路径。
 
-[![项目数](https://img.shields.io/badge/projects-73-6f42c1)](docs/result/catalogue-redesign/README.md)
+[![项目数](https://img.shields.io/badge/projects-70-6f42c1)](docs/result/catalogue-redesign/README.md)
 [![许可证](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
 [![规范](https://img.shields.io/badge/docs-AGENTS.md-0f766e)](AGENTS.md)
 
@@ -29,11 +29,11 @@
 | [aps](aps/) | An experimental local planning workbench that models manufacturing item flows, compiles constraints,… | 原型 | 5.8 | 5.3 | 6 | 5.2 | 7 |
 | [dojo](dojo/) | A local CLI and SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives,… | 原型 | 5.8 | 6.3 | 5 | 4.9 | 6 |
 
-**73 个固定版本项目**：5 可用 · 33 原型 · 1 仅设计 · 18 单次交付 · 12 归档 · 4 私有。其中 52 行仍是首轮估计。
+**70 个固定版本项目**：5 可用 · 33 原型 · 1 仅设计 · 18 单次交付 · 9 归档 · 4 私有。其中 52 行仍是首轮估计。
 
 项目描述沿用各仓库的英文原文，避免同一事实出现两份译文。
 
-全部 73 个固定版本项目，每项都写明能实际看到什么、每个数字怎么来的、哪些尚未验证、评分如何变化：[**打开作品总览**](docs/result/catalogue-redesign/README.md)。所有分数是基于书面证据的 0–10 序数判断估计，不是测量，量表定义见该页。
+全部 70 个固定版本项目，每项都写明能实际看到什么、每个数字怎么来的、哪些尚未验证、评分如何变化：[**打开作品总览**](docs/result/catalogue-redesign/README.md)。所有分数是基于书面证据的 0–10 序数判断估计，不是测量，量表定义见该页。
 
 <!-- 由 scripts/catalogue_final.py 从 assessments.json 生成。请改评分，不要改这段。 -->
 <!-- END GENERATED SHOWCASE -->
@@ -46,7 +46,7 @@ cd auto-dead-serious
 git submodule status | wc -l
 ```
 
-最后一行输出 `73`。其中 4 个子项目是私有的（`colleague_private`、`tutor_private`、`resume_private`、`timecolumn`），没有权限会失败；其余 68 个可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
+最后一行输出 `70`。其中 4 个子项目是私有的（`colleague_private`、`tutor_private`、`resume_private`、`timecolumn`），没有权限会失败；其余 66 个可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
 
 重新生成本页所有表格只需要标准库（Python 3.12，无需安装依赖）：
 
@@ -54,12 +54,12 @@ git submodule status | wc -l
 python3 scripts/catalogue_final.py
 ```
 
-输出 `PASS: 73 projects, 73 rows rendered, …`，在作者机器上实测约 0.04 秒。全新克隆无法重建的只有上面 4 个私有子项目：工作树本身就是项目，仓库里没有放置构建产物。
+输出 `PASS: 70 projects, 70 rows rendered, …`，在作者机器上实测约 0.04 秒。全新克隆无法重建的只有上面 4 个私有子项目：工作树本身就是项目，仓库里没有放置构建产物。
 
 ## 状态与限制
 
 - **本页每个分数都是依据书面证据给出的 0–10 序数判断估计。** 没有任何构建、测试、渲染或模型运行作为支撑，没有一个是测量值。
-- **73 行中有 52 行未复核。** 它们保留首轮估计，只有复核过的行会在“评分轨迹”里注明。
+- **70 行中有 52 行未复核。** 它们保留首轮估计，只有复核过的行会在“评分轨迹”里注明。
 - 已发布的作品总览逐项写明：访客实际能看到什么、每个维度怎么得出、哪些尚未验证、评分如何变化——[打开总览](docs/result/catalogue-redesign/README.md)。
 - 本页图片均来自子仓库中已提交文件的裁切，并标注来源；没有为本页渲染、摆拍或修图。
 - 可选的检出说明在 [WORKSPACE.md](WORKSPACE.md)，代理权限与规范在 [AGENTS.md](AGENTS.md)。

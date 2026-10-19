@@ -80,11 +80,8 @@ Ordinal estimates from written evidence, not measurements: no build, test, rende
 | [huaqiang_video](#huaqiang-video) | A closed Remotion composition that encodes the Huaqiang melon story beats and timing in source and reports a 70-second audiovisual render. | delivered-once | 0.6 | 0.7 | 0 | 0.0 | 7 | 1 | The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source |
 | [colleague_private](#colleague-private) | A privacy-limited registered project; the existing sanitized record describes role-specific assistant skill directories and supporting knowledge assets, but content was not inspected. | private | 0.0 | 0.0 | 1 | 0.8 | 8 | 0 | — |
 | [cuda](#cuda) | A personal archive of hand-written CUDA tensor-core, attention, convolution, reduction, and sorting experiments with hardware-profiling notes. | archive | 0.0 | 3.0 | 2 | 1.1 | 2 | 0 | Hand-written CUDA kernel experiment source |
-| [cz_bert](#cz-bert) | A deprecated personal deep-learning sandbox containing old Transformer, data-kernel, nearest-neighbor, and CNN notebook experiments. | archive | 0.0 | 2.7 | 1 | 0.5 | 1 | 0 | Sorted/memmap data-kernel experiment |
-| [cz_noidea](#cz-noidea) | A deprecated personal scratch archive of heterogeneous notebooks/scripts probing Python, asyncio, numerical libraries, neural networks, and throughput. | archive | 0.0 | 1.0 | 1 | 0.5 | 1 | 0 | — |
 | [myminio2](#myminio2) | An archived second-pass object-storage plumbing experiment involving custom asyncio HTTP code, S3-like file operations and an XOR-sharded gateway across three backends. | archive | 0.0 | 3.3 | 1 | 1.5 | 2 | 0 | XOR-sharded object-storage gateway sketch |
 | [myygo](#myygo) | An archived sketch of a nine-slot Yu-Gi-Oh! card-effect DSL and two unfinished card-definition scripts for a rules engine not present in this repository. | archive | 0.0 | 3.3 | 1 | 1.5 | 2 | 0 | Nine-slot card-effect DSL sketch |
-| [neuronloop](#neuronloop) | An abandoned personal experiment directory of notebooks, a local neural-layer fork and reversible-network helpers; the founding per-neuron-gating idea occupies two notebook cells and has no conclusion. | archive | 0.0 | 1.3 | 1 | 0.9 | 1 | 0 | Per-neuron-gating hypothesis |
 | [nn](#nn) | An archived set of personal neural-network and attention notebooks from approximately 2021–2022, including trainer experiments and small applications. | archive | 0.0 | 4.7 | 3 | 2.2 | 2 | 0 | Attention written as a Sequential of three linears |
 | [resume_private](#resume-private) | Private resume-related repository; this assessment is intentionally limited to sanitized pinned-tree structure and makes no claim about personal content. | private | 0.0 | 1.0 | 2 | 1.4 | 4 | 0 | Pinned tree structure contains resume/invention artifacts, data, templates and documentation |
 | [retnet](#retnet) | Notebook-only byte-level language-model research archive exploring RetNet-style retention and causal-convolution combinations with Ray Tune; the pinned status says it was never written up or benchmarked against a baseline. | archive | 0.0 | 2.3 | 1 | 1.8 | 1 | 0 | Archived notebook and local neural-layer code, including a Retention/Decay implementation |
@@ -2356,70 +2353,6 @@ A personal archive of hand-written CUDA tensor-core, attention, convolution, red
 - practical estimate from the existing project packet; no new research, run or measurement
 - audit re-score (archive): current 3→2, future 3→2, technical 6→9, delivery 8→2; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 3, 'depth_of_thought': 3, 'transferability': 3}. This is an unmaintained source archive, and some experiments depend on external build context and missing profiling outputs.
 
-<a id="cz-bert"></a>
-### cz_bert
-A deprecated personal deep-learning sandbox containing old Transformer, data-kernel, nearest-neighbor, and CNN notebook experiments.
-
-**State** archive · **Showcase** 0.0 · **Gate** 0 — Missing corpora and checkpoints plus the lack of an entrypoint prevent a newcomer from seeing a working result. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
-**Who it is for** A reader of a historical personal deep-learning archive; no current product audience is evidenced.
-**What to keep in mind** The cited experiments are thin historical work, and the required data and checkpoints are absent.
-**Strongest reusable thing inside** Sorted/memmap data-kernel experiment
-
-**What you see**
-- Python/Jupyter source archive with notebooks, scripts, and selective documentation.
-- cz_bert/README.md — Pinned README describes a 2019–2020 sandbox, identifies thin ideas in custom sorted/memmap data kernels and a TF-IDF intranet finder, and notes required data/checkpoints are absent and the tree is not expected to run on a modern stack.
-- cz_bert/docs/project-status.md — Pinned project-status document says no package/CI/environment/top-level entrypoint, with referenced datasets and checkpoints absent.
-- everything above is pinned at f7eed5e5be2d
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 2.7 | no contribution card was identified, so no idea score exists: recorded as zero identified value, not as an assertion that nothing was thought |
-| realized | 1 | max(product now 2, best inside 0) = 2: This is a modestly useful historical archive, but missing inputs, obsolete dependencies, and no current product audience limit practical value. Preserving it as an archaeological record appears feasible, though making the experiments runnable would be difficult. |
-| upside | 0.5 | max(product if done 3, inside if done 0) × (technical 3 + delivery 8)/20 = 1.6: This is a modestly useful historical archive, but missing inputs, obsolete dependencies, and no current product audience limit practical value. Preserving it as an archaeological record appears feasible, though making the experiments runnable would be difficult. |
-| delivery | 1 | This is a modestly useful historical archive, but missing inputs, obsolete dependencies, and no current product audience limit practical value. Preserving it as an archaeological record appears feasible, though making the experiments runnable would be difficult. |
-
-**Unverified or bounded**
-- No private or omitted enterprise content was inspected; the README says the enterprise Q&A prototype was removed before publication.
-- No notebook, model, or code was run; no candidate kernel/bot method was inspected deeply enough to distinguish from routine archive content.
-- Only the contract-pinned source revision was read; live child HEAD/dirty state was not inspected.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-- audit re-score (archive): current 2→1, future 3→1, technical 3→8, delivery 8→1; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 3, 'depth_of_thought': 2, 'transferability': 3}. The cited experiments are thin historical work, and the required data and checkpoints are absent.
-
-<a id="cz-noidea"></a>
-### cz_noidea
-A deprecated personal scratch archive of heterogeneous notebooks/scripts probing Python, asyncio, numerical libraries, neural networks, and throughput.
-
-**State** archive · **Showcase** 0.0 · **Gate** 0 — The archive has no entrypoint or included benchmark corpus to show a working result. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
-**Who it is for** No coherent current audience beyond a reader of a personal experiment archive is established.
-**What to keep in mind** The packet describes a disconnected archive and the owner no longer recognizes its contents.
-
-**What you see**
-- Unpackaged Python/Jupyter archive.
-- cz_noidea/README.md — Pinned README describes about 37 notebooks and three scripts across unrelated experiments, with no package entrypoint, tests, environment manifest, or included benchmark corpus.
-- docs/plan/catalogue-curation.md — The owner says they no longer know the contents and questions whether the archive is random miscellany; this is uncertainty, not proof of no contribution or authority to remove.
-- cz_noidea/docs/project-status.md — Pinned project status classifies the archive as migrated reference material rather than a maintained project.
-- everything above is pinned at 3272f57ed626
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 1.0 | no contribution card was identified, so no idea score exists: recorded as zero identified value, not as an assertion that nothing was thought |
-| realized | 1 | max(product now 1, best inside 0) = 1: This is a preserved personal scratch archive, not a coherent product; its disconnected experiments and missing inputs constrain practical use. A modestly more navigable reference archive seems technically achievable, but no specific future goal or audience is established. |
-| upside | 0.5 | max(product if done 2, inside if done 0) × (technical 5 + delivery 3)/20 = 0.8: This is a preserved personal scratch archive, not a coherent product; its disconnected experiments and missing inputs constrain practical use. A modestly more navigable reference archive seems technically achievable, but no specific future goal or audience is established. |
-| delivery | 1 | This is a preserved personal scratch archive, not a coherent product; its disconnected experiments and missing inputs constrain practical use. A modestly more navigable reference archive seems technically achievable, but no specific future goal or audience is established. |
-
-**Unverified or bounded**
-- No notebook or script was inspected beyond the pinned README and project-status document; no claim that the contents have no value is made.
-- The owner's uncertainty and older disputed scores are not used as defaults.
-- Only the contract-pinned source revision was read; live child HEAD/dirty state was not inspected.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-- audit re-score (archive): future 2→1, technical 5→8, delivery 3→1; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 1, 'depth_of_thought': 1, 'transferability': 1}. The packet describes a disconnected archive and the owner no longer recognizes its contents.
-
 <a id="myminio2"></a>
 ### myminio2
 An archived second-pass object-storage plumbing experiment involving custom asyncio HTTP code, S3-like file operations and an XOR-sharded gateway across three backends.
@@ -2481,37 +2414,6 @@ An archived sketch of a nine-slot Yu-Gi-Oh! card-effect DSL and two unfinished c
 **Rating trajectory**
 - practical estimate from the existing project packet; no new research, run or measurement
 - audit re-score (archive): technical 4→8; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 4, 'depth_of_thought': 3, 'transferability': 3}. This is a historical design fragment; its intended host engine is not in the repository.
-
-<a id="neuronloop"></a>
-### neuronloop
-An abandoned personal experiment directory of notebooks, a local neural-layer fork and reversible-network helpers; the founding per-neuron-gating idea occupies two notebook cells and has no conclusion.
-
-**State** archive · **Showcase** 0.0 · **Gate** 0 — The packet reports no runnable entrypoint, reproducibility, or experiment conclusion. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
-**Who it is for** Readers tracing the provenance of an abandoned neural-network idea
-**What to keep in mind** The per-neuron-gating idea is only described as two notebook cells with no conclusion.
-**Strongest reusable thing inside** Per-neuron-gating hypothesis
-
-**What you see**
-- Notebook and Python source archive
-- neuronloop/docs/project-status.md — Pinned status page calls the directory abandoned research scratch, says the neuron-loop idea is present in two cells and later abandoned, and reports no runnable entrypoint, reproducibility or conclusion.
-- neuronloop/README.md — Pinned README identifies a research scratch repository rather than a library or package; no notebooks or data were opened in this assessment.
-- everything above is pinned at 325189012b22
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 1.3 | no contribution card was identified, so no idea score exists: recorded as zero identified value, not as an assertion that nothing was thought |
-| realized | 1 | max(product now 2, best inside 0) = 2: The archive offers narrow provenance for an abandoned idea, but no runnable project, reproducible result, or conclusion. Its value is mainly as a record, not as a usable neural-network capability. |
-| upside | 0.9 | max(product if done 2, inside if done 0) × (technical 5 + delivery 5)/20 = 1.0: The archive offers narrow provenance for an abandoned idea, but no runnable project, reproducible result, or conclusion. Its value is mainly as a record, not as a usable neural-network capability. |
-| delivery | 1 | The archive offers narrow provenance for an abandoned idea, but no runnable project, reproducible result, or conclusion. Its value is mainly as a record, not as a usable neural-network capability. |
-
-**Unverified or bounded**
-- No notebook, experiment output, weights, log or private/employer material was inspected.
-- No research finding or reusable contribution is established by this bounded review.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-- audit re-score (archive): current 2→1, technical 5→8, delivery 5→1; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 2, 'depth_of_thought': 1, 'transferability': 1}. The per-neuron-gating idea is only described as two notebook cells with no conclusion.
 
 <a id="nn"></a>
 ### nn

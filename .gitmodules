@@ -139,9 +139,6 @@
 [submodule "http_mock"]
 	path = http_mock
 	url = https://github.com/ZisIsNotZis/http_mock.git
-[submodule "cz_noidea"]
-	path = cz_noidea
-	url = https://github.com/ZisIsNotZis/cz_noidea.git
 [submodule "beam"]
 	path = beam
 	url = https://github.com/ZisIsNotZis/beam.git
@@ -160,9 +157,6 @@
 [submodule "disk"]
 	path = disk
 	url = https://github.com/ZisIsNotZis/disk.git
-[submodule "cz_bert"]
-	path = cz_bert
-	url = https://github.com/ZisIsNotZis/cz_bert.git
 [submodule "nn"]
 	path = nn
 	url = https://github.com/ZisIsNotZis/nn.git
@@ -187,9 +181,6 @@
 [submodule "cz_einn"]
 	path = cz_einn
 	url = https://github.com/ZisIsNotZis/cz_einn.git
-[submodule "neuronloop"]
-	path = neuronloop
-	url = https://github.com/ZisIsNotZis/neuronloop.git
 [submodule "grammar"]
 	path = grammar
 	url = https://github.com/ZisIsNotZis/grammar.git
