@@ -15,6 +15,9 @@ The checks run with the render, never apart from it:
   - every @ref names a key the renderer actually writes into the view
   - no two nodes carry the same text, because a fact has one home
   - the render is byte-identical to a fresh render of the SSOT
+
+The view also opens with a one-line index of every handle, generated from the same
+source so that the map can never drift from the rules it maps.
 """
 from __future__ import annotations
 
@@ -148,6 +151,36 @@ def check(doc) -> list[str]:
     return errors
 
 
+CLAUSE_CUT = re.compile(r"(?:\.\s|;\s|\s-\s)")
+INDEX_LIMIT = 140
+
+
+def first_clause(text: str) -> str:
+    """The leading statement of a node, short enough to sit beside its handle."""
+    text = " ".join(text.split())
+    cut = CLAUSE_CUT.search(text)
+    if cut:
+        text = text[: cut.start()]
+    text = text.rstrip(" .,;:-")
+    if len(text) > INDEX_LIMIT:
+        text = text[:INDEX_LIMIT].rsplit(" ", 1)[0] + " ..."
+    return text
+
+
+def render_index(doc) -> str:
+    """One comment line per handle, so the view opens with a map a reader can hold."""
+    lines = []
+    for key, value in doc.items():
+        if key == "_text":
+            continue
+        line = f"# {key} - {first_clause(value.get('_text', ''))}"
+        if key == "laws":
+            children = [child for child in value if child != "_text" and not child.endswith("*")]
+            line += ": " + ", ".join(children)
+        lines.append(line)
+    return "\n".join(lines) + "\n"
+
+
 def render(doc, source: Path) -> str:
     expected = {key: convertible(value) for key, value in doc.items()}
     body = yaml.safe_dump(
@@ -160,7 +193,7 @@ def render(doc, source: Path) -> str:
     body = "\n".join(line for line in body.splitlines() if line.strip()) + "\n"
     assert yaml.safe_load(body) == expected, "rendering changed the document"
     banner = f"<!-- generated from {source.name} - edit that file -->\n"
-    return f"{banner}```yaml\n{body}```\n"
+    return f"{banner}```yaml\n{render_index(doc)}{body}```\n"
 
 
 def main() -> int:
