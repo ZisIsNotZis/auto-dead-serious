@@ -39,7 +39,6 @@ Ordinal estimates from written evidence, not measurements: no build, test, rende
 | [local_lm_research](#local-lm-research) | A local-LLM inference research workbench with experiment plans, measurement records and a generated report; measurements are intended to be sourced from an SQLite database. | prototype | 5.3 | 6.0 | 5 | 3.6 | 5 | 1 | Keep measurement numbers in one data source, plans and interpretations in their owning documents |
 | [autofe](#autofe) | An intent-driven frontend modeling engine that projects one semantic model into HTML, text, and Markdown renderings. | prototype | 5.1 | 5.3 | 5 | 3.9 | 6 | 1 | A single target-neutral axis module owns semantic display decisions that HTML, text, and Markdown |
 | [agentworld](#agentworld) | An experimental event-driven civilization simulator with explicit actors, executable strategies, a cognitive call path, and recorded simulation interventions. | prototype | 5.1 | 5.3 | 5 | 3.9 | 5 | 1 | For each escalated hour, append a hash-chained allocation record containing the policy fingerprint, candidate |
-| [timecolumn](#timecolumn) | Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries. | prototype | 4.9 | 5.7 | 4 | 3.9 | 6 | 1 | A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval |
 | [hyperframaker](#hyperframaker) | A local-first browser canvas for connecting, generating, inspecting and regenerating artifact nodes through a filesystem-backed registry, manifests and agent scripts. | delivered-once | 4.9 | 4.0 | 5 | 5.2 | 7 | 1 | A browser canvas and local workspace app that documents nodes, named inputs, scripts, manifests |
 | [resume_improve_loop](#resume-improve-loop) | A command-line loop that asks independent reviewer personas to assess the same document, preserve quoted lines and scores, and repeat until a score plateau. | delivered-once | 4.8 | 5.3 | 4 | 4.0 | 8 | 1 | A structured review practice: use separate role-specific reviewers on the same document, require exact-line |
 | [litellmgen](#litellmgen) | A closed local Python utility that generates a LiteLLM model configuration from provider catalogs, endpoints, vendor documentation and local assertions. | delivered-once | 4.8 | 5.7 | 4 | 3.5 | 7 | 1 | In a multi-source model catalog, make roster membership a separate decision from per-field fact |
@@ -77,18 +76,19 @@ Ordinal estimates from written evidence, not measurements: no build, test, rende
 | [ygo](#ygo) | Archived personal Yu-Gi-Oh! deck/art experiments covering standalone scripts and notebooks for card-art cropping, DINOv2 frame selection, deck naming/archive, deck models and a handwritten GGML/GGUF inference wrapper. | archive | 2.3 | 2.0 | 2 | 2.0 | 2 | 1 | DINOv2-based replay-frame selection experiment |
 | [beam](#beam) | An archived hand-written beam-search decoder experiment layered on llama.cpp example infrastructure, focused on retaining candidate continuations through KV-cache sequence operations. | prototype | 2.3 | 2.7 | 2 | 1.0 | 6 | 1 | Beam-search decoder variants using llama.cpp example APIs for sequence copy/removal and sampler cloning |
 | [http_mock](#http-mock) | An archived notebook experiment generating synthetic toy protocol traces and training a character-level GRU encoder-decoder to imitate mock-server responses, including cycle losses and a request/response grid variant. | prototype | 1.9 | 2.3 | 1 | 1.4 | 2 | 1 | Five notebooks contain synthetic protocol generators and GRU seq2seq training code, including a triple-loss/cross-grid |
+| [horse_video](#horse-video) | A closed code-authored 15-second horse-running animation using Remotion, SVG and Three.js primitives, seeded scenery and a local soundtrack; the README presents it as a single art experiment, not an animation framework. | delivered-once | 0.6 | 0.7 | 0 | 0.0 | 9 | 1 | The README reports a 1280×720, 30-fps, 15-second checked-in MP4 generated from a code-authored scene |
+| [huaqiang_video](#huaqiang-video) | A closed Remotion composition that encodes the Huaqiang melon story beats and timing in source and reports a 70-second audiovisual render. | delivered-once | 0.6 | 0.7 | 0 | 0.0 | 7 | 1 | The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source |
 | [colleague_private](#colleague-private) | A privacy-limited registered project; the existing sanitized record describes role-specific assistant skill directories and supporting knowledge assets, but content was not inspected. | private | 0.0 | 0.0 | 1 | 0.8 | 8 | 0 | — |
 | [cuda](#cuda) | A personal archive of hand-written CUDA tensor-core, attention, convolution, reduction, and sorting experiments with hardware-profiling notes. | archive | 0.0 | 3.0 | 2 | 1.1 | 2 | 0 | Hand-written CUDA kernel experiment source |
 | [cz_bert](#cz-bert) | A deprecated personal deep-learning sandbox containing old Transformer, data-kernel, nearest-neighbor, and CNN notebook experiments. | archive | 0.0 | 2.7 | 1 | 0.5 | 1 | 0 | Sorted/memmap data-kernel experiment |
 | [cz_noidea](#cz-noidea) | A deprecated personal scratch archive of heterogeneous notebooks/scripts probing Python, asyncio, numerical libraries, neural networks, and throughput. | archive | 0.0 | 1.0 | 1 | 0.5 | 1 | 0 | — |
-| [horse_video](#horse-video) | A closed code-authored 15-second horse-running animation using Remotion, SVG and Three.js primitives, seeded scenery and a local soundtrack; the README presents it as a single art experiment, not an animation framework. | delivered-once | 0.0 | 0.7 | 0 | 0.0 | 9 | 0 | The README reports a 1280×720, 30-fps, 15-second checked-in MP4 generated from a code-authored scene |
-| [huaqiang_video](#huaqiang-video) | A closed Remotion composition that encodes the Huaqiang melon story beats and timing in source and reports a 70-second audiovisual render. | delivered-once | 0.0 | 0.7 | 0 | 0.0 | 7 | 0 | The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source |
 | [myminio2](#myminio2) | An archived second-pass object-storage plumbing experiment involving custom asyncio HTTP code, S3-like file operations and an XOR-sharded gateway across three backends. | archive | 0.0 | 3.3 | 1 | 1.5 | 2 | 0 | XOR-sharded object-storage gateway sketch |
 | [myygo](#myygo) | An archived sketch of a nine-slot Yu-Gi-Oh! card-effect DSL and two unfinished card-definition scripts for a rules engine not present in this repository. | archive | 0.0 | 3.3 | 1 | 1.5 | 2 | 0 | Nine-slot card-effect DSL sketch |
 | [neuronloop](#neuronloop) | An abandoned personal experiment directory of notebooks, a local neural-layer fork and reversible-network helpers; the founding per-neuron-gating idea occupies two notebook cells and has no conclusion. | archive | 0.0 | 1.3 | 1 | 0.9 | 1 | 0 | Per-neuron-gating hypothesis |
-| [nn](#nn) | An archived set of personal neural-network and attention notebooks from approximately 2021–2022, including trainer experiments and small applications. | archive | 0.0 | 2.0 | 2 | 1.1 | 2 | 0 | Neural-network and attention experiment notebooks |
+| [nn](#nn) | An archived set of personal neural-network and attention notebooks from approximately 2021–2022, including trainer experiments and small applications. | archive | 0.0 | 4.7 | 3 | 2.2 | 2 | 0 | Attention written as a Sequential of three linears |
 | [resume_private](#resume-private) | Private resume-related repository; this assessment is intentionally limited to sanitized pinned-tree structure and makes no claim about personal content. | private | 0.0 | 1.0 | 2 | 1.4 | 4 | 0 | Pinned tree structure contains resume/invention artifacts, data, templates and documentation |
 | [retnet](#retnet) | Notebook-only byte-level language-model research archive exploring RetNet-style retention and causal-convolution combinations with Ray Tune; the pinned status says it was never written up or benchmarked against a baseline. | archive | 0.0 | 2.3 | 1 | 1.8 | 1 | 0 | Archived notebook and local neural-layer code, including a Retention/Decay implementation |
+| [timecolumn](#timecolumn) | Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries. | private | 0.0 | 5.7 | 4 | 3.9 | 6 | 0 | A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval |
 | [tutor_private](#tutor-private) | Private tutorial-generation experiment as characterized by the owner's curation record; assessment is restricted to sanitized tree structure and owner testimony, without reading tutorial, script, video or asset contents. | private | 0.0 | 0.3 | 1 | 0.8 | 8 | 0 | Pinned tree names include a tutorial-building script, tutorial JSON, videos and asset directories |
 | [xywdisk](#xywdisk) | Archived one-shot script and bench-data record for a private thermal-control experiment; pinned status says the acquisition path ran on real hardware but the committed control path is unfinished and cannot be reproduced without the bench. | archive | 0.0 | 1.7 | 1 | 1.1 | 1 | 0 | The pinned status reports surviving hardware capture files, but this assessment inspected no data |
 
@@ -889,42 +889,6 @@ An experimental event-driven civilization simulator with explicit actors, execut
 | Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
 |---|---:|---:|---:|---:|---:|---|
 | allocation-audit-record | 5 | 6 | 5 | 5 | 6 | Recording allocation choices, budget and PRNG state in a hash-chained record before world commit is a thoughtful audit practice, though reuse requires adapting it to other transaction and scheduler designs. |
-
-<a id="timecolumn"></a>
-### timecolumn
-Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries.
-
-**State** prototype · **Showcase** 4.9 · **Gate** 1 — a stranger can open it and see something: the caveats are already priced in delivery
-**Who it is for** Engineers handling compact, queryable sensor/telemetry data; no actual use is reported.
-**Strongest reusable thing inside** A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval
-
-**What you see**
-- Python API and FastAPI prototype with binary chunk format.
-- timecolumn/README.md — Pinned README states the intended telemetry audience, fit-plus-residual format, approximate interval-query behavior and an approximately measured throughput snapshot that requires remeasurement before release claims.
-- timecolumn/docs/project-status.md — Pinned status calls this a closed useful prototype and says reproducible benchmark fixtures, retention controls and broader boundary coverage are deferred.
-- timecolumn/timetable/_chunk.py — Pinned chunk source documents polynomial-fit coefficients and separately compressed quantized residuals, with fit-only approximate access and residual decoding for exact values.
-- everything above is pinned at d73a5225c45e
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 5.7 | mean of 6/5/6 for `time-chunk-method`, the strongest currently valuable asset: Separating fitted coefficients from compressed residuals enables a useful approximate-to-exact query path, though workload-specific error bounds and retention remain. |
-| realized | 4 | max(product now 4, best inside 4) = 4: A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
-| upside | 3.9 | max(product if done 6, inside if done 6) × (technical 7 + delivery 6)/20 = 3.9: A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
-| delivery | 6 | A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
-
-**Unverified or bounded**
-- Approximate performance figures are reported by the README and are not a reproducible release benchmark.
-- The project does not claim distributed storage or hostile-filesystem durability.
-- No project tests or API/server were run; live HEAD matched the root pin when checked.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-
-**Assets inside**
-| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
-|---|---:|---:|---:|---:|---:|---|
-| time-chunk-method | 6 | 5 | 6 | 4 | 6 | Separating fitted coefficients from compressed residuals enables a useful approximate-to-exact query path, though workload-specific error bounds and retention remain. |
 
 <a id="hyperframaker"></a>
 ### hyperframaker
@@ -2253,6 +2217,84 @@ An archived notebook experiment generating synthetic toy protocol traces and tra
 |---|---:|---:|---:|---:|---:|---|
 | http-mock-notebook-output | 3 | 2 | 2 | 1 | 2 | The GRU and cross-grid variants suggest a modest exploratory angle, but no preserved results establish a reusable method or learned behavior. |
 
+<a id="horse-video"></a>
+### horse_video
+A closed code-authored 15-second horse-running animation using Remotion, SVG and Three.js primitives, seeded scenery and a local soundtrack; the README presents it as a single art experiment, not an animation framework.
+
+**State** delivered-once · **Showcase** 0.6 · **Gate** 1 — a stranger can watch the finished piece as-is; its value is the artefact itself, with no reusable method behind it
+**Who it is for** Animation learners or viewers interested in one code-authored procedural horse scene; visual outcome is unreviewed here.
+**Strongest reusable thing inside** The README reports a 1280×720, 30-fps, 15-second checked-in MP4 generated from a code-authored scene
+
+**What you see**
+- Checked-in MP4 plus TypeScript composition source, as reported by the README.
+- horse_video/README.md at the contract-pinned child revision — The pinned README describes a finished single art experiment, reports a checked-in 15-second 1280×720 render and explicitly says the project is not a general animation framework.
+- horse_video/src/HorseRun.tsx and horse_video/README.md at the contract-pinned child revision — The scene source contains seeded scenery, a hand-built horse scene, Three.js canvas and local audio; the separate HuaqiangMelon composition in this file is not registered as the supported HorseRun output per the README.
+- docs/product/catalogue-calibration.md at root revision f623cb650c30fe619880610a9bc1666332b644a8 — The product calibration record describes horse_video and huaqiang_video as low in reusable practice/current tool value and says modern language models can produce similar video outputs; this is owner testimony, not independent quality, originality or equivalence evidence.
+- everything above is pinned at 465b41f74d51
+
+**How the numbers were reached**
+| Axis | Score | Derivation |
+|---|---:|---|
+| idea | 0.7 | mean of 1/1/0 for `horse-video-render`, the strongest currently valuable asset: The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
+| realized | 0 | max(product now 0, best inside 0) = 0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
+| upside | 0.0 | max(product if done 0, inside if done 0) × (technical 8 + delivery 9)/20 = 0.0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
+| delivery | 9 | The reported render and defined single-artifact scope make delivery highly plausible, while usefulness is limited by its one-off nature. |
+
+**Unverified or bounded**
+- No install, render, playback, media inspection or human visual review was performed.
+- The owner statement concerns low tool value and is preserved as testimony, not as a verified judgement of video quality.
+- The existing bounded public evidence does not establish local-output equivalence, originality or visual merit.
+- Audio/media provenance and any public redistribution rights were not audited.
+
+**Rating trajectory**
+- practical estimate from the existing project packet; no new research, run or measurement
+- owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself
+- owner kept this as a watchable one-off rather than a showcase of method; the gate is therefore 1 (it can be opened and watched) while idea stays low, which is what the scores already say.
+
+**Assets inside**
+| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
+|---|---:|---:|---:|---:|---:|---|
+| horse-video-render | 1 | 1 | 0 | 0 | 0 | The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
+
+<a id="huaqiang-video"></a>
+### huaqiang_video
+A closed Remotion composition that encodes the Huaqiang melon story beats and timing in source and reports a 70-second audiovisual render.
+
+**State** delivered-once · **Showcase** 0.6 · **Gate** 1 — a stranger can watch the finished piece as-is; its value is the artefact itself, with no reusable method behind it
+**Who it is for** Viewers or creative-coding learners interested in one scripted short composition; no audience reaction is documented.
+**Strongest reusable thing inside** The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source
+
+**What you see**
+- Remotion/TypeScript composition and reported checked-in MP4.
+- huaqiang_video/README.md at the contract-pinned child revision — The pinned README calls this a closed creative prototype, says story beats/motion/timing are in code and reports a checked-in render; it warns against redistribution before rights review.
+- huaqiang_video/docs/project-status.md at the contract-pinned child revision — The status record reports a 1280×720, 30-fps, 2,100-frame composition and checked-in MP4, with rights review and formal release left undone.
+- huaqiang_video/src/HuaqiangMelon.tsx at the contract-pinned child revision — The composition source contains frame-indexed transitions, seeded procedural motion and audio sequencing; this is source observation, not playback/quality evidence.
+- everything above is pinned at af86cc715f95
+
+**How the numbers were reached**
+| Axis | Score | Derivation |
+|---|---:|---|
+| idea | 0.7 | mean of 1/1/0 for `huaqiang-video-render`, the strongest currently valuable asset: The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
+| realized | 0 | max(product now 0, best inside 0) = 0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
+| upside | 0.0 | max(product if done 0, inside if done 0) × (technical 8 + delivery 7)/20 = 0.0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
+| delivery | 7 | This is a finite, reportedly rendered creative prototype with little reusable tool value and no documented audience response. Existing composition and render support high technical plausibility, while rights and release work remain open. |
+
+**Unverified or bounded**
+- No install, render, playback, visual review or rights audit was performed.
+- Owner testimony about tool value remains separate from the unreviewed creative output.
+- The bounded public comparison identifies common timing primitives only and does not establish equivalence, originality or visual quality.
+- All legacy 0–4 ratings remain disputed and were not used as defaults; final independent review is still required before M1.
+
+**Rating trajectory**
+- practical estimate from the existing project packet; no new research, run or measurement
+- owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself
+- owner kept this as a watchable one-off rather than a showcase of method; the gate is therefore 1 (it can be opened and watched) while idea stays low, which is what the scores already say.
+
+**Assets inside**
+| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
+|---|---:|---:|---:|---:|---:|---|
+| huaqiang-video-render | 1 | 1 | 0 | 0 | 0 | The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
+
 <a id="colleague-private"></a>
 ### colleague_private
 A privacy-limited registered project; the existing sanitized record describes role-specific assistant skill directories and supporting knowledge assets, but content was not inspected.
@@ -2378,82 +2420,6 @@ A deprecated personal scratch archive of heterogeneous notebooks/scripts probing
 - practical estimate from the existing project packet; no new research, run or measurement
 - audit re-score (archive): future 2→1, technical 5→8, delivery 3→1; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 1, 'depth_of_thought': 1, 'transferability': 1}. The packet describes a disconnected archive and the owner no longer recognizes its contents.
 
-<a id="horse-video"></a>
-### horse_video
-A closed code-authored 15-second horse-running animation using Remotion, SVG and Three.js primitives, seeded scenery and a local soundtrack; the README presents it as a single art experiment, not an animation framework.
-
-**State** delivered-once · **Showcase** 0.0 · **Gate** 0 — a one-off output with no reusable method inside, and the owner rejects it as a showcase; the score is a catalogue judgement, not a verdict on the artwork
-**Who it is for** Animation learners or viewers interested in one code-authored procedural horse scene; visual outcome is unreviewed here.
-**Strongest reusable thing inside** The README reports a 1280×720, 30-fps, 15-second checked-in MP4 generated from a code-authored scene
-
-**What you see**
-- Checked-in MP4 plus TypeScript composition source, as reported by the README.
-- horse_video/README.md at the contract-pinned child revision — The pinned README describes a finished single art experiment, reports a checked-in 15-second 1280×720 render and explicitly says the project is not a general animation framework.
-- horse_video/src/HorseRun.tsx and horse_video/README.md at the contract-pinned child revision — The scene source contains seeded scenery, a hand-built horse scene, Three.js canvas and local audio; the separate HuaqiangMelon composition in this file is not registered as the supported HorseRun output per the README.
-- docs/product/catalogue-calibration.md at root revision f623cb650c30fe619880610a9bc1666332b644a8 — The product calibration record describes horse_video and huaqiang_video as low in reusable practice/current tool value and says modern language models can produce similar video outputs; this is owner testimony, not independent quality, originality or equivalence evidence.
-- everything above is pinned at 465b41f74d51
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 0.7 | mean of 1/1/0 for `horse-video-render`, the strongest currently valuable asset: The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
-| realized | 0 | max(product now 0, best inside 0) = 0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
-| upside | 0.0 | max(product if done 0, inside if done 0) × (technical 8 + delivery 9)/20 = 0.0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
-| delivery | 9 | The reported render and defined single-artifact scope make delivery highly plausible, while usefulness is limited by its one-off nature. |
-
-**Unverified or bounded**
-- No install, render, playback, media inspection or human visual review was performed.
-- The owner statement concerns low tool value and is preserved as testimony, not as a verified judgement of video quality.
-- The existing bounded public evidence does not establish local-output equivalence, originality or visual merit.
-- Audio/media provenance and any public redistribution rights were not audited.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-- owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself
-
-**Assets inside**
-| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
-|---|---:|---:|---:|---:|---:|---|
-| horse-video-render | 1 | 1 | 0 | 0 | 0 | The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
-
-<a id="huaqiang-video"></a>
-### huaqiang_video
-A closed Remotion composition that encodes the Huaqiang melon story beats and timing in source and reports a 70-second audiovisual render.
-
-**State** delivered-once · **Showcase** 0.0 · **Gate** 0 — a one-off output with no reusable method inside, and the owner rejects it as a showcase; the score is a catalogue judgement, not a verdict on the artwork
-**Who it is for** Viewers or creative-coding learners interested in one scripted short composition; no audience reaction is documented.
-**Strongest reusable thing inside** The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source
-
-**What you see**
-- Remotion/TypeScript composition and reported checked-in MP4.
-- huaqiang_video/README.md at the contract-pinned child revision — The pinned README calls this a closed creative prototype, says story beats/motion/timing are in code and reports a checked-in render; it warns against redistribution before rights review.
-- huaqiang_video/docs/project-status.md at the contract-pinned child revision — The status record reports a 1280×720, 30-fps, 2,100-frame composition and checked-in MP4, with rights review and formal release left undone.
-- huaqiang_video/src/HuaqiangMelon.tsx at the contract-pinned child revision — The composition source contains frame-indexed transitions, seeded procedural motion and audio sequencing; this is source observation, not playback/quality evidence.
-- everything above is pinned at af86cc715f95
-
-**How the numbers were reached**
-| Axis | Score | Derivation |
-|---|---:|---|
-| idea | 0.7 | mean of 1/1/0 for `huaqiang-video-render`, the strongest currently valuable asset: The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
-| realized | 0 | max(product now 0, best inside 0) = 0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
-| upside | 0.0 | max(product if done 0, inside if done 0) × (technical 8 + delivery 7)/20 = 0.0: The owner regards this finite video as a trivial output rather than a useful project or reusable creation capability. This is his catalogue-value judgement, not a claim that all artwork lacks value. |
-| delivery | 7 | This is a finite, reportedly rendered creative prototype with little reusable tool value and no documented audience response. Existing composition and render support high technical plausibility, while rights and release work remain open. |
-
-**Unverified or bounded**
-- No install, render, playback, visual review or rights audit was performed.
-- Owner testimony about tool value remains separate from the unreviewed creative output.
-- The bounded public comparison identifies common timing primitives only and does not establish equivalence, originality or visual quality.
-- All legacy 0–4 ratings remain disputed and were not used as defaults; final independent review is still required before M1.
-
-**Rating trajectory**
-- practical estimate from the existing project packet; no new research, run or measurement
-- owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself
-
-**Assets inside**
-| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
-|---|---:|---:|---:|---:|---:|---|
-| huaqiang-video-render | 1 | 1 | 0 | 0 | 0 | The owner identifies no significant reusable practice here: it is one finite video using existing tools, unlike the reusable animation system. The score estimates contribution value, not the unseen film's artistic quality. |
-
 <a id="myminio2"></a>
 ### myminio2
 An archived second-pass object-storage plumbing experiment involving custom asyncio HTTP code, S3-like file operations and an XOR-sharded gateway across three backends.
@@ -2551,10 +2517,10 @@ An abandoned personal experiment directory of notebooks, a local neural-layer fo
 ### nn
 An archived set of personal neural-network and attention notebooks from approximately 2021–2022, including trainer experiments and small applications.
 
-**State** archive · **Showcase** 0.0 · **Gate** 0 — The notebooks have empty outputs and the archive has no supported project entrypoint. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
+**State** archive · **Showcase** 0.0 · **Gate** 0 — notebooks only, no entrypoint: nothing a stranger can open and run
 **Who it is for** Readers tracing historical neural-network experiments
-**What to keep in mind** The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.
-**Strongest reusable thing inside** Neural-network and attention experiment notebooks
+**What to keep in mind** The interesting part was not in the old description: declaring Attention as a Sequential subclass makes the ordinary parameter container double as the q/k/v stack.
+**Strongest reusable thing inside** Attention written as a Sequential of three linears
 
 **What you see**
 - Notebook and small Python-script collection
@@ -2565,10 +2531,10 @@ An archived set of personal neural-network and attention notebooks from approxim
 **How the numbers were reached**
 | Axis | Score | Derivation |
 |---|---:|---|
-| idea | 2.0 | no contribution card was identified, so no idea score exists: recorded as zero identified value, not as an assertion that nothing was thought |
-| realized | 2 | max(product now 2, best inside 0) = 2: The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder. |
-| upside | 1.1 | max(product if done 3, inside if done 0) × (technical 4 + delivery 7)/20 = 1.6: The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder. |
-| delivery | 2 | The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder. |
+| idea | 4.7 | mean of 5/4/5 for `sequential-as-attention`, the strongest asset: a Sequential subclass whose forward reuses s[0..2] as q/k/v projections, alongside parameter-budget width solving and bit-unpacked labels. |
+| realized | 3 | max(product now 2, best inside 3) = 3: the idea is visible in the notebooks but nothing is packaged or runnable. |
+| upside | 2.2 | max(product if done 3, inside if done 4) × (technical 9 + delivery 2)/20 = 2.5: a documented snippet would raise reach, but the project is an archive by intent. |
+| delivery | 2 | delivery 2: no entrypoint, no environment file, and most cells need a local GPU and absolute paths from the original machine. |
 
 **Unverified or bounded**
 - No notebooks, outputs, private data, credentials or local assets were opened or executed.
@@ -2577,6 +2543,12 @@ An archived set of personal neural-network and attention notebooks from approxim
 **Rating trajectory**
 - practical estimate from the existing project packet; no new research, run or measurement
 - audit re-score (archive): future 3→2, technical 4→9, delivery 7→2; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 2}. The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.
+- owner recalled a functional style for expressing complex modules; direct inspection of nnMeta confirmed it (Attention as a Sequential reuse of s[0..2], plus parameter-budget width and bit-unpack helpers), so idea 2/2/2 → 5/4/5 and a contribution card was added. Kept: the idea exists even though the archive does not run.
+
+**Assets inside**
+| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
+|---|---:|---:|---:|---:|---:|---|
+| sequential-as-attention | 5 | 4 | 5 | 3 | 4 | Present reach is small: the trick lives in a deprecated notebook set with no entrypoint, so a reader must already know what to look for. |
 
 <a id="resume-private"></a>
 ### resume_private
@@ -2649,6 +2621,43 @@ Notebook-only byte-level language-model research archive exploring RetNet-style 
 | Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
 |---|---:|---:|---:|---:|---:|---|
 | retnet-archive-module | 2 | 2 | 1 | 1 | 2 | The archived Retention/Decay code is described as a duplicate experiment component with no reproduced consumer or result. |
+
+<a id="timecolumn"></a>
+### timecolumn
+Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries.
+
+**State** private · **Showcase** 0.0 · **Gate** 0 — private repository: a stranger cannot open it, so it cannot be shown
+**Who it is for** Engineers handling compact, queryable sensor/telemetry data; no actual use is reported.
+**Strongest reusable thing inside** A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval
+
+**What you see**
+- Python API and FastAPI prototype with binary chunk format.
+- timecolumn/README.md — Pinned README states the intended telemetry audience, fit-plus-residual format, approximate interval-query behavior and an approximately measured throughput snapshot that requires remeasurement before release claims.
+- timecolumn/docs/project-status.md — Pinned status calls this a closed useful prototype and says reproducible benchmark fixtures, retention controls and broader boundary coverage are deferred.
+- timecolumn/timetable/_chunk.py — Pinned chunk source documents polynomial-fit coefficients and separately compressed quantized residuals, with fit-only approximate access and residual decoding for exact values.
+- everything above is pinned at d73a5225c45e
+
+**How the numbers were reached**
+| Axis | Score | Derivation |
+|---|---:|---|
+| idea | 5.7 | mean of 6/5/6 for `time-chunk-method`, the strongest currently valuable asset: Separating fitted coefficients from compressed residuals enables a useful approximate-to-exact query path, though workload-specific error bounds and retention remain. |
+| realized | 4 | max(product now 4, best inside 4) = 4: A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
+| upside | 3.9 | max(product if done 6, inside if done 6) × (technical 7 + delivery 6)/20 = 3.9: A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
+| delivery | 6 | A closed prototype offers a concrete capability for approximate telemetry queries, with meaningful broader value if its deferred workload and release needs are addressed. |
+
+**Unverified or bounded**
+- Approximate performance figures are reported by the README and are not a reproducible release benchmark.
+- The project does not claim distributed storage or hostile-filesystem durability.
+- No project tests or API/server were run; live HEAD matched the root pin when checked.
+
+**Rating trajectory**
+- practical estimate from the existing project packet; no new research, run or measurement
+- corrected a false claim: the repository is private, so state is now private and the gate 0; the earlier prototype/gate-1 row wrongly implied a stranger could open it.
+
+**Assets inside**
+| Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
+|---|---:|---:|---:|---:|---:|---|
+| time-chunk-method | 6 | 5 | 6 | 4 | 6 | Separating fitted coefficients from compressed residuals enables a useful approximate-to-exact query path, though workload-specific error bounds and retention remain. |
 
 <a id="tutor-private"></a>
 ### tutor_private

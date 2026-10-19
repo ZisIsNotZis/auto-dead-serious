@@ -5409,8 +5409,8 @@
         "state": "delivered-once",
         "asset": "The README reports a 1280×720, 30-fps, 15-second checked-in MP4 generated from a code-authored scene",
         "showability": {
-          "gate": 0,
-          "reason": "a one-off output with no reusable method inside, and the owner rejects it as a showcase; the score is a catalogue judgement, not a verdict on the artwork"
+          "gate": 1,
+          "reason": "a stranger can watch the finished piece as-is; its value is the artefact itself, with no reusable method behind it"
         },
         "see": [
           "Checked-in MP4 plus TypeScript composition source, as reported by the README.",
@@ -5432,7 +5432,8 @@
         },
         "trajectory": [
           "practical estimate from the existing project packet; no new research, run or measurement",
-          "owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself"
+          "owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself",
+          "owner kept this as a watchable one-off rather than a showcase of method; the gate is therefore 1 (it can be opened and watched) while idea stays low, which is what the scores already say."
         ]
       }
     },
@@ -5983,8 +5984,8 @@
         "state": "delivered-once",
         "asset": "The project status reports a 1280×720, 30-fps, 2,100-frame checked-in MP4 and identifies story/storyboard source",
         "showability": {
-          "gate": 0,
-          "reason": "a one-off output with no reusable method inside, and the owner rejects it as a showcase; the score is a catalogue judgement, not a verdict on the artwork"
+          "gate": 1,
+          "reason": "a stranger can watch the finished piece as-is; its value is the artefact itself, with no reusable method behind it"
         },
         "see": [
           "Remotion/TypeScript composition and reported checked-in MP4.",
@@ -6006,7 +6007,8 @@
         },
         "trajectory": [
           "practical estimate from the existing project packet; no new research, run or measurement",
-          "owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself"
+          "owner-reference calibration: owner rejected this as an ordinary finite output; current and future product value are set to 0 as a catalogue-value judgement, not as a judgement of the artwork itself",
+          "owner kept this as a watchable one-off rather than a showcase of method; the gate is therefore 1 (it can be opened and watched) while idea stays low, which is what the scores already say."
         ]
       }
     },
@@ -8909,17 +8911,17 @@
             "status": "estimated",
             "estimate": 2,
             "scale": "ordinal_0_10",
-            "rationale": "The notebooks provide historical study material, but the status page reports empty outputs and no supported entrypoint.",
-            "confidence": "low",
-            "basis": "audit re-score: idea judged blind to delivery state, integer 0–10 estimate, not a measurement"
+            "rationale": "An archive of scratch notebooks with no entrypoint; its value is the visible working-out of the ideas, not a usable product.",
+            "confidence": "medium",
+            "basis": "direct inspection by the parent"
           },
           "future_product_value": {
             "status": "estimated",
-            "estimate": 2,
+            "estimate": 3,
             "scale": "ordinal_0_10",
-            "rationale": "The stated scope is historical study material, with no described product outcome beyond the archive already present.",
-            "confidence": "low",
-            "basis": "audit re-score: idea judged blind to delivery state, integer 0–10 estimate, not a measurement"
+            "rationale": "The stated scope is an archive; a documented snippet would add a little reach but the project is not meant to become a product.",
+            "confidence": "medium",
+            "basis": "direct inspection by the parent"
           },
           "technical_feasibility": {
             "status": "estimated",
@@ -8940,7 +8942,56 @@
         },
         "inside_value_refs": []
       },
-      "contributions": [],
+      "contributions": [
+        {
+          "id": "sequential-as-attention",
+          "kind": "transferable_practice_insight",
+          "description": "Attention is expressed as a torch.nn.Sequential of three linears by overriding forward on the Sequential subclass, so the standard container doubles as the query/key/value projection stack; sibling notebooks size a hidden layer from a parameter-budget equation and bit-decompose integer labels for embedding-free classification.",
+          "reuse_scope": "Directly reusable in PyTorch code as a compact attention-as-container idiom; the notebooks around it are unscored scratch and do not make this a maintained library.",
+          "judgements": {
+            "non_obviousness": {
+              "status": "estimated",
+              "estimate": 5,
+              "scale": "ordinal_0_10",
+              "rationale": "Making a Sequential serve as q/k/v projections via s[0]/s[1]/s[2] is a compact idiom most PyTorch users would not reach for, though each part is familiar.",
+              "confidence": "medium",
+              "basis": "direct inspection of nnMeta notebooks by the parent"
+            },
+            "depth_of_thought": {
+              "status": "estimated",
+              "estimate": 4,
+              "scale": "ordinal_0_10",
+              "rationale": "A handful of small ideas are worked through — container reuse, parameter-budget width solving, bit unpacking — but each is a one-notebook experiment rather than a system.",
+              "confidence": "medium",
+              "basis": "direct inspection of nnMeta notebooks by the parent"
+            },
+            "transferability": {
+              "status": "estimated",
+              "estimate": 5,
+              "scale": "ordinal_0_10",
+              "rationale": "The Sequential-as-attention trick and the parameter-budget helper can be lifted into another PyTorch codebase directly; nothing else in the archive travels as easily.",
+              "confidence": "medium",
+              "basis": "direct inspection of nnMeta notebooks by the parent"
+            },
+            "current_contribution_value": {
+              "status": "estimated",
+              "estimate": 3,
+              "scale": "ordinal_0_10",
+              "rationale": "Present reach is small: the trick lives in a deprecated notebook set with no entrypoint, so a reader must already know what to look for.",
+              "confidence": "medium",
+              "basis": "direct inspection by the parent, ordinal 0–10 judgement estimate, not a measurement"
+            },
+            "future_contribution_value": {
+              "status": "estimated",
+              "estimate": 4,
+              "scale": "ordinal_0_10",
+              "rationale": "If the notebooks were reduced to one documented snippet the idea would be more reusable, but it stays a small idiom rather than a library.",
+              "confidence": "medium",
+              "basis": "direct inspection by the parent, ordinal 0–10 judgement estimate, not a measurement"
+            }
+          }
+        }
+      ],
       "evidence": [
         {
           "id": "nn-status",
@@ -8956,6 +9007,14 @@
           "claim": "Pinned README identifies an archive of neural-network experiment notebooks; no notebook execution or asset review was performed.",
           "source": "nn/README.md",
           "locator": "project description and status",
+          "revision": "67f65bed3ee5b98a70590c7e66571f156316108a"
+        },
+        {
+          "id": "nn-sequential-attention",
+          "provenance": "independent_observation",
+          "claim": "The nnMeta notebooks subclass Sequential so Attention.forward reuses s[0], s[1], s[2] as the q/k/v projections, size a hidden layer from a parameter-budget equation, and bit-decompose labels; the tree is an archive without an entrypoint.",
+          "source": "nn/nnMeta/nnTreeTrainEval-Copy1.ipynb",
+          "locator": "class Attention(Sequential); def unpack; class Scale",
           "revision": "67f65bed3ee5b98a70590c7e66571f156316108a"
         }
       ],
@@ -8995,10 +9054,10 @@
         "what": "An archived set of personal neural-network and attention notebooks from approximately 2021–2022, including trainer experiments and small applications.",
         "for": "Readers tracing historical neural-network experiments",
         "state": "archive",
-        "asset": "Neural-network and attention experiment notebooks",
+        "asset": "Attention written as a Sequential of three linears",
         "showability": {
           "gate": 0,
-          "reason": "The notebooks have empty outputs and the archive has no supported project entrypoint. (audit called it a caveat, which delivery already prices; a caveat is not a zero)"
+          "reason": "notebooks only, no entrypoint: nothing a stranger can open and run"
         },
         "see": [
           "Notebook and small Python-script collection",
@@ -9007,21 +9066,22 @@
           "everything above is pinned at 67f65bed3ee5"
         ],
         "why": {
-          "idea": "no contribution card was identified, so no idea score exists: recorded as zero identified value, not as an assertion that nothing was thought",
-          "realized": "max(product now 2, best inside 0) = 2: The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder.",
-          "upside": "max(product if done 3, inside if done 0) × (technical 4 + delivery 7)/20 = 1.6: The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder.",
-          "delivery": "The archive offers limited historical reference value, while absent outputs and obsolete or missing dependencies make reuse difficult. Preserving it for readers tracing past experiments seems deliverable, but making the notebooks practically reusable would be harder."
+          "idea": "mean of 5/4/5 for `sequential-as-attention`, the strongest asset: a Sequential subclass whose forward reuses s[0..2] as q/k/v projections, alongside parameter-budget width solving and bit-unpacked labels.",
+          "realized": "max(product now 2, best inside 3) = 3: the idea is visible in the notebooks but nothing is packaged or runnable.",
+          "upside": "max(product if done 3, inside if done 4) × (technical 9 + delivery 2)/20 = 2.5: a documented snippet would raise reach, but the project is an archive by intent.",
+          "delivery": "delivery 2: no entrypoint, no environment file, and most cells need a local GPU and absolute paths from the original machine."
         },
         "idea": {
-          "non_obviousness": 2,
-          "depth_of_thought": 2,
-          "transferability": 2
+          "non_obviousness": 5,
+          "depth_of_thought": 4,
+          "transferability": 5
         },
         "trajectory": [
           "practical estimate from the existing project packet; no new research, run or measurement",
-          "audit re-score (archive): future 3→2, technical 4→9, delivery 7→2; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 2}. The notebooks are historical material with empty outputs and unsupported or missing environment assumptions."
+          "audit re-score (archive): future 3→2, technical 4→9, delivery 7→2; idea {'non_obviousness': 0, 'depth_of_thought': 0, 'transferability': 0}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 2}. The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.",
+          "owner recalled a functional style for expressing complex modules; direct inspection of nnMeta confirmed it (Attention as a Sequential reuse of s[0..2], plus parameter-budget width and bit-unpack helpers), so idea 2/2/2 → 5/4/5 and a contribution card was added. Kept: the idea exists even though the archive does not run."
         ],
-        "hook": "The notebooks are historical material with empty outputs and unsupported or missing environment assumptions.",
+        "hook": "The interesting part was not in the old description: declaring Attention as a Sequential subclass makes the ordinary parameter container double as the q/k/v stack.",
         "fused_idea": "The packet names broad experiment categories but gives no specific design or results to separate novelty, reasoning depth, and reusable practice."
       }
     },
@@ -11998,11 +12058,11 @@
       "display": {
         "what": "Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries.",
         "for": "Engineers handling compact, queryable sensor/telemetry data; no actual use is reported.",
-        "state": "prototype",
+        "state": "private",
         "asset": "A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval",
         "showability": {
-          "gate": 1,
-          "reason": "a stranger can open it and see something: the caveats are already priced in delivery"
+          "gate": 0,
+          "reason": "private repository: a stranger cannot open it, so it cannot be shown"
         },
         "see": [
           "Python API and FastAPI prototype with binary chunk format.",
@@ -12023,7 +12083,8 @@
           "transferability": 6
         },
         "trajectory": [
-          "practical estimate from the existing project packet; no new research, run or measurement"
+          "practical estimate from the existing project packet; no new research, run or measurement",
+          "corrected a false claim: the repository is private, so state is now private and the gate 0; the earlier prototype/gate-1 row wrongly implied a stranger could open it."
         ]
       }
     },
