@@ -16,6 +16,17 @@ class CatalogueRedesignTests(unittest.TestCase):
         cls.fixture = json.loads(catalogue.REDESIGN_FIXTURE.read_text())
         cls.contract = json.loads(catalogue.REDESIGN_CONTRACT.read_text())
 
+    def test_public_research_profile_uses_read_only_acceptance_inference(self):
+        profile = (ROOT / ".pi/agents/catalogue-public-research.md").read_text()
+        header = profile.split("---", 2)[1]
+        self.assertIn("acceptanceRole: read-only", header)
+        self.assertNotIn("acceptance:", header)
+        self.assertIn("tools: read, web_search_ds, web_fetch_ds", header)
+        self.assertIn("model: github_copilot/gpt-6-luna", header)
+        self.assertIn("over-length query is a request-validation failure", profile)
+        self.assertIn("individual HTTP 404 is a source-retrieval limit", profile)
+        self.assertIn("Missing tool/provider/bootstrap/runtime", profile)
+
     def test_failed_product_can_contain_valuable_transferable_practice(self):
         record = self.fixture
         catalogue.validate_assessment(record)
