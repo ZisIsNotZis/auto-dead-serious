@@ -175,8 +175,8 @@
 [submodule "dinoseg"]
 	path = dinoseg
 	url = https://github.com/ZisIsNotZis/dinoseg.git
-[submodule "xywdisk"]
-	path = xywdisk
+[submodule "wafer_thermal_calibration"]
+	path = wafer_thermal_calibration
 	url = https://github.com/ZisIsNotZis/xywdisk.git
 [submodule "ringsvr"]
 	path = ringsvr

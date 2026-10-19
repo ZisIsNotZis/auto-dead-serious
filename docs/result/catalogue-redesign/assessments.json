@@ -13149,7 +13149,7 @@
       }
     },
     {
-      "path": "xywdisk",
+      "path": "wafer_thermal_calibration",
       "source_pin": "d792e6ac0f74daec9022233c89a6d4cc813dd712",
       "project": {
         "description": "Archived one-shot script and bench-data record for a private thermal-control experiment; pinned status says the acquisition path ran on real hardware but the committed control path is unfinished and cannot be reproduced without the bench.",
@@ -13192,7 +13192,7 @@
       },
       "contributions": [
         {
-          "id": "xywdisk-capture-output",
+          "id": "wafer_thermal_calibration-capture-output",
           "kind": "output",
           "description": "The pinned status reports surviving hardware capture files, but this assessment inspected no data content and the status says run identity/units/row-order metadata are missing; the records are an output archive, not a transferable method claim.",
           "reuse_scope": "Only potentially interpretable with the original bench and missing capture metadata; no measurement claim is made here.",
@@ -13245,7 +13245,7 @@
           "id": "xyw-status",
           "provenance": "independent_observation",
           "claim": "Pinned project status describes a hardware-specific abandoned experiment, says acquisition was run and captures survive, identifies a broken control path and missing metadata, and says the experiment cannot be re-executed without the bench.",
-          "source": "xywdisk/docs/project-status.md",
+          "source": "wafer_thermal_calibration/docs/project-status.md",
           "locator": "lines 5-48",
           "revision": "d792e6ac0f74daec9022233c89a6d4cc813dd712"
         },
@@ -13253,7 +13253,7 @@
           "id": "xyw-readme",
           "provenance": "independent_observation",
           "claim": "Pinned README describes the archive as unreproducible hardware-bench scratch and distinguishes it from the separately published disk repository; no capture files were opened.",
-          "source": "xywdisk/README.md",
+          "source": "wafer_thermal_calibration/README.md",
           "locator": "opening status and What it is",
           "revision": "d792e6ac0f74daec9022233c89a6d4cc813dd712"
         }
@@ -13303,12 +13303,12 @@
         },
         "see": [
           "One-shot Python scripts, notebooks and opaque binary capture artifacts.",
-          "xywdisk/docs/project-status.md — Pinned project status describes a hardware-specific abandoned experiment, says acquisition was run and captures survive, identifies a broken control path and missing metadata, and says the experiment cannot be re-executed without the bench.",
-          "xywdisk/README.md — Pinned README describes the archive as unreproducible hardware-bench scratch and distinguishes it from the separately published disk repository; no capture files were opened.",
+          "wafer_thermal_calibration/docs/project-status.md — Pinned project status describes a hardware-specific abandoned experiment, says acquisition was run and captures survive, identifies a broken control path and missing metadata, and says the experiment cannot be re-executed without the bench.",
+          "wafer_thermal_calibration/README.md — Pinned README describes the archive as unreproducible hardware-bench scratch and distinguishes it from the separately published disk repository; no capture files were opened.",
           "everything above is pinned at d792e6ac0f74"
         ],
         "why": {
-          "idea": "mean of 1/1/1 for `xywdisk-capture-output`, the strongest currently valuable asset: Surviving captures may preserve a trace of the experiment, but missing metadata and bench dependence sharply limit interpretation and reuse.",
+          "idea": "mean of 1/1/1 for `wafer_thermal_calibration-capture-output`, the strongest currently valuable asset: Surviving captures may preserve a trace of the experiment, but missing metadata and bench dependence sharply limit interpretation and reuse.",
           "realized": "max(product now 1, best inside 1) = 1: The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state.",
           "upside": "max(product if done 3, inside if done 1) × (technical 3 + delivery 1)/20 = 0.6: The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state.",
           "delivery": "The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state."
@@ -13320,7 +13320,8 @@
         },
         "trajectory": [
           "practical estimate from the existing project packet; no new research, run or measurement",
-          "audit re-score (archive): technical 3→6; idea {'non_obviousness': 1, 'depth_of_thought': 1, 'transferability': 1}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 1}. The packet reports hardware capture but does not establish an interpretable measurement or reusable control method."
+          "audit re-score (archive): technical 3→6; idea {'non_obviousness': 1, 'depth_of_thought': 1, 'transferability': 1}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 1}. The packet reports hardware capture but does not establish an interpretable measurement or reusable control method.",
+          "submodule path renamed from `xywdisk` to `wafer_thermal_calibration` to keep an employer name out of the portfolio; the git remote is unchanged."
         ],
         "hook": "The packet reports hardware capture but does not establish an interpretable measurement or reusable control method."
       }

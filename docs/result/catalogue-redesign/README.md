@@ -90,7 +90,7 @@ Ordinal estimates from written evidence, not measurements: no build, test, rende
 | [retnet](#retnet) | Notebook-only byte-level language-model research archive exploring RetNet-style retention and causal-convolution combinations with Ray Tune; the pinned status says it was never written up or benchmarked against a baseline. | archive | 0.0 | 2.3 | 1 | 1.8 | 1 | 0 | Archived notebook and local neural-layer code, including a Retention/Decay implementation |
 | [timecolumn](#timecolumn) | Timetable is a Python time-sequence database prototype using polynomial-fit chunks, zstd-compressed residuals and vectorized aggregation for approximate interval queries. | private | 0.0 | 5.7 | 4 | 3.9 | 6 | 0 | A chunk stores polynomial fit coefficients separately from quantized, zstd-compressed residuals, allowing approximate interval |
 | [tutor_private](#tutor-private) | Private tutorial-generation experiment as characterized by the owner's curation record; assessment is restricted to sanitized tree structure and owner testimony, without reading tutorial, script, video or asset contents. | private | 0.0 | 0.3 | 1 | 0.8 | 8 | 0 | Pinned tree names include a tutorial-building script, tutorial JSON, videos and asset directories |
-| [xywdisk](#xywdisk) | Archived one-shot script and bench-data record for a private thermal-control experiment; pinned status says the acquisition path ran on real hardware but the committed control path is unfinished and cannot be reproduced without the bench. | archive | 0.0 | 1.7 | 1 | 1.1 | 1 | 0 | The pinned status reports surviving hardware capture files, but this assessment inspected no data |
+| [wafer_thermal_calibration](#wafer-thermal-calibration) | Archived one-shot script and bench-data record for a private thermal-control experiment; pinned status says the acquisition path ran on real hardware but the committed control path is unfinished and cannot be reproduced without the bench. | archive | 0.0 | 1.7 | 1 | 1.1 | 1 | 0 | The pinned status reports surviving hardware capture files, but this assessment inspected no data |
 
 ## What to show first
 One per family, so a portfolio is not six variants of the same idea. Order is showcase score.
@@ -2694,8 +2694,8 @@ Private tutorial-generation experiment as characterized by the owner's curation 
 |---|---:|---:|---:|---:|---:|---|
 | tutor-private-output | 0 | 0 | 1 | 1 | 1 | The tree shows generated artifacts, but their uninspected contents support no meaningful insight or reuse claim. |
 
-<a id="xywdisk"></a>
-### xywdisk
+<a id="wafer-thermal-calibration"></a>
+### wafer_thermal_calibration
 Archived one-shot script and bench-data record for a private thermal-control experiment; pinned status says the acquisition path ran on real hardware but the committed control path is unfinished and cannot be reproduced without the bench.
 
 **State** archive · **Showcase** 0.0 · **Gate** 0 — The packet describes a one-off hardware archive with a broken control path and no reproducible entry point. (audit called it a caveat, which delivery already prices; a caveat is not a zero)
@@ -2705,14 +2705,14 @@ Archived one-shot script and bench-data record for a private thermal-control exp
 
 **What you see**
 - One-shot Python scripts, notebooks and opaque binary capture artifacts.
-- xywdisk/docs/project-status.md — Pinned project status describes a hardware-specific abandoned experiment, says acquisition was run and captures survive, identifies a broken control path and missing metadata, and says the experiment cannot be re-executed without the bench.
-- xywdisk/README.md — Pinned README describes the archive as unreproducible hardware-bench scratch and distinguishes it from the separately published disk repository; no capture files were opened.
+- wafer_thermal_calibration/docs/project-status.md — Pinned project status describes a hardware-specific abandoned experiment, says acquisition was run and captures survive, identifies a broken control path and missing metadata, and says the experiment cannot be re-executed without the bench.
+- wafer_thermal_calibration/README.md — Pinned README describes the archive as unreproducible hardware-bench scratch and distinguishes it from the separately published disk repository; no capture files were opened.
 - everything above is pinned at d792e6ac0f74
 
 **How the numbers were reached**
 | Axis | Score | Derivation |
 |---|---:|---|
-| idea | 1.7 | mean of 1/1/1 for `xywdisk-capture-output`, the strongest currently valuable asset: Surviving captures may preserve a trace of the experiment, but missing metadata and bench dependence sharply limit interpretation and reuse. |
+| idea | 1.7 | mean of 1/1/1 for `wafer_thermal_calibration-capture-output`, the strongest currently valuable asset: Surviving captures may preserve a trace of the experiment, but missing metadata and bench dependence sharply limit interpretation and reuse. |
 | realized | 1 | max(product now 1, best inside 1) = 1: The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state. |
 | upside | 1.1 | max(product if done 3, inside if done 1) × (technical 3 + delivery 1)/20 = 0.6: The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state. |
 | delivery | 1 | The archive preserves limited evidence of a hardware run, but the unfinished control path and missing context prevent a usable present capability. A successful single-bench experiment could provide modest value, though delivery appears unlikely from the stated state. |
@@ -2725,8 +2725,9 @@ Archived one-shot script and bench-data record for a private thermal-control exp
 **Rating trajectory**
 - practical estimate from the existing project packet; no new research, run or measurement
 - audit re-score (archive): technical 3→6; idea {'non_obviousness': 1, 'depth_of_thought': 1, 'transferability': 1}→{'non_obviousness': 2, 'depth_of_thought': 2, 'transferability': 1}. The packet reports hardware capture but does not establish an interpretable measurement or reusable control method.
+- submodule path renamed from `xywdisk` to `wafer_thermal_calibration` to keep an employer name out of the portfolio; the git remote is unchanged.
 
 **Assets inside**
 | Asset | Non-obvious | Depth | Transfer | Now | If done | Why |
 |---|---:|---:|---:|---:|---:|---|
-| xywdisk-capture-output | 1 | 1 | 1 | 1 | 1 | The surviving captures are an output archive, but missing run identity, units, and row-order metadata limit even their potential reuse. |
+| wafer_thermal_calibration-capture-output | 1 | 1 | 1 | 1 | 1 | The surviving captures are an output archive, but missing run identity, units, and row-order metadata limit even their potential reuse. |
