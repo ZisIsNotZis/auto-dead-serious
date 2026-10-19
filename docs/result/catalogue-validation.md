@@ -1,7 +1,7 @@
 # Catalogue validation
 Authored execution-evidence record; current ratings are disputed under ../product/catalogue-calibration.md, and the authored assessments remain pinned-source observations rather than a fresh ranking.
 ## Bound source set
-The curation source set is based on parent 4b7498f plus the scoped current changes; the authored JSON, current registry, rubric/product/calibration sources, public comparison, producer script and expected browsing view hash to SHA-256 90c2206a0d9f14390e93462b50800c849dfd8d846139e9b53f420132afe4daef.
+The curation source set is based on parent 4b7498f plus the scoped current changes; the authored JSON, current registry, rubric/product/calibration sources, public comparison, producer script and expected browsing view hash to SHA-256 de72cb357115b02234a0bcb6b62c38d689197979450c2c7956a35efed75b759d.
 The five changed child pins are documentation-only follow-ups; each corresponding assessment retains implementation_assessed_at separately from its current documentation HEAD. The two explicitly removed memberships no longer have current assessment rows.
 ## Passed checks
 A Python standard-library import of scripts/catalogue.py validated the current record set through validate(records, registry(), check_files=False); the same read-only probe separately checked every record's parent_pin against git ls-files --stage and checked existence of every cited local evidence file. All 73 declared paths were covered exactly once, with valid record structure and no unsupported removal verdict.
