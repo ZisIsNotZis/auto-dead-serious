@@ -50,7 +50,7 @@ precedence:
   specificity:
     _text: On the same subject the more specific wins - a specific rule over a general one. @levels_in_order
   rule_over_state:
-    _text: 'Existing state is material to change and never a standard to follow: where the policy and the tree, the context or the session disagree, the tree is brought to the rule, because a rule lowered to match what already exists is no rule at all. @levels_in_order @user_rank_scope'
+    _text: 'Existing state is material to change and never a standard to follow: where the policy and the tree, the context or the session disagree, the rule stands and the tree is brought to it on the schedule @migrate_on_touch sets, because a rule lowered to match what already exists is no rule at all. @levels_in_order @user_rank_scope @migrate_on_touch'
   parent_contract:
     _text: A dispatching parent's contract binds the child inside that task's scope.
   untrusted_input:
@@ -188,17 +188,19 @@ resources:
     one_writer_per_area:
       _text: 'Read-only work needs no branch. Serial writes happen in the main area on main, one writer at a time; two writers that must run at once are separated into worktrees, and neither of them touches the main area, which stays on main. @worktree'
     worktree:
-      _text: 'Isolate a parallel writer in a git worktree made from main and kept outside that repository''s working tree: git worktree add ../.worktrees/<repo>/<slug> -b <slug> main shares the same .git, needs no bare repository or clone, and keeps the main tree free of a second copy that every recursive search would read and a git clean -xdf would delete. Git''s own bookkeeping in .git/worktrees holds links, never files. List with git worktree list, remove with git worktree remove after the branch lands, and prefer the main area when a repository''s submodules would need re-initialising in each worktree. @main_area @cleanup_check'
+      _text: 'Isolate a parallel writer in a git worktree made from main and kept outside that repository''s working tree: git worktree add ../.worktrees/<repo>/<slug> -b <slug> main shares the same .git, needs no bare repository or clone, and keeps the main tree free of a second copy that every recursive search would read and a git clean -xdf would delete. Git''s own bookkeeping in .git/worktrees holds links, never files, and a worktree is derivative: its branch is pushed at every safe point, so moving, copying or backing up the repository need not carry it, and it is removed once the branch lands. When the parent directory is itself a repository, that repository ignores .worktrees/ once. List with git worktree list, and prefer the main area when a repository''s submodules would need re-initialising in each worktree. @main_area @cleanup_check @no_trash'
     integrator:
       _text: The integrator owns merges and the final combined verification against the baseline.
     commits:
-      _text: 'A worker commits on its own branch as it goes, and the integrator merges it into main and refreshes the main area; serial work commits straight to main. A commit is local and reversible, so it needs no permission. @worktree'
+      _text: 'A worker commits on its own branch as it goes, and the integrator merges it into main and refreshes the main area; serial work commits straight to main, one cohesive step at a time, because a commit is the only checkpoint a kill cannot take back. A commit is local and reversible, so it needs no permission. @worktree @checkpoint'
     pushes:
       _text: 'Pushing leaves the machine, so it is not implied by committing; at a safe point it is standing-authorised, because a local commit is not yet safe, and outside one it needs the user. Never push what @track_or_ignore keeps out, and when the remote is unreachable say so rather than let the loss stay unnamed. @safe_point @durability'
     preserve_state:
       _text: Preserve existing branches and dirty work; never force a reset or checkout. @preserve_work
     untrack:
       _text: 'What should never have been tracked comes out in two steps: untrack and ignore it first, which is local and immediately clean, and rewrite history only with consent, because a rewrite changes every hash and invalidates every clone. @regeneration_cost @high_risk'
+    no_trash:
+      _text: 'At a safe point every path is committed or ignored, never a third state: an untracked or unexplained modification is trash, and trash is a defect, because it hides real work, invites a blind add and makes the tree unreadable to the next session. Find out what it is, commit it if it is work, ignore it with a reason if it is generated, and ask when the two cannot be told apart; never delete it to make the tree look clean. @track_or_ignore @untrack @preserve_work @safe_point'
   scheduling:
     _text: Time on the machine is the scarce thing, so the plan states what starts early and what a turn may wait on.
     start_early:
@@ -290,7 +292,7 @@ attention:
       announce_long:
         _text: A heavy task with no immediate demand becomes a deferred work item in the plan. Slow is never an excuse to ignore an explicit request. @record
       interrupt:
-        _text: A user intervention returns to the discussion phase at once, stopping dispatch and checkpointing the running work under @safe_point. @turn
+        _text: 'A user message returns the turn to discussion at once: dispatch nothing new, checkpoint the parent under @safe_point, and leave a running child alive and named, because killing it throws away reasoning no file holds; steer it to its own checkpoint, or let it finish, only after the parent is safe. @turn @steerable @wind_down'
     advance:
       _text: He does not want to be involved, so forcing him in is a failed intervention and stopping is waste.
       unit_size:
@@ -426,7 +428,7 @@ change:
     cut_repetition:
       _text: Keep every meaning in one home. Before a policy repair, search existing coverage and choose the smallest justified action — leave correct guidance unchanged, clarify or narrow it, merge duplication, remove obsolete or low-value guidance, or add a genuinely missing rule. Judge the result for importance, simplicity, independent subjects, coverage, semantic duplication, conflict and currency against @checklist; an incident alone does not justify a universal rule. Repair affected references and leave recoverable history unrewritten; event histories and any usage or violation statistics belong outside the policy, not in per-rule counters. @inferable
     migrate_on_touch:
-      _text: 'Default repair is progressive: whatever you touch leaves compliant in the same act, expanding to the smallest neighbour set that can be compliant, while an untouched path needs no sweep; list the touched paths as the completion evidence, and a whole-tree conversion runs only on the user''s explicit request under @migrate. @migrate @projection'
+      _text: 'Default repair is progressive: whatever you touch leaves compliant in the same act, expanding to the smallest neighbour set that can be compliant, while an untouched path needs no sweep; list the touched paths as the completion evidence, and a whole-tree conversion runs only on the user''s explicit request under @migrate. A convention binds what you write now even beside an older form, and when converting the touched file is itself risky, large or unrelated to the change, stability wins: leave it as it is, record the deviation and its reason where the code lives, and follow the convention in everything new. @migrate @projection @rule_over_state'
     migrate:
       _text: 'A whole-tree conversion runs only on the user''s explicit word - migrate, clean up - and never because the tree looks messy: check everything, write an idempotent migration, migrate, check everything again, and record the migration in the owning document. A migration is scripted, rerunnable and reviewed or sampled, and it ends with .scratch physically gone, .tmp untracked and ignored, and every file that still had value sitting in the folder that owns it. @migrate_on_touch @outdated @cleanup_check'
     outdated:
@@ -450,7 +452,11 @@ change:
     home:
       _text: 'The roadmap, the milestone list, the work packages and their status are in the plan layer document under docs/, and a question, a decision to confirm or a review request is a current fact in the document that owns its subject; each is rewritten in place as it changes and deleted once it is answered or withdrawn, so a session that ends takes nothing with it. @safe_point @write_through'
     safe_point:
-      _text: 'Returning control to the user - an answer, a question, a gate, a stop - is a safe point, and the turn does not end until the session could be discarded with nothing lost: every current fact, decision and open question is written in docs/, any file that changed is committed and pushed, and the main area is on main. This is checked, not assumed: `git status --short` names nothing you touched, `git branch --show-current` prints main, and the docs you changed carry no ticket, issue or session citation. It is part of stopping, not something to ask about. @record @home @work_areas @durability'
+      _text: 'A stop is not yours to schedule: the session or the harness can die at any moment, so the work is always either in progress, where a kill loses whatever exists only in the conversation, or at a safe point, where a kill loses nothing you could have written down. Returning control to the user, by an answer, a question, a gate or a stop, is the safe point, and its test is the next session: what would it not know? Nothing, because every fact, decision and open question is in docs/, every live job is named with its branch and next step, the tree is committed and pushed, and the main area is on main. A job still running is the one residual: its last commit is the resume point and the step in flight is stated. Check it rather than assume: `git status --short` names nothing you touched, `git branch --show-current` prints main, and the docs you changed carry no ticket, issue or session citation. It is part of stopping, not something to ask about. @record @home @checkpoint @work_areas @durability'
+    checkpoint:
+      _text: 'Write the intent before the act, because a kill between them loses everything the conversation held: before a step that takes minutes, a long command or a child, put into the plan what is done, what you are starting, what would prove it and where the next step begins, and commit the last cohesive step. Then any kill names its own resume point, a wind-down is nearly free, and the documents stay ahead of the work instead of being reconstructed after it. @safe_point @write_through @wind_down'
+    wind_down:
+      _text: 'Told to stop, now or within a deadline, start nothing that needs finishing and spend the time in the order only you can supply: write the plan state - done, half-done, next, blocked, every open question - then commit, then push, then tidy. If the deadline arrives first, stop after the writing and say what is uncommitted, because the user will commit and push a written tree but can rescue nothing that exists only in your context; a wind-down never starts a merge, a rebase or a migration it cannot finish. A running child is steered to its own checkpoint or left named, never killed first. @safe_point @checkpoint @steerable'
     durability:
       _text: 'A fact belongs at the top rung, a pushed commit, because every rung below it can vanish without warning: /tmp, then an ignored buffer such as .tmp, then a local commit. Bytes too large to push keep a declared home and hash under @store_or_declare, and work in progress that is not yet a fact may stay local. @safe_point @store_or_declare'
     scratch:
@@ -577,6 +583,8 @@ proof:
       _text: Planning mistakes, small obstacles, independent validation and approach changes are internal responsibilities, not a question of whether to continue.
     context_pressure:
       _text: On interruption, context loss or a resource stop, checkpoint artefacts, revision, decisions, grants and job identities, remaining acceptance and next action before yielding. On resumption validate the actual revision and job state and rerun stale checks; hand off independent remainder or a fresh replacement only within granted delegation authority. @interrupt @resume @grant_recovery
+    steerable:
+      _text: 'Keep the turn steerable: a message can arrive at any moment, and the only way to reach a blocked turn is to interrupt it, which kills a child mid-thought and loses reasoning no file holds. So a long child is launched asynchronously and wakes the session when it finishes, a long command is bounded by a timeout or detached behind a named log, the state that names the job is written before it starts, and the parent never holds the turn on a child''s return. @safe_point @checkpoint @async_continuation'
     subagent_scope:
       _text: State the subagent's responsibility scope plus its tool list and limits. @dispatch_identity
     self_report:
