@@ -23,12 +23,18 @@ def git(*args):
     return subprocess.check_output(["git", *args], cwd=ROOT, text=True).strip()
 
 
+# A pinned child that is not a project. `agent-policy` carries the law this workspace works
+# under; it is pinned like a child so the law arrives with a clone, and the plan points here
+# rather than restating which children are infrastructure.
+INFRA = {"agent-policy"}
+
+
 def registry():
     rows = git("config", "-f", ".gitmodules", "--get-regexp", r"^submodule\..*\.path$").splitlines()
     paths = [row.split(" ", 1)[1] for row in rows]
     if len(paths) != len(set(paths)):
         raise ValueError("duplicate .gitmodules path")
-    return set(paths)
+    return set(paths) - INFRA
 
 
 def validate(records, expected, check_files=True):
