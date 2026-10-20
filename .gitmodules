@@ -208,3 +208,6 @@
 [submodule "local_lm_research"]
 	path = local_lm_research
 	url = https://github.com/ZisIsNotZis/tiny-llm-eval-factors.git
+[submodule "nomos"]
+	path = nomos
+	url = https://github.com/ZisIsNotZis/nomos.git
