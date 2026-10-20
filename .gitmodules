@@ -211,3 +211,6 @@
 [submodule "nomos"]
 	path = nomos
 	url = https://github.com/ZisIsNotZis/nomos.git
+[submodule "agent-policy"]
+	path = agent-policy
+	url = git@github.com:ZisIsNotZis/agent-policy.git

@@ -45,7 +45,7 @@ cd auto-dead-serious
 git submodule status | wc -l
 ```
 
-The last line prints `70`. Four children are private (`colleague_private`, `tutor_private`, `resume_private`, `timecolumn`) and will fail without access; the other 66 clone anonymously. Remotes are HTTPS, so no SSH key is needed.
+The last line prints `71`: the 70 projects plus this workspace's own policy. Four projects are private (`colleague_private`, `tutor_private`, `resume_private`, `timecolumn`) and will fail without access; the other 66 projects clone anonymously, and so does the policy. Remotes are HTTPS, so no SSH key is needed.
 
 Rebuild every table on this page from the ratings source — standard library only, Python 3.12, no install step:
 
@@ -61,7 +61,7 @@ It prints `PASS: 70 projects, 70 rows rendered, …` and takes about 0.04 s, mea
 - **52 of the 70 rows have not been audited.** They keep a first-pass estimate; only audited rows say so in their trajectory.
 - The published catalogue gives each project what a visitor actually sees, how each axis was reached, what stays unverified, and how its rating moved — [open it](docs/result/catalogue-redesign/README.md).
 - Media on this page is a crop of a file already committed in a child repository, captioned with its source. Nothing was rendered, staged or edited for this page.
-- Optional checkout notes live in [WORKSPACE.md](WORKSPACE.md); agent permissions and policy in [AGENTS.md](AGENTS.md).
+- Optional checkout notes live in [WORKSPACE.md](WORKSPACE.md); the law agents work under is [AGENTS.md](AGENTS.md), a symlink into the [agent-policy](https://github.com/ZisIsNotZis/agent-policy) submodule where it is maintained.
 
 ## What “serious” means here
 
@@ -80,8 +80,8 @@ The collection should become a coherent catalogue of working ideas: every useful
 
 ## Contributing
 
-Open an issue or PR against the relevant child repository, or against this index for membership and policy. Include the affected path, evidence, and verification command. Agents may assist with triage, research, tests, docs, and implementation; maintainers review and merge.
+Open an issue or PR against the relevant child repository, or against this index for membership and the catalogue; the policy itself takes issues in [agent-policy](https://github.com/ZisIsNotZis/agent-policy). Include the affected path, evidence, and verification command. Agents may assist with triage, research, tests, docs, and implementation; maintainers review and merge.
 
 ## License
 
-This aggregator's policy and original materials are AGPL-3.0-only. Child repositories retain their own licenses; inspect each child before reuse.
+This aggregator's original materials are AGPL-3.0-only, and the policy in `agent-policy/` is MIT. Child repositories retain their own licenses; inspect each child before reuse.

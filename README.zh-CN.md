@@ -46,7 +46,7 @@ cd auto-dead-serious
 git submodule status | wc -l
 ```
 
-最后一行输出 `70`。其中 4 个子项目是私有的（`colleague_private`、`tutor_private`、`resume_private`、`timecolumn`），没有权限会失败；其余 66 个可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
+最后一行输出 `71`：70 个项目加上本工作区自己的规范。其中 4 个项目是私有的（`colleague_private`、`tutor_private`、`resume_private`、`timecolumn`），没有权限会失败；其余 66 个项目可匿名克隆，规范仓库同样可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
 
 重新生成本页所有表格只需要标准库（Python 3.12，无需安装依赖）：
 
@@ -62,7 +62,7 @@ python3 scripts/catalogue_final.py
 - **70 行中有 52 行未复核。** 它们保留首轮估计，只有复核过的行会在“评分轨迹”里注明。
 - 已发布的作品总览逐项写明：访客实际能看到什么、每个维度怎么得出、哪些尚未验证、评分如何变化——[打开总览](docs/result/catalogue-redesign/README.md)。
 - 本页图片均来自子仓库中已提交文件的裁切，并标注来源；没有为本页渲染、摆拍或修图。
-- 可选的检出说明在 [WORKSPACE.md](WORKSPACE.md)，代理权限与规范在 [AGENTS.md](AGENTS.md)。
+- 可选的检出说明在 [WORKSPACE.md](WORKSPACE.md)，代理遵循的规范在 [AGENTS.md](AGENTS.md)，它是指向 [agent-policy](https://github.com/ZisIsNotZis/agent-policy) 子模块的软链接，规范在那里维护。
 
 ## 这里的“严肃”指什么
 
@@ -81,8 +81,8 @@ python3 scripts/catalogue_final.py
 
 ## 贡献
 
-请向对应子仓库提 issue 或 PR；关于成员与规范的改动，向本索引提出。请附上受影响的路径、证据和验证命令。代理可以协助分诊、调研、测试、文档与实现；维护者负责评审与合并。
+请向对应子仓库提 issue 或 PR；关于成员与目录的改动，向本索引提出；规范本身在 [agent-policy](https://github.com/ZisIsNotZis/agent-policy) 提 issue。请附上受影响的路径、证据和验证命令。代理可以协助分诊、调研、测试、文档与实现；维护者负责评审与合并。
 
 ## 许可证
 
-本汇总仓库的规范与原创材料采用 AGPL-3.0-only。子仓库保留各自许可证；复用前请逐个检查。
+本汇总仓库的原创材料采用 AGPL-3.0-only，`agent-policy/` 里的规范采用 MIT。子仓库保留各自许可证；复用前请逐个检查。
