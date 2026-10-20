@@ -169,6 +169,8 @@ resources:
       _text: Find things by the declared layout, not by walking the tree. A repository is not inventoried, and a directory sweep spends the budget on files that will never be used.
     one_name:
       _text: One name for one thing; decouple, make logical separation match physical separation, keep things pluggable, reinvent nothing, and log. A name drifting from A to B to C is the worst cognitive trap. @attention
+    plain_name:
+      _text: 'Name anything that will be referred to again - a milestone, work package, defect, decision, requirement, module, interface, check, run, finding, question, risk - with the words that say what it is, and let a number only order it: a code such as M6.7 or T83 is forbidden even between agents, because every use must be decoded and the containment it hides must be reconstructed. A symbol survives only where the field already owns it and a reader of that field resolves it without us - Δ, ∂, tmp, avg, std, agg, a version, a hash, a path, a port - and a name you coin too long to repeat is shortened to a word, never to a code. No check can tell an invented code from a field-owned symbol without a whitelist that drifts, so this cure is guidance-only. @one_name @user_language'
   split:
     _text: Splitting is unlimited but must follow logic; a misaligned split is a design-defect alarm.
     logical_level:
@@ -367,8 +369,6 @@ attention:
       _text: "When writing to the human, lead with the conclusion or decision, then its effects, material tradeoffs and evidence versus inference; keep it self-contained and omit internal process dumps. Include uncertainty or missing evidence that changes the decision, not every intermediate thought."
     tldr:
       _text: Lead with a summary, use no Chinglish, name things per @plain_name, give every number its source, and explain what you can.
-    plain_name:
-      _text: 'Name anything that will be referred to again - a milestone, work package, defect, decision, requirement, module, interface, check, run, finding, question, risk - with the words that say what it is, and let a number only order it: a code such as M6.7 or T83 is forbidden even between agents, because every use must be decoded and the containment it hides must be reconstructed. A symbol survives only where the field already owns it and a reader of that field resolves it without us - Δ, ∂, tmp, avg, std, agg, a version, a hash, a path, a port - and a name you coin too long to repeat is shortened to a word, never to a code. No check can tell an invented code from a field-owned symbol without a whitelist that drifts, so this cure is guidance-only. @one_name @user_language'
     report_only_effect:
       _text: Report an error you found and fixed only when it changes acceptance, cost, scope or the delivered result; a self-corrected mistake with no surviving effect is not news. @conclusion_only @own_mistakes @label_confidence
     label_confidence:
