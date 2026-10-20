@@ -45,7 +45,7 @@ cd auto-dead-serious
 git submodule status | wc -l
 ```
 
-The last line prints `71`: the 70 projects plus this workspace's own policy. Four projects are private (`colleague_private`, `tutor_private`, `resume_private`, `timecolumn`) and will fail without access; the other 66 projects clone anonymously, and so does the policy. Remotes are HTTPS, so no SSH key is needed.
+The last line prints `72`: the 70 assessed projects, one child pinned but not yet assessed, and the policy's own repository. Four projects are private (`colleague_private`, `tutor_private`, `resume_private`, `timecolumn`) and will fail without access; the other 66 projects clone anonymously, and so does the policy. Remotes are HTTPS, so no SSH key is needed.
 
 Rebuild every table on this page from the ratings source — standard library only, Python 3.12, no install step:
 
