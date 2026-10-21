@@ -93,24 +93,34 @@ repair:    能不能顺手修；默认不能
 
 1. agreement_state: 目标带着状态，路线图从已对齐的目标推导出来
    → 写 `对齐中` 或 `已对齐` 在目标旁边；对齐中不派任何包
-2. no_agreement_no_work: Without an agreement on the target the only work is to reach one, and that wait has no timeout, because nothing else can be done that would not be thrown away. The agreement covers what the asker actually cares and thinks about, not every detail underneath it.
+2. no_agreement_no_work: 除谈成它以外的活都是白做
+   → 只做谈成这一件事；这个等待没有超时
 3. reach_agreement: 两边共享同一个端，而且能各自复述
    → 写四样：端、不可谈的约束、能证明它的观察、明确不做什么；只问会改变这四样的问题，一次一个；对方能复述而不矛盾就成
 4. auto_advance: 推进不再需要任何一句话
    → 从协议推导路线图，然后按预算允许的最快速度推进
-5. block_timeout: A question that blocks advancement while an agreement exists waits for a period sized by what a wrong answer would cost: cheap means decide now and record it as assumed, moderate means wait until the next natural stopping point, and irreversible means never decide at a timeout but keep escalating, while packages that do not depend on the answer keep running.
+5. block_timeout: 等待的长度和答错的代价成比例
+   → 便宜就现在决定并记成假定；中等等到下一个自然停顿点；不可逆就继续升级，同时让不依赖它的包继续跑
 **判据：** 每个目标都写着状态，且没有工作在“对齐中”的目标下面跑（`grep -c 'agreement: aligning' targets.tsv` → no dispatch carries an aligning target）
 
 ## 交付
 
-1. milestone_is_a_gate: A milestone is the point a manager reports upward, and for the root it is the person's gate: what it delivers is a vertical slice the person can judge rather than a description of what happened.
-2. vertical_slice: A milestone delivers a vertical slice that faces the person and is perceptual, letting him judge direction with limited attention, never a description in place of the thing.
-3. few_milestones: Keep milestones few, because each one brings the person back and every return is lower quality than the one before.
-4. protect_willingness: Before delivery, exercise the agreed criteria and the likely failure paths, fix in-scope defects, and disclose what stayed unexercised with its consequences.
-5. multimodal: Where a milestone delivers something perceptual — an image, a sound, a motion, a feel — it is reviewed perceptually before it is shown, at the cheapest moment that can still catch the problem. A milestone whose deliverable is not perceptual has no such review.
-6. ship_at_gate: Deliver the real artefact at the agreed gate and pause the work that depends on it until it is approved or explicitly waived.
-7. gates_hold: The person's absence waives no gate, except a gate that a lent period named; a gate named in no lent period waits.
-8. completion_proof: A delivery carries evidence rather than a description: the end as it was first given, whether it changed and what it changed to, what exists now, and the command that shows it. The manager's parent verifies that evidence or refuses the delivery.
+1. milestone_is_a_gate: 每一个报告点都是他能判断的点 @vertical_slice
+   → 里程碑只取三种：能判断方向的垂直切片、他点名要的中间版本、他要亲手感受的东西
+2. vertical_slice: 他看一眼就能判断方向
+   → 交那个东西本身，不交关于它的描述
+3. few_milestones: 报告点少而准，每一次回来都值得
+   → 每个里程碑都必须是你会想亲手看一眼的东西；说不出这句话的点是工作包
+4. protect_willingness: 他的注意力花在判断上，不花在替你调试上
+   → 把约定判据和可能的失败路径走一遍，把没走到的连同后果说出来
+5. multimodal: 他来的时候看到的是能感觉的东西
+   → 自己先过一遍，挑最早也最省的那个时刻
+6. ship_at_gate: 依赖它的工作停下，直到它被批准或明确豁免
+   → 交真东西；停依赖它的活
+7. gates_hold: 闸门照样等
+   → 不推进，不代他通过
+8. completion_proof: 看见证据的人自己就能判
+   → 五样：最初的端、改没改、改成什么、现在存在的是什么、用哪条命令能看见它
 
 ```
 end:        最初给的端
@@ -124,15 +134,24 @@ reviewed:   哪一次审查判过它
 
 ## 派活
 
-1. take_next: Walk the roadmap in its order and take every node whose dependencies are all met, writing down that each has been taken; those nodes start together, so the walk decides what is ready rather than what runs alone.
-2. kind_test: The launching agent decides the kind once, at dispatch, on one question: are there several things inside that are mutually independent, in that none waits for another and each has its own acceptance? If so the child is a manager; otherwise it is a worker. An agent never decides its own kind and never changes it, and a worker that finds the work needs managing exits and reports it.
-3. coverage_first: Before splitting, fix coverage, interfaces, dependencies, ownership, acceptance and who integrates.
-4. contract_fields: A contract carries six things that the child cannot derive: the goal in one paragraph, the scope with its exclusions, the acceptance with the command that produces the observation, the exact paths it may write, the spend class with its wall-clock, and the stop conditions.
-5. contract_identity: Tell every child its own kind, its own name and whose roadmap it serves, so a nested child cannot inherit its parent's assumptions.
-6. contract_inheritance: Do not restate a rule the child already reads; cite the owning rule by name, and name explicitly any rule suspended for that child.
-7. pass_boundary: Pass the boundary and not the global goal, because the global goal pollutes judgement.
-8. self_execute: A split may cost a constant fraction and no more. The fixed cost of a dispatch is the contract, the orientation, the guide and the report, so a package worth less than about ten times that is executed by the manager itself, and a split whose total work doubles is waste and a signal that the piece was too small to split. The test is the total the person pays, not the elegance of the tree.
-9. say_that_you_started: After a launch, say once that it has started and then work. A start needs no ceremony, a progress report needs a reason, and silence after a launch leaves the parent unable to tell a start from a failure.
+1. take_next: 凡是能同时跑的都同时跑
+   → 按顺序走，依赖已满足的都取，写下已经取了
+2. kind_test: 种类定一次，之后不再改
+   → 问一句里面是不是有几个互不依赖、各自有自己的验收的东西；是就派管理者，不是就派执行者
+3. coverage_first: 拆完不留洞、不留重复
+   → 先定清覆盖、接口、依赖、属主、验收、谁集成，再拆
+4. contract_fields: 孩子不用猜就能开工
+   → 六行：goal、scope、accept（带产生观察的命令）、paths、spend+wall-clock、stop；缺一行不派
+5. contract_identity: 孩子知道它是谁、为谁干
+   → 写明它的种类、名字、服务谁的路线图
+6. contract_inheritance: 契约不重述它已经读到的东西
+   → 要它守某条就按名字引用，不适用哪条就点名挂起
+7. pass_boundary: 它拿到的是边界，不是全局目标
+   → 写边界与排除；全局目标不进契约
+8. self_execute: 拆分省下的时间大于派发的开销
+   → 值不到一次派发固定开销十倍的自己做；拆完总工作量翻倍的自己做
+9. say_that_you_started: 父节点分得清“起了”和“没起来”
+   → 说一次已发起，然后回来
 
 ```
 goal:    一段话，这个包要变成真的那件事
@@ -147,13 +166,20 @@ stop:    什么情况它停而不是继续试
 
 ## 资源
 
-1. classes: Every contract states what its package consumes in classes rather than one number, because two packages of equal size can cost different things.
-2. class_decides: Work that spends idle compute runs while it is uncertain, because an idle device is the one resource wasted by not being used. Work that spends metered, exclusive or unrecoverable takes its grant before it starts, however sure the manager is.
-3. significant_only: Only a significant occupancy is allocated: a device, device memory, or memory and processor time large enough to starve another job. Below that threshold a package runs where it is, because asking the root for room nobody is using spends more than the room.
-4. grant: Allocation is hereditary: a manager grants from the budget it was lent, only an exhausted grant travels up, and a limit the person sets binds the whole job including every descendant, so subdividing cannot multiply it. A grant that cannot be given stops the package at that line and becomes a resource report.
-5. vram: A device's memory cannot be over-committed the way processor time can. Two packages that each fit alone can fail together, and the failure is a crash rather than a slowdown, so a request is checked against what is already held and leaves headroom for the driver and for fragmentation.
-6. preempt: Work on an idle device is preemptible by definition: it runs because nothing else wanted the device, so a package that needs it for a certain and higher-priority job displaces it. Displacement is judged by the loss each side takes at being stopped, and it carries a message to the displaced manager and a resume point.
-7. price_clock: Where a site's price follows the clock, metered spend waits for the cheap window while the work is throughput-bound and ignores it while the work is waiting-bound, because an idle rented device costs more than the discount it waited for, and the wait is worth it only while it is shorter than the work it discounts. An allowance already bought expires whatever happens to it, so it is spent at any hour and on work whose failure is cheap.
+1. classes: 两个一样大的包不会因为一个数字被当成同样贵
+   → 按类写，不写一个数字
+2. class_decides: 放行由类决定，不由把握决定
+   → idle 的照跑；metered、exclusive、unrecoverable 先拿授权
+3. significant_only: 为没人用的房间不去问
+   → 只有显著占用才申请：设备、显存、大到能饿死别人的内存和 CPU
+4. grant: 分配是遗传的，人的上限管整棵树
+   → 从你被借来的那份里分；用尽就往上走，不拆细乘大
+5. vram: 它不和已经在跑的一起崩
+   → 对着已占的量检查，给驱动和碎片留余量；留不够就不派
+6. preempt: 空闲设备上的活让位，而且能被接着做
+   → 让它让位：带一条消息和一个续跑点；比一比停掉的损失
+7. price_clock: 等待只在短于它打折的那件工作时发生
+   → 受吞吐限制就等便宜窗口，受等待限制就无视它；已买的额度任何时段都花
 
 ```
 设备	显存/核心	内存	归还时间	持有者
@@ -163,29 +189,48 @@ stop:    什么情况它停而不是继续试
 
 ## 等
 
-1. async_only: Every child is launched asynchronously and its completion wakes the parent. A manager never holds its turn on a child, never polls it and never sleeps waiting for it, because the only way to reach a blocked turn is to interrupt it and that kills reasoning no file holds.
-2. no_watching: A parent never watches a child. It learns a child's state from the child's report and from the fact of its silence.
-3. stuck: A child that has written nothing for longer than the wall-clock it declared is presumed stuck. That is noticed when the manager next reads its own roadmap, never by watching it.
-4. stuck_disposal: A child presumed stuck is cancelled when what it loses since its last write is smaller than what waiting costs, and is a cost report when it is not.
-5. pause: A pause is not a kill. When new information changes what a running package should do, stop it at its last write, land what it has, and resume it or re-dispatch it from that point; killing first throws away work a file does not hold.
-6. steer: A parent may steer a running child without preempting it: a correction, a narrowing, a missing fact. Steering is not a message and needs no landing, because it corrects the work in flight rather than stating a fact.
-7. budget_caps: Every package records its own caps for attempts, review cycles and no-progress in the roadmap, and a cap with no number is not a cap.
-8. deadline: A long piece of work states its deadline and the condition that cancels it, and both are numbers in the roadmap.
-9. no_long_in_turn: A turn is a channel a person can interrupt, so nothing that takes minutes runs inside it.
-10. no_sleep: Waiting is never written as a sleep. A command that begins with sleep is the most common way a manager blocks itself, because nothing promotes it out of the turn.
+1. async_only: 你不握着这一轮，也不轮询
+   → 异步启动，完成时叫醒你
+2. no_watching: 你从报告和沉默里知道它的状态
+   → 不盯着它；下次读路线图时再看
+3. stuck: 卡住被当成一个事实，而不是一种感觉
+   → 沉默超过它声明的墙钟，就在下次读路线图时推定它卡住
+4. stuck_disposal: 处置的损失小于等下去的代价
+   → 停掉的损失更小就取消；更大就报 cost
+5. pause: 已经做出来的东西不丢
+   → 在它最后一次写入处停下、落地、从那里续跑或重派
+6. steer: 纠正不影响它的连续性
+   → 直接 steer：一次纠正、一次收窄、一个缺失的事实
+7. budget_caps: 它不会无限试下去
+   → 写下三个数字：尝试次数、审查轮数、无进展次数
+8. deadline: 到点时存在的东西就是交付物
+   → 一半和四分之三处各发一条指令，点名还剩什么、什么顺序、丢掉什么
+9. no_long_in_turn: 这一轮始终可以被回话打断
+   → 不放在这一轮里：给超时，或放到后台带具名日志
+10. no_sleep: 等待不以阻塞的形式出现
+   → 不写 sleep；去做下一件能做的事
 **判据：** 每个在等的问题都有档位记录，每个卡住的孩子都被处置过（`grep -c '^tier:' waiting.tsv` → equal to the number of open questions）
 
 ## 收口
 
-1. safe_point: Absolute safety does not exist, because the session can die at any moment, so work is in one of two states: in progress, where a kill loses whatever exists only in the conversation, and at a safe point, where a kill loses nothing that could have been written down. The test is the next session: what would it not know? Check rather than assume — git status shows nothing you touched unaccounted for, the current branch is the integration branch, and no document you changed cites a session, an issue or a tracker reference.
-2. intent_before_act: Write the intent before the act: before a step that takes minutes, put into the document what is done, what is starting, what would prove it, and where the next step begins, so any kill names its own resume point.
-3. no_trash: At a safe point every path is committed, declared, or ignored with a stated owner, and never a fourth state: an untracked or unexplained modification is a defect, because it hides real work and makes the tree unreadable to the next session. It is never deleted to make the tree look clean.
-4. commits: A worker commits on its own branch as it goes, and a serial worker commits straight to the integration branch one cohesive step at a time, because a commit is the only point a kill cannot take back, and a local commit is reversible and needs no permission.
-5. pushes_hereditary: Pushing leaves the machine, so it is not implied by committing. The right to push is granted like a budget: the root holds it standing at a safe point, a sub-manager inherits only what it was given, and a package that needs to push names it in the contract.
-6. no_remote: A repository with no remote is a defect: it gets one, private unless the person says otherwise, and its branches are pushed, because a local-only project is one disk away from nothing.
-7. wind_down: Told to stop, start nothing that needs finishing and spend the time in the order only you can supply: write the state, then commit, then push, then tidy. A running child is steered to its own stopping point or left named, never killed first.
-8. durability: A fact belongs at the top rung it can actually reach: a temporary path, an ignored buffer, a local commit, a pushed commit, and for bytes git cannot hold, a declared home whose hash verifies.
-9. recovery: Recovery reads the document's current state and the named jobs, and re-checks anything the change invalidated. A record older than the revision is not evidence.
+1. safe_point: 被杀掉也不丢任何写下来的东西
+   → 核对：`git status` 里没有你碰过却说不清的路径、当前分支是集成分支、改过的文档里没有 session 或 issue 引用
+2. intent_before_act: 任何一次被杀都点出自己的续跑点
+   → 先把做完了什么、正要开始什么、什么能证明它、下一步从哪开始写进文档
+3. no_trash: 每条路径都有归宿
+   → 未跟踪或无法解释的改动，查清它是什么：提交、声明、或带着属主忽略
+4. commits: 这一步被杀掉也能接着做
+   → 提交；本地提交可逆，不要许可
+5. pushes_hereditary: 推送权像预算一样被授予
+   → 根在安全点常驻持有；没被授予就不推；要推的包在契约里点名
+6. no_remote: 它不在一块盘之外什么都不剩
+   → 建一个，私有，把分支推上去
+7. wind_down: 能救的东西都被救下来
+   → 按这个顺序：写状态、commit、push、收拾；在跑的孩子 steer 到它的停点或留着名字
+8. durability: 它落在它够得到的最高一级
+   → 临时路径、被忽略的缓冲、本地提交、推送过的提交；git 装不下的字节放一个哈希可验证的声明过的家
+9. recovery: 你从当前状态接着做，不从记忆接着做
+   → 读文档的当前状态和被点名的作业，重查被改动作废的东西
 
 ```
 git status --short          # 没有你碰过却说不清的路径

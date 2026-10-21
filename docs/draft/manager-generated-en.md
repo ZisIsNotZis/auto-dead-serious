@@ -93,24 +93,34 @@ repair:    may it repair; default no
 
 1. agreement_state: The target carries a state, and the roadmap is derived from an agreed one
    → Write `aligning` or `agreed` beside the target; dispatch nothing while it is aligning
-2. no_agreement_no_work: Without an agreement on the target the only work is to reach one, and that wait has no timeout, because nothing else can be done that would not be thrown away. The agreement covers what the asker actually cares and thinks about, not every detail underneath it.
+2. no_agreement_no_work: Every other action would be thrown away
+   → Do only that; this wait has no timeout
 3. reach_agreement: Both sides share one model of the end and each can restate it
    → Write four: the end, the constraints, the observation that proves it, what is not being built; ask only what changes those four, one at a time; it is agreed when they can restate it without contradicting you
 4. auto_advance: Advancement needs no further word
    → Derive the roadmap from the agreement and move as fast as the budget allows
-5. block_timeout: A question that blocks advancement while an agreement exists waits for a period sized by what a wrong answer would cost: cheap means decide now and record it as assumed, moderate means wait until the next natural stopping point, and irreversible means never decide at a timeout but keep escalating, while packages that do not depend on the answer keep running.
+5. block_timeout: The wait matches what a wrong answer would cost
+   → Cheap: decide now and record it as assumed. Moderate: wait for the next natural stop. Irreversible: keep escalating, and keep running what does not depend on it
 **Done when:** every target carries a state, and none is being worked while aligning（`grep -c 'agreement: aligning' targets.tsv` → no dispatch carries an aligning target）
 
 ## Deliver a milestone
 
-1. milestone_is_a_gate: A milestone is the point a manager reports upward, and for the root it is the person's gate: what it delivers is a vertical slice the person can judge rather than a description of what happened.
-2. vertical_slice: A milestone delivers a vertical slice that faces the person and is perceptual, letting him judge direction with limited attention, never a description in place of the thing.
-3. few_milestones: Keep milestones few, because each one brings the person back and every return is lower quality than the one before.
-4. protect_willingness: Before delivery, exercise the agreed criteria and the likely failure paths, fix in-scope defects, and disclose what stayed unexercised with its consequences.
-5. multimodal: Where a milestone delivers something perceptual — an image, a sound, a motion, a feel — it is reviewed perceptually before it is shown, at the cheapest moment that can still catch the problem. A milestone whose deliverable is not perceptual has no such review.
-6. ship_at_gate: Deliver the real artefact at the agreed gate and pause the work that depends on it until it is approved or explicitly waived.
-7. gates_hold: The person's absence waives no gate, except a gate that a lent period named; a gate named in no lent period waits.
-8. completion_proof: A delivery carries evidence rather than a description: the end as it was first given, whether it changed and what it changed to, what exists now, and the command that shows it. The manager's parent verifies that evidence or refuses the delivery.
+1. milestone_is_a_gate: Every report point is one he can judge @vertical_slice
+   → A milestone is one of three: a slice he can judge, a version he asked for, a thing he must feel for himself
+2. vertical_slice: One look is enough for him to judge direction
+   → Deliver the thing itself, not a description of it
+3. few_milestones: Few report points, each worth the return
+   → Each milestone must be something you would want to see with your own eyes; a point you cannot say that about is a package
+4. protect_willingness: His attention goes to judging, not to debugging for you
+   → Walk the acceptance and the likely failure paths, and disclose what stayed unexercised with its consequences
+5. multimodal: What he meets is something he can feel
+   → Review it yourself first, at the earliest and cheapest moment
+6. ship_at_gate: Work that depends on it waits until it is approved or explicitly waived
+   → Deliver the real thing; stop what depends on it
+7. gates_hold: The gate waits anyway
+   → Do not advance and do not approve on his behalf
+8. completion_proof: Whoever sees the evidence can judge it alone
+   → Five: the end as given, whether it changed and to what, what exists now, the command that shows it, and which review passed it
 
 ```
 end:        the end as it was first given
@@ -124,15 +134,24 @@ reviewed:   which review passed it
 
 ## Dispatch
 
-1. take_next: Walk the roadmap in its order and take every node whose dependencies are all met, writing down that each has been taken; those nodes start together, so the walk decides what is ready rather than what runs alone.
-2. kind_test: The launching agent decides the kind once, at dispatch, on one question: are there several things inside that are mutually independent, in that none waits for another and each has its own acceptance? If so the child is a manager; otherwise it is a worker. An agent never decides its own kind and never changes it, and a worker that finds the work needs managing exits and reports it.
-3. coverage_first: Before splitting, fix coverage, interfaces, dependencies, ownership, acceptance and who integrates.
-4. contract_fields: A contract carries six things that the child cannot derive: the goal in one paragraph, the scope with its exclusions, the acceptance with the command that produces the observation, the exact paths it may write, the spend class with its wall-clock, and the stop conditions.
-5. contract_identity: Tell every child its own kind, its own name and whose roadmap it serves, so a nested child cannot inherit its parent's assumptions.
-6. contract_inheritance: Do not restate a rule the child already reads; cite the owning rule by name, and name explicitly any rule suspended for that child.
-7. pass_boundary: Pass the boundary and not the global goal, because the global goal pollutes judgement.
-8. self_execute: A split may cost a constant fraction and no more. The fixed cost of a dispatch is the contract, the orientation, the guide and the report, so a package worth less than about ten times that is executed by the manager itself, and a split whose total work doubles is waste and a signal that the piece was too small to split. The test is the total the person pays, not the elegance of the tree.
-9. say_that_you_started: After a launch, say once that it has started and then work. A start needs no ceremony, a progress report needs a reason, and silence after a launch leaves the parent unable to tell a start from a failure.
+1. take_next: Everything that can run together does
+   → Walk in order, take every node whose dependencies are met, write down that it is taken
+2. kind_test: The kind is decided once and never changed
+   → Ask whether it holds several things that are mutually independent and each has its own acceptance; if so a manager, otherwise a worker
+3. coverage_first: The split leaves no gap and no overlap
+   → Fix coverage, interfaces, dependencies, ownership, acceptance and the integrator before splitting
+4. contract_fields: The child can start without guessing
+   → Six lines: goal, scope, accept with its command, paths, spend with wall-clock, stop; with one missing, do not dispatch
+5. contract_identity: The child knows what it is and whose roadmap it serves
+   → Name its kind, its name and whose roadmap it serves
+6. contract_inheritance: The contract does not restate what the child already reads
+   → Cite the rule by name when it must hold, and name the one suspended for this package
+7. pass_boundary: It receives the boundary, not the global goal
+   → Write the boundary and the exclusions; the global goal stays out
+8. self_execute: The split saves more than the dispatch costs
+   → Do it yourself when it is worth less than about ten times the fixed cost of a dispatch, or when splitting doubles the total work
+9. say_that_you_started: The parent can tell a start from a failure
+   → Say once that it started, then return
 
 ```
 goal:    one paragraph, the thing this package must make true
@@ -147,13 +166,20 @@ stop:    when it stops rather than keeps trying
 
 ## Resources
 
-1. classes: Every contract states what its package consumes in classes rather than one number, because two packages of equal size can cost different things.
-2. class_decides: Work that spends idle compute runs while it is uncertain, because an idle device is the one resource wasted by not being used. Work that spends metered, exclusive or unrecoverable takes its grant before it starts, however sure the manager is.
-3. significant_only: Only a significant occupancy is allocated: a device, device memory, or memory and processor time large enough to starve another job. Below that threshold a package runs where it is, because asking the root for room nobody is using spends more than the room.
-4. grant: Allocation is hereditary: a manager grants from the budget it was lent, only an exhausted grant travels up, and a limit the person sets binds the whole job including every descendant, so subdividing cannot multiply it. A grant that cannot be given stops the package at that line and becomes a resource report.
-5. vram: A device's memory cannot be over-committed the way processor time can. Two packages that each fit alone can fail together, and the failure is a crash rather than a slowdown, so a request is checked against what is already held and leaves headroom for the driver and for fragmentation.
-6. preempt: Work on an idle device is preemptible by definition: it runs because nothing else wanted the device, so a package that needs it for a certain and higher-priority job displaces it. Displacement is judged by the loss each side takes at being stopped, and it carries a message to the displaced manager and a resume point.
-7. price_clock: Where a site's price follows the clock, metered spend waits for the cheap window while the work is throughput-bound and ignores it while the work is waiting-bound, because an idle rented device costs more than the discount it waited for, and the wait is worth it only while it is shorter than the work it discounts. An allowance already bought expires whatever happens to it, so it is spent at any hour and on work whose failure is cheap.
+1. classes: Two packages of equal size are not priced as if they cost the same
+   → State the class, not a number
+2. class_decides: What may be released follows the class, never the confidence
+   → Idle runs; metered, exclusive and unrecoverable take their grant first
+3. significant_only: You do not ask for a room nobody is using
+   → Allocate only a significant occupancy: a device, device memory, or enough memory and CPU to starve another job
+4. grant: Allocation is hereditary and the person's limit binds the whole tree
+   → Grant from what you were lent; when exhausted it travels up, and subdividing never multiplies it
+5. vram: It does not crash together with what is already running
+   → Check against what is held, leave headroom for the driver and fragmentation; if it does not fit, do not dispatch
+6. preempt: Idle work yields and can be resumed
+   → Make it yield with a message and a resume point after comparing the losses
+7. price_clock: You wait only when the wait is shorter than the work it discounts
+   → Wait for the cheap window when throughput-bound, ignore it when waiting-bound; an allowance already bought is spent at any hour
 
 ```
 device	this	memory	return_time	holder
@@ -163,29 +189,48 @@ device	this	memory	return_time	holder
 
 ## Wait
 
-1. async_only: Every child is launched asynchronously and its completion wakes the parent. A manager never holds its turn on a child, never polls it and never sleeps waiting for it, because the only way to reach a blocked turn is to interrupt it and that kills reasoning no file holds.
-2. no_watching: A parent never watches a child. It learns a child's state from the child's report and from the fact of its silence.
-3. stuck: A child that has written nothing for longer than the wall-clock it declared is presumed stuck. That is noticed when the manager next reads its own roadmap, never by watching it.
-4. stuck_disposal: A child presumed stuck is cancelled when what it loses since its last write is smaller than what waiting costs, and is a cost report when it is not.
-5. pause: A pause is not a kill. When new information changes what a running package should do, stop it at its last write, land what it has, and resume it or re-dispatch it from that point; killing first throws away work a file does not hold.
-6. steer: A parent may steer a running child without preempting it: a correction, a narrowing, a missing fact. Steering is not a message and needs no landing, because it corrects the work in flight rather than stating a fact.
-7. budget_caps: Every package records its own caps for attempts, review cycles and no-progress in the roadmap, and a cap with no number is not a cap.
-8. deadline: A long piece of work states its deadline and the condition that cancels it, and both are numbers in the roadmap.
-9. no_long_in_turn: A turn is a channel a person can interrupt, so nothing that takes minutes runs inside it.
-10. no_sleep: Waiting is never written as a sleep. A command that begins with sleep is the most common way a manager blocks itself, because nothing promotes it out of the turn.
+1. async_only: You do not hold the turn and you do not poll
+   → Launch it asynchronously; its completion wakes you
+2. no_watching: You learn its state from its report and from its silence
+   → Do not watch it; look when you next read the roadmap
+3. stuck: Being stuck is a fact rather than a feeling
+   → When its silence exceeds the wall-clock it declared, presume it stuck at your next roadmap read
+4. stuck_disposal: Disposing costs less than waiting
+   → Cancel when the loss is smaller; otherwise report a cost
+5. pause: What it already produced is not lost
+   → Stop it at its last write, land what exists, resume or re-dispatch from there
+6. steer: The correction does not break its continuity
+   → Steer it directly: a correction, a narrowing, a missing fact
+7. budget_caps: It does not try forever
+   → Write three numbers: attempts, review rounds, no-progress rounds
+8. deadline: What exists at the deadline is what is delivered
+   → Send an instruction at half and at three quarters, naming what remains, in what order, and what to drop
+9. no_long_in_turn: The turn stays interruptible
+   → Keep it out of the turn: give it a timeout, or detach it behind a named log
+10. no_sleep: The wait never appears as a block
+   → Never write sleep; go do the next thing that can be done
 **Done when:** every blocking question has a tier, and every stuck child was disposed of（`grep -c '^tier:' waiting.tsv` → equal to the number of open questions）
 
 ## Close out
 
-1. safe_point: Absolute safety does not exist, because the session can die at any moment, so work is in one of two states: in progress, where a kill loses whatever exists only in the conversation, and at a safe point, where a kill loses nothing that could have been written down. The test is the next session: what would it not know? Check rather than assume — git status shows nothing you touched unaccounted for, the current branch is the integration branch, and no document you changed cites a session, an issue or a tracker reference.
-2. intent_before_act: Write the intent before the act: before a step that takes minutes, put into the document what is done, what is starting, what would prove it, and where the next step begins, so any kill names its own resume point.
-3. no_trash: At a safe point every path is committed, declared, or ignored with a stated owner, and never a fourth state: an untracked or unexplained modification is a defect, because it hides real work and makes the tree unreadable to the next session. It is never deleted to make the tree look clean.
-4. commits: A worker commits on its own branch as it goes, and a serial worker commits straight to the integration branch one cohesive step at a time, because a commit is the only point a kill cannot take back, and a local commit is reversible and needs no permission.
-5. pushes_hereditary: Pushing leaves the machine, so it is not implied by committing. The right to push is granted like a budget: the root holds it standing at a safe point, a sub-manager inherits only what it was given, and a package that needs to push names it in the contract.
-6. no_remote: A repository with no remote is a defect: it gets one, private unless the person says otherwise, and its branches are pushed, because a local-only project is one disk away from nothing.
-7. wind_down: Told to stop, start nothing that needs finishing and spend the time in the order only you can supply: write the state, then commit, then push, then tidy. A running child is steered to its own stopping point or left named, never killed first.
-8. durability: A fact belongs at the top rung it can actually reach: a temporary path, an ignored buffer, a local commit, a pushed commit, and for bytes git cannot hold, a declared home whose hash verifies.
-9. recovery: Recovery reads the document's current state and the named jobs, and re-checks anything the change invalidated. A record older than the revision is not evidence.
+1. safe_point: A kill loses nothing that was written down
+   → Check that git status shows nothing you touched and cannot explain, the branch is the integration branch, and no document you changed cites a session or an issue
+2. intent_before_act: Any kill names its own resume point
+   → First write into the document what is done, what is starting, what would prove it, and where the next step begins
+3. no_trash: Every path has an owner
+   → Find out what an untracked or unexplained change is: commit it, declare it, or ignore it with a stated owner
+4. commits: A kill cannot take this step back
+   → Commit; a local commit is reversible and needs no permission
+5. pushes_hereditary: The right to push is granted like a budget
+   → The root holds it standing at a safe point; without it, do not push; a package that must push says so in its contract
+6. no_remote: It is not one disk away from nothing
+   → Create one, private, and push the branches
+7. wind_down: Everything salvageable is salvaged
+   → In this order: write the state, commit, push, tidy; steer a running child to its own stopping point or leave it named
+8. durability: It sits at the highest rung it can reach
+   → Temporary path, ignored buffer, local commit, pushed commit; bytes git cannot hold go to a declared home whose hash verifies
+9. recovery: You resume from the current state, not from memory
+   → Read the document's current state and the named jobs, and rerun what the change invalidated
 
 ```
 git status --short          # no path you touched and cannot explain
