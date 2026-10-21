@@ -214,3 +214,6 @@
 [submodule "agent-policy"]
 	path = agent-policy
 	url = git@github.com:ZisIsNotZis/agent-policy.git
+[submodule "petfleet"]
+	path = petfleet
+	url = git@github.com:ZisIsNotZis/petfleet.git
