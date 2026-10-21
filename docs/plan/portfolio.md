@@ -27,6 +27,10 @@ The order of work has one hard constraint: two projects are mid-experiment, so n
 - Nine projects advance, two are `later` on the person's word, one is `dormant` and one is `early`.
 - The nine advancing projects each received the same first-orientation contract on this `go`; none had been dispatched before, and no project has a report back yet. A report that comes back is filed into that project's own directory, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
 
+## The loop after a report
+
+A first report is filed into the project it came from, in that project's `mail/`, because nothing about a project is filed above it. The milestone it proposes is accepted or refused there, in one line, before a second contract is written; a `contract` finding is answered there too, by rewriting the contract rather than by cancelling the package. Only the questions go up, and they go up through `mail/` addressed to `person`, where `tools/needs.py` renders them. This file therefore never names a project, and the scope check enforces that rather than trusting it.
+
 ## Running
 
 Nine orientation runs, launched together, declared at 15 minutes wall-clock each. A run silent past that is presumed stuck when this file is next read, and is cancelled rather than waited for, because it is read-only and would lose nothing.

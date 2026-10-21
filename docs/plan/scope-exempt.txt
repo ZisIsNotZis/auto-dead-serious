@@ -12,3 +12,5 @@ docs/product/catalogue-calibration.md	a score compares siblings, which no child 
 docs/result/catalogue*.md	a score compares siblings, which no child can do about itself, so it lives one layer up
 docs/result/catalogue/*.md	a score compares siblings, which no child can do about itself, so it lives one layer up
 docs/result/catalogue-redesign/*.md	a score compares siblings, which no child can do about itself, so it lives one layer up
+mail/*.md	a raise quotes the child it came from and must name it, or the person cannot answer which project is meant
+docs/needs-you.md	the rendered list of those raises, so it names exactly what they name
