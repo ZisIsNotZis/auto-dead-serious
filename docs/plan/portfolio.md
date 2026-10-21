@@ -17,13 +17,15 @@ The order of work has one hard constraint: two projects are mid-experiment, so n
 ## Work packages
 
 - `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
-- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan.
+- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: nine first-orientation contracts are out, one per advancing project (see the launch record).
+- `orient` — the first contract, one per advancing project: boundary is reaching the next milestone by orienting inside its own directory, the acceptance is a report naming what the project is, the milestone it proposes next with evidence, and any question it cannot answer, and the report target is the root. Spend: `idle-compute`, read-only, 15 minutes wall-clock each, no metered device and no exclusive one. It is a package, so the root files each report into that project's own directory when it arrives.
 - `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
 - `join-orders` — a takeover written as its own first contract, so the transition is a decision rather than an interruption.
 
 ## Current facts
 
 - Nine projects advance, two are `later` on the person's word, one is `dormant` and one is `early`.
+- The nine advancing projects each received the same first-orientation contract on this `go`; none had been dispatched before, and no project has a report back yet. A report that comes back is filed into that project's own directory, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
 - `agent-policy` is infrastructure: it holds the law and is pinned like a child.
 - The price clock, stated by the person: Beijing time, weekdays 09:00–12:00 and 14:00–18:00 are peak, and everything else including weekends and public holidays is idle at half price.
 - The model rule, stated by the person, is in `docs/method/models.md`: development takes the strongest available model, a cheap one decides nothing that judgement decides, and the clock moves when a spend happens rather than what it buys.
@@ -32,6 +34,7 @@ The order of work has one hard constraint: two projects are mid-experiment, so n
 ## Evidence
 
 - The register: `docs/plan/portfolio.tsv`.
+- The launch record for the nine first contracts: the `orient` entry above and the pinned commit that carries this file.
 - The boundary between this file and a project: `docs/method/portfolio.md`.
 - The law: `agent-policy/law/`, pinned in `agent-policy`.
 - What waits on the person: `docs/needs-you.md`.
