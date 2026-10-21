@@ -4,9 +4,42 @@ This workspace holds thirteen names, ten of which advance now, one of which wait
 
 The portfolio holds a project's goal at the level the person states it, because a name alone does not say which drawing project is meant. A goal is stable and it is not a description of how the project works; anything that would shift when the project reorganises belongs to the project and not here.
 
-It also holds what a root must decide without looking inside anything: what a name refers to on disk, whether that name advances, how much authority its nodes hold, which model runs its work, and which model its product calls at runtime. Everything about a project's insides belongs to that project, so this file does not say what any project is, where it keeps its documents, or what state it is in. A root that knew those things would be maintaining a second copy of somebody else's layout.
+It also holds what a root must decide without looking inside anything: what a name refers to on disk, whether that name advances, how much authority its managers hold, which model runs its work, and which model its product calls at runtime. Everything about a project's insides belongs to that project, so this file does not say what any project is, where it keeps its documents, or what state it is in. A root that knew those things would be maintaining a second copy of somebody else's layout.
 
 Every advancing project receives the same first contract, which is to take the roadmap over and carry it to its next milestone. The root learns a project by asking it, not by reading it, so the order in which projects are asked costs nothing and needs no plan.
+
+## The first contract
+
+One text, dispatched to each advancing project with `{project}` replaced by its directory name. It is written once because ten copies that must stay in step are ten chances to drift.
+
+```
+kind:     manager
+name:     {project}
+roadmap:  docs/plan/portfolio.md, the `go` package; you serve the portfolio and you own {project}/
+
+goal
+Take {project}/'s roadmap over and carry it to its next milestone.
+
+scope
+Inside {project}/ only. Start from the checkout's current HEAD; do not fetch, pull or switch branch.
+Commit inside {project} at each cohesive step; do not push. Touch no other directory, not this file, not docs/.
+
+accept
+Your report names the milestone, the command that shows the state it claims, and the decision you need from root, which may be none.
+It passes when root can read those three without opening {project}/.
+
+paths
+Working directory {project}/; your document and roadmap inside it; your report into {project}/mail/ addressed `to: root`.
+
+spend
+machine_time, idle class; no device held exclusively; no money authorised beyond the development model; wall-clock 120 minutes for this advance.
+Model deepseek/deepseek-flash, thinking medium. Terminator: the milestone, a decision beyond you, or the 120 minutes.
+
+stop
+At 60 minutes, start no new package and land what exists. At the terminator report once and return; do not wait for root.
+```
+
+A manager that finds a field of this contract unreadable raises `contract` rather than guessing, and root rewrites the contract instead of cancelling the package.
 
 ## Milestones
 
@@ -17,7 +50,7 @@ Every advancing project receives the same first contract, which is to take the r
 ## Work packages
 
 - `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
-- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: ten manager contracts are written, one per advancing project, and none is launched — a pause arrived before the launch.
+- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: the contract below is written and the ten managers it addresses are dispatched.
 - `orient` — the first contract root ran before the rule changed: one read-only package per advancing project, 15 minutes each, reporting what the project is, the milestone it proposes next with evidence, and any question it cannot answer. Done: nine reports are filed in their projects' `mail/`, and root's answer sits beside each.
 - `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
 - `join-orders` — the takeover is folded into `go`: a project root may now manage gets the same manager contract as the others. Done for the one; the one a live writer holds has none.
@@ -25,12 +58,12 @@ Every advancing project receives the same first contract, which is to take the r
 ## Current facts
 
 - Ten projects advance, one is `later` because a live writer holds it, one is `dormant` and one is `early`.
-- Every advancing project is assigned a manager: one agent owning that directory, its document and its roadmap. Root plans inside no project. None is running yet, so no project has a live writer and nothing is in flight.
-- Each advancing project's `mail/` holds root's answer naming the next milestone, except where the answer is the person's; those questions are in `docs/needs-you.md` and their projects advance only as far as the gate.
+- Every advancing project is assigned a manager: one agent owning that directory, its document and its roadmap, and the only writer in it. Root plans inside no project.
+- Root's answer to a project's question goes into that project's `mail/`; the questions that are the person's are in `docs/needs-you.md`, and a project advances only as far as a gate the person has not passed.
 
 ## Who plans a project
 
-Root does not plan inside a project, and a package is not a plan. Dispatching implementation packages straight into a project makes root the thing the law forbids it to be: the planner of a node it does not own. A project that advances gets a manager — one agent, that directory, that document, that roadmap — and the manager splits its own work, by the law's `kind test` and `manager owns`.
+Root does not plan inside a project, and a package is not a plan. Dispatching implementation packages straight into a project makes root the thing the law forbids it to be: the planner of a directory it does not own. A project that advances gets a manager — one agent, that directory, that document, that roadmap — and the manager splits its own work, by the law's `kind test` and `manager owns`.
 
 Root's acts are then exactly three: accept or refuse the milestone that manager proposes, answer the `contract` report it raises about the contract root wrote, and pass a `direction` report upward. A manager is not launched into an area that has a live writer, because two writers there produce a diff nobody owns.
 
