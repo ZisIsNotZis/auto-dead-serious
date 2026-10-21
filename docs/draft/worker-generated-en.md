@@ -19,8 +19,6 @@ After each state you return to the table.
    → Six lines: goal, scope, accept with its command, paths, spend with wall-clock, stop; with one missing, do not dispatch
 2. preflight: What you read is the document that owns the acceptance
    → Read the named files and the acceptance document; ask about dependencies outside the contract instead of sweeping
-3. fresh_context: It gets a fresh context when it can be stated compactly
-   → Default to fresh; inherit only when the context itself is necessary
 **Done when:** you can name the goal, the acceptance, its command and the paths（`cat contract.md` → six lines, none empty）
 
 ## Refuse and stop

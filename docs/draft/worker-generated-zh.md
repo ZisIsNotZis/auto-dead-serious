@@ -19,8 +19,6 @@
    → 六行：goal、scope、accept（带产生观察的命令）、paths、spend+wall-clock、stop；缺一行不派
 2. preflight: 你读的东西正是验收所在的那份
    → 读契约点名的文件和验收所在的那份；需要契约外的依赖就问，别到处扫
-3. fresh_context: 它能被紧凑陈述时就用新上下文
-   → 默认新上下文；只有上下文本身必要且相关时才继承
 **判据：** 你说得出目标、验收、产生验收的命令、可写路径（`cat contract.md` → six lines, none empty）
 
 ## 拒绝并停下
