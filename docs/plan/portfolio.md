@@ -33,9 +33,11 @@ A first report is filed into the project it came from, in that project's `mail/`
 
 ## Running
 
-Nine orientation runs, launched together, declared at 15 minutes wall-clock each. A run silent past that is presumed stuck when this file is next read, and is cancelled rather than waited for, because it is read-only and would lose nothing.
+**2026-10-21, provider failure.** All five runs then in flight died with a connection error from the model provider, within the same minute: the nine orientation packages had finished, and the five that followed (one engine package, one benchmark package, one art study, one independent review, one late orientation) all failed at once. None had written a file — all five checkouts are clean and their last commit is one of mine — so the loss is the tokens already spent and nothing else.
 
-Their ids, working directory and output log are not copied here: `subagent({action:"status"})` lists the nine active async runs with all three, so the schedule is one command away and this file cannot drift from it. A report that arrives is filed under the directory it came from, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
+Handling, in the order the law gives it: the failure is reported rather than retried silently; one run is relaunched as a probe, because a provider that answers again answers for all of them; the rest wait behind that probe rather than burning five runs' worth of tokens to learn the same thing. A run that fails at its first tool call is a provider problem and costs nothing to notice.
+
+The ids, working directory and output log of whatever is live are not copied here: `subagent({action:"status"})` lists them with all three, so this file cannot drift from the truth. A report that arrives is filed under the directory it came from, and the milestone it proposes is accepted or refused there in one line before a second contract is written.
 
 ## Evidence
 
