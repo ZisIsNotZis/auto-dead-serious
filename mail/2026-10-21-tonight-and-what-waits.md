@@ -24,7 +24,7 @@ What waits for you, one line each, and nothing else does:
 - backseat: the C2 tradeoff, forwarded unchanged in `2026-10-21-backseat-c2-carried-up.md`.
 - sys_gal M4: delivered and gate-green — root ran its 134 tests at `d02c395` and they pass. Its own milestone review says claims 1, 2 and 3 hold for the mechanism, and claim 3 does not hold for its premise. The report is at `sys_gal/inbox/2026-10-21-m4-report.md`; accepting M4 is yours.
 
-All ten projects advanced tonight. Five came back, were reviewed by a fresh reader, and went out again on the verdict; the rest were still working when this was written.
+All ten projects advanced tonight. Every return was judged by a fresh reader and sent back out on the verdict, and the count of rounds is in each project's own inbox rather than in this letter.
 
 ## one defect in the new law, found by a reviewer
 
