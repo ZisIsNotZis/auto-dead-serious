@@ -36,11 +36,11 @@ paths
 Working directory {project}/; your document and roadmap inside it; your report into {project}/mail/ addressed `to: root`.
 
 spend
-machine_time, idle class; no device held exclusively; no money authorised beyond the development model; wall-clock 120 minutes for this advance.
-Model deepseek/deepseek-flash, thinking medium. Terminator: the milestone, a decision beyond you, or the 120 minutes.
+machine_time, idle class; no device held exclusively; no money authorised beyond the development model; wall-clock 25 minutes for this advance, because the runtime kills a child at 30 and a killed child writes no report.
+Model deepseek/deepseek-flash, thinking medium. Terminator: the milestone, a decision beyond you, or the 25 minutes.
 
 stop
-At 60 minutes, start no new package and land what exists. At the terminator report once and return; do not wait for root.
+At 15 minutes, start no new package and land what exists. At the terminator report once and return; do not wait for root.
 ```
 
 A manager that finds a field of this contract unreadable raises `contract` rather than guessing, and root rewrites the contract instead of cancelling the package.
@@ -81,6 +81,8 @@ A report is filed into the project it came from, in that project's `mail/`, beca
 **2026-10-21, the first large-scale run.** The person said `go` and left, so all ten advanced at once. Two lessons are in the record rather than in a rule. Ten dispatches went out before anyone checked that the manager role resolves from a child's own directory; the role lived in the root's `.pi/agents/` and eight of the ten could not find it, so they failed at once and cost their full token price for nothing. One canary dispatch would have found it in seconds, and the role is now reachable from every directory rather than from one.
 
 The second: the returned reports were dense enough that reading them myself would have made root the judge of work it can no longer see the inside of, so each went to a fresh reviewer whose verdict was filed into the project. The reviews found three things a manager's own reading would not have: a commit one `git gc` away from being lost, a milestone marked done whose criterion the tree contradicts, and an advance of 199 prose lines and zero code lines.
+
+**2026-10-21, the runtime's own limit.** The first ten contracts declared a 120-minute wall-clock. The runtime kills a child at 30 minutes, so three advances were cut mid-action with nothing filed, and the declared number was advice nobody enforced. The contract now declares 25 minutes and names why; a limit this layer does not enforce is still the limit it must plan inside.
 
 The ids, working directory and output log of whatever is live are not copied into this file: `subagent({action:"status"})` lists them with all three, so this file cannot drift from the truth.
 
