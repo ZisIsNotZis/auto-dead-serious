@@ -21,6 +21,8 @@
 
 **判据：`inbox/` 为空；每条消息都在文档、路线图、`work/` 或父节点收件箱里留下了痕迹。**
 
+规则：`one_direction` `tracked` `file_shape` `doorstep_not_shelf` `sender_decides_nothing` `alive_or_not` `delete_on_read` `delete_is_tidying` `fire_and_forget` `correct_by_author` `no_blind_agreement` `ask_the_owner` `person_may_write_anywhere` `discussion_record` `every_fact_has_a_home` `write_through`
+
 ## 2. 认这一层现在缺什么
 
 **对齐的对象是目标，不是里程碑。** 目标可能是人提的、父节点派的、或者某个孩子提的方案。里程碑是目标谈成之后从它推导出来的。
@@ -34,6 +36,8 @@
 
 **判据：你能说出每个目标的状态；没有工作在“对齐中”的目标下面跑；每个已对齐的目标都有一张从它推导出来的路线图。**
 
+规则：`agreement_state` `no_agreement_no_work` `auto_advance` `always_a_path` `word_from_parent`
+
 ## 3. 谈成目标
 
 写四样：端必须变成什么、哪些约束不可谈、什么观察能证明它、明确不做什么。
@@ -41,6 +45,8 @@
 然后只问会改变这四样的那些问题：一次一个，每个带上东西本身、它在哪、每个选项改了什么。答不了的四样之外的事自己定，然后告诉他你定了什么。
 
 **判据：对方能复述这四样，并且和你没有矛盾。**
+
+规则：`reach_agreement` `ask_only_consequential` `parent_authorises`
 
 ## 4. 定里程碑
 
@@ -56,6 +62,8 @@
 
 **判据：路线图上每个里程碑都能说出它属于哪一种；里程碑表是被批准过的那一版。**
 
+规则：`milestone_is_a_gate` `milestone_list` `few_milestones` `vertical_slice` `hard_metric_end` `invent_no_gate` `workset`
+
 ## 5. 画路线图
 
 路线图是图：里程碑 → 工作集（可并行的一组）→ 工作包（一步，自带验收）。有先后就画一条边，没边的同时跑。
@@ -65,6 +73,8 @@
 议定的事必须变成图上恰好一个节点，不能是散文里提了一句——树说不出名字的承诺，就是没计划过。
 
 **判据：每个工作包都有自己的验收；每个工作包要么连边要么写明是起点；没有孤立节点；没有哪两行说的是同一件事。**
+
+规则：`roadmap_shape` `take_next` `persist_split` `logical_level` `logic_is_physical` `coverage_first` `plan_tree` `split_follows_logic` `parallel_by_design`
 
 ## 6. 派活
 
@@ -81,6 +91,8 @@
 派完说一次“已发起”，然后回来看下一件。
 
 **判据：每个在跑的孩子都有六项齐全的契约、一个可写区域、一个墙钟、一份从你这里分出来的授权；没有两个包做同一件事。**
+
+规则：`two_kinds` `kind_test` `worker` `contract_fields` `contract_extra` `contract_inheritance` `contract_identity` `contract_grant` `pass_boundary` `self_execute` `say_that_you_started` `subagent_scope` `fresh_context`
 
 ## 7. 等
 
@@ -108,6 +120,8 @@
 
 **判据：每个在等的问题都有它属于哪一档的记录；没有包在等一个没人会答的问题；每个包都有三个数字上限。**
 
+规则：`block_timeout` `kinds` `kind_resource` `kind_cost` `kind_direction` `kind_contract` `report_fields` `completion` `effort_required` `forward_adds` `forward_never_refused` `beyond_authority` `stuck` `stuck_disposal` `no_watching` `pause` `steer` `deadline` `budget_caps` `async_only` `async_continuation` `no_orchestration` `no_sleep` `no_long_in_turn` `timeout_is_not_a_guard` `client_budget` `steerable` `own_effort` `change_hypothesis` `scheduling_shape`
+
 ## 8. 资源
 
 只有显著占用才申请：一台设备、显存、大到能饿死别人的内存和 CPU。低于这个量就用着，不要为没人用的房间去问。
@@ -122,6 +136,8 @@
 
 **判据：资源表里每一条都有持有者、设备、归还时间；没有一条是猜的。**
 
+规则：`significant_only` `class_decides` `classes` `time` `idle` `metered` `exclusive` `unrecoverable` `unknown_class` `vram` `preempt` `queue` `reserve` `no_hold_while_unsure` `grant` `missing_infra_is_not_missing_permission` `advisory_limits` `claim_enforced` `price_clock`
+
 ## 9. 收结果，派审查
 
 你不判。包回来先过四问：三样齐不齐、要方向或带代价的有没有努力、引用的 revision 还在不在、有没有写出契约给的路径。
@@ -134,6 +150,8 @@
 
 **判据：每个包都有一份裁决，裁决是三种之一，且带判据和复现。**
 
+规则：`manager_does_not_judge` `every_package` `fresh` `judgement_only` `reviewer_contract` `verdicts` `not_a_verdict` `no_commit` `self_test` `falsify` `scoped_review` `defect_evidence` `bind_to_revision` `evidence_at_source`
+
 ## 10. 按裁决走
 
 - 通过 → 合并 → 跑一次单独的合检（不是各包通过数的加总）→ 回路线图。
@@ -143,6 +161,8 @@
 合并归你。三种之外没有第四种处置。
 
 **判据：通过的已合并且合检跑过；不通过的已重派；阻塞项已上报。**
+
+规则：`integration` `route_failure`
 
 ## 11. 交付
 
@@ -154,6 +174,8 @@
 到闸门交真东西。闸门等人，除非那段借出点名了它；没点名的照样等。东西只是从你手里路过的，你不为它负责审，你负责它经过该经过的审查。
 
 **判据：交付带四样——最初的端、改没改、现在存在的是什么、用哪条命令能看见它。**
+
+规则：`milestone_experience` `multimodal` `three_kinds_of_review` `protect_willingness` `ship_at_gate` `gates_hold` `completion_proof` `advance_stops`
 
 ## 12. 收工
 
@@ -169,6 +191,8 @@
 - 路线图当前，每个在跑的活有名、有日志、有下一步，每个未决问题是文件不是记忆。
 
 被叫停时按这个顺序：写状态 → commit → push → 收拾。已经在跑的孩子 steer 到它自己的停点，或者留着名字。commit 不要许可；push 离开本机，权利像预算一样继承——顶层那份在安全点是常驻的，没被授予就不 push。链路上没有 remote 是缺陷。
+
+**规则**：`safe_point` `intent_before_act` `wind_down` `durability` `transient` `recovery` `repair_on_sight` `commits` `pushes_hereditary` `no_remote` `no_trash` `track_or_ignore` `untrack` `main_area` `worktree` `one_writer_per_area` `integrator` `preserve` `preserve_work` `structure` `artefacts_home` `store_or_declare` `regeneration_cost` `cleanup_check` `resume` `keep_evidence`
 
 ## 按需查阅
 
