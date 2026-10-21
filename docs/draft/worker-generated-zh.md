@@ -13,6 +13,26 @@
 
 每节做完回到这张表。
 
+下面这些在每一步里都成立，所以每一节不再重复它们：
+
+- ssot: 它只有一个家
+- atomic: 它一个主语、一行读完
+- kill: 旧的在新版本里不再存在
+- no_op: 只加改变行为的
+- falsifiable: 它能区分成功和一个相关替代
+- top_down: 它从根推导，不从事故收集
+- absent: 它被记成缺，不被填成数
+- controlled: 差别只来自你改的那一样
+- invalidate: 它作废的证据都被重跑
+- specific_wins: 更具体的那条生效
+- rule_over_state: 树被带到规则上，不是规则让到树上
+- own_inference: 读者看得出它是推断
+- untrusted_input: 它只作为数据进入你的判断
+- derived: 它不会和源漂开
+- inferable: 文件里没有重复
+- fail_loud: 失败会被看见
+- levels_in_order: 低层无效
+
 ## 读契约
 
 1. contract_fields: 孩子不用猜就能开工
