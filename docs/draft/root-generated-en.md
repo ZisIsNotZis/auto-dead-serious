@@ -131,8 +131,10 @@ repair:    may it repair; default no
    → A milestone is one of three: a slice he can judge, a version he asked for, a thing he must feel for himself
 2. vertical_slice: One look is enough for him to judge direction
    → Deliver the thing itself, not a description of it
-3. few_milestones: Few report points, each worth the return
-   → Each milestone must be something you would want to see with your own eyes; a point you cannot say that about is a package
+3. few_milestones: A milestone is something you would want to see with your own eyes; a point you cannot say that about is a package
+   - Too many: person_attention: the person is pulled back until they stop looking [person]
+   - Too few: person_time: the direction drifts for months and everything before it is redone [person]
+   → Time is the scarcest, so fewer is better, until nobody judges the direction
 4. protect_willingness: His attention goes to judging, not to debugging for you
    → Walk the acceptance and the likely failure paths, and disclose what stayed unexercised with its consequences
 5. multimodal: What he meets is something he can feel
@@ -196,8 +198,10 @@ stop:    when it stops rather than keeps trying
    → Allocate only a significant occupancy: a device, device memory, or enough memory and CPU to starve another job
 4. grant: Allocation is hereditary and the person's limit binds the whole tree
    → Grant from what you were lent; when exhausted it travels up, and subdividing never multiplies it
-5. vram: It does not crash together with what is already running
-   → Check against what is held, leave headroom for the driver and fragmentation; if it does not fit, do not dispatch
+5. vram: Check against what is held and leave headroom for the driver and fragmentation; if it fits, fill it
+   - Cram it in: machine_time: it crashes together with what is running and both rerun [self]
+   - Leave too much headroom: person_time: a card idles while work that would fit queues [person]
+   → A crash costs more than a wait, so at the margin you yield
 6. preempt: Idle work yields and can be resumed
    → Make it yield with a message and a resume point after comparing the losses
 7. price_clock: You wait only when the wait is shorter than the work it discounts
@@ -280,8 +284,10 @@ grep -rn "session\\|issue#" docs/ # no session or tracker citation
    → Grant from what you were lent; when exhausted it travels up, and subdividing never multiplies it
 2. significant_only: You do not ask for a room nobody is using
    → Allocate only a significant occupancy: a device, device memory, or enough memory and CPU to starve another job
-3. vram: It does not crash together with what is already running
-   → Check against what is held, leave headroom for the driver and fragmentation; if it does not fit, do not dispatch
+3. vram: Check against what is held and leave headroom for the driver and fragmentation; if it fits, fill it
+   - Cram it in: machine_time: it crashes together with what is running and both rerun [self]
+   - Leave too much headroom: person_time: a card idles while work that would fit queues [person]
+   → A crash costs more than a wait, so at the margin you yield
 4. preempt: Idle work yields and can be resumed
    → Make it yield with a message and a resume point after comparing the losses
 5. queue: The waiter has a place and a trigger
