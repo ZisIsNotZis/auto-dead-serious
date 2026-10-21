@@ -27,6 +27,12 @@ The order of work has one hard constraint: two projects are mid-experiment, so n
 - Nine projects advance, two are `later` on the person's word, one is `dormant` and one is `early`.
 - The nine advancing projects each received the same first-orientation contract on this `go`; none had been dispatched before, and no project has a report back yet. A report that comes back is filed into that project's own directory, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
 
+## Who plans a project
+
+Root does not plan inside a project, and a package is not a plan. Dispatching implementation packages straight into a project makes root the thing the law forbids it to be: the planner of a node it does not own. A project that advances gets its own node — one agent, that directory, that document, that roadmap — and the node splits its own work. Root's acts are then exactly three: accept or refuse the milestone that node proposes, answer the `contract` report it raises about the contract root wrote, and pass a `direction` report upward unchanged.
+
+`node` is that agent, defined at `.pi/agents/node.md`; it reports to root and never to a person. The packages in flight when this rule was written are the last root-dispatched ones: each finishes, its report is filed under its project, and the project's node is launched to take the roadmap over. A node is not launched into an area that has a live writer, because two writers there produce a diff nobody owns.
+
 ## The loop after a report
 
 A first report is filed into the project it came from, in that project's `mail/`, because nothing about a project is filed above it. The milestone it proposes is accepted or refused there, in one line, before a second contract is written; a `contract` finding is answered there too, by rewriting the contract rather than by cancelling the package. Only the questions go up, and they go up through `mail/` addressed to `person`, where `tools/needs.py` renders them. This file therefore never names a project, and the scope check enforces that rather than trusting it.
