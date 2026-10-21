@@ -37,7 +37,7 @@ Working directory {project}/; your document and roadmap inside it; your report i
 
 spend
 machine_time, idle class; no device held exclusively; no money authorised beyond the development model; wall-clock 25 minutes for this advance, because the runtime kills a child at 30 and a killed child writes no report.
-Model deepseek/deepseek-flash, thinking medium. Terminator: the milestone, a decision beyond you, or the 25 minutes.
+The model that runs you is deepseek/deepseek-flash at thinking medium; a model your product calls at runtime is the one its row names, and the two are not interchangeable. Terminator: the milestone, a decision beyond you, or the 25 minutes.
 
 stop
 At 15 minutes, start no new package and land what exists. At the terminator report once and return; do not wait for root.
