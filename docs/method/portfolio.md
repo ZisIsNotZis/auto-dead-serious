@@ -4,11 +4,13 @@ Three tiers, and no fact lives in two of them.
 
 The law lives in `agent-policy/law/`, pinned as a submodule. It holds nothing about any project.
 
-`docs/plan/` holds the portfolio: which projects the root advances, the degree of agency each runs at, what each may spend, when spending it is cheapest, and which model serves its work. It names a project's plan by path and never restates a fact from it.
+`docs/plan/` holds the portfolio: what a name refers to on disk, which projects the root advances, the degree of agency each runs at, and which model serves its work. It does not say what a project is, where it keeps anything, or what state it is in, because those are facts of that project and a second copy is a second home for them.
 
 A project's node document is its own plan document, inside its own `docs/`, in whatever shape that project chose. The law does not dictate that shape, because no layer above a node decides how it splits.
 
-The test at the boundary: a portfolio row may carry a decision about a project. It may not carry a description of one. A sentence that describes a project belongs in that project.
+The test at the boundary, and it is the one this file failed twice: a sentence is the root's business only if answering it needs nothing from inside a child. A row may say that a project advances. It may not say what the project is, where its plan lives, whether its directory has a document in it, or what it will spend, because all four require looking, and looking is the child's work.
+
+A child's spend is declared by the child in its contract. A child's missing document is found by the child and raised. A child's emptiness is a fact the child reports, not one the root audits.
 
 ## Two models, not one
 

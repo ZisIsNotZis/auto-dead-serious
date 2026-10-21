@@ -1,14 +1,14 @@
-project	dir	status	level	spend	cost	window	model_work	model_product	entrance
-agentic-animation	agentic-animation	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash	-	none
-agentworld	agentworld	dormant	recommend	metered-compute	product fleet, not yet existing	shift	deepseek-flash	gpt-6-luna	none
-backseat	backseat	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash	gpt-6-luna	none
-dojo	dojo	active	recommend	metered-compute	product fleet, small today	shift	deepseek-flash	gpt-6-luna	none
-flashdb	flashdb	active	recommend	time,exclusive,idle-compute	cpu and disk, benchmark queue, docker	any	deepseek-flash	-	none
-helpagent	helpagent	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash	gpt-6-luna	none
-learn_draw	learn_draw	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash	-	WORKSPACE.md
-local_lm_research	local_lm_research	later	recommend	exclusive,time	gpu, occupancy	any	deepseek-flash	-	none
-nomos	nomos	active	recommend	exclusive,metered-compute	gpu, dataset, review tokens	any	deepseek-flash	-	none
-pathlm	pathlm	later	recommend	exclusive,time	gpu, experiment occupancy	any	deepseek-flash	-	none
-petfleet	petfleet	active	recommend	idle-compute,time	the person's taste	any	deepseek-flash	-	none
-prompt_fixed_point	prompt_fixed_point	early	recommend	time	discussion	n/a	deepseek-flash	-	none
-sys_gal	sys_gal	active	recommend	metered-compute	product fleet, medium	shift	deepseek-flash	gpt-6-luna	none
+project	dir	status	level	model_work	model_product
+agentic-animation	agentic-animation	active	recommend	deepseek-flash	-
+agentworld	agentworld	dormant	recommend	deepseek-flash	gpt-6-luna
+backseat	backseat	active	recommend	deepseek-flash	gpt-6-luna
+dojo	dojo	active	recommend	deepseek-flash	gpt-6-luna
+flashdb	flashdb	active	recommend	deepseek-flash	-
+helpagent	helpagent	active	recommend	deepseek-flash	gpt-6-luna
+learn_draw	learn_draw	active	recommend	deepseek-flash	-
+local_lm_research	local_lm_research	later	recommend	deepseek-flash	-
+nomos	nomos	active	recommend	deepseek-flash	-
+pathlm	pathlm	later	recommend	deepseek-flash	-
+petfleet	petfleet	active	recommend	deepseek-flash	-
+prompt_fixed_point	prompt_fixed_point	early	recommend	deepseek-flash	-
+sys_gal	sys_gal	active	recommend	deepseek-flash	gpt-6-luna

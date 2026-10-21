@@ -1,8 +1,10 @@
 # Portfolio
 
-This workspace advances thirteen projects, of which three are experiments rather than products. The portfolio exists because nothing else held the answers to four questions the root must answer without reading a project: whether a project is advanced at all, how much authority its nodes hold, what it may spend, and when spending it is cheapest.
+This workspace holds thirteen names, nine of which advance now, two of which wait for the person's word, one of which waits for a product that does not exist, and one of which is still a discussion.
 
-The order of work follows from what can and cannot be started. Two projects are mid-experiment, so the root cannot touch them until the person says they have stopped; that is the only hard ordering constraint and it removes nothing else from the schedule. After that the first work goes to what a person can experience soonest, because a felt result is the only evidence that the standard is right before it is applied thirteen times. Projects that need a product which does not exist yet wait, because their first step is a decision rather than work. The one project still in discussion waits for the rest to be arranged, which is what the person asked for.
+The portfolio holds the six things a root must decide without looking inside anything: what a name refers to on disk, whether that name advances, how much authority its nodes hold, which model runs its work, and which model its product calls at runtime. Everything about a project's insides belongs to that project, so this file does not say what any project is, where it keeps its documents, or what state it is in. A root that knew those things would be maintaining a second copy of somebody else's layout.
+
+The order of work has one hard constraint: two projects are mid-experiment, so nothing touches them until the person says they have stopped. Beyond that, every advancing project receives the same first contract, which is to orient itself and report what it proposes next. The root learns a project by asking it, not by reading it, so the order in which projects are asked costs nothing and needs no plan.
 
 ## Milestones
 
@@ -12,31 +14,22 @@ The order of work follows from what can and cannot be started. Two projects are 
 
 ## Work packages
 
-- `register` — the thirteen projects recorded with a level, a spend class and a pointer. Done.
-- `entrance` — each project carries one document at its root that says how to start, how to continue, what is where when that differs from convention, and what is no longer current. The register records only whether that door exists, never where the project keeps its insides, because a parent that knows the path has taken on a coupling. Twelve of thirteen lack it today, so for each of them the first package is the door itself.
-- `petfleet-notes` — the person's product notes land in that project rather than in a conversation. Done.
-- `join-orders` — the takeover of a running project written as its own first step, so the transition is a decision rather than an interruption.
-- `go` — permission to act by the law and this register as they stand, not a list of launches. Every active project advances until its own advance ends: its milestone reached, a decision the root cannot take, or its granted spend exhausted, whichever comes first. That terminator is what bounds how many are alive at once, so no launch list is needed and nine simultaneous dispatches cannot happen by accident. Each contract declares its spend and its expected time, and the root decides shift-or-now by the wait-is-shorter-than-the-work rule rather than by the hour alone. Only one child may hold the gpu.
-- `inbox` — a question no layer could answer is a directory under `docs/raise/`, and `tools/needs.py` renders `docs/needs-you.md` from it. On each new item the root sends one line naming that file and the count, plus the new item; it never restates the queue, because a message that grows is a summary the law refuses and a cost paid on every turn.
+- `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
+- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan.
+- `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
+- `join-orders` — a takeover written as its own first contract, so the transition is a decision rather than an interruption.
 
 ## Current facts
 
-- Thirteen projects are in scope. Twelve are active, dormant or in discussion; two of those are running experiments and are not touched.
-- `agent-policy` is infrastructure, not a project: it holds the law and is pinned like a child.
+- Nine projects advance, two are `later` on the person's word, one is `dormant` and one is `early`.
+- `agent-policy` is infrastructure: it holds the law and is pinned like a child.
 - The price clock, stated by the person: Beijing time, weekdays 09:00–12:00 and 14:00–18:00 are peak, and everything else including weekends and public holidays is idle at half price.
-- The model rule, stated by the person: development uses the strongest available model, which today is `deepseek-flash`; a cheap model is for work a check decides rather than judgement, and a product's own calls run `gpt-6-luna`. `deepseek-pro`, `gpt-6.1-sol`, the volcano plan, `glm-5.3-flash` and the copilot pool are each unused for a reason recorded in `docs/method/models.md`.
-- The price clock is a reason to wait, never a reason to choose a weaker model.
-- A project with GPU or queue-bound work ignores the clock, because most of its wall-clock is spent waiting and its tokens are few. A project whose cost is tokens and whose work is a few hours waits for the idle window.
-- The register no longer names any project's plan path. That column was a coupling dressed as convenience: it made the root responsible for knowing a layout it does not own, and it produced two wrong absences in a row. `docs/method/entry.md` holds the replacement, and the search that once looked for a plan by filename now establishes only whether an entrance exists.
-- `agentic-animation` keeps milestone state in `docs/STATUS.md` and its forward programme, the art asset programme, in `docs/ART_ASSET_PROGRAM.md`. Its engine milestone is closed; the programme is what remains.
-- `local_lm_research` is a container in the sense this law means: `docs/plan/subprojects.md` owns which units exist, their goals, acceptance, dependencies and owners, and sixteen subprojects each own a `PLAN.md`. It also keeps a GPU lock and a resource table with a concurrency rule, which is the same discipline the law states, practised before it was written.
-- `prompt_fixed_point` has no plan because its repository has no commits, which is a fact about git rather than a search result.
-- `sys_gal`'s top-level `ROADMAP.md` is superseded by its own words and points at the v5 plan. The live plan is the v5 file.
-- `prompt_fixed_point` holds nothing yet and stays in discussion until the others are arranged.
+- The model rule, stated by the person, is in `docs/method/models.md`: development takes the strongest available model, a cheap one decides nothing that judgement decides, and the clock moves when a spend happens rather than what it buys.
+- A project's degree of agency is `recommend` until the person changes it for that project.
 
 ## Evidence
 
 - The register: `docs/plan/portfolio.tsv`.
-- The layout and the boundary between this file and a project: `docs/method/portfolio.md`.
+- The boundary between this file and a project: `docs/method/portfolio.md`.
 - The law: `agent-policy/law/`, pinned in `agent-policy`.
-- Per-project plans: the path column of the register.
+- What waits on the person: `docs/needs-you.md`.
