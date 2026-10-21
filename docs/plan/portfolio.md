@@ -17,7 +17,7 @@ Every advancing project receives the same first contract, which is to take the r
 ## Work packages
 
 - `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
-- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: ten manager contracts are out, one per advancing project.
+- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: ten manager contracts are written, one per advancing project, and none is launched — a pause arrived before the launch.
 - `orient` — the first contract root ran before the rule changed: one read-only package per advancing project, 15 minutes each, reporting what the project is, the milestone it proposes next with evidence, and any question it cannot answer. Done: nine reports are filed in their projects' `mail/`, and root's answer sits beside each.
 - `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
 - `join-orders` — the takeover is folded into `go`: a project root may now manage gets the same manager contract as the others. Done for the one; the one a live writer holds has none.
@@ -25,7 +25,7 @@ Every advancing project receives the same first contract, which is to take the r
 ## Current facts
 
 - Ten projects advance, one is `later` because a live writer holds it, one is `dormant` and one is `early`.
-- Every advancing project has its manager: one agent owning that directory, its document and its roadmap. Root plans inside no project.
+- Every advancing project is assigned a manager: one agent owning that directory, its document and its roadmap. Root plans inside no project. None is running yet, so no project has a live writer and nothing is in flight.
 - Each advancing project's `mail/` holds root's answer naming the next milestone, except where the answer is the person's; those questions are in `docs/needs-you.md` and their projects advance only as far as the gate.
 
 ## Who plans a project
@@ -40,7 +40,7 @@ A report is filed into the project it came from, in that project's `mail/`, beca
 
 ## Running
 
-**2026-10-21, provider failure.** Five runs then in flight died together with a connection error from the model provider, within the same minute; the nine orientation packages had finished, and the five that followed all failed at once. None had written a file. The ten manager contracts were launched after that, against the same provider; whether it answers is read from the first report and not assumed here.
+**2026-10-21, provider failure.** Five runs then in flight died together with a connection error from the model provider, within the same minute; the nine orientation packages had finished, and the five that followed all failed at once. None had written a file. The ten manager contracts were written after that, against the same provider, and the launch was paused before any of them started; whether the provider answers is read from the first report and not assumed here.
 
 The ids, working directory and output log of whatever is live are not copied into this file: `subagent({action:"status"})` lists them with all three, so this file cannot drift from the truth.
 
