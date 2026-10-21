@@ -14,7 +14,7 @@ The existing private-project slug convention uses a trailing `_private`
 
 ## Local-only checkouts
 
-Two project directories are git repositories with no remote: `petfleet` and `prompt_fixed_point`. The parent index cannot pin them, so their absence from `.gitmodules` and from the index is deliberate rather than forgotten. They stay untracked here until each has a remote, because a pin to a commit nobody else can fetch is worse than an explained gap.
+One project directory is a git repository with no remote: `prompt_fixed_point`, which has no commits yet. Its absence from `.gitmodules` and from the index is deliberate rather than forgotten; it stays untracked until it has commits and a remote, because a pin to a commit nobody else can fetch is worse than an explained gap. `petfleet` had the same shape and now has a private remote and a pin, after a night of work sat on one disk.
 
 ## Inspection
 
