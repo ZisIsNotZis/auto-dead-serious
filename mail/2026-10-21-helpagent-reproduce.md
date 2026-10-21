@@ -21,6 +21,15 @@ before compaction, a few hundred KB after) plus the scripts, which makes the CI
 tables recomputable without a model server; or **re-run** the campaign from
 scratch, which is hours of metered wall-clock against a local model.
 
+**Correction, and it is a correction of my own numbers.** I wrote that the bytes
+were 775 MB across `n25`/`r2`/`r3`. They are **2.0 GB across 53 270 files**, and the
+extra 1.3 GB is not padding: the analysis script also opens `our-n5`, `n9` and
+`n17`, because seeds 1..17 predate the n25 wave. Copying only the three directories
+named would have made the head-to-head unrecomputable **and silently so** — a missing
+root reads as an empty list, so the same script prints `+0.06 [−3.35, +3.71]` over
+680 rows instead of `−0.320 [−3.520, +3.080]` over 1000, and raises nothing. A short
+home does not fail loudly; it reports parity.
+
 Separately, and not waiting on your answer: `/tmp` is one reboot from erasing the
 only home of three archived verdicts. The project's node is copying those bytes
 to a declared home with verified hashes now. That is a durability act, not a
