@@ -73,8 +73,8 @@ the producer's reasoning, which is what you asked for. B's writer was right to r
 and right about what a reviewer would strike: uniformity and palm anatomy are exactly blockers 3
 and part of 1. So R1a now has its first bound art disposition, and it is a failure, not a pass.
 
-The plan's repair cycle therefore opened: one scoped repair, then a re-review against the repaired
-revision with a fresh manifest (package 3 below). I took four directions as **assumed** so the
+The repair cycle the advance carries therefore opened: one scoped repair, then a re-review against the
+repaired revision with a fresh manifest (package 3 below). I took four directions as **assumed** so the
 writer is not left guessing, and I name what reversing each costs: the hand is under the plate with
 an unbroken near rim; the thumb opposes on the near side — which is the contract's own wording that
 v1's README records itself as having violated; digits vary in width and reach; the palm gains a
