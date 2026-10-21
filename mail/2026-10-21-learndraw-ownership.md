@@ -59,6 +59,28 @@ If either review returns blocking findings, R1a is not "still in flight": one sc
 the original writer and one re-review, then the study is reported **unresolved** with its image
 and its findings. I will not move that line, and I will not award a verdict myself.
 
+**Observation 1 has already returned, and it says BLOCK.** The review is archived verbatim at
+`evidence/reviews-r1a/B-hand-study-v1-image-review-1.md`: three blocking findings, five
+nonblocking. (1) The occlusion is inverted — the digits are drawn in front of the plate's near rim,
+so nothing visible carries the dish and the rim is cut where it must be foreground; (2) a radial
+spoke fan with concentric terracing in the well turns the bowl into a flat lens with one rim — the
+loudest artefact in the picture, and its cause was already named in B's own README (sub-pixel apex
+quads inflated 0.45 px, 60-step revolution flat-shaded); (3) the hand is five near-parallel
+near-equal prongs, no thumb opposition, no knuckle mass. Two of the three are the study contract's
+own named failure readings — "a hand intersecting a plate" and "fingers as rake tines". The
+reviewer stated it opened only the two PNGs and executed nothing, so the verdict is independent of
+the producer's reasoning, which is what you asked for. B's writer was right to refuse the verdict
+and right about what a reviewer would strike: uniformity and palm anatomy are exactly blockers 3
+and part of 1. So R1a now has its first bound art disposition, and it is a failure, not a pass.
+
+The plan's repair cycle therefore opened: one scoped repair, then a re-review against the repaired
+revision with a fresh manifest (package 3 below). I took four directions as **assumed** so the
+writer is not left guessing, and I name what reversing each costs: the hand is under the plate with
+an unbroken near rim; the thumb opposes on the near side — which is the contract's own wording that
+v1's README records itself as having violated; digits vary in width and reach; the palm gains a
+knuckle row and a heel. Reversal costs one full review cycle each, because each reversal leaves a
+blocker standing.
+
 ## (c) What I cannot answer
 
 **One grant: this node's own wall clock.** My 90 minutes end before both children return, so
@@ -67,7 +89,9 @@ report all need a second session of this node. Effort: I sized the two packages 
 *inside* the harness rather than the session (75- and 25-minute deadlines, checkpoint steer at
 65), committed every contract and run id before launching, and left the tree at a safe point —
 status current, both run ids in `work/wave12-contracts.md`, `git status` clean, so a kill now
-loses nothing but the wall clock. What would reopen it: nothing; it closes only with the grant.
+loses nothing but the wall clock. What would reopen it: nothing; it closes only with the grant. The B verdict landing inside this
+session made the grant less optional, not more: the repair returns in roughly 75 minutes from its
+launch, and the re-review that decides whether B is passable needs a session that is awake after that.
 
 Residual risk I am not asking you to answer, named so it is not a surprise: defect 6 of v1's
 review ("nearly all interior strokes free-terminate, and a single flat fill leaves overlap
@@ -81,8 +105,8 @@ a pose parameter change in `source/scene.py`, not a new construction.
 
 ## (d) The packages I dispatched, spend class and wall clock
 
-Both launched `async`, `fresh` context, `worktree: false`, from the checkout. No reservation is
-written for either: neither holds an exclusive resource.
+All three launched `async`, `fresh` context, `worktree: false`, from the checkout. No reservation is
+written for any: none holds an exclusive resource.
 
 1. **`r1a-a-bow-v2-repair`** — work package, **one writer**, owns exactly
    `evidence/A-bow-study-v2/`. Retune the turn geometry until the inherited law holds with the
@@ -109,7 +133,23 @@ short pole and its verdict is independent of the repair. One consequence I did a
 B **structural** review is deliberately not dispatched yet, because it would regenerate
 `check/` inside the directory the image reviewer is reading, which is a write into a frozen
 area mid-read; it goes out the moment the verdict lands, against the revision the verdict binds
-to.
+to. The verdict landed inside this session and it BLOCKED, so that structural pass now reviews
+the repaired revision rather than `5e12d36` — a mechanical pass over a construction that is
+about to change is work that has to be redone.
+
+3. **`r1a-b-hand-repair-1`** — work package, **one writer**, owns a new directory
+   `evidence/B-hand-study-v1-r1/` copied from the frozen revision; `B-hand-study-v1/` is left
+   untouched because it is the revision the BLOCK binds to by hash. Repairs the three blockers
+   with the four directions in (b), a test and a failing mutation per blocker, fresh
+   `check/`+manifest, a README carrying a finding-to-repair table against the archived review.
+   **Spend: `idle-compute` + `time`.** **Wall clock 75 min, hard stop, checkpoint at 65.** Run
+   `eec45d67-36fe-4af2-8454-ef17ebeaa3e1` — launched the same session, forty minutes after the
+   verdict returned, so the repair does not wait on the grant this message is asking for.
+
+**Cut but not launched** (`work/wave13-contracts.md`): the A v2 image review, blind to v2's
+producer and **not** given the six v1 defects as a checklist, because a reviewer handed the
+previous verdict answers the previous verdict; and the B structural review against the repaired
+revision.
 
 ## effort
 
