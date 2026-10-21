@@ -8,6 +8,10 @@ It also holds what a root must decide without looking inside anything: what a na
 
 Every advancing project receives the same first contract, which is to take the roadmap over and carry it to its next milestone. The root learns a project by asking it, not by reading it, so the order in which projects are asked costs nothing and needs no plan.
 
+## Decided while the person was away
+
+The person left on the evening of 2026-10-21 and said that a question whose answer follows from root's model of him may be answered for him, and that anything he must review or decide waits for him. Six decisions were taken under that instruction, each recorded as `assumed` with root as the decider and each filed where it changes work — inside the project it belongs to, never in this file. None is a milestone acceptance: every milestone waits for him.
+
 ## The first contract
 
 One text, dispatched to each advancing project with `{project}` replaced by its directory name. It is written once because ten copies that must stay in step are ten chances to drift.
@@ -50,7 +54,7 @@ A manager that finds a field of this contract unreadable raises `contract` rathe
 ## Work packages
 
 - `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
-- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Started: the contract below is written and the ten managers it addresses are dispatched.
+- `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Running: the ten managers came back or are still out; each return was judged by one fresh reviewer against the project's own acceptance, the verdict was filed into that project's `inbox/` with the next contract, and the manager was dispatched again. A milestone that passed its review still waits for the person's acceptance.
 - `orient` — the first contract root ran before the rule changed: one read-only package per advancing project, 15 minutes each, reporting what the project is, the milestone it proposes next with evidence, and any question it cannot answer. Done: nine reports are filed in their projects' `mail/`, and root's answer sits beside each.
 - `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
 - `join-orders` — the takeover is folded into `go`: a project root may now manage gets the same manager contract as the others. Done for the one; the one a live writer holds has none.
@@ -59,7 +63,8 @@ A manager that finds a field of this contract unreadable raises `contract` rathe
 
 - Ten projects advance, one is `later` because a live writer holds it, one is `dormant` and one is `early`.
 - Every advancing project is assigned a manager: one agent owning that directory, its document and its roadmap, and the only writer in it. Root plans inside no project.
-- Root's answer to a project's question goes into that project's `mail/`; the questions that are the person's are in `docs/needs-you.md`, and a project advances only as far as a gate the person has not passed.
+- Root's answer to a project's question goes into that project's `inbox/`; the questions that are the person's are in `docs/needs-you.md`, and a project advances only as far as a gate the person has not passed.
+- The tree's message directories are still named `mail/` while the law calls them `inbox/`; each manager migrates its own on next touch, and root writes new messages to `inbox/`.
 
 ## Who plans a project
 
@@ -73,7 +78,9 @@ A report is filed into the project it came from, in that project's `mail/`, beca
 
 ## Running
 
-**2026-10-21, provider failure.** Five runs then in flight died together with a connection error from the model provider, within the same minute; the nine orientation packages had finished, and the five that followed all failed at once. None had written a file. The ten manager contracts were written after that, against the same provider, and the launch was paused before any of them started; whether the provider answers is read from the first report and not assumed here.
+**2026-10-21, the first large-scale run.** The person said `go` and left, so all ten advanced at once. Two lessons are in the record rather than in a rule. Ten dispatches went out before anyone checked that the manager role resolves from a child's own directory; the role lived in the root's `.pi/agents/` and eight of the ten could not find it, so they failed at once and cost their full token price for nothing. One canary dispatch would have found it in seconds, and the role is now reachable from every directory rather than from one.
+
+The second: the returned reports were dense enough that reading them myself would have made root the judge of work it can no longer see the inside of, so each went to a fresh reviewer whose verdict was filed into the project. The reviews found three things a manager's own reading would not have: a commit one `git gc` away from being lost, a milestone marked done whose criterion the tree contradicts, and an advance of 199 prose lines and zero code lines.
 
 The ids, working directory and output log of whatever is live are not copied into this file: `subagent({action:"status"})` lists them with all three, so this file cannot drift from the truth.
 
