@@ -1,14 +1,14 @@
-project	dir	status	level	model_work	model_product
-agentic-animation	agentic-animation	active	recommend	deepseek-flash	-
-agentworld	agentworld	dormant	recommend	deepseek-flash	gpt-6-luna
-backseat	backseat	active	recommend	deepseek-flash	gpt-6-luna
-dojo	dojo	active	recommend	deepseek-flash	gpt-6-luna
-flashdb	flashdb	active	recommend	deepseek-flash	-
-helpagent	helpagent	active	recommend	deepseek-flash	gpt-6-luna
-learn_draw	learn_draw	active	recommend	deepseek-flash	-
-local_lm_research	local_lm_research	later	recommend	deepseek-flash	-
-nomos	nomos	active	recommend	deepseek-flash	-
-pathlm	pathlm	later	recommend	deepseek-flash	-
-petfleet	petfleet	active	recommend	deepseek-flash	-
-prompt_fixed_point	prompt_fixed_point	early	recommend	deepseek-flash	-
-sys_gal	sys_gal	active	recommend	deepseek-flash	gpt-6-luna
+project	dir	purpose	status	level	model_work	model_product
+agentic-animation	agentic-animation	a written story becomes a finished, narrated 2D animation, locally and deterministically	active	recommend	deepseek-flash	-
+agentworld	agentworld	an event-driven civilization simulator that maximises causal fidelity under a finite budget	dormant	recommend	deepseek-flash	gpt-6-luna
+backseat	backseat	a local-first companion that rides along and comments until handed the wheel	active	recommend	deepseek-flash	gpt-6-luna
+dojo	dojo	a local proof of concept for turning ideas, claims and counterexamples into traceable discussion	active	recommend	deepseek-flash	gpt-6-luna
+flashdb	flashdb	a single-node document store that learns its own physical layout from a workload	active	recommend	deepseek-flash	-
+helpagent	helpagent	a harness that runs a small local model through an ordinary engineering process and measures it honestly	active	recommend	deepseek-flash	gpt-6-luna
+learn_draw	learn_draw	learning the drawing skill itself, expressed as programmatic art rather than generated images	active	recommend	deepseek-flash	-
+local_lm_research	local_lm_research	a reproducible workbench for measuring local language-model inference factors	later	recommend	deepseek-flash	-
+nomos	nomos	compressing a personal operating method into a small model by fine-tuning	active	recommend	deepseek-flash	-
+pathlm	pathlm	a research meta-repository that publishes an inspectable tree of studies rather than a model	later	recommend	deepseek-flash	-
+petfleet	petfleet	a fleet of small desktop figures, one per process, arranged as the family tree those processes declare	active	recommend	deepseek-flash	-
+prompt_fixed_point	prompt_fixed_point	unknown: the repository has no commits	early	recommend	deepseek-flash	-
+sys_gal	sys_gal	a Chinese narrative-simulation workspace studying autonomous characters and information boundaries	active	recommend	deepseek-flash	gpt-6-luna

@@ -2,7 +2,9 @@
 
 This workspace holds thirteen names, nine of which advance now, two of which wait for the person's word, one of which waits for a product that does not exist, and one of which is still a discussion.
 
-The portfolio holds the six things a root must decide without looking inside anything: what a name refers to on disk, whether that name advances, how much authority its nodes hold, which model runs its work, and which model its product calls at runtime. Everything about a project's insides belongs to that project, so this file does not say what any project is, where it keeps its documents, or what state it is in. A root that knew those things would be maintaining a second copy of somebody else's layout.
+The portfolio holds a project's goal at the level the person states it, because a name alone does not say which drawing project is meant. A goal is stable and it is not a description of how the project works; anything that would shift when the project reorganises belongs to the project and not here.
+
+It also holds what a root must decide without looking inside anything: what a name refers to on disk, whether that name advances, how much authority its nodes hold, which model runs its work, and which model its product calls at runtime. Everything about a project's insides belongs to that project, so this file does not say what any project is, where it keeps its documents, or what state it is in. A root that knew those things would be maintaining a second copy of somebody else's layout.
 
 The order of work has one hard constraint: two projects are mid-experiment, so nothing touches them until the person says they have stopped. Beyond that, every advancing project receives the same first contract, which is to orient itself and report what it proposes next. The root learns a project by asking it, not by reading it, so the order in which projects are asked costs nothing and needs no plan.
 
