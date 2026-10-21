@@ -16,6 +16,8 @@ The order of work follows from what can and cannot be started. Two projects are 
 - `plan-pointer` — the register names each project's plan by the path that file actually has, not by a directory this repository hopes exists. Two projects have no plan found by that search, and the row says `unknown` rather than inventing one; the first work in either of them is to find or write it.
 - `petfleet-notes` — the person's product notes land in that project rather than in a conversation. Done.
 - `join-orders` — the takeover of a running project written as its own first step, so the transition is a decision rather than an interruption.
+- `go` — one word starts the nine active projects. Each dispatch declares its spend and its expected time in the contract, and the root decides shift-or-now against the wait-is-shorter-than-the-work rule rather than against the hour alone. Only one child may hold the gpu.
+- `inbox` — a question no layer could answer is a directory under `docs/raise/`, and `tools/needs.py` renders `docs/needs-you.md` from it. On each new item the root sends one line naming that file and the count, plus the new item; it never restates the queue, because a message that grows is a summary the law refuses and a cost paid on every turn.
 
 ## Current facts
 
