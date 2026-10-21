@@ -341,10 +341,14 @@
 - **context_pressure** — On interruption, context loss or a resource stop, write down the artefacts, the revision, the decisions, the grants, the job identities, the remaining acceptance and the next action before yielding.
 - **subagent_scope** — State a child's responsibility scope together with its tools and its limits, because a child that has to discover its own scope spends its budget exploring.
 - **model_cost** — Name the model and the thinking level in the dispatch rather than relying on a default, because an omitted model resolves silently to the cheapest one while a wrong model fails loudly.
-289 rules
+290 rules
 
 - **external_compute** — External execution and compute use only provided or authorised resources within spending, privacy and safety bounds, and routine public reading is not authorisation to execute externally.
 - **model_choice** — Development uses the strongest model available, because doing the work well beats doing it cheaply and a weaker model's mistakes come back as the person's time. A cheap model serves automation, where success is decided by a check rather than by judgement, and the site's declared table decides which is which.
+
+## Communication (1)
+
+- **result_not_inventory** — Bring the result, not a tally of what went wrong on the way. A report upward carries what is now true, what it cost and what is needed; a catalogue of errors that changed nothing is the author's bookkeeping, and the person pays for it in the only currency he has.
 
 ## Principles (12)
 
