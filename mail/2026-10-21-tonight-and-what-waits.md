@@ -23,6 +23,10 @@ What waits for you, one line each, and nothing else does:
 
 All ten projects advanced tonight. Five came back, were reviewed by a fresh reader, and went out again on the verdict; the rest were still working when this was written.
 
+## one defect in the new law, found by a reviewer
+
+Your Inbox section says a message carries four header lines — kind, from, spend, id — and no addressee, because direction is the directory. `tools/needs.py` routes by a `to: person` line and refuses to render a file without one, so the tree cannot obey both. Root wrote tonight's messages with five lines to keep the renderer working. One of the two changes: either the tool learns that `mail/` at the root is addressed to you, or the law keeps `to:`.
+
 ## effort
 
 One canary would have caught the manager role failing to resolve from a child's directory; ten dispatches went out instead, and eight of them failed before writing a file. That cost is root's, not yours, and the role is now reachable from every directory.
