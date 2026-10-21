@@ -19,7 +19,8 @@ Read this first: six decisions were taken while you were out, each recorded as `
 
 What waits for you, one line each, and nothing else does:
 - nomos M4: is "−12.2pp, interval excludes 0, sign survives the reference implementation" the version the frozen claim may use?
-- petfleet M3: look at `docs/media/m3-fleet.png` and `docs/media/m3-boxes.png` — is that the fleet you meant?
+- petfleet M3: look at `docs/media/m3-boxes.png` — is that the fleet you meant? root looked first: that one reads cleanly at a glance, the other one did not and is being re-captured.
+- learn_draw R1a: two images to judge, both tracked and rebuildable — `A-bow-study-v2/check/draft-fullres.png` and `B-hand-study-v1-r1/check/draft-fullres.png` under `.scratch/35-r1-articulated-study/evidence/`. Root looked first: both are real full-resolution renders with nothing broken, and root's own reading — inference, not a verdict — is that the hand reads as a hand while the bow does not read as a bow at this size.
 - agentic-animation: which framing wins, `zoom 0.75` with heads or `zoom 1` with a real follow; and how large must a bounce be.
 - dojo M2: your confirmation of the M1/M1.5 checkpoints, which the advance did not presume.
 - helpagent M1: reached at tag `preprint-v1` — `python3 bench/checks/m1_acceptance.py` prints OK. Say whether the preprint is published, because a push or a DOI is yours and not root's.
