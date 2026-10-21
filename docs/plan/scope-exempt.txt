@@ -1,0 +1,14 @@
+# Files above the projects that name one, with the reason each may.
+# A line is: path-glob<TAB>reason
+README.md	the workspace front page, which lists each project with a one-line description and a score
+README.zh-CN.md	the same page in Chinese
+WORKSPACE.md	checkout facts: which directories have no remote, so the pin gap is explained
+docs/plan/catalogue.md	the curation judgement, with its criteria
+docs/plan/catalogue-curation.md	the curation judgement, with its criteria
+docs/plan/catalogue-fast.md	the curation judgement, with its criteria
+docs/plan/catalogue-redesign.md	the curation judgement, with its criteria
+docs/product/catalogue.md	the curation judgement, with its criteria
+docs/product/catalogue-calibration.md	the curation judgement, with its criteria
+docs/result/catalogue*.md	the curation judgement, with its criteria
+docs/result/catalogue/*.md	the curation judgement, with its criteria
+docs/result/catalogue-redesign/*.md	the curation judgement, with its criteria
