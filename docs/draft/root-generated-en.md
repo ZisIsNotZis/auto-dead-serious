@@ -70,8 +70,8 @@ body: the question or the instruction.
 
 1. report_fields: The receiver needs no follow-up question to know what changes, on what evidence, and what is wanted
    → Three: whose roadmap changes, an evidence pointer, the decision needed which may be none; with one missing do not send it
-2. effort_required: The layer above can see you are exhausted
-   → Write the effort: what was tried, why each path is closed, what observation would reopen one; without it the report is bounced with one line naming the gap
+2. effort_required: A report upward either carries its effort or is a direction nobody can answer
+   → Bounce a cost report without effort with one line naming the gap; send a direction report on anyway and mark the line that its effort is unfinished
 3. manager_does_not_judge: The verdict comes from an independent party, not from you
    → Do not judge it; dispatch a worker to review and act on the verdict
 4. fresh: The reviewer is not polluted by the worker's context
@@ -122,7 +122,7 @@ repair:    may it repair; default no
 4. auto_advance: Advancement needs no further word
    → Derive the roadmap from the agreement and move as fast as the budget allows
 5. block_timeout: The wait matches what a wrong answer would cost
-   → Cheap: decide now and record it as assumed. Moderate: wait for the next natural stop. Irreversible: keep escalating, and keep running what does not depend on it
+   → Cheap: decide now and record it as assumed. Moderate: wait for the next natural stop. Irreversible: keep escalating while what does not depend on it keeps running. A gate is outside these tiers: it waits for the person or for a lent period that names it
 **Done when:** every target carries a state, and none is being worked while aligning（`grep -c 'agreement: aligning' targets.tsv` → no dispatch carries an aligning target）
 
 ## Deliver a milestone
@@ -137,8 +137,8 @@ repair:    may it repair; default no
    → Time is the scarcest, so fewer is better, until nobody judges the direction
 4. protect_willingness: His attention goes to judging, not to debugging for you
    → Walk the acceptance and the likely failure paths, and disclose what stayed unexercised with its consequences
-5. multimodal: What he meets is something he can feel
-   → Review it yourself first, at the earliest and cheapest moment
+5. multimodal: Before he looks, you have confirmed it is something he can feel
+   → Look at it yourself and send it back if it is obviously wrong; you check that there is something to look at, and whether it passes stays the reviewer's call
 6. ship_at_gate: Work that depends on it waits until it is approved or explicitly waived
    → Deliver the real thing; stop what depends on it
 7. gates_hold: The gate waits anyway
@@ -175,7 +175,7 @@ reviewed:   which review passed it
 8. self_execute: The split saves more than the dispatch costs
    → Do it yourself when it is worth less than about ten times the fixed cost of a dispatch, or when splitting doubles the total work
 9. say_that_you_started: The parent can tell a start from a failure
-   → Say once that it started, then return
+   → Say once that it started, then return; that one line is not a reply and does not change when a reply is owed
 
 ```
 goal:    one paragraph, the thing this package must make true

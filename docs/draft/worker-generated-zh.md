@@ -87,8 +87,8 @@
    → 三样：谁的路线图会变、证据指针、需要的决定（可以是无）；缺一样就不发
 3. completion: 它是一份“决定为无”的报告
    → 报给父节点，带证据指针
-4. effort_required: 上一层能看出你已经耗尽
-   → 写 effort：试过什么、每条路为什么封死、什么观察能重开一条；没写的退回并一行写明缺什么
+4. effort_required: 上一层的报告要么带着努力，要么是一份无法回答的 direction
+   → cost 缺努力就退回并一行写明缺什么；direction 缺努力照样上送，在行里标一句“努力未完成”
 5. bind_to_revision: 它绑在一个能被指认的修订上
    → 写 commit 或 worktree 哈希、命令和结果；修订一动，重跑被作废的检查
 **判据：** 一份报告、三样齐、绑在修订上（`echo` → one message, then stopped）

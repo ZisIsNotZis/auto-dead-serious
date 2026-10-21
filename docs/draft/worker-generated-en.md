@@ -87,8 +87,8 @@ These hold in every state, so no step below repeats them:
    → Three: whose roadmap changes, an evidence pointer, the decision needed which may be none; with one missing do not send it
 3. completion: It is a report whose decision is none
    → Report it with an evidence pointer
-4. effort_required: The layer above can see you are exhausted
-   → Write the effort: what was tried, why each path is closed, what observation would reopen one; without it the report is bounced with one line naming the gap
+4. effort_required: A report upward either carries its effort or is a direction nobody can answer
+   → Bounce a cost report without effort with one line naming the gap; send a direction report on anyway and mark the line that its effort is unfinished
 5. bind_to_revision: It is bound to a revision that can be named
    → Name the commit or worktree hash, the commands and the results; when the revision moves, rerun the checks it invalidated
 **Done when:** one report, three fields, bound to a revision（`echo` → one message, then stopped）
