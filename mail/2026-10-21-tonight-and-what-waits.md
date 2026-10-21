@@ -19,7 +19,7 @@ Read this first: six decisions were taken while you were out, each recorded as `
 
 What waits for you, one line each, and nothing else does:
 - nomos M4: is "−12.2pp, interval excludes 0, sign survives the reference implementation" the version the frozen claim may use?
-- petfleet M3: look at `docs/media/m3-boxes.png` — is that the fleet you meant? root looked first: that one reads cleanly at a glance, the other one did not and is being re-captured.
+- petfleet M3: look at `docs/media/m3-fleet.png` and `docs/media/m3-boxes.png` — is that the fleet you meant? root looked at both twice: the first `m3-fleet.png` had two names you could not read at this size, petfleet found the cause (the name was painted inside the figure's own window and a neighbour's window stood over it) and gave every name its own window; root's second look reads all seven names, and one figure sits with a neighbour's window over its shoulder rather than at it.
 - learn_draw R1a: two images to judge, both tracked and rebuildable — `A-bow-study-v2/check/draft-fullres.png` and `B-hand-study-v1-r1/check/draft-fullres.png` under `.scratch/35-r1-articulated-study/evidence/`. Root looked first: both are real full-resolution renders with nothing broken, and root's own reading — inference, not a verdict — is that the hand reads as a hand while the bow does not read as a bow at this size.
 - agentic-animation: which framing wins, `zoom 0.75` with heads or `zoom 1` with a real follow; and how large must a bounce be.
 - dojo M2: your confirmation of the M1/M1.5 checkpoints, which the advance did not presume.
