@@ -5,5 +5,6 @@ set -e
 cd "$(git rev-parse --show-toplevel)"
 test -f agent-policy/tools/law.py || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
 python3 agent-policy/tools/law.py --check
+python3 agent-policy/tools/build.py --check
 python3 tools/needs.py --check
 exec python3 tools/scope.py --check
