@@ -13,7 +13,7 @@ The order of work follows from what can and cannot be started. Two projects are 
 ## Work packages
 
 - `register` — the thirteen projects recorded with a level, a spend class and a pointer. Done.
-- `no-plan` — the two projects with no plan document of their own get one before any work in them starts, since a node without a roadmap has nothing to be measured against.
+- `plan-pointer` — the register names each project's plan by the path that file actually has, not by a directory this repository hopes exists. Two projects have no plan found by that search, and the row says `unknown` rather than inventing one; the first work in either of them is to find or write it.
 - `petfleet-notes` — the person's product notes land in that project rather than in a conversation. Done.
 - `join-orders` — the takeover of a running project written as its own first step, so the transition is a decision rather than an interruption.
 
@@ -22,9 +22,11 @@ The order of work follows from what can and cannot be started. Two projects are 
 - Thirteen projects are in scope. Twelve are active, dormant or in discussion; two of those are running experiments and are not touched.
 - `agent-policy` is infrastructure, not a project: it holds the law and is pinned like a child.
 - The price clock, stated by the person: Beijing time, weekdays 09:00–12:00 and 14:00–18:00 are peak, and everything else including weekends and public holidays is idle at half price.
-- The model split, stated by the person: work that advances a project runs `deepseek-flash:low`; a product's own agent calls run `gpt-6-luna:low`, which has no price clock and is cheaper but weaker.
+- The model rule, stated by the person: development uses the strongest available model, which today is `deepseek-flash`; a cheap model is for work a check decides rather than judgement, and a product's own calls run `gpt-6-luna`. `deepseek-pro`, `gpt-6.1-sol`, the volcano plan, `glm-5.3-flash` and the copilot pool are each unused for a reason recorded in `docs/method/models.md`.
+- The price clock is a reason to wait, never a reason to choose a weaker model.
 - A project with GPU or queue-bound work ignores the clock, because most of its wall-clock is spent waiting and its tokens are few. A project whose cost is tokens and whose work is a few hours waits for the idle window.
-- `learn_draw` and `sys_gal` have no plan document in their own tree. That is recorded here rather than filled in, because a portfolio row may name a gap but may not invent the project's plan.
+- Both projects that were first recorded as having no plan do have one: `learn_draw/docs/drawing/roadmap.md` and `sys_gal/契约失效时请勿喂猫/v5/docs/V5-ROADMAP.md`. The earlier entry was wrong because it looked for a directory named `docs/plan` and inferred absence from the path, which is not a search. `agentic-animation` and `local_lm_research` remain `unknown` under a real search.
+- `sys_gal`'s top-level `ROADMAP.md` is superseded by its own words and points at the v5 plan. The live plan is the v5 file.
 - `prompt_fixed_point` holds nothing yet and stays in discussion until the others are arranged.
 
 ## Evidence

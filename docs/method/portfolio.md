@@ -12,7 +12,7 @@ The test at the boundary: a portfolio row may carry a decision about a project. 
 
 ## Two models, not one
 
-Work that advances a project runs on the root's own model. A product's own agent calls are the product's cost, not the root's, so they are named in the portfolio row and dispatched by that name. This keeps a project from silently spending the development model on its own runtime, which is the expense that grows without a person noticing.
+Work that advances a project runs on the root's own model. A product's own agent calls are the product's cost, not the root's, so they are named in the portfolio row and dispatched by that name. This keeps a project from silently spending the development model on its own runtime, which is the expense that grows without a person noticing. `docs/method/models.md` holds which model is which and why the cheap one does not advance work.
 
 ## Where the spend rule lives
 

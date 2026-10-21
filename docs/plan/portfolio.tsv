@@ -1,14 +1,14 @@
 project	dir	status	level	spend	cost	window	model_work	model_product	plan
-agentic-animation	agentic-animation	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash:low	-	docs/plan
-agentworld	agentworld	dormant	recommend	metered-compute	product fleet, not yet existing	shift	deepseek-flash:low	gpt-6-luna:low	docs/plan
-backseat	backseat	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash:low	gpt-6-luna:low	docs/ROADMAP.md
-dojo	dojo	active	recommend	metered-compute	product fleet, small today	shift	deepseek-flash:low	gpt-6-luna:low	docs/plan
-flashdb	flashdb	active	recommend	time,exclusive,idle-compute	cpu and disk, benchmark queue, docker	any	deepseek-flash:low	-	docs/plan
-helpagent	helpagent	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash:low	gpt-6-luna:low	docs/ROADMAP.md
-learn_draw	learn_draw	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash:low	-	unknown
-local_lm_research	local_lm_research	later	recommend	exclusive,time	gpu, occupancy	any	deepseek-flash:low	-	docs/docs/plan
-nomos	nomos	active	recommend	exclusive,metered-compute	gpu, dataset, review tokens	any	deepseek-flash:low	-	docs/plan
-pathlm	pathlm	later	recommend	exclusive,time	gpu, experiment occupancy	any	deepseek-flash:low	-	docs/plan.md
-petfleet	petfleet	active	recommend	idle-compute,time	the person's taste	any	deepseek-flash:low	-	docs/plan
-prompt_fixed_point	prompt_fixed_point	early	recommend	time	discussion	n/a	deepseek-flash:low	-	none
-sys_gal	sys_gal	active	recommend	metered-compute	product fleet, medium	shift	deepseek-flash:low	gpt-6-luna:low	unknown
+agentic-animation	agentic-animation	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash	-	unknown
+agentworld	agentworld	dormant	recommend	metered-compute	product fleet, not yet existing	shift	deepseek-flash	gpt-6-luna	docs/ROADMAP.md
+backseat	backseat	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash	gpt-6-luna	docs/ROADMAP.md
+dojo	dojo	active	recommend	metered-compute	product fleet, small today	shift	deepseek-flash	gpt-6-luna	docs/plan.md
+flashdb	flashdb	active	recommend	time,exclusive,idle-compute	cpu and disk, benchmark queue, docker	any	deepseek-flash	-	docs/roadmap.md
+helpagent	helpagent	active	recommend	metered-compute	product tokens, moderate	shift	deepseek-flash	gpt-6-luna	docs/ROADMAP.md
+learn_draw	learn_draw	active	recommend	time,metered-compute	tokens, image reading	shift	deepseek-flash	-	docs/drawing/roadmap.md
+local_lm_research	local_lm_research	later	recommend	exclusive,time	gpu, occupancy	any	deepseek-flash	-	unknown
+nomos	nomos	active	recommend	exclusive,metered-compute	gpu, dataset, review tokens	any	deepseek-flash	-	docs/plan/plan.md
+pathlm	pathlm	later	recommend	exclusive,time	gpu, experiment occupancy	any	deepseek-flash	-	docs/plan.md
+petfleet	petfleet	active	recommend	idle-compute,time	the person's taste	any	deepseek-flash	-	docs/plan/PLAN.md
+prompt_fixed_point	prompt_fixed_point	early	recommend	time	discussion	n/a	deepseek-flash	-	none
+sys_gal	sys_gal	active	recommend	metered-compute	product fleet, medium	shift	deepseek-flash	gpt-6-luna	契约失效时请勿喂猫/v5/docs/V5-ROADMAP.md
