@@ -16,6 +16,7 @@ Read this first: six decisions were taken while you were out, each recorded as `
 | 6 | agentic-animation | slice A is repaired rather than stopped, starting with the packages that need no taste from you | the workset is already split; stopping discards it |
 | 7 | agentic-animation | the renderer gains a per-actor depth order instead of the convention that draws every actor over the set | under that convention no serve can cross the net, so there is nothing to taste |
 | 8 | backseat | a second real run, on the product's own model this time: up to six hours of idle machine and a few dollars | the first run produced eight judgeable rows, and the tradeoff below needs a population |
+| 9 | learn_draw | the hand is repaired before the bow gets a fourth attempt | three bow attempts each cured the class the last review named; the hand's blockers are evidence defects on a green construction |
 
 What waits for you, one line each, and nothing else does:
 - nomos M4: is "−12.2pp, interval excludes 0, sign survives the reference implementation" the version the frozen claim may use?
