@@ -26,10 +26,12 @@ The order of work has one hard constraint: two projects are mid-experiment, so n
 
 - Nine projects advance, two are `later` on the person's word, one is `dormant` and one is `early`.
 - The nine advancing projects each received the same first-orientation contract on this `go`; none had been dispatched before, and no project has a report back yet. A report that comes back is filed into that project's own directory, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
-- `agent-policy` is infrastructure: it holds the law and is pinned like a child.
-- The price clock, stated by the person: Beijing time, weekdays 09:00–12:00 and 14:00–18:00 are peak, and everything else including weekends and public holidays is idle at half price.
-- The model rule, stated by the person, is in `docs/method/models.md`: development takes the strongest available model, a cheap one decides nothing that judgement decides, and the clock moves when a spend happens rather than what it buys.
-- A project's degree of agency is `recommend` until the person changes it for that project.
+
+## Running
+
+Nine orientation runs, launched together, declared at 15 minutes wall-clock each. A run silent past that is presumed stuck when this file is next read, and is cancelled rather than waited for, because it is read-only and would lose nothing.
+
+Their ids, working directory and output log are not copied here: `subagent({action:"status"})` lists the nine active async runs with all three, so the schedule is one command away and this file cannot drift from it. A report that arrives is filed under the directory it came from, and the milestone it proposes is accepted or refused here in one line before any second contract is written.
 
 ## Evidence
 
