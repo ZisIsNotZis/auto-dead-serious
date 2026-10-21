@@ -20,6 +20,8 @@ What waits for you, one line each, and nothing else does:
 - petfleet M3: look at `docs/media/m3-fleet.png` and `docs/media/m3-boxes.png` — is that the fleet you meant?
 - agentic-animation: which framing wins, `zoom 0.75` with heads or `zoom 1` with a real follow; and how large must a bounce be.
 - dojo M2: your confirmation of the M1/M1.5 checkpoints, which the advance did not presume.
+- helpagent M1: reached at tag `preprint-v1` — `python3 bench/checks/m1_acceptance.py` prints OK. Say whether the preprint is published, because a push or a DOI is yours and not root's.
+- backseat: the C2 tradeoff, forwarded unchanged in `2026-10-21-backseat-c2-carried-up.md`.
 
 All ten projects advanced tonight. Five came back, were reviewed by a fresh reader, and went out again on the verdict; the rest were still working when this was written.
 
