@@ -1,4 +1,5 @@
 project	dir	purpose	status	level	model_work	model_product
+agent.sh	agent.sh	an absolutely minimal but fully functional agent, written in bash, whose hands are a stock bash it owns	early	unknown	unknown	unknown
 agentic-animation	agentic-animation	a written story becomes a finished, narrated 2D animation, locally and deterministically	active	recommend	deepseek-flash	-
 agentworld	agentworld	an event-driven civilization simulator that maximises causal fidelity under a finite budget	dormant	recommend	deepseek-flash	gpt-6-luna
 backseat	backseat	a local-first companion that rides along and comments until handed the wheel	active	recommend	deepseek-flash	gpt-6-luna

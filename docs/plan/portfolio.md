@@ -1,6 +1,6 @@
 # Portfolio
 
-This workspace holds thirteen names, ten of which advance now, one of which waits for a live writer to stop, one of which waits for a product that does not exist, and one of which is still a discussion.
+This workspace holds fourteen names, ten of which advance now, one of which waits for a live writer to stop, one of which waits for a product that does not exist, and one of which is still a discussion.
 
 The portfolio holds a project's goal at the level the person states it, because a name alone does not say which drawing project is meant. A goal is stable and it is not a description of how the project works; anything that would shift when the project reorganises belongs to the project and not here.
 
@@ -53,7 +53,7 @@ A manager that finds a field of this contract unreadable raises `contract` rathe
 
 ## Work packages
 
-- `register` — thirteen names recorded with a directory, a status, a degree of agency and two models. Done.
+- `register` — fourteen names recorded with a directory, a status, a degree of agency and two models. Done.
 - `go` — permission to act by the law and this register as they stand, not a list of launches. Each advancing project starts with the same first contract; the advance ends at the first of its milestone, a decision the root cannot take, or an exhausted grant, and that terminator is what bounds concurrency without a plan. Running: the ten managers came back or are still out; each return was judged by one fresh reviewer against the project's own acceptance, the verdict was filed into that project's `inbox/` with the next contract, and the manager was dispatched again. A milestone that passed its review still waits for the person's acceptance.
 - `orient` — the first contract root ran before the rule changed: one read-only package per advancing project, 15 minutes each, reporting what the project is, the milestone it proposes next with evidence, and any question it cannot answer. Done: nine reports are filed in their projects' `mail/`, and root's answer sits beside each.
 - `inbox` — `docs/raise/` with one directory per question, and `docs/needs-you.md` rendered from it by `tools/needs.py`. Done.
@@ -61,7 +61,7 @@ A manager that finds a field of this contract unreadable raises `contract` rathe
 
 ## Current facts
 
-- Ten projects advance, one is `later` because a live writer holds it, one is `dormant` and one is `early`.
+- Ten projects advance, one is `later` because a live writer holds it, one is `dormant` and two are `early`.
 - Every advancing project is assigned a manager: one agent owning that directory, its document and its roadmap, and the only writer in it. Root plans inside no project.
 - Root's answer to a project's question goes into that project's `inbox/`; the questions that are the person's are in `docs/needs-you.md`, and a project advances only as far as a gate the person has not passed.
 - The tree's message directories are still named `mail/` while the law calls them `inbox/`; each manager migrates its own on next touch, and root writes new messages to `inbox/`.
