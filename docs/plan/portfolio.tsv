@@ -1,4 +1,5 @@
 project	dir	purpose	status	level	model_work	model_product
+agent.js	agent.js	a coding agent that runs in the browser tab with the user's own token and no server of ours, and resumes its whole tree after the page is killed	early	decide	unknown	unknown
 agent.sh	agent.sh	an absolutely minimal but fully functional agent, written in bash, whose hands are a stock bash it owns	early	decide	deepseek-flash	-
 agentic-animation	agentic-animation	a written story becomes a finished, narrated 2D animation, locally and deterministically	active	recommend	deepseek-flash	-
 agentworld	agentworld	an event-driven civilization simulator that maximises causal fidelity under a finite budget	dormant	recommend	deepseek-flash	gpt-6-luna
