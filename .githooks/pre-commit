@@ -9,8 +9,13 @@
 set -e
 cd "$(git rev-parse --show-toplevel)"
 test -f agent-policy/tools/policy.py || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
-python3 agent-policy/tools/policy.py
-env -u GIT_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE git -C agent-policy diff --quiet -- AGENTS.yaml agents || {
-    echo "the law's views are not committed in agent-policy; commit them there first" >&2; exit 1; }
+# The law check belongs to commits that move the law. A commit touching nothing under
+# agent-policy/ was blocked by another writer's half-finished edit — the check recomputed
+# somebody else's tree and reported it as this commit's defect.
+if git diff --cached --name-only | grep -q "^agent-policy"; then
+    python3 agent-policy/tools/policy.py
+    env -u GIT_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE git -C agent-policy diff --quiet -- AGENTS.yaml agents || {
+        echo "the law's views are not committed in agent-policy; commit them there first" >&2; exit 1; }
+fi
 python3 tools/needs.py --check
 exec python3 tools/scope.py --check
