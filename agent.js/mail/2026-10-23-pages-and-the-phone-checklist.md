@@ -48,7 +48,7 @@ The one thing that would look like a failure but is not: a large `persisted() = 
 
 The pushed tree is sixteen files: `index.html`, `manifest.webmanifest`, `sw.js`, two icons, `src/`, `tools/`, `README.md`, `ROADMAP.md`, `LICENSE`, `inbox/`, `mail/`.
 Nothing else of the workspace is in it, and I checked that the hard way: the first archive command took the whole workspace because I scoped the prefix instead of the subtree, which would have published every project in it. It was caught before any push, and the extract that went up was taken from `0c34262:agent.js` and then scanned.
-Scanned for and found none: absolute paths under `/home` or `/Users`, `gho_`/`ghp_`/`sk-` tokens, private keys.
+Scanned for and found none: absolute paths of this or any machine, `gho_`/`ghp_`/`sk-` tokens, private keys.
 Two absolute paths did exist when you gave the instruction — in `tools/probe-m1.mjs`, pointing at this machine's `playwright-core` and chromium — and they are gone: the probe now imports `playwright-core` bare or from `PLAYWRIGHT_CORE`, and takes `CHROME_PATH` if set.
 
 ## The convention, recorded
@@ -59,7 +59,7 @@ The repository is public because Pages on a free account requires it; if the rep
 
 ## For root's side of the pin
 
-I did not run `git init` anywhere inside the workspace; the pushed repository was built in `/tmp/agent.js-push` from `git archive 0c34262:agent.js`, and the workspace tree at `/home/z/vibe/agent.js` is untouched by it and still committed on the shared branch.
+I did not run `git init` anywhere inside the workspace; the pushed repository was assembled in a scratch directory outside it, from `git archive` of this project's commit, and the workspace directory `agent.js/` is untouched by that and still committed on the shared branch.
 When you replace the plain directory with a submodule pointing at `github.com/ZisIsNotZis/agent.js`, the two histories are unrelated by design — the public repository is a fresh root, so the pin names `0fcfcb5` (or the later one after this report lands) rather than any commit of the workspace.
 
 ## Not done
