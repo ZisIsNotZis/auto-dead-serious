@@ -220,3 +220,6 @@
 [submodule "agent.sh"]
 	path = agent.sh
 	url = https://github.com/ZisIsNotZis/agent.sh.git
+[submodule "agent.js"]
+	path = agent.js
+	url = https://github.com/ZisIsNotZis/agent.js.git
