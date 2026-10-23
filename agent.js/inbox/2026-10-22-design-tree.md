@@ -7,6 +7,30 @@ id:      none — first contact; no dispatch exists yet
 
 Recorded 2026-10-22, from one conversation. It is the sibling of `agent.sh` and shares its metric, not its mechanism. Everything below marked *reported* came from someone else's documentation and has not been measured on this machine; everything marked *measured* was run here.
 
+## Decided — root, 2026-10-23
+
+root answered the two gating questions in `mail/2026-10-23-answer-two-promises.md`, carrying the person's direction: "做能解决 7 天问题的最小那一步", "最小范围是 js 和 git，TS 或 python 有余力再说，免费就行".
+Nothing else below is still the person's except the two items named at the end of this section.
+
+**Durability is promised for the site added to the Home Screen, and for nothing else.**
+What ships is a manifest with `display: standalone` plus the `apple-mobile-web-app-capable` meta; the user taps Share → Add to Home Screen.
+iOS 16.4–25 then treats the icon as a home-screen web app whose site data is exempt from ITP's 7-day wipe, and iOS 26+ opens any home-screen site as a web app with no installability requirement at all, so the manifest is what older iOS and Chrome need and not a gate on 26+.
+A plain tab is not promised, and a Safari *bookmark* is not promised either: without the manifest it opens as an ordinary page and keeps the 7-day clock, and `navigator.storage.persist()` does not override ITP on WebKit.
+The cost is stated rather than discovered: the home-screen container and the Safari-tab container are separate, so a user who signs in on a tab and then taps the icon meets an empty workspace, and the first screen must either recover itself (import/export) or say "use the icon".
+Chrome prompts for nothing and evicts under disk pressure rather than on a timer, so **the promise follows `navigator.storage.persisted()`**, read at load: `true` says "will not be evicted", `false` says "may be evicted, export".
+Acceptance line, observable: add to Home Screen, cut the network, kill the app, reopen, and the tree is still there with the `persisted()` reading agreeing with what the screen claims.
+Measured 2026-10-23 on a desktop Chromium profile (`tools/probe-m1.mjs`, 13/13): first load writes, reload finds it, a browser restart finds it, an offline reopen finds it, and the claim equals the return value in both directions.
+Not yet measured: the same on an iPhone Home Screen, which is the next observation and the one that actually carries the promise.
+
+**Execution is JS natively plus erasable-syntax TS, with git in the tab; Python is a lazy opt-in outside the promise.**
+JS runs natively in a Worker — no compiler, no licence, no server.
+TS enters the promise only as *erasable* TS: types are stripped with `ts.transpileModule` (sucrase if it earns its ~200KB), and `enum`, `namespace`, decorators and parameter properties are named as not running, so `erasableSyntaxOnly` is a boundary that can be both enforced and shown.
+git is real git in the tab: `isomorphic-git` over the OPFS `fs` adapter, pushing with the user's own token.
+Python is Pyodide, 10–25MB cold, fetched only when a person taps it, with the download price written at that tap.
+Rejected by this decision, with their reasons: WebContainers (commercial licence plus COOP/COEP), any paid runtime, and any server of ours that is not a CDN — which also puts a real `npm install` outside the promise.
+
+**Still not the manager's:** where the site is served from (a CDN account is the one credential this needs and it is not the manager's to hold), and whether the home-screen container needs import/export before the milestone is called done — the manager reads that as the next milestone, not this one.
+
 ## The expectation, in his words
 
 > how "lightweight" it can be? Lightweight in terms of two things: It should be able to run (not necessarily) client side (in browser), not server side … be super powerful, WITHOUT need server side infrastructure (CORS is a different story, we can provide helper for that), so does the whole agent framework, the auth token, never sent to our side. We don't care which token provider user is using. It tries to provide tools that lets agent feel familiar (like ls, rg, read, write, git). So all our side pay is CDN.
@@ -33,8 +57,8 @@ What that adds up to as a thing a person can judge:
 4. **The log is the truth and JS state is a cache.** Append `intent {seq, node, tool, args}` before the effect and `result {seq, ok, out}` after it. On load, replay the tail: an intent with no result is resolved by re-running (idempotent effects) or by checking (non-idempotent ones, e.g. "does the ref already point at this commit"). The model call is treated as idempotent-but-costly: record the request hash, re-issue on resume, accept that one turn may be paid twice.
 5. **The tree resumes because nothing lives in memory.** Root and every child are nodes with their own log and status; the parent owns the children's liveness. On load, every node marked `running` restarts. There is no continue button because there is nothing to continue *from*.
 6. **One lock per session.** `navigator.locks` keyed by the session id, because the browser releases a dead page's lock for free. Two tabs on one tree is the only guaranteed corruption.
-7. **Installable PWA as the durability mechanism, not a nicety.** Persistent storage is requested with `navigator.storage.persist()`, and the documented limits are shown to the user (`estimate()`), because the browser may otherwise evict under disk pressure.
-8. **Execution is tiered, and the tiers are named in the product**: (1) JS/TS in a **Worker**, compiled with `esbuild-wasm` — no licence, no shell, faster than spawning a process; (2) Python via Pyodide; (3) shell-ish via `wasm-coreutils`; (4) remote compute as an explicit budgeted tool; (5) WebContainers only where someone wants real `npm i` and accepts the licence. Tiers 4 and 5 are opt-in; tier 1 is the promise.
+7. **The Home Screen entry as the durability mechanism, not a nicety** (root, 2026-10-23). A manifest with `display: standalone` plus Share → Add to Home Screen is the whole mechanism; `navigator.storage.persisted()` is read at load and the screen says what it returned, and `estimate()` is shown beside it, because a tab may otherwise be evicted — by ITP on a timer in Safari, by disk pressure anywhere.
+8. **Execution is tiered, and the tiers are named in the product** (root, 2026-10-23): (1) JS natively in a **Worker**, plus TS with types stripped — no licence, no shell, faster than spawning a process; (2) Python via Pyodide, lazily fetched and priced at the tap, outside the promise; (3) shell-ish via `wasm-coreutils`; (4) remote compute as an explicit budgeted tool. Tiers 3 and 4 are opt-in; tier 1 is the promise; WebContainers are rejected rather than optional.
 9. **Tools are native and named.** `ls · read · write · edit · grep · git_* · run_js · todo · remote`. There is no shell. The tool list exists in the prompt (unlike `agent.sh`, where bash *is* the tool list), and that is a different harness kind, not a port.
 10. **Git is the workspace's version control from the first commit.** `isomorphic-git` over the same `fs` adapter; auto-commit per agent step, so undo, review, diff and blame exist without inventing anything.
 11. **CORS ladder with no relay of ours**: provider's own browser-origin opt-in first; otherwise a helper on the user's own `127.0.0.1` (which needs `Access-Control-Allow-Private-Network` as well as CORS, per Chrome's Private Network Access rules — *reported*, verify); otherwise an extension the user installs. Never a relay that sees the token.
@@ -79,7 +103,7 @@ The prior art says this is a crowded room: `bolt.new`/`bolt.diy` are the product
 | checkpoint snapshots (serialize the whole tree periodically) | **rejected as the resume mechanism**: cost is O(workspace) per checkpoint, and a kill between two checkpoints still loses work. The append-only log is strictly better and cheaper. |
 | in-memory only | rejected; it is the failure this project exists to avoid. |
 
-The number that governs the product: all of these share one quota pool per origin. Chrome gives ~60% of disk per origin; Firefox ~10–20%; **Safari ~1 GB and wipes script-writable storage after 7 days without interaction for sites that are not installed**, while installed home-screen apps are exempt, and Chrome auto-grants `persist()` to installed PWAs. That single rule is why "install it" is part of the design and not marketing.
+The number that governs the product: all of these share one quota pool per origin. Chrome gives ~60% of disk per origin; Firefox ~10–20%; **Safari ~1 GB and wipes script-writable storage after 7 days without interaction for sites that are not on the Home Screen**, while sites added to the Home Screen are exempt, and Chrome auto-grants `persist()` to installed PWAs. That single rule is why the Home Screen entry is part of the design and not marketing (root, 2026-10-23).
 
 ### D4. Surviving a kill
 
@@ -164,12 +188,13 @@ Nothing above about the browser has been measured on this machine. The first pac
 6. Quota and eviction behaviour on Safari specifically, including the 7-day rule and whether an installed PWA really is exempt.
 7. The cache arithmetic from a browser origin: two requests, `prompt_cache_hit_tokens` on the second.
 
-## Open questions — the person's, not the manager's
+## Open questions
 
-1. **Durability target**: installed PWA only (Chrome install, Safari home screen, an honest promise of resume) or a plain tab as well (we must then tell people Safari may delete their tree after 7 days)? The first is one sentence in the product and changes nothing technical; the second changes the storage engineering. Recommend the first.
-2. **Execution promise**: "runs your JS/TS app in the tab" (no licence, tier 1) or "runs anything" (WebContainers licence, or a remote tool with a price)? Recommend the first as the promise and the remote tool as the exception.
-3. **Degree**, recorded as `decide` *assumed* from the sibling project's instruction, not stated here; one word vetoes it.
-4. **D2** — coding agent, embeddable SDK, or single-file page — is the manager's to take at `decide` unless it is one of the two above.
+1. **Durability target — answered by root, 2026-10-23.** The promise is the site added to the Home Screen and nothing else; a plain tab and a Safari bookmark stay outside it, and the screen repeats `persisted()` so nobody is told more than the browser said. What this closed: the "promise a plain tab too" branch, and the belief that `persist()` can override ITP.
+2. **Execution promise — answered by root, 2026-10-23.** JS native plus erasable-syntax TS plus `isomorphic-git` in the tab; Python fetched lazily outside the promise; WebContainers and paid runtimes rejected. What this closed: `esbuild-wasm` as a mandatory 12MB download and the tier-5 "real npm" branch.
+3. **Degree** — recorded as `decide` *assumed* from the sibling project's instruction, not stated here; one word vetoes it, and the decisions taken under it are marked.
+4. **D2 — taken by the manager at `decide`, 2026-10-23: a coding agent (`D2a`).** It is the story in the person's words, and the only branch whose first milestone is also the promise being checked. What the assumption costs: an embeddable SDK (`D2b`) would have been the cheaper thing to get right first, and a single-file CDN page (`D2c`) is what the "lightweight" claim would look best as. The observation that would overturn it: the in-tab Worker turning out to need WebContainers for the web-app class of work, at which point the SDK is the honest product.
+5. **Where the site is served from — root's, not the manager's.** A CDN account is the one credential this needs and the only piece that is not the user's own; M1 is accepted without it, on `http://127.0.0.1:8137/`.
 
 ## Non-goals
 
