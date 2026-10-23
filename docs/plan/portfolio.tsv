@@ -4,7 +4,7 @@ agent.sh	agent.sh	an absolutely minimal but fully functional agent, written in b
 agentic-animation	agentic-animation	a written story becomes a finished, narrated 2D animation, locally and deterministically	active	recommend	deepseek-flash	-
 agentworld	agentworld	an event-driven civilization simulator that maximises causal fidelity under a finite budget	dormant	recommend	deepseek-flash	gpt-6-luna
 backseat	backseat	a local-first companion that rides along and comments until handed the wheel	active	recommend	deepseek-flash	gpt-6-luna
-dojo	dojo	a local proof of concept for turning ideas, claims and counterexamples into traceable discussion	active	recommend	deepseek-flash	gpt-6-luna
+dojo	dojo	a database of the principles humans live by, extracted from a willing person and returned as organized thought — the discussion UI is what attracts the person, not the product	active	recommend	deepseek-flash	gpt-6-luna
 flashdb	flashdb	a single-node document store that learns its own physical layout from a workload	active	recommend	deepseek-flash	-
 helpagent	helpagent	a harness that runs a small local model through an ordinary engineering process and measures it honestly	active	recommend	deepseek-flash	gpt-6-luna
 learn_draw	learn_draw	learning the drawing skill itself, expressed as programmatic art rather than generated images	active	recommend	deepseek-flash	-
