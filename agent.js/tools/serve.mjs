@@ -5,7 +5,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = fileURLToPath(new URL('../site/', import.meta.url));
+const ROOT = fileURLToPath(new URL('../', import.meta.url)); // the project root is the site
 const PORT = Number(process.env.PORT || 8137);
 
 const TYPES = {

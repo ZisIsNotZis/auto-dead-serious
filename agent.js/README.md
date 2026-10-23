@@ -13,7 +13,7 @@ The promise is measured on desktop Chromium, locally and on the live origin; the
 
 ## Where it is
 
-Live: **https://zisisnotzis.github.io/agent.js/site/**
+Live: **https://zisisnotzis.github.io/agent.js/**
 Source: **https://github.com/ZisIsNotZis/agent.js** — public, AGPL-3.0, served by GitHub Pages from the default branch with no build step and no server of ours.
 A project of this workspace that must be reachable lives at `github.com/ZisIsNotZis/<its directory name>`.
 
@@ -21,7 +21,7 @@ A project of this workspace that must be reachable lives at `github.com/ZisIsNot
 
 Read `ROADMAP.md`, then the design record in `inbox/`.
 Run it locally: `node tools/serve.mjs` and open `http://127.0.0.1:8137/`.
-Run its acceptance: `node tools/probe-m1.mjs` (needs the server up, or `URL=https://zisisnotzis.github.io/agent.js/site/` to check the live one; it needs `playwright-core`, bare or at `PLAYWRIGHT_CORE`).
+Run its acceptance: `node tools/probe-m1.mjs` (needs the server up, or `URL=https://zisisnotzis.github.io/agent.js/` to check the live one; it needs `playwright-core`, bare or at `PLAYWRIGHT_CORE`).
 
 ## How to continue
 

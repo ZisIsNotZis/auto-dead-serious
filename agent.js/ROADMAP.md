@@ -12,7 +12,7 @@ Degree: `decide` (assumed); every decision taken under it is marked in the desig
 | term | what was promised |
 |---|---|
 | outcome | a person adds the site to the Home Screen, kills it, reopens it, and the same tree is on screen — with a persistence line that says what `navigator.storage.persisted()` returned, not what we hoped |
-| deliverable | `site/` — manifest, icon, shell, one OPFS-backed tree file; `tools/serve.mjs`, `tools/probe-m1.mjs` |
+| deliverable | the project root is the site — `index.html`, `manifest.webmanifest`, `sw.js`, icons, one OPFS-backed tree file in `src/`; `tools/serve.mjs`, `tools/probe-m1.mjs` |
 | acceptance | `node tools/serve.mjs &` then `node tools/probe-m1.mjs` → 13/13: first load writes, reload finds it, a browser restart finds it, an offline reopen finds it, and the claim equals the return value with `persisted()` false *and* with it forced true |
 | not doing | no agent loop, no model call, no token field, no git, no editor, no diff view, no tree diagram, no import/export |
 
@@ -29,7 +29,7 @@ Not doing: partial merges, account sync, encryption theatre.
 
 **M3 — the log, and resume with nothing in memory — `open`.** Depends on M1.
 Outcome: a kill mid-step costs at most the step. The tree on reopen is reconstructed from the append-only log, not from a snapshot.
-Deliverable: `site/src/log.js` (IndexedDB, intent/result pairs), a replay on boot, and a visible "what was in flight" line.
+Deliverable: `src/log.js` (IndexedDB, intent/result pairs), a replay on boot, and a visible "what was in flight" line.
 Acceptance: kill the page at N random points in a scripted run; every reopen reports the same settled state and names the one step that was re-run. `node tools/probe-m3.mjs` prints N and the count.
 Not doing: checkpoints, a continue button, model calls.
 
@@ -41,8 +41,8 @@ Not doing: grep, patch, push, TS, Python.
 
 **M5 — the served copy — `done`, 2026-10-23.** Depends on M1 only.
 Outcome: the URL a person can add to the Home Screen, and the only place the promise can be observed.
-Deliverable: `site/` served by GitHub Pages from the public repository `github.com/ZisIsNotZis/agent.js`, default branch, no server of ours and no build step.
-Acceptance: `curl -sI https://zisisnotzis.github.io/agent.js/site/manifest.webmanifest` returns 200 and `application/manifest+json`; the M1 probe run against the live origin also prints 13/13; and the phone steps below are **not yet run**.
+Deliverable: this tree served by GitHub Pages from the public repository `github.com/ZisIsNotZis/agent.js`, default branch, no server of ours and no build step.
+Acceptance: `curl -sI https://zisisnotzis.github.io/agent.js/manifest.webmanifest` returns 200 and `application/manifest+json`; the M1 probe run against the live origin also prints 13/13; and the phone steps below are **not yet run**.
 Not doing: any origin server, any telemetry, any credential of ours.
 
 ## The one step still unrun, and who runs it
