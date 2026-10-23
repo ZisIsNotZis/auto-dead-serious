@@ -9,7 +9,7 @@ flashdb	flashdb	a single-node document store that learns its own physical layout
 helpagent	helpagent	a harness that runs a small local model through an ordinary engineering process and measures it honestly	active	recommend	deepseek-flash	gpt-6-luna
 learn_draw	learn_draw	learning the drawing skill itself, expressed as programmatic art rather than generated images	active	recommend	deepseek-flash	-
 local_lm_research	local_lm_research	a reproducible workbench for measuring local language-model inference factors	active	recommend	deepseek-flash	-
-nomos	nomos	compressing a personal operating method into a small model by fine-tuning	active	recommend	deepseek-flash	-
+nomos	nomos	an SFT finetune of a small model that inlines the working policy, with no several performance regressions	active	recommend	deepseek-flash	-
 pathlm	pathlm	a research meta-repository that publishes an inspectable tree of studies rather than a model	later	recommend	deepseek-flash	-
 petfleet	petfleet	a fleet of small desktop figures, one per process, arranged as the family tree those processes declare	active	recommend	deepseek-flash	-
 prompt_fixed_point	prompt_fixed_point	unknown: the repository has no commits	early	recommend	deepseek-flash	-
