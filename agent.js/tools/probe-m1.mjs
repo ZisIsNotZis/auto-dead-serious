@@ -4,13 +4,35 @@
 //   navigator.storage.persisted() at every one of those points.
 //
 // Run: node tools/probe-m1.mjs   (server must already be running on PORT)
-import playwright from '/home/z/vibe/vibeos/node_modules/playwright-core/index.js';
-const { chromium } = playwright;
+//
+// The browser is found, not hard-coded: `npm i -D playwright-core` and it is used
+// bare, or point PLAYWRIGHT_CORE at an install elsewhere (a file path or a package
+// directory), and CHROME_PATH at a chromium binary if the bundle's own is not the
+// one you want.
 import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
-const EXE = '/home/z/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell';
+function playwrightSpecifier() {
+  const p = process.env.PLAYWRIGHT_CORE;
+  if (!p) return 'playwright-core';
+  if (p.startsWith('/') || p.startsWith('.')) {
+    return pathToFileURL(p.endsWith('.js') ? p : join(p, 'index.js')).href;
+  }
+  return p;
+}
+
+let chromium;
+try {
+  const mod = await import(playwrightSpecifier());
+  chromium = (mod.default ?? mod).chromium;
+} catch (e) {
+  console.error(`playwright-core was not found (${e.code || e.name}); set PLAYWRIGHT_CORE to an install`);
+  process.exit(2);
+}
+
+const EXE = process.env.CHROME_PATH || undefined;
 const URL_ = process.env.URL || 'http://127.0.0.1:8137/';
 const userDataDir = await mkdtemp(join(tmpdir(), 'agentjs-m1-'));
 

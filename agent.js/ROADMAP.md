@@ -39,11 +39,24 @@ Deliverable: `fs` adapter over OPFS, `isomorphic-git` wired, `ls`/`read`/`write`
 Acceptance: a scripted two-step run produces two commits; `git log` read back through `isomorphic-git` in the page shows both after a kill and reopen.
 Not doing: grep, patch, push, TS, Python.
 
-**M5 — the first served copy — `open`, blocked on root.** Depends on M4? No: depends on M1 only; ran in parallel and is now only waiting on a CDN account.
-Outcome: the URL a person can actually add to the Home Screen, and the only place the promise can be observed.
-Deliverable: the same `site/` deployed to a CDN with HTTPS and correct manifest/icon headers.
-Acceptance: `curl -sI https://<cdn>/manifest.webmanifest` returns 200 and `application/manifest+json`; a Home Screen add on a real phone, then the four steps of M1's acceptance, recorded with the `persisted()` value seen.
+**M5 — the served copy — `done`, 2026-10-23.** Depends on M1 only.
+Outcome: the URL a person can add to the Home Screen, and the only place the promise can be observed.
+Deliverable: `site/` served by GitHub Pages from the public repository `github.com/ZisIsNotZis/agent.js`, default branch, no server of ours and no build step.
+Acceptance: `curl -sI https://zisisnotzis.github.io/agent.js/site/manifest.webmanifest` returns 200 and `application/manifest+json`; the M1 probe run against the live origin also prints 13/13; and the phone steps below are **not yet run**.
 Not doing: any origin server, any telemetry, any credential of ours.
+
+## The one step still unrun, and who runs it
+
+Everything M1 claims is measured on desktop Chromium, locally and on the live origin.
+The device that carries the promise has never opened it, so the promise is unconfirmed rather than proven.
+The list is written for the person, in the order they do it, and root puts it in front of them; the report in `mail/2026-10-23-pages-and-the-phone-checklist.md` is where it lives.
+
+## Convention: where a project of this workspace is reachable
+
+A project of this workspace that must be reachable lives at `github.com/ZisIsNotZis/<its directory name>`, and this project's is `github.com/ZisIsNotZis/agent.js`.
+That is the person's convention as given on 2026-10-23, not an invention here: the directory name is the repository name, the default branch is what Pages serves, and nothing of ours sits between the person's browser and the CDN.
+Public, because Pages on a free account requires a public repository; the tree that goes up is this directory and nothing else, so no other project's work is exposed by it.
+The workspace pins this directory as a submodule pointing at that repository, which is why nothing here runs `git init` inside the workspace tree.
 
 **M6 — execution: native JS in a Worker, then erasable TS — `open`.** Depends on M4.
 Outcome: the promise's first half. A file in the workspace is executed in a Worker with no shell and no licence.
