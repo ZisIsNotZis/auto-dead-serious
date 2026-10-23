@@ -1,10 +1,16 @@
 #!/bin/sh
 # The law lives in the agent-policy submodule; this refuses a commit whose view no longer
 # matches its source, and says so when the submodule is not initialised.
+#
+# One tool does both halves — the check and the render — because splitting them let this
+# hook name two files that the law repo had already merged into one, and a hook that fails
+# closed on a missing checker blocks every commit in the tree rather than the one change it
+# guards. The name is checked before it is used.
 set -e
 cd "$(git rev-parse --show-toplevel)"
-test -f agent-policy/tools/law.py || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
-python3 agent-policy/tools/law.py --check
-python3 agent-policy/tools/build.py --check
+test -f agent-policy/tools/policy.py || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
+python3 agent-policy/tools/policy.py
+env -u GIT_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE git -C agent-policy diff --quiet -- AGENTS.yaml agents || {
+    echo "the law's views are not committed in agent-policy; commit them there first" >&2; exit 1; }
 python3 tools/needs.py --check
 exec python3 tools/scope.py --check
