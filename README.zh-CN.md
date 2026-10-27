@@ -46,7 +46,7 @@ cd auto-dead-serious
 git submodule status | wc -l
 ```
 
-最后一行输出 `72`：70 个已评估项目、1 个已固定但尚未评估的子项目，以及规范仓库本身。其中 4 个项目是私有的（`colleague_private`、`tutor_private`、`resume_private`、`timecolumn`），没有权限会失败；其余 66 个项目可匿名克隆，规范仓库同样可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
+最后一行输出 `76`：70 个已评估项目，以及 6 个已固定但尚未评估的子项目（规范仓库本身和 `agent.my` 在其中）。其中 6 个项目是私有的（`agent.my`、`colleague_private`、`petfleet`、`resume_private`、`timecolumn`、`tutor_private`），没有权限会失败；其余 70 个子项目可匿名克隆，规范仓库同样可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
 
 重新生成本页所有表格只需要标准库（Python 3.12，无需安装依赖）：
 
