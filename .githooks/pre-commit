@@ -3,18 +3,19 @@
 # matches its source, and says so when the submodule is not initialised.
 #
 # One tool does both halves — the check and the render — because splitting them let this
-# hook name two files that the law repo had already merged into one, and a hook that fails
-# closed on a missing checker blocks every commit in the tree rather than the one change it
-# guards. The name is checked before it is used.
+# hook name a file the law repo had already renamed, and a hook that fails closed on a
+# missing checker blocks every commit in the tree rather than the one change it guards.
+# So the name is `agent-policy/tools/check.sh`, and it is only asked for by a commit that
+# touches agent-policy.
 set -e
 cd "$(git rev-parse --show-toplevel)"
-test -f agent-policy/tools/policy.py || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
 # The law check belongs to commits that move the law. A commit touching nothing under
 # agent-policy/ was blocked by another writer's half-finished edit — the check recomputed
 # somebody else's tree and reported it as this commit's defect.
 if git diff --cached --name-only | grep -q "^agent-policy"; then
-    python3 agent-policy/tools/policy.py
-    env -u GIT_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE git -C agent-policy diff --quiet -- AGENTS.yaml agents || {
+    test -f agent-policy/tools/check.sh || { echo "agent-policy submodule missing: git submodule update --init agent-policy" >&2; exit 1; }
+    sh agent-policy/tools/check.sh
+    env -u GIT_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE git -C agent-policy diff --quiet -- LAW.md manager.md agents || {
         echo "the law's views are not committed in agent-policy; commit them there first" >&2; exit 1; }
 fi
 python3 tools/needs.py --check

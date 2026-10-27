@@ -1,1 +1,1 @@
-agent-policy/agents/root_manager.md
+agent-policy/manager.md
