@@ -1,216 +1,216 @@
 [submodule "aps"]
 	path = aps
-	url = https://github.com/ZisIsNotZis/aps.git
+	url = ssh://git@github.com/ZisIsNotZis/aps.git
 [submodule "auto_maintain_bench"]
 	path = auto_maintain_bench
-	url = https://github.com/ZisIsNotZis/auto_maintain_bench.git
+	url = ssh://git@github.com/ZisIsNotZis/auto_maintain_bench.git
 [submodule "colleague_private"]
 	path = colleague_private
-	url = https://github.com/ZisIsNotZis/colleague_private.git
+	url = ssh://git@github.com/ZisIsNotZis/colleague_private.git
 [submodule "drive"]
 	path = drive
-	url = https://github.com/ZisIsNotZis/suzhou-drive.git
+	url = ssh://git@github.com/ZisIsNotZis/suzhou-drive.git
 [submodule "horse_video"]
 	path = horse_video
-	url = https://github.com/ZisIsNotZis/horse_video.git
+	url = ssh://git@github.com/ZisIsNotZis/horse_video.git
 [submodule "huaqiang_game"]
 	path = huaqiang_game
-	url = https://github.com/ZisIsNotZis/huaqiang_game.git
+	url = ssh://git@github.com/ZisIsNotZis/huaqiang_game.git
 [submodule "huaqiang_video"]
 	path = huaqiang_video
-	url = https://github.com/ZisIsNotZis/huaqiang_video.git
+	url = ssh://git@github.com/ZisIsNotZis/huaqiang_video.git
 [submodule "hyperframaker"]
 	path = hyperframaker
-	url = https://github.com/ZisIsNotZis/hypermaker.git
+	url = ssh://git@github.com/ZisIsNotZis/hypermaker.git
 [submodule "ideas"]
 	path = ideas
-	url = https://github.com/ZisIsNotZis/ideas.git
+	url = ssh://git@github.com/ZisIsNotZis/ideas.git
 [submodule "npchallenge"]
 	path = npchallenge
-	url = https://github.com/ZisIsNotZis/npchallenge.git
+	url = ssh://git@github.com/ZisIsNotZis/npchallenge.git
 [submodule "ra2"]
 	path = ra2
-	url = https://github.com/ZisIsNotZis/iron-meridian.git
+	url = ssh://git@github.com/ZisIsNotZis/iron-meridian.git
 [submodule "sys_gal"]
 	path = sys_gal
-	url = https://github.com/ZisIsNotZis/sys_gal.git
+	url = ssh://git@github.com/ZisIsNotZis/sys_gal.git
 [submodule "timecolumn"]
 	path = timecolumn
-	url = https://github.com/ZisIsNotZis/timetable.git
+	url = ssh://git@github.com/ZisIsNotZis/timetable.git
 [submodule "tutor_private"]
 	path = tutor_private
-	url = https://github.com/ZisIsNotZis/tutor_private.git
+	url = ssh://git@github.com/ZisIsNotZis/tutor_private.git
 [submodule "vibeos"]
 	path = vibeos
-	url = https://github.com/ZisIsNotZis/vibeos.git
+	url = ssh://git@github.com/ZisIsNotZis/vibeos.git
 [submodule "agentic-animation"]
 	path = agentic-animation
-	url = https://github.com/ZisIsNotZis/agentic-animation.git
+	url = ssh://git@github.com/ZisIsNotZis/agentic-animation.git
 [submodule "autofe"]
 	path = autofe
-	url = https://github.com/ZisIsNotZis/autofe.git
+	url = ssh://git@github.com/ZisIsNotZis/autofe.git
 [submodule "backseat"]
 	path = backseat
-	url = https://github.com/ZisIsNotZis/backseat.git
+	url = ssh://git@github.com/ZisIsNotZis/backseat.git
 [submodule "danmaku"]
 	path = danmaku
-	url = https://github.com/ZisIsNotZis/danmaku.git
+	url = ssh://git@github.com/ZisIsNotZis/danmaku.git
 [submodule "expyssion"]
 	path = expyssion
-	url = https://github.com/ZisIsNotZis/expyssion.git
+	url = ssh://git@github.com/ZisIsNotZis/expyssion.git
 [submodule "flashdb"]
 	path = flashdb
-	url = https://github.com/ZisIsNotZis/flashdb.git
+	url = ssh://git@github.com/ZisIsNotZis/flashdb.git
 [submodule "helpagent"]
 	path = helpagent
-	url = https://github.com/ZisIsNotZis/helpagent.git
+	url = ssh://git@github.com/ZisIsNotZis/helpagent.git
 [submodule "hfget"]
 	path = hfget
-	url = https://github.com/ZisIsNotZis/hfget.git
+	url = ssh://git@github.com/ZisIsNotZis/hfget.git
 [submodule "learn_draw"]
 	path = learn_draw
-	url = https://github.com/ZisIsNotZis/learn_draw.git
+	url = ssh://git@github.com/ZisIsNotZis/learn_draw.git
 [submodule "litellmgen"]
 	path = litellmgen
-	url = https://github.com/ZisIsNotZis/litellmgen.git
+	url = ssh://git@github.com/ZisIsNotZis/litellmgen.git
 [submodule "mycar"]
 	path = mycar
-	url = https://github.com/ZisIsNotZis/mycar.git
+	url = ssh://git@github.com/ZisIsNotZis/mycar.git
 [submodule "pathlm"]
 	path = pathlm
-	url = https://github.com/ZisIsNotZis/pathlm.git
+	url = ssh://git@github.com/ZisIsNotZis/pathlm.git
 [submodule "pelican_bike"]
 	path = pelican_bike
-	url = https://github.com/ZisIsNotZis/pelican_bike.git
+	url = ssh://git@github.com/ZisIsNotZis/pelican_bike.git
 [submodule "pushbus"]
 	path = pushbus
-	url = https://github.com/ZisIsNotZis/pushbus.git
+	url = ssh://git@github.com/ZisIsNotZis/pushbus.git
 [submodule "raid_calc"]
 	path = raid_calc
-	url = https://github.com/ZisIsNotZis/raid_calc.git
+	url = ssh://git@github.com/ZisIsNotZis/raid_calc.git
 [submodule "resume_private"]
 	path = resume_private
-	url = https://github.com/ZisIsNotZis/resume_private.git
+	url = ssh://git@github.com/ZisIsNotZis/resume_private.git
 [submodule "sys_gal_rt"]
 	path = sys_gal_rt
-	url = https://github.com/ZisIsNotZis/sys_gal_rt.git
+	url = ssh://git@github.com/ZisIsNotZis/sys_gal_rt.git
 [submodule "tokenqr"]
 	path = tokenqr
-	url = https://github.com/ZisIsNotZis/TokenQR.git
+	url = ssh://git@github.com/ZisIsNotZis/TokenQR.git
 [submodule "resume_img_gen"]
 	path = resume_img_gen
-	url = https://github.com/ZisIsNotZis/resume_img_gen.git
+	url = ssh://git@github.com/ZisIsNotZis/resume_img_gen.git
 [submodule "resume_improve_loop"]
 	path = resume_improve_loop
-	url = https://github.com/ZisIsNotZis/resume_improve_loop.git
+	url = ssh://git@github.com/ZisIsNotZis/resume_improve_loop.git
 [submodule "lmlayer"]
 	path = lmlayer
-	url = https://github.com/ZisIsNotZis/lmlayer.git
+	url = ssh://git@github.com/ZisIsNotZis/lmlayer.git
 [submodule "cuda"]
 	path = cuda
-	url = https://github.com/ZisIsNotZis/cuda.git
+	url = ssh://git@github.com/ZisIsNotZis/cuda.git
 [submodule "cvorat"]
 	path = cvorat
-	url = https://github.com/ZisIsNotZis/cvorat.git
+	url = ssh://git@github.com/ZisIsNotZis/cvorat.git
 [submodule "myzcopy"]
 	path = myzcopy
-	url = https://github.com/ZisIsNotZis/myzcopy.git
+	url = ssh://git@github.com/ZisIsNotZis/myzcopy.git
 [submodule "dino.py"]
 	path = dino.py
-	url = https://github.com/ZisIsNotZis/dino.py.git
+	url = ssh://git@github.com/ZisIsNotZis/dino.py.git
 [submodule "causalmlp"]
 	path = causalmlp
-	url = https://github.com/ZisIsNotZis/causalmlp.git
+	url = ssh://git@github.com/ZisIsNotZis/causalmlp.git
 [submodule "fring"]
 	path = fring
-	url = https://github.com/ZisIsNotZis/fring.git
+	url = ssh://git@github.com/ZisIsNotZis/fring.git
 [submodule "treui"]
 	path = treui
-	url = https://github.com/ZisIsNotZis/treui.git
+	url = ssh://git@github.com/ZisIsNotZis/treui.git
 [submodule "tok"]
 	path = tok
-	url = https://github.com/ZisIsNotZis/tok.git
+	url = ssh://git@github.com/ZisIsNotZis/tok.git
 [submodule "myygo"]
 	path = myygo
-	url = https://github.com/ZisIsNotZis/myygo.git
+	url = ssh://git@github.com/ZisIsNotZis/myygo.git
 [submodule "myminio2"]
 	path = myminio2
-	url = https://github.com/ZisIsNotZis/myminio2.git
+	url = ssh://git@github.com/ZisIsNotZis/myminio2.git
 [submodule "http_mock"]
 	path = http_mock
-	url = https://github.com/ZisIsNotZis/http_mock.git
+	url = ssh://git@github.com/ZisIsNotZis/http_mock.git
 [submodule "beam"]
 	path = beam
-	url = https://github.com/ZisIsNotZis/beam.git
+	url = ssh://git@github.com/ZisIsNotZis/beam.git
 [submodule "ygo"]
 	path = ygo
-	url = https://github.com/ZisIsNotZis/ygo.git
+	url = ssh://git@github.com/ZisIsNotZis/ygo.git
 [submodule "uv"]
 	path = uv
-	url = https://github.com/ZisIsNotZis/uv.git
+	url = ssh://git@github.com/ZisIsNotZis/uv.git
 [submodule "jpi.fe"]
 	path = jpi.fe
-	url = https://github.com/ZisIsNotZis/jpi.fe.git
+	url = ssh://git@github.com/ZisIsNotZis/jpi.fe.git
 [submodule "misc"]
 	path = misc
-	url = https://github.com/ZisIsNotZis/misc.git
+	url = ssh://git@github.com/ZisIsNotZis/misc.git
 [submodule "disk"]
 	path = disk
-	url = https://github.com/ZisIsNotZis/disk.git
+	url = ssh://git@github.com/ZisIsNotZis/disk.git
 [submodule "nn"]
 	path = nn
-	url = https://github.com/ZisIsNotZis/nn.git
+	url = ssh://git@github.com/ZisIsNotZis/nn.git
 [submodule "cznn"]
 	path = cznn
-	url = https://github.com/ZisIsNotZis/cznn.git
+	url = ssh://git@github.com/ZisIsNotZis/cznn.git
 [submodule "myminio"]
 	path = myminio
-	url = https://github.com/ZisIsNotZis/myminio.git
+	url = ssh://git@github.com/ZisIsNotZis/myminio.git
 [submodule "dinoseg"]
 	path = dinoseg
-	url = https://github.com/ZisIsNotZis/dinoseg.git
+	url = ssh://git@github.com/ZisIsNotZis/dinoseg.git
 [submodule "wafer_thermal_calibration"]
 	path = wafer_thermal_calibration
-	url = https://github.com/ZisIsNotZis/xywdisk.git
+	url = ssh://git@github.com/ZisIsNotZis/xywdisk.git
 [submodule "ringsvr"]
 	path = ringsvr
-	url = https://github.com/ZisIsNotZis/ringsvr.git
+	url = ssh://git@github.com/ZisIsNotZis/ringsvr.git
 [submodule "retnet"]
 	path = retnet
-	url = https://github.com/ZisIsNotZis/retnet.git
+	url = ssh://git@github.com/ZisIsNotZis/retnet.git
 [submodule "cz_einn"]
 	path = cz_einn
-	url = https://github.com/ZisIsNotZis/cz_einn.git
+	url = ssh://git@github.com/ZisIsNotZis/cz_einn.git
 [submodule "grammar"]
 	path = grammar
-	url = https://github.com/ZisIsNotZis/grammar.git
+	url = ssh://git@github.com/ZisIsNotZis/grammar.git
 [submodule "seq_autoenc"]
 	path = seq_autoenc
-	url = https://github.com/ZisIsNotZis/seq_autoenc.git
+	url = ssh://git@github.com/ZisIsNotZis/seq_autoenc.git
 [submodule "fat_kakeya_needle"]
 	path = fat_kakeya_needle
-	url = https://github.com/ZisIsNotZis/fat_kakeya_needle.git
+	url = ssh://git@github.com/ZisIsNotZis/fat_kakeya_needle.git
 [submodule "agentworld"]
 	path = agentworld
-	url = https://github.com/ZisIsNotZis/agentworld.git
+	url = ssh://git@github.com/ZisIsNotZis/agentworld.git
 [submodule "knowledge_net"]
 	path = knowledge_net
-	url = https://github.com/ZisIsNotZis/knowledge_net.git
+	url = ssh://git@github.com/ZisIsNotZis/knowledge_net.git
 [submodule "dojo"]
 	path = dojo
-	url = https://github.com/ZisIsNotZis/dojo.git
+	url = ssh://git@github.com/ZisIsNotZis/dojo.git
 [submodule "murderMysteryGame"]
 	path = murderMysteryGame
-	url = https://github.com/ZisIsNotZis/murderMysteryGame.git
+	url = ssh://git@github.com/ZisIsNotZis/murderMysteryGame.git
 [submodule "pi-keys"]
 	path = pi-keys
-	url = https://github.com/ZisIsNotZis/pi-keys.git
+	url = ssh://git@github.com/ZisIsNotZis/pi-keys.git
 [submodule "local_lm_research"]
 	path = local_lm_research
-	url = https://github.com/ZisIsNotZis/tiny-llm-eval-factors.git
+	url = ssh://git@github.com/ZisIsNotZis/tiny-llm-eval-factors.git
 [submodule "nomos"]
 	path = nomos
-	url = https://github.com/ZisIsNotZis/nomos.git
+	url = ssh://git@github.com/ZisIsNotZis/nomos.git
 [submodule "agent-policy"]
 	path = agent-policy
 	url = git@github.com:ZisIsNotZis/agent-policy.git
@@ -219,10 +219,10 @@
 	url = git@github.com:ZisIsNotZis/petfleet.git
 [submodule "agent.sh"]
 	path = agent.sh
-	url = https://github.com/ZisIsNotZis/agent.sh.git
+	url = ssh://git@github.com/ZisIsNotZis/agent.sh.git
 [submodule "agent.js"]
 	path = agent.js
-	url = https://github.com/ZisIsNotZis/agent.js.git
+	url = ssh://git@github.com/ZisIsNotZis/agent.js.git
 [submodule "agent.my"]
 	path = agent.my
-	url = https://github.com/ZisIsNotZis/agent.my.git
+	url = ssh://git@github.com/ZisIsNotZis/agent.my.git
