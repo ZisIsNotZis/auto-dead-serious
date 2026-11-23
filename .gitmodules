@@ -226,3 +226,15 @@
 [submodule "agent.my"]
 	path = agent.my
 	url = ssh://git@github.com/ZisIsNotZis/agent.my.git
+[submodule "cov7segDsp"]
+	path = cov7segDsp
+	url = ./cov7segDsp/
+[submodule "monopoly11"]
+	path = monopoly11
+	url = ./monopoly11/
+[submodule "monopoly12"]
+	path = monopoly12
+	url = ./monopoly12/
+[submodule "socraticMirror"]
+	path = socraticMirror
+	url = ./socraticMirror/
