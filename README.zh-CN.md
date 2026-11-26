@@ -9,7 +9,7 @@
 
 [![项目数](https://img.shields.io/badge/projects-70-6f42c1)](docs/result/catalogue-redesign/README.md)
 [![许可证](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
-[![规范](https://img.shields.io/badge/docs-AGENTS.md-0f766e)](AGENTS.md)
+[![贡献指南](https://img.shields.io/badge/docs-contributing-0f766e)](CONTRIBUTING.md)
 
 ![作品集中的四个项目](docs/media/showcase.jpg)
 

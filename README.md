@@ -10,7 +10,7 @@ English | [简体中文](README.zh-CN.md)
 
 [![Projects](https://img.shields.io/badge/projects-70-6f42c1)](docs/result/catalogue-redesign/README.md)
 [![License](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
-[![Policy](https://img.shields.io/badge/docs-AGENTS.md-0f766e)](AGENTS.md)
+[![Contributing](https://img.shields.io/badge/docs-contributing-0f766e)](CONTRIBUTING.md)
 
 ![Four projects from the collection](docs/media/showcase.jpg)
 
