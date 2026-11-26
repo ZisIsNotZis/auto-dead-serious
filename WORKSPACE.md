@@ -7,7 +7,7 @@
 ```sh
 git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
 cd vibe
-git submodule update --init --depth 1 --jobs 5 -- ygoDocGen asyncs7.py hfget cppTest goSeamCarve
+git submodule update --init --depth 1 --jobs 5 -- ygoDocGen asyncs7.py cppTest goSeamCarve monoploy11
 ```
 
 父仓固定仍有开放范围的公开项目，包含暂缓项目。以上命令只检出首批五个子模块；后续按索引选择路径，逐批检出。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。

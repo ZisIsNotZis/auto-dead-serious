@@ -5,7 +5,7 @@
 
 [横向比较与历史评分](docs/result/catalogue-redesign/README.md) · [工作区和验收规则](WORKSPACE.md)
 
-共 120 项，16 项已验收完成，50 个子模块（含 3 个暂缓），其余保留历史或参考状态。
+共 120 项，17 项已验收完成，49 个子模块（含 3 个暂缓），其余保留历史或参考状态。
 
 ## 已验收完成
 
@@ -27,6 +27,7 @@
 | [resume_img_gen](https://github.com/ZisIsNotZis/resume_img_gen) | [8da436dd](https://github.com/ZisIsNotZis/resume_img_gen/blob/8da436dd22459284356adcf77b8d978899253397/COMPLETION.md) | 仓内关闭的三阶段交付已实跑：5 项渲染测试通过，样例 JSON 产出 HTML 及 1760×2400 PNG，样例 Markdown 经 Pandoc 3.11/WeasyPrint 产出 PDF 1.7；浏览器另从 HTML 导出单页 PDF。 | 标记已完成的 HTML、浏览器 PNG/PDF 与 Markdown PDF 工作流，保留外部工具依赖。 |
 | [resume_improve_loop](https://github.com/ZisIsNotZis/resume_improve_loop) | [c451f33f](https://github.com/ZisIsNotZis/resume_improve_loop/blob/c451f33f2c6f909a8372e90265e45034e5e54129/COMPLETION.md) | 原范围是独立评委打分与聚合 CLI。固定提交 4 项自测通过；9 个评委通过本地合成子进程完成两轮，比分相同后在上限 3 轮之前按阈值停止。没有验证真人评审价值。 | 记录已验证的本地工作流合同，不扩大为提高录用率或新岗位推荐。 |
 | [suzhou-drive](https://github.com/ZisIsNotZis/suzhou-drive) | [0b11c2d4](https://github.com/ZisIsNotZis/suzhou-drive/blob/0b11c2d4204dd248e8d0741626a163adee2ac171/COMPLETION.md) | 原范围 roadmap-v2 0.1.0。隔离复验 40 条单元测试与 Vite 构建通过；用现有 Chromium Headless Shell 的软件 WebGL 运行实际浏览器套件，26 条通过，缺命名地点样例的既知测试跳过。 | 标记离线 0.1.0 的已验收范围，保留命名地点样例缺失和硬件性能不在此次验收的限制。 |
+| [hfget](https://github.com/ZisIsNotZis/hfget) | [efdaabb7](https://github.com/ZisIsNotZis/hfget/blob/efdaabb71cf61c07793805edb50f137aaa353ee7/COMPLETION.md) | 10 项离线测试通过。真实 Hugging Face 干跑列出一个公开仓的完整文件选择，未下载权重。 | — |
 | [ygodoc.py](https://github.com/ZisIsNotZis/ygodoc.py) | [b2ba3980](https://github.com/ZisIsNotZis/ygodoc.py/blob/b2ba3980603dd83ce891b51186f8a853a6866cb1/COMPLETION.md) | 解析五个 ocgcore Lua 绑定文件，生成签名说明与 Sublime 补全。固定远端和 ocgcore 2d2e322d 实测输出 609 行 | README 修复克隆路径并记录被验收的上游版本 |
 
 ## 进行中与待验收
@@ -37,7 +38,6 @@
 |---|---|---|---|
 | [ygoDocGen](https://github.com/ZisIsNotZis/ygoDocGen) | [09ab91ba](https://github.com/ZisIsNotZis/ygoDocGen/tree/09ab91ba90500e963df89a49d762650a1de806a4) | 另一套解析器，README 声称可直接运行。固定源码和完整 ocgcore 输入实测 NameError re，另引用未交付的 _functions.txt | 修正独立入口和缺失输入，或证明可由 ygodoc.py 替代 |
 | [asyncs7.py](https://github.com/ZisIsNotZis/asyncs7.py) | [342f5e2f](https://github.com/ZisIsNotZis/asyncs7.py/tree/342f5e2f2fd06efdcf90560aee3cc59cbc688813) | S7 DBRead Python 库；协议原型、未见可复核的安装和本地验收。 | 先修发行包并验证安装，随后从可重复的本地模拟端验证读块。 |
-| [hfget](https://github.com/ZisIsNotZis/hfget) | [c69cabae](https://github.com/ZisIsNotZis/hfget/tree/c69cabaeab6ea2bd2dc1a688f2d6a052b226da62) | 真实 Hugging Face dry-run 在 2 个仓上成功。合成测试中它选择了只下载到首片的两片量化，违反「完整分片集」承诺，即使有完整低优先回退。 | 遇缺片、重复片和总片数不一致时跳过分片组，保证选择完整可用的模型集合。 |
 | [cppTest](https://github.com/ZisIsNotZis/cppTest) | [2c979da7](https://github.com/ZisIsNotZis/cppTest/tree/2c979da7952a9f4b44ee1847c53b2854ad3f21f7) | GCC 试验性 C/C++ 测试脚本。 | 用最小独立样例明确支持的 shell/编译器和响应断言，复验报告。 |
 | [goSeamCarve](https://github.com/ZisIsNotZis/goSeamCarve) | [12ba253a](https://github.com/ZisIsNotZis/goSeamCarve/tree/12ba253a8d3959db32f0d9646412b558fa9b3857) | 存在 PNG/JPEG 等输入读取和 Sobel/随机能量的 Go 缩图原型；README 仅标题，无环境、输入输出约束与可跑样例。 | 用合成小图跑宽高缩减，补正确命令、格式限制与失败边界。 |
 | [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [4393f980](https://github.com/ZisIsNotZis/monoploy11/tree/4393f980734cd42ace9227cd0e2d41bfd780aea1) | 独立浏览器棋盘原型可开局，远端固定版本 node --test 96/96；接受范围仍有窄屏决策与离线交付，活跃 Vibe 工作尚未验收。 | 从远端真实入口完成一次可读、可重复的窄屏完整局。 |

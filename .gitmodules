@@ -61,9 +61,6 @@
 [submodule "helpagent"]
 	path = helpagent
 	url = https://github.com/ZisIsNotZis/helpagent.git
-[submodule "hfget"]
-	path = hfget
-	url = https://github.com/ZisIsNotZis/hfget.git
 [submodule "huaqiang_game"]
 	path = huaqiang_game
 	url = https://github.com/ZisIsNotZis/huaqiang_game.git
