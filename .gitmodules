@@ -124,9 +124,6 @@
 [submodule "ygocli"]
 	path = ygocli
 	url = https://github.com/ZisIsNotZis/ygocli.git
-[submodule "ygoDocGen"]
-	path = ygoDocGen
-	url = https://github.com/ZisIsNotZis/ygoDocGen.git
 [submodule "ygoimgen.sh"]
 	path = ygoimgen.sh
 	url = https://github.com/ZisIsNotZis/ygoimgen.sh.git

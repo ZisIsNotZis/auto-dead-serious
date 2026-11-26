@@ -5,7 +5,7 @@
 
 [横向比较与历史评分](docs/result/catalogue-redesign/README.md) · [工作区和验收规则](WORKSPACE.md)
 
-共 120 项，20 项已验收完成，46 个子模块（含 3 个暂缓），其余保留历史或参考状态。
+共 120 项，21 项已验收完成，45 个子模块（含 3 个暂缓），其余保留历史或参考状态。
 
 ## 已验收完成
 
@@ -32,6 +32,7 @@
 | [asyncs7.py](https://github.com/ZisIsNotZis/asyncs7.py) | [57d26f89](https://github.com/ZisIsNotZis/asyncs7.py/blob/57d26f898b3cbc80752c5b2fcb06835609656d08/COMPLETION.md) | 只读 Python 客户端、CLI 与本地模拟器。远端重建安装后，Python 3.11 和 3.14 各通过 23 项回环与功能测试。 | — |
 | [cppTest](https://github.com/ZisIsNotZis/cppTest) | [9afd565d](https://github.com/ZisIsNotZis/cppTest/blob/9afd565d34f11693e0f5a5cac3beb97b1e2a5f5b/COMPLETION.md) | 独立的表驱动 C/C++ 单元测试运行器。干净远端检出通过 47 项自检，覆盖混合语言、退出状态和并发运行。 | — |
 | [ygodoc.py](https://github.com/ZisIsNotZis/ygodoc.py) | [b2ba3980](https://github.com/ZisIsNotZis/ygodoc.py/blob/b2ba3980603dd83ce891b51186f8a853a6866cb1/COMPLETION.md) | 解析五个 ocgcore Lua 绑定文件，生成签名说明与 Sublime 补全。固定远端和 ocgcore 2d2e322d 实测输出 609 行 | 验收依据为固定的 ocgcore 版本，复现命令见项目 README。 |
+| [ygoDocGen](https://github.com/ZisIsNotZis/ygoDocGen) | [96b34b7c](https://github.com/ZisIsNotZis/ygoDocGen/blob/96b34b7c2692ab22a0acb8719e005d0d9b1194d0/COMPLETION.md) | v2.0.0 从五份 ocgcore 绑定源码生成 DataEditorX Lua API 文档，保留中文注释并导出逐字段证据。两个上游版本与两种 Python 的四组测试均 41 项通过；独立远端检出复验通过。 | 三项源码不可推断的字段仍明确标为未知。 |
 
 ## 进行中与待验收
 
@@ -39,7 +40,6 @@
 
 | 仓库 | 固定版本或回执 | 已核对的交付范围与边界 | 下一步 |
 |---|---|---|---|
-| [ygoDocGen](https://github.com/ZisIsNotZis/ygoDocGen) | [09ab91ba](https://github.com/ZisIsNotZis/ygoDocGen/tree/09ab91ba90500e963df89a49d762650a1de806a4) | 另一套解析器，README 声称可直接运行。固定源码和完整 ocgcore 输入实测 NameError re，另引用未交付的 _functions.txt | 修正独立入口和缺失输入，或证明可由 ygodoc.py 替代 |
 | [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [4393f980](https://github.com/ZisIsNotZis/monoploy11/tree/4393f980734cd42ace9227cd0e2d41bfd780aea1) | 独立浏览器棋盘原型可开局，远端固定版本 node --test 96/96；接受范围仍有窄屏决策与离线交付，活跃 Vibe 工作尚未验收。 | 从远端真实入口完成一次可读、可重复的窄屏完整局。 |
 | [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | [0a93d474](https://github.com/ZisIsNotZis/monopoly12/tree/0a93d4749869116d2756adb881a17df2207fb568) | 公开是 M1 设计与校验工具，Vibe 可运行原型还未合入；不能把设计公开当成游戏交付。 | 按发布入口核对键盘与交互完整切片，再验收真正游戏交付。 |
 | [learn_draw](https://github.com/ZisIsNotZis/learn_draw) | [0a28db7f](https://github.com/ZisIsNotZis/learn_draw/tree/0a28db7f1d3fec5b29a7f4eac710fedd1509824e) | 公开有关系渲染 CLI、比对命令和可追溯迭代，但“像看懂一样画”的效果仍以每张图验收，当前 Vibe 有开放切片。 | 验收一张能独立读清叙事/空间关系的原创作品，并证明过程可复现。 |
