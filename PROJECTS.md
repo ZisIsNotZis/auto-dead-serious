@@ -30,7 +30,7 @@
 | [hfget](https://github.com/ZisIsNotZis/hfget) | [efdaabb7](https://github.com/ZisIsNotZis/hfget/blob/efdaabb71cf61c07793805edb50f137aaa353ee7/COMPLETION.md) | 10 项离线测试通过。真实 Hugging Face 干跑列出一个公开仓的完整文件选择，未下载权重。 | — |
 | [goSeamCarve](https://github.com/ZisIsNotZis/goSeamCarve) | [4852759c](https://github.com/ZisIsNotZis/goSeamCarve/blob/4852759cac45dfb05369eaea395a74f5e5c63f4f/COMPLETION.md) | 离线 Go 缩图入口与五组合成场景；20 张 PNG 可逐字节重现，远端干净检出复验通过。 | — |
 | [asyncs7.py](https://github.com/ZisIsNotZis/asyncs7.py) | [57d26f89](https://github.com/ZisIsNotZis/asyncs7.py/blob/57d26f898b3cbc80752c5b2fcb06835609656d08/COMPLETION.md) | 只读 Python 客户端、CLI 与本地模拟器。远端重建安装后，Python 3.11 和 3.14 各通过 23 项回环与功能测试。 | — |
-| [cppTest](https://github.com/ZisIsNotZis/cppTest) | [318531dd](https://github.com/ZisIsNotZis/cppTest/blob/318531ddfbc19b84438ce4de700d9bc01dc0cbc0/COMPLETION.md) | 独立的表驱动 C/C++ 单元测试运行器。干净远端检出通过 47 项自检，覆盖混合语言、退出状态和并发运行。 | — |
+| [cppTest](https://github.com/ZisIsNotZis/cppTest) | [9afd565d](https://github.com/ZisIsNotZis/cppTest/blob/9afd565d34f11693e0f5a5cac3beb97b1e2a5f5b/COMPLETION.md) | 独立的表驱动 C/C++ 单元测试运行器。干净远端检出通过 47 项自检，覆盖混合语言、退出状态和并发运行。 | — |
 | [ygodoc.py](https://github.com/ZisIsNotZis/ygodoc.py) | [b2ba3980](https://github.com/ZisIsNotZis/ygodoc.py/blob/b2ba3980603dd83ce891b51186f8a853a6866cb1/COMPLETION.md) | 解析五个 ocgcore Lua 绑定文件，生成签名说明与 Sublime 补全。固定远端和 ocgcore 2d2e322d 实测输出 609 行 | 验收依据为固定的 ocgcore 版本，复现命令见项目 README。 |
 
 ## 进行中与待验收
