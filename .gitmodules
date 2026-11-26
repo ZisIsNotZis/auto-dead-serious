@@ -7,9 +7,6 @@
 [submodule "aps"]
 	path = aps
 	url = https://github.com/ZisIsNotZis/aps.git
-[submodule "asyncs7.py"]
-	path = asyncs7.py
-	url = https://github.com/ZisIsNotZis/asyncs7.py.git
 [submodule "auto_maintain_bench"]
 	path = auto_maintain_bench
 	url = https://github.com/ZisIsNotZis/auto_maintain_bench.git
