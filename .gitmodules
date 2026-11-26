@@ -49,9 +49,6 @@
 [submodule "flashdb"]
 	path = flashdb
 	url = https://github.com/ZisIsNotZis/flashdb.git
-[submodule "goSeamCarve"]
-	path = goSeamCarve
-	url = https://github.com/ZisIsNotZis/goSeamCarve.git
 [submodule "greenlet_fiber"]
 	path = greenlet_fiber
 	url = https://github.com/ZisIsNotZis/greenlet_fiber.git
