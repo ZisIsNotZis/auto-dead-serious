@@ -20,41 +20,35 @@
 <!-- BEGIN GENERATED SHOWCASE -->
 | 项目 | 是什么 | 状态 | 推荐度 | 想法 | 已实现 | 潜力 | 完成度 |
 |---|---|---|---:|---:|---:|---:|---:|
-| [helpagent](helpagent/) | A completed research campaign and harness measuring a fixed small local model in bounded… | 单次交付 | 7.6 | 7.7 | 7 | 7.2 | 9 |
-| [auto_maintain_bench](auto_maintain_bench/) | A benchmark for small language models diagnosing and maintaining Linux hosts through constrained bash… | 可用 | 6.8 | 7.0 | 6 | 6.4 | 8 |
-| [agentic-animation](agentic-animation/) | A local, project-agnostic pipeline for structured-story input, code-driven 2D puppet motion, replaceable… | 可用 | 6.8 | 6.3 | 7 | 6.0 | 7 |
-| [murderMysteryGame](murderMysteryGame/) | 《寿宴》 is a printable six-player-and-host mystery-game POC with role booklets, host instructions, clue cards,… | 单次交付 | 6.5 | 7.0 | 6 | 5.2 | 7 |
-| [fat_kakeya_needle](fat_kakeya_needle/) | A mathematical and computational research workbench on minimizing the swept area of a 1×ε rectangle during a… | 原型 | 6.3 | 7.3 | 5 | 5.6 | 6 |
-| [raid_calc](raid_calc/) | Offline browser calculator for expected data loss over time in arbitrarily nested storage pools, with a CTMC… | 单次交付 | 5.9 | 6.0 | 6 | 4.5 | 8 |
-| [aps](aps/) | An experimental local planning workbench that models manufacturing item flows, compiles constraints,… | 原型 | 5.8 | 5.3 | 6 | 5.2 | 7 |
-| [dojo](dojo/) | A local CLI and SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives,… | 原型 | 5.8 | 6.3 | 5 | 4.9 | 6 |
+| [helpagent](docs/result/catalogue-redesign/README.md#helpagent) | A completed research campaign and harness measuring a fixed small local model in bounded… | 单次交付 | 7.6 | 7.7 | 7 | 7.2 | 9 |
+| [auto_maintain_bench](docs/result/catalogue-redesign/README.md#auto-maintain-bench) | A benchmark for small language models diagnosing and maintaining Linux hosts through constrained bash… | 可用 | 6.8 | 7.0 | 6 | 6.4 | 8 |
+| [agentic-animation](docs/result/catalogue-redesign/README.md#agentic-animation) | A local, project-agnostic pipeline for structured-story input, code-driven 2D puppet motion, replaceable… | 可用 | 6.8 | 6.3 | 7 | 6.0 | 7 |
+| [murderMysteryGame](docs/result/catalogue-redesign/README.md#murdermysterygame) | 《寿宴》 is a printable six-player-and-host mystery-game POC with role booklets, host instructions, clue cards,… | 单次交付 | 6.5 | 7.0 | 6 | 5.2 | 7 |
+| [fat_kakeya_needle](docs/result/catalogue-redesign/README.md#fat-kakeya-needle) | A mathematical and computational research workbench on minimizing the swept area of a 1×ε rectangle during a… | 原型 | 6.3 | 7.3 | 5 | 5.6 | 6 |
+| [raid_calc](docs/result/catalogue-redesign/README.md#raid-calc) | Offline browser calculator for expected data loss over time in arbitrarily nested storage pools, with a CTMC… | 单次交付 | 5.9 | 6.0 | 6 | 4.5 | 8 |
+| [aps](docs/result/catalogue-redesign/README.md#aps) | An experimental local planning workbench that models manufacturing item flows, compiles constraints,… | 原型 | 5.8 | 5.3 | 6 | 5.2 | 7 |
+| [dojo](docs/result/catalogue-redesign/README.md#dojo) | A local CLI and SQLite proof of concept for storing revisable, sourced discussion candidates, alternatives,… | 原型 | 5.8 | 6.3 | 5 | 4.9 | 6 |
 
-**70 个固定版本项目**：5 可用 · 33 原型 · 1 仅设计 · 18 单次交付 · 9 归档 · 4 私有。其中 52 行仍是首轮估计。
+**70 个历史评审项目**：5 可用 · 33 原型 · 1 仅设计 · 18 单次交付 · 9 归档 · 4 私有。其中 52 行仍是首轮估计。
 
 项目描述沿用各仓库的英文原文，避免同一事实出现两份译文。
 
-全部 70 个固定版本项目，每项都写明能实际看到什么、每个数字怎么来的、哪些尚未验证、评分如何变化：[**打开作品总览**](docs/result/catalogue-redesign/README.md)。所有分数是基于书面证据的 0–10 序数判断估计，不是测量，量表定义见该页。
+全部 70 个历史评审项目，每项都写明能实际看到什么、每个数字怎么来的、哪些尚未验证、评分如何变化：[**打开作品总览**](docs/result/catalogue-redesign/README.md)。所有分数是基于书面证据的 0–10 序数判断估计，不是测量，量表定义见该页。
 
 <!-- 由 scripts/catalogue_final.py 从 assessments.json 生成。请改评分，不要改这段。 -->
 <!-- END GENERATED SHOWCASE -->
 
 ## 快速开始
 
-```sh
-git clone --recurse-submodules https://github.com/ZisIsNotZis/auto-dead-serious.git
-cd auto-dead-serious
-git submodule status | wc -l
-```
-
-最后一行输出 `76`：70 个已评估项目，以及 6 个已固定但尚未评估的子项目（规范仓库本身和 `agent.my` 在其中）。其中 6 个项目是私有的（`agent.my`、`colleague_private`、`petfleet`、`resume_private`、`timecolumn`、`tutor_private`），没有权限会失败；其余 70 个子项目可匿名克隆，规范仓库同样可匿名克隆。远端已改为 HTTPS，不需要 SSH 密钥。
-
-重新生成本页所有表格只需要标准库（Python 3.12，无需安装依赖）：
+从[项目总索引](PROJECTS.md)查看当前状态、已完成交付和待推进顺序。[工作区说明](WORKSPACE.md)说明如何接入本地工作与完成验收。
 
 ```sh
-python3 scripts/catalogue_final.py
+git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
+cd vibe
+git submodule update --init --jobs 5
 ```
 
-输出 `PASS: 70 projects, 70 rows rendered, …`，在作者机器上实测约 0.04 秒。全新克隆无法重建的只有上面 4 个私有子项目：工作树本身就是项目，仓库里没有放置构建产物。
+评分基于历史固定版本。重建表格请运行 `python3 scripts/catalogue_final.py`。
 
 ## 状态与限制
 
@@ -62,7 +56,7 @@ python3 scripts/catalogue_final.py
 - **70 行中有 52 行未复核。** 它们保留首轮估计，只有复核过的行会在“评分轨迹”里注明。
 - 已发布的作品总览逐项写明：访客实际能看到什么、每个维度怎么得出、哪些尚未验证、评分如何变化——[打开总览](docs/result/catalogue-redesign/README.md)。
 - 本页图片均来自子仓库中已提交文件的裁切，并标注来源；没有为本页渲染、摆拍或修图。
-- 可选的检出说明在 [WORKSPACE.md](WORKSPACE.md)，代理遵循的规范在 [AGENTS.md](AGENTS.md)，它是指向 [agent-policy](https://github.com/ZisIsNotZis/agent-policy) 子模块的软链接，规范在那里维护。
+- 工作区说明见 [WORKSPACE.md](WORKSPACE.md)。历史规范在 [agent-policy](https://github.com/ZisIsNotZis/agent-policy)，已融入 Praxis 与 Praxis2。
 
 ## 这里的“严肃”指什么
 
@@ -85,4 +79,4 @@ python3 scripts/catalogue_final.py
 
 ## 许可证
 
-本汇总仓库的原创材料采用 AGPL-3.0-only，`agent-policy/` 里的规范采用 MIT。子仓库保留各自许可证；复用前请逐个检查。
+本汇总仓库的原创材料采用 AGPL-3.0-only，独立的 agent-policy 仓库采用 MIT。子仓库保留各自许可证；复用前请逐个检查。

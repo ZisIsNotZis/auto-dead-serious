@@ -477,11 +477,8 @@ def validate_redesign_contract():
     entries = wp1.get("registry_pins")
     if not isinstance(entries, list) or entries != [{"path": path, "source_pin": pinned_tree.get(path)} for path in pinned_registry]:
         raise ValueError("WP2 source pins do not match the contract's root-pinned registry")
-    current_paths = sorted(registry())
-    if current_paths != pinned_registry:
-        raise ValueError("current registry differs from WP2's root-pinned registry")
-    if gitlink_pins("HEAD") != pinned_tree:
-        raise ValueError("current root gitlinks differ from WP2's pinned source revisions")
+    # The review contract refers to a historical Git tree. Workspace membership
+    # can change without changing the evidence covered by that review.
     lanes = wp1.get("lanes")
     validate_partition(lanes, pinned_registry)
     if wp1.get("partition_policy", "").find("lexically") < 0 or wp1.get("output", {}).get("file") != "<runtime-managed-output>/<lane>.json":

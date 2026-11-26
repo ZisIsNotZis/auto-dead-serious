@@ -1,30 +1,27 @@
-# Checkout facts
+# Vibe 工作区
 
-Optional local inspection notes for this aggregator.
+[项目总索引](PROJECTS.md)是当前状态与顺序的入口。[横向比较与评分](docs/result/catalogue-redesign/README.md)保留原评审所依据的固定版本。分数变化需要新证据，项目移出子模块本身不改分。
 
-## Layout
-
-`.gitmodules` maps child checkout paths to repository URLs; these names can
-differ (for example, `drive` maps to `suzhou-drive`). The parent index records
-pinned gitlinks, while each child has its own index and working tree. A changed
-child checkout and a changed parent pin are distinct states.
-
-The existing private-project slug convention uses a trailing `_private`
-(for example, `colleague_private`). Local names do not verify remote visibility.
-
-## Local-only checkouts
-
-One project directory is a git repository with no remote: `prompt_fixed_point`, which has no commits yet. Its absence from `.gitmodules` and from the index is deliberate rather than forgotten; it stays untracked until it has commits and a remote, because a pin to a commit nobody else can fetch is worse than an explained gap. `petfleet` had the same shape and now has a private remote and a pin, after a night of work sat on one disk.
-
-## Inspection
-
-From the aggregator root, replace `<child>` with the relevant checkout path:
+## 检出与迁移
 
 ```sh
-git submodule status -- <child>
-git -C <child> status --short
+git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
+cd vibe
+git submodule update --init --jobs 5
 ```
 
-The first command reports the child's checked-out revision relative to the
-parent pin; the second reports that child's local changes. Neither changes the
-checkout or runs the child's tests.
+父仓只固定当前进行中的公开项目。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。
+
+已有工作区先检查每个子目录的未提交文件、未跟踪材料、只存在于本地的分支和远端差异。接入父仓时保留原有子目录及本地运行数据。不要在有本地工作时用 `git submodule update --force` 或清理工具覆盖它们。`git submodule status` 的加号通常表示子目录正在另一个提交上，先查实际状态再调整父仓的固定版本。
+
+## 怎么推进
+
+从短、独立、可端到端验收的项目开始，同时最多推进 5 个独立项目。已经有可验收切片的项目优先结束手上的工作。进行中子模块之外的待验收项目按 [总索引](PROJECTS.md) 中的顺序进入，等空出一个位置再接入下一个项目。长期研究按可发布的里程碑推进。处于暂缓或待核状态的仓库先厘清目标、依赖和证据。
+
+每个项目先跑真实入口，记录验收范围、产物、复现方式、结果和仍开放的限制。维护者更新 README 的状态和 GitHub 简介，随后独立复核。已交付的阶段可以在 README 中标明其范围，整项目状态仍可能是进行中。
+
+## 完成与移出
+
+确认完整范围已达成后，在项目根目录新增 `COMPLETION.md`。记下日期、验收范围、入口与命令、结果、证据链接及已知限制。README 第一屏写清完成范围并链接此标记。GitHub 简介使用 `Completed:` 后接实际交付物。被另一项目取代、暂缓和历史归档沿用各自状态。
+
+先推送项目交付，再用独立目录从远端取回固定提交，打开真实产物或执行验收。然后在总索引的完成区记录固定提交和证据链接，在父仓移除对应子模块。原目录只有在独有文件、分支及运行数据都已确认可恢复后才清理。
