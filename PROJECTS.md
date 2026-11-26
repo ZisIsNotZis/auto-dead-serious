@@ -27,7 +27,7 @@
 | [agentic-animation](https://github.com/ZisIsNotZis/agentic-animation) | 进行中 | `agentic-animation` | 用完整短片验证可复用动作与道具交互 | Agent-operated toolkit that turns a written story into a narrated, deterministic 2D animated MP4 — code-driven motion, no generative video |
 | [dojo](https://github.com/ZisIsNotZis/dojo) | 进行中 | `dojo` | 用本地 CLI 验收一条可追溯、可修订的知识链 | Local no-UI CLI + SQLite ledger for traceable discussion candidates: provenance, versions, boundaries, and a dao library |
 | [autofe](https://github.com/ZisIsNotZis/autofe) | 进行中 | `autofe` | 同一业务意图从源证据生成并验收多个阅读视图 | Intent-driven frontend: declare what a page means, and one shared decision layer renders it as HTML, plain text and Markdown. |
-| [flashdb](https://github.com/ZisIsNotZis/flashdb) | 进行中 | `flashdb` | 验收真实业务单请求、自动布局及可归因的发布包 | A log-structured document store that learns its per-region physical layout from the workload instead of asking you to declare one. |
+| [flashdb](https://github.com/ZisIsNotZis/flashdb) | 进行中 | `flashdb` | Research database for whole-business requests and workload-learned storage layout. Adaptive layout and performance are under evaluation. |
 | [socraticMirror](https://github.com/ZisIsNotZis/socraticMirror) | 进行中 | `socraticMirror` | Conversation-based knowledge mapping: surface what you understand, missing prerequisites, and useful next questions. Prototype in validation. |
 | [backseat](https://github.com/ZisIsNotZis/backseat) | 进行中 | `backseat` | 验证本地、透明、可追溯的建议工作流 | Local-first AI companion: the screen is a trigger, the substance comes from your repos and session records, and every comment cites its source. |
 | [helpagent](https://github.com/ZisIsNotZis/helpagent) | 进行中 | `helpagent` | 保留已完测量，验证小模型工作流的下一处独立收益 | A pre-registered measurement of a program-shaped coding harness on a 4B local model: three verdicts, negative results, and every decisive number recomputable offline |
@@ -101,8 +101,8 @@
 | [drive](https://github.com/ZisIsNotZis/drive) | 待核 | — | 待核对 README、入口和最后一份交付证据 | drive project |
 | [fring](https://github.com/ZisIsNotZis/fring) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Three hand-written io_uring event loops in Python: raw CQEs, an asyncio bridge, and a from-scratch coroutine scheduler. |
 | [ggml-python](https://github.com/ZisIsNotZis/ggml-python) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | Python bindings for ggml |
-| [ghtest](https://github.com/ZisIsNotZis/ghtest) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
-| [goSeamCarve](https://github.com/ZisIsNotZis/goSeamCarve) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
+| [ghtest](https://github.com/ZisIsNotZis/ghtest) | 待核 | — | Archived test repository for GitHub workflows, branches and repository metadata. |
+| [goSeamCarve](https://github.com/ZisIsNotZis/goSeamCarve) | 待核 | — | Small Go seam-carving experiment for content-aware image resizing. |
 | [grammar](https://github.com/ZisIsNotZis/grammar) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Masked-token (denoising) U-Net experiments over a 90-symbol tokenised Python-source corpus — pure convolution, no recurrence, no attention |
 | [greenlet_fiber](https://github.com/ZisIsNotZis/greenlet_fiber) | 待核 | — | 待核对 README、入口和最后一份交付证据 | fiber with greenlet |
 | [gu](https://github.com/ZisIsNotZis/gu) | 待核 | — | 待核对 README、入口和最后一份交付证据 | The best card game ever |
@@ -119,12 +119,12 @@
 | [llama-cpp-python](https://github.com/ZisIsNotZis/llama-cpp-python) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | Python bindings for llama.cpp |
 | [llama.cpp](https://github.com/ZisIsNotZis/llama.cpp) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | llama.cpp fork with a live plain-text server dashboard: llama-server --tui N prints a tagged per-sequence status stream (phases, KV memory, cache hits, speeds, live tails, GPU/CPU utilization) every second. |
 | [lm_paper_test](https://github.com/ZisIsNotZis/lm_paper_test) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Vibe coding project: lm_paper_test |
-| [lmchk](https://github.com/ZisIsNotZis/lmchk) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
+| [lmchk](https://github.com/ZisIsNotZis/lmchk) | 待核 | — | Experimental scripts for checking streamed LLM code-review output and validating its structured format. |
 | [lmlayer](https://github.com/ZisIsNotZis/lmlayer) | 待核 | — | 待核对 README、入口和最后一份交付证据 | OpenAI-compatible proxy that adds safety, sessions, RAG, tools, quotas, and fair scheduling to any LLM server. |
 | [misc](https://github.com/ZisIsNotZis/misc) | 待核 | — | 待核对 README、入口和最后一份交付证据 | A flat drawer of one-off scripts, notebooks and notes: a from-scratch ANSI terminal, asyncio servers, industrial-vision config munging and llama.cpp builds |
 | [mux](https://github.com/ZisIsNotZis/mux) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Vibe coding project: mux |
 | [mycar](https://github.com/ZisIsNotZis/mycar) | 待核 | — | 待核对 README、入口和最后一份交付证据 | A 4.46 m shape-shifting camper car: a 1.75 m person sleeps flat and stands upright, purely mechanically. Parametric blueprint engine in one HTML file. |
-| [myideaplugin](https://github.com/ZisIsNotZis/myideaplugin) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
+| [myideaplugin](https://github.com/ZisIsNotZis/myideaplugin) | 待核 | — | IntelliJ Platform plugin scaffold. Template setup remains visible; no plugin release is documented. |
 | [myminio](https://github.com/ZisIsNotZis/myminio) | 待核 | — | 待核对 README、入口和最后一份交付证据 | A hand-rolled object store: XOR erasure coding, versioned reads, quota-aware placement, and on-read shard repair in Python and NumPy. |
 | [myminio2](https://github.com/ZisIsNotZis/myminio2) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Hand-rolled object store: asyncio HTTP/1.1 file server plus a 2+1 XOR erasure-coded gateway over three backends |
 | [myygo](https://github.com/ZisIsNotZis/myygo) | 待核 | — | 待核对 README、入口和最后一份交付证据 | A compact, lambda-driven DSL sketch that turns Yu-Gi-Oh! card effects into uniform, auditable data. |
@@ -148,7 +148,7 @@
 | [ydkgen](https://github.com/ZisIsNotZis/ydkgen) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Transformer-Based Yu-Gi-Oh! Deck Generator (Pure PyTorch) |
 | [ydkskill](https://github.com/ZisIsNotZis/ydkskill) | 待核 | — | 待核对 README、入口和最后一份交付证据 | A skill that generates mastered Yu-Gi-Oh! deck (need ygopro files) |
 | [ygo](https://github.com/ZisIsNotZis/ygo) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Yu-Gi-Oh! deck and card-art experiments: DINOv2 on hand-written ggml/GGUF from Python, PCA card-art autocrop, video shot selection, n-gram deck naming, torch deck models |
-| [ygocli](https://github.com/ZisIsNotZis/ygocli) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
+| [ygocli](https://github.com/ZisIsNotZis/ygocli) | 待核 | — | Text-first Yu-Gi-Oh! duel CLI and server powered by ocgcore, with a scriptable MCP interface. |
 | [ygodoc.py](https://github.com/ZisIsNotZis/ygodoc.py) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Generate Ygopro/ocgcore Lua skeleton by parsing ocgcore/lib*.cpp |
 | [ygoDocGen](https://github.com/ZisIsNotZis/ygoDocGen) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Generate YGOPro Lua Documentation by automatically inspecting C++ source file |
 | [ygopro-core](https://github.com/ZisIsNotZis/ygopro-core) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | ygopro script engine. |
