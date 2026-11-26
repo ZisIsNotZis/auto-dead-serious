@@ -7,10 +7,17 @@
 ```sh
 git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
 cd vibe
-git submodule update --init --depth 1 --jobs 5 -- ygoDocGen monoploy11 monopoly12 learn_draw dojo
 ```
 
-父仓固定仍有开放范围的公开项目，包含暂缓项目。以上命令只检出首批五个子模块；后续按索引选择路径，逐批检出。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。
+父仓固定仍有开放范围的公开项目，包含暂缓项目。按[项目总索引](PROJECTS.md)选择本批项目，再用下面的命令分别检出。输入的是父仓中的路径，可以用 `git submodule status` 核对。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。
+
+```sh
+printf '要检出的项目路径：'
+IFS= read -r project
+if [ -n "$project" ]; then
+  git submodule update --init --depth 1 -- "$project"
+fi
+```
 
 已有工作区先检查每个子目录的未提交文件、未跟踪材料、只存在于本地的分支和远端差异。接入父仓时保留原有子目录及本地运行数据。不要在有本地工作时用 `git submodule update --force` 或清理工具覆盖它们。`git submodule status` 的加号通常表示子目录正在另一个提交上，先查实际状态再调整父仓的固定版本。
 
