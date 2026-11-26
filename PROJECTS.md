@@ -41,7 +41,7 @@
 | 仓库 | 固定版本或回执 | 已核对的交付范围与边界 | 下一步 |
 |---|---|---|---|
 | [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [4393f980](https://github.com/ZisIsNotZis/monoploy11/tree/4393f980734cd42ace9227cd0e2d41bfd780aea1) | 独立浏览器棋盘原型可开局，远端固定版本 node --test 96/96；接受范围仍有窄屏决策与离线交付，活跃 Vibe 工作尚未验收。 | 从远端真实入口完成一次可读、可重复的窄屏完整局。 |
-| [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | [0a93d474](https://github.com/ZisIsNotZis/monopoly12/tree/0a93d4749869116d2756adb881a17df2207fb568) | 公开是 M1 设计与校验工具，Vibe 可运行原型还未合入；不能把设计公开当成游戏交付。 | 按发布入口核对键盘与交互完整切片，再验收真正游戏交付。 |
+| [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | [d170e019](https://github.com/ZisIsNotZis/monopoly12/tree/d170e01952fcbc7b342ba9d10a2fc9a6ffb14f7b) | M1 设计集和单文件离线原型已发布；在 390×844 和 1280×900 各实跑一局，121 次点击、关键文案一致，远端检出可复建。 | 改善窄屏买地时的盘面可见性，继续验证键盘交互和完整游戏范围。 |
 | [learn_draw](https://github.com/ZisIsNotZis/learn_draw) | [45e55c66](https://github.com/ZisIsNotZis/learn_draw/tree/45e55c6695ef6f54de85365abfb86476d43af8ca) | 两幅原创画面已发布，分别展示卸货与记账。独立从远端取回并验证 2 PNG、2 SVG 可复建，成图经读图验收。 | 按仓内路线图继续推进 R1a、R1b、R2、R3、R4。 |
 | [dojo](https://github.com/ZisIsNotZis/dojo) | [1af799f1](https://github.com/ZisIsNotZis/dojo/tree/1af799f171c4fc4e996ff179fcb19ef4f39ef6ce) | 本地知识出处账本已有 PoC，真知识链的交付范围未达。 | 从真实 CLI 核对知识链出处、修订和比较的完整只读入口。 |
 | [agentic-animation](https://github.com/ZisIsNotZis/agentic-animation) | [92678d89](https://github.com/ZisIsNotZis/agentic-animation/tree/92678d8951d0782c8c31f32bdf4efcffc26a0b8d) | 可重复的叙事动画制作工具；已发布多集展示，完整制作质量仍在推进。 | 以同一短片的动作与道具互动作端到端验收。 |
