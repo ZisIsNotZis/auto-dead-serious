@@ -13,6 +13,21 @@ PIN = re.compile(r"^\[[0-9a-f]+\]\((https://github\.com/[^)]+)/tree/([0-9a-f]{40
 
 
 class ProjectIndexTest(unittest.TestCase):
+    def test_completed_projects_link_to_their_own_fixed_completion_marker(self):
+        text = (ROOT / "PROJECTS.md").read_text(encoding="utf-8")
+        completed = text.split("## 已验收完成\n", 1)[1].split("\n## ", 1)[0]
+        rows = ROW.findall(completed)
+        self.assertTrue(rows, "No completed repositories in PROJECTS.md")
+        for url, fields in rows:
+            with self.subTest(repo=url):
+                marker = re.match(
+                    rf"^\[([0-9a-f]{{7,40}})\]\({re.escape(url)}/blob/([0-9a-f]{{40}})/COMPLETION\.md\)",
+                    fields,
+                )
+                self.assertIsNotNone(marker, "Expected this repository's fixed COMPLETION.md")
+                abbreviated, full = marker.groups()
+                self.assertTrue(full.startswith(abbreviated), "Completion label disagrees with its commit")
+
     def test_unfinished_projects_match_submodules_and_pins(self):
         text = (ROOT / "PROJECTS.md").read_text(encoding="utf-8")
         rows = ROW.findall(text)
