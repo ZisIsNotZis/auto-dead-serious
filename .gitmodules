@@ -4,6 +4,12 @@
 [submodule "agentworld"]
 	path = agentworld
 	url = https://github.com/ZisIsNotZis/agentworld.git
+[submodule "aps"]
+	path = aps
+	url = https://github.com/ZisIsNotZis/aps.git
+[submodule "asyncs7.py"]
+	path = asyncs7.py
+	url = https://github.com/ZisIsNotZis/asyncs7.py.git
 [submodule "auto_maintain_bench"]
 	path = auto_maintain_bench
 	url = https://github.com/ZisIsNotZis/auto_maintain_bench.git
@@ -13,21 +19,75 @@
 [submodule "backseat"]
 	path = backseat
 	url = https://github.com/ZisIsNotZis/backseat.git
+[submodule "cppBorrow"]
+	path = cppBorrow
+	url = https://github.com/ZisIsNotZis/cppBorrow.git
+[submodule "cppChan"]
+	path = cppChan
+	url = https://github.com/ZisIsNotZis/cppChan.git
+[submodule "cppTest"]
+	path = cppTest
+	url = https://github.com/ZisIsNotZis/cppTest.git
+[submodule "danmaku"]
+	path = danmaku
+	url = https://github.com/ZisIsNotZis/danmaku.git
+[submodule "dinoseg"]
+	path = dinoseg
+	url = https://github.com/ZisIsNotZis/dinoseg.git
+[submodule "dinov23.cpp.py"]
+	path = dinov23.cpp.py
+	url = https://github.com/ZisIsNotZis/dinov23.cpp.py.git
 [submodule "dojo"]
 	path = dojo
 	url = https://github.com/ZisIsNotZis/dojo.git
+[submodule "expyssion"]
+	path = expyssion
+	url = https://github.com/ZisIsNotZis/expyssion.git
 [submodule "fat_kakeya_needle"]
 	path = fat_kakeya_needle
 	url = https://github.com/ZisIsNotZis/fat_kakeya_needle.git
 [submodule "flashdb"]
 	path = flashdb
 	url = https://github.com/ZisIsNotZis/flashdb.git
+[submodule "goSeamCarve"]
+	path = goSeamCarve
+	url = https://github.com/ZisIsNotZis/goSeamCarve.git
+[submodule "greenlet_fiber"]
+	path = greenlet_fiber
+	url = https://github.com/ZisIsNotZis/greenlet_fiber.git
+[submodule "gu"]
+	path = gu
+	url = https://github.com/ZisIsNotZis/gu.git
 [submodule "helpagent"]
 	path = helpagent
 	url = https://github.com/ZisIsNotZis/helpagent.git
+[submodule "hfget"]
+	path = hfget
+	url = https://github.com/ZisIsNotZis/hfget.git
+[submodule "huaqiang_game"]
+	path = huaqiang_game
+	url = https://github.com/ZisIsNotZis/huaqiang_game.git
+[submodule "hypermaker"]
+	path = hypermaker
+	url = https://github.com/ZisIsNotZis/hypermaker.git
+[submodule "iba.py"]
+	path = iba.py
+	url = https://github.com/ZisIsNotZis/iba.py.git
+[submodule "iron-meridian"]
+	path = iron-meridian
+	url = https://github.com/ZisIsNotZis/iron-meridian.git
 [submodule "learn_draw"]
 	path = learn_draw
 	url = https://github.com/ZisIsNotZis/learn_draw.git
+[submodule "lm_paper_test"]
+	path = lm_paper_test
+	url = https://github.com/ZisIsNotZis/lm_paper_test.git
+[submodule "lmchk"]
+	path = lmchk
+	url = https://github.com/ZisIsNotZis/lmchk.git
+[submodule "lmlayer"]
+	path = lmlayer
+	url = https://github.com/ZisIsNotZis/lmlayer.git
 [submodule "local_lm_research"]
 	path = local_lm_research
 	url = https://github.com/ZisIsNotZis/tiny-llm-eval-factors.git
@@ -37,15 +97,54 @@
 [submodule "monopoly12"]
 	path = monopoly12
 	url = https://github.com/ZisIsNotZis/monopoly12.git
+[submodule "murderMysteryGame"]
+	path = murderMysteryGame
+	url = https://github.com/ZisIsNotZis/murderMysteryGame.git
+[submodule "mycar"]
+	path = mycar
+	url = https://github.com/ZisIsNotZis/mycar.git
 [submodule "nomos"]
 	path = nomos
 	url = https://github.com/ZisIsNotZis/nomos.git
 [submodule "pathlm"]
 	path = pathlm
 	url = https://github.com/ZisIsNotZis/pathlm.git
+[submodule "send_teams"]
+	path = send_teams
+	url = https://github.com/ZisIsNotZis/send_teams.git
 [submodule "socraticMirror"]
 	path = socraticMirror
 	url = https://github.com/ZisIsNotZis/socraticMirror.git
 [submodule "sys_gal"]
 	path = sys_gal
 	url = https://github.com/ZisIsNotZis/sys_gal.git
+[submodule "sys_gal_rt"]
+	path = sys_gal_rt
+	url = https://github.com/ZisIsNotZis/sys_gal_rt.git
+[submodule "TokenQR"]
+	path = TokenQR
+	url = https://github.com/ZisIsNotZis/TokenQR.git
+[submodule "vibeos"]
+	path = vibeos
+	url = https://github.com/ZisIsNotZis/vibeos.git
+[submodule "ydkgen"]
+	path = ydkgen
+	url = https://github.com/ZisIsNotZis/ydkgen.git
+[submodule "ydkskill"]
+	path = ydkskill
+	url = https://github.com/ZisIsNotZis/ydkskill.git
+[submodule "ygocli"]
+	path = ygocli
+	url = https://github.com/ZisIsNotZis/ygocli.git
+[submodule "ygoDocGen"]
+	path = ygoDocGen
+	url = https://github.com/ZisIsNotZis/ygoDocGen.git
+[submodule "ygoimgen.sh"]
+	path = ygoimgen.sh
+	url = https://github.com/ZisIsNotZis/ygoimgen.sh.git
+[submodule "ygopromcp"]
+	path = ygopromcp
+	url = https://github.com/ZisIsNotZis/ygopromcp.git
+[submodule "ygoskill"]
+	path = ygoskill
+	url = https://github.com/ZisIsNotZis/ygoskill.git

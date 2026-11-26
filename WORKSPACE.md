@@ -7,16 +7,16 @@
 ```sh
 git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
 cd vibe
-git submodule update --init --jobs 5
+git submodule update --init --depth 1 --jobs 5 -- ygoDocGen asyncs7.py hfget cppTest goSeamCarve
 ```
 
-父仓只固定当前进行中的公开项目。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。
+父仓固定仍有开放范围的公开项目，包含暂缓项目。以上命令只检出首批五个子模块；后续按索引选择路径，逐批检出。每个子模块都有独立 Git 历史、版本和工作树。本地目录名可与 GitHub 仓库名不同，身份以 `.gitmodules` 的 URL 为准。
 
 已有工作区先检查每个子目录的未提交文件、未跟踪材料、只存在于本地的分支和远端差异。接入父仓时保留原有子目录及本地运行数据。不要在有本地工作时用 `git submodule update --force` 或清理工具覆盖它们。`git submodule status` 的加号通常表示子目录正在另一个提交上，先查实际状态再调整父仓的固定版本。
 
 ## 怎么推进
 
-从短、独立、可端到端验收的项目开始，同时最多推进 5 个独立项目。 用 Praxis2 运行时，只给本批项目安排新任务，并设 `PRAXIS2_MAX_CONCURRENT_TURNS=5`；该设置约束模型轮次，项目数量仍由队列控制。已经有可验收切片的项目优先结束手上的工作。进行中子模块之外的待验收项目按 [总索引](PROJECTS.md) 中的顺序进入，等空出一个位置再接入下一个项目。长期研究按可发布的里程碑推进。处于暂缓或待核状态的仓库先厘清目标、依赖和证据。
+从短、独立、可端到端验收的项目开始，同时最多推进 5 个独立项目。 用 Praxis2 运行时，只给本批项目安排新任务，并设 `PRAXIS2_MAX_CONCURRENT_TURNS=5`；该设置约束模型轮次，项目数量仍由队列控制。已经有可验收切片的项目优先结束手上的工作。待验收项目都在子模块清单中，按 [总索引](PROJECTS.md) 中的顺序进入，等有空位再检出。长期研究按可发布的里程碑推进。暂缓的项目保留子模块固定版本，队列只排仍可推进的项目。历史归档、已被替代的项目和上游参考保留 Markdown 记录。
 
 每个项目先跑真实入口，记录验收范围、产物、复现方式、结果和仍开放的限制。维护者更新 README 的状态和 GitHub 简介，随后独立复核。已交付的阶段可以在 README 中标明其范围，整项目状态仍可能是进行中。
 

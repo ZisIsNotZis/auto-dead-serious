@@ -45,7 +45,7 @@
 ```sh
 git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
 cd vibe
-git submodule update --init --jobs 5
+git submodule update --init --depth 1 --jobs 5 -- ygoDocGen asyncs7.py hfget cppTest goSeamCarve
 ```
 
 评分基于历史固定版本。重建表格请运行 `python3 scripts/catalogue_final.py`。

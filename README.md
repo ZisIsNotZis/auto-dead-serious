@@ -44,7 +44,7 @@ See [Projects](PROJECTS.md) for current status, accepted deliveries and the queu
 ```sh
 git clone https://github.com/ZisIsNotZis/auto-dead-serious.git vibe
 cd vibe
-git submodule update --init --jobs 5
+git submodule update --init --depth 1 --jobs 5 -- ygoDocGen asyncs7.py hfget cppTest goSeamCarve
 ```
 
 Ratings refer to their recorded historical revisions. Regenerate the tables with `python3 scripts/catalogue_final.py`.
