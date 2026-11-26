@@ -22,9 +22,6 @@
 [submodule "cppChan"]
 	path = cppChan
 	url = https://github.com/ZisIsNotZis/cppChan.git
-[submodule "cppTest"]
-	path = cppTest
-	url = https://github.com/ZisIsNotZis/cppTest.git
 [submodule "danmaku"]
 	path = danmaku
 	url = https://github.com/ZisIsNotZis/danmaku.git
