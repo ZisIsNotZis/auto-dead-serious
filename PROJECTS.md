@@ -13,6 +13,7 @@
 |---|---|---|
 | [pelican_bike](https://github.com/ZisIsNotZis/pelican_bike) | 离线单文件骑行，六档速度、昼夜和声音控制。 | [aaf2a21](https://github.com/ZisIsNotZis/pelican_bike/blob/aaf2a21/COMPLETION.md) |
 | [pushbus](https://github.com/ZisIsNotZis/pushbus) | 无运行时依赖的 Python 路由总线，支持键连接、宽限计时、异常隔离和并发更新。 | [05bb147](https://github.com/ZisIsNotZis/pushbus/blob/05bb147/COMPLETION.md) |
+| [raid_calc](https://github.com/ZisIsNotZis/raid_calc) | 离线存储池损失计算器。111 项单测、单文件重建及 53 项浏览器检查通过。 | [39578bb](https://github.com/ZisIsNotZis/raid_calc/blob/39578bb/COMPLETION.md) |
 
 ## 进行中
 
@@ -20,14 +21,14 @@
 
 | 仓库 | 状态 | 工作区路径 | 目标或下一步 | GitHub 简介 |
 |---|---|---|---|---|
-| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | 进行中 | `monoploy11` | 验收可离线玩的单文件版本和窄屏决策 | GitHub 暂无简介 |
-| [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | 进行中 | `monopoly12` | 验收可离线玩的单文件版本和键盘决策 | GitHub 暂无简介 |
+| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | 进行中 | `monoploy11` | Lightweight browser board-game prototype with a hotel-centered grid, property decisions and SVG game pieces. |
+| [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | 进行中 | `monopoly12` | Tilelord: a lightweight browser board-game design where movement, roads, and tiles share mutually exclusive space. M1 design published. |
 | [learn_draw](https://github.com/ZisIsNotZis/learn_draw) | 进行中 | `learn_draw` | 用单张成图验收二维叙事与绘画工作流 | Learning to draw as a computed skill: SVG artwork built from relations and 3D depth, judged picture by picture. AGPL-3.0. |
 | [agentic-animation](https://github.com/ZisIsNotZis/agentic-animation) | 进行中 | `agentic-animation` | 用完整短片验证可复用动作与道具交互 | Agent-operated toolkit that turns a written story into a narrated, deterministic 2D animated MP4 — code-driven motion, no generative video |
 | [dojo](https://github.com/ZisIsNotZis/dojo) | 进行中 | `dojo` | 用本地 CLI 验收一条可追溯、可修订的知识链 | Local no-UI CLI + SQLite ledger for traceable discussion candidates: provenance, versions, boundaries, and a dao library |
 | [autofe](https://github.com/ZisIsNotZis/autofe) | 进行中 | `autofe` | 同一业务意图从源证据生成并验收多个阅读视图 | Intent-driven frontend: declare what a page means, and one shared decision layer renders it as HTML, plain text and Markdown. |
 | [flashdb](https://github.com/ZisIsNotZis/flashdb) | 进行中 | `flashdb` | 验收真实业务单请求、自动布局及可归因的发布包 | A log-structured document store that learns its per-region physical layout from the workload instead of asking you to declare one. |
-| [socraticMirror](https://github.com/ZisIsNotZis/socraticMirror) | 进行中 | `socraticMirror` | 验收用户能自主发现知识缺口的完整交互 | GitHub 暂无简介 |
+| [socraticMirror](https://github.com/ZisIsNotZis/socraticMirror) | 进行中 | `socraticMirror` | Conversation-based knowledge mapping: surface what you understand, missing prerequisites, and useful next questions. Prototype in validation. |
 | [backseat](https://github.com/ZisIsNotZis/backseat) | 进行中 | `backseat` | 验证本地、透明、可追溯的建议工作流 | Local-first AI companion: the screen is a trigger, the substance comes from your repos and session records, and every comment cites its source. |
 | [helpagent](https://github.com/ZisIsNotZis/helpagent) | 进行中 | `helpagent` | 保留已完测量，验证小模型工作流的下一处独立收益 | A pre-registered measurement of a program-shaped coding harness on a 4B local model: three verdicts, negative results, and every decisive number recomputable offline |
 | [sys_gal](https://github.com/ZisIsNotZis/sys_gal) | 进行中 | `sys_gal` | 验收角色自主行动和可重放的完整叙事切片 | A reproducible Chinese narrative-simulation lab: autonomous characters see only what they perceive, and every run leaves a byte-exact replayable trace |
@@ -40,13 +41,12 @@
 
 ## 待验收与推进
 
-按表顺序进入验收。首轮另已检查 Raid Calc、cov7segDsp 和 pi-keys，进度在各行。
+按表顺序进入验收。首轮另已检查 cov7segDsp 和 pi-keys，进度在各行。
 
 | 仓库 | 状态 | 工作区路径 | 目标或下一步 | GitHub 简介 |
 |---|---|---|---|---|
-| [cov7segDsp](https://github.com/ZisIsNotZis/cov7segDsp) | 待验收 | — | 12 项 Python 测试、7 组 JS 测试、离线构建及 6/8 遮挡演示通过；设计器完整流程待验收 | GitHub 暂无简介 |
+| [cov7segDsp](https://github.com/ZisIsNotZis/cov7segDsp) | 待验收 | — | Interactive research on occluded segmented displays: see the 6/8 ambiguity, test fault tolerance, and design your own display offline. |
 | [murderMysteryGame](https://github.com/ZisIsNotZis/murderMysteryGame) | 待验收 | — | 复核六人打印包，确认角色人数和剧透边界 | 《寿宴》— a six-player, print-and-play Chinese murder mystery where nobody lies; every line stays true after the reveal. |
-| [raid_calc](https://github.com/ZisIsNotZis/raid_calc) | 待验收 | — | 111 项测试与单文件重建通过；完整浏览器烟测待复核 | Calculate the expected data loss of nested storage pools over time — exact CTMC numerics in one offline HTML file. |
 | [resume_img_gen](https://github.com/ZisIsNotZis/resume_img_gen) | 待验收 | — | 从公开样例重建 HTML 与已有支持的导出格式 | Structured resume data + reusable HTML design canvas -> HTML, PNG, or PDF. Dependency-free rendering, headless-browser capture, pandoc/WeasyPrint PDF. |
 | [pi-keys](https://github.com/ZisIsNotZis/pi-keys) | 待验收 | — | 轮换单测通过；真实 Pi 客户端的回环烟测待验证 | Environment API-key rotation for Pi: advance to the next key on failure, while Pi owns retries. |
 | [litellmgen](https://github.com/ZisIsNotZis/litellmgen) | 待验收 | — | 用合成配置核对字段合并与凭据边界 | Build one LiteLLM config from five model sources, with every field resolved by source priority. |
@@ -94,7 +94,7 @@
 | [cznn](https://github.com/ZisIsNotZis/cznn) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Point-free layer composition for PyTorch research — build neural networks as expressions, not Module subclasses. |
 | [danmaku](https://github.com/ZisIsNotZis/danmaku) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Bilibili-style scrolling comments over any X11 desktop — transparent, always on top, click-through. |
 | [DataEditorX](https://github.com/ZisIsNotZis/DataEditorX) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | YGOPRO Cards Editor |
-| [dcg](https://github.com/ZisIsNotZis/dcg) | 待核 | — | 待核对 README、入口和最后一份交付证据 | GitHub 暂无简介 |
+| [dcg](https://github.com/ZisIsNotZis/dcg) | 待核 | — | Custom Yu-Gi-Oh! card experiment with a card database, artwork and Lua effects. |
 | [dino.py](https://github.com/ZisIsNotZis/dino.py) | 待核 | — | 待核对 README、入口和最后一份交付证据 | DINOv2 and DINOv3 vision features on ggml — no PyTorch at inference. |
 | [dinoseg](https://github.com/ZisIsNotZis/dinoseg) | 待核 | — | 待核对 README、入口和最后一份交付证据 | Click a few pixels to segment a whole batch: interactive segmentation on frozen DINOv3 features for industrial machine vision. |
 | [dinov2.cpp](https://github.com/ZisIsNotZis/dinov2.cpp) | 公开派生仓库，待核 | — | 待核对 README、入口和最后一份交付证据 | DINOv2 inference engine written in C/C++ using ggml and OpenCV. |
