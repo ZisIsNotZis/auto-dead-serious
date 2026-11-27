@@ -40,7 +40,7 @@
 
 | 仓库 | 固定版本或回执 | 已核对的交付范围与边界 | 下一步 |
 |---|---|---|---|
-| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [a79c1af0](https://github.com/ZisIsNotZis/monoploy11/tree/a79c1af01710a825ebf4f06edc6b193bc750f027) | 「街角生意」窄屏整局已发布。独立复验 533 项通过，390×844 用 44 次点击走到结算并可重开；360×640 仍需滚动。远端检出能启动。 | 改善首局决策的节奏和回报，验证玩家是否愿意再玩一局。 |
+| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [7ad1f8a5](https://github.com/ZisIsNotZis/monoploy11/tree/7ad1f8a55b9f24074f387aea0301a149fbd4fbe2) | 「街角生意」窄屏整局与再来一局已发布。541 项测试通过，390×844 用 44 次点击走到结算，重开保留开局风格并换种子。360×640 仍需滚动。 | 改善首局决策的节奏和回报，验证玩家是否愿意再玩一局。 |
 | [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | [0c8169a5](https://github.com/ZisIsNotZis/monopoly12/tree/0c8169a5284a80df6062d9889ea50f03ac6d7b9f) | 已发布单文件离线原型。手机和桌面均独立走完 121 次点击整局；买地候选可见，键盘焦点及 Enter/Space 买地通过。远端检出可逐字节重建。 | 优先验收首玩家的完整玩法节奏和决定性提示，继续推进完整游戏范围。 |
 | [learn_draw](https://github.com/ZisIsNotZis/learn_draw) | [45e55c66](https://github.com/ZisIsNotZis/learn_draw/tree/45e55c6695ef6f54de85365abfb86476d43af8ca) | 两幅原创画面已发布，分别展示卸货与记账。独立从远端取回并验证 2 PNG、2 SVG 可复建，成图经读图验收。 | 按仓内路线图继续推进 R1a、R1b、R2、R3、R4。 |
 | [dojo](https://github.com/ZisIsNotZis/dojo) | [6aac3114](https://github.com/ZisIsNotZis/dojo/tree/6aac3114752e4f5be84c18a61c84c5e8b8049bbe) | 离线 CLI 可读带出处、比较和修订的知识链。两份 README 的写入演示已隔离到临时数据库，远端复验通过。 | 用真实知识材料验证从追问、工具核查、修正到复用的闭环。 |
