@@ -103,9 +103,9 @@
 | [cept](https://github.com/ZisIsNotZis/cept) | [eda1c58f](https://github.com/ZisIsNotZis/cept/tree/eda1c58f975ca3be24a5a470cae4111afdbdb686) | 历史语言/编译器探索，无可支持的现行产品。 | — |
 | [cuda](https://github.com/ZisIsNotZis/cuda) | [5a4c13d6](https://github.com/ZisIsNotZis/cuda/tree/5a4c13d6ec1dcf09ca79cc5bf82e570372965123) | CUDA tensor-core/warp 测量实验归档。 | — |
 | [cvorat](https://github.com/ZisIsNotZis/cvorat) | [322d69ba](https://github.com/ZisIsNotZis/cvorat/tree/322d69baefc7ba2c86775751689400deeb7f39d3) | 字节级语言模型结构实验归档。 | — |
-| [cz_bert](https://github.com/ZisIsNotZis/cz_bert) | [f7eed5e5](https://github.com/ZisIsNotZis/cz_bert/tree/f7eed5e5be2da86b2885760f5d50aa5ed5110c88) | 2019–2020 弃用的 BERT/语言研究。 | — |
+| [cz_bert](https://github.com/ZisIsNotZis/cz_bert) | [f7eed5e5](https://github.com/ZisIsNotZis/cz_bert/tree/f7eed5e5be2da86b2885760f5d50aa5ed5110c88) | 2019–2020 弃用的深度学习笔记，含 Mixer 与注意力结构、内存映射数据内核和 fastai CNN。 | — |
 | [cz_einn](https://github.com/ZisIsNotZis/cz_einn) | [2865d041](https://github.com/ZisIsNotZis/cz_einn/tree/2865d0418c43290d3b9dc914c450d3251fa216ff) | 2020 EINN 中文字符建模 notebook。 | — |
-| [cz_noidea](https://github.com/ZisIsNotZis/cz_noidea) | [3272f57e](https://github.com/ZisIsNotZis/cz_noidea/tree/3272f57ed6261b58147418d9ea4de00556008475) | 2020–2021 弃用的早期研究手稿。 | — |
+| [cz_noidea](https://github.com/ZisIsNotZis/cz_noidea) | [3272f57e](https://github.com/ZisIsNotZis/cz_noidea/tree/3272f57ed6261b58147418d9ea4de00556008475) | 2020–2021 弃用的 Python 试验笔记，含 asyncio 与套接字吞吐、稀疏数组和 NumPy、Numba、PyTorch。 | — |
 | [cznn](https://github.com/ZisIsNotZis/cznn) | [6b05a2e4](https://github.com/ZisIsNotZis/cznn/tree/6b05a2e40c443c71be00ee4c71d0983b7873f8fb) | 三份分叉尚未合并的研究神经网络构件。 | — |
 | [dcg](https://github.com/ZisIsNotZis/dcg) | [db9675fc](https://github.com/ZisIsNotZis/dcg/tree/db9675fc311643c8fec6adedd6b89e7b5823f743) | DIY 游戏王卡片数据和脚本归档，无独立应用。 | — |
 | [dino.py](https://github.com/ZisIsNotZis/dino.py) | [f080369a](https://github.com/ZisIsNotZis/dino.py/tree/f080369a8e3d8e635deea246e2928fb51c68f1a5) | DINO ggml 推理多路径的实验参考实现。 | — |
