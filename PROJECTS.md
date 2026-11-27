@@ -40,7 +40,7 @@
 
 | 仓库 | 固定版本或回执 | 已核对的交付范围与边界 | 下一步 |
 |---|---|---|---|
-| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [12e9016c](https://github.com/ZisIsNotZis/monoploy11/tree/12e9016c503dc3b52d850d16971903f3ccb2b38f) | 「街角生意」窄屏整局已发布。390×844 用 64 次操作走到结算和再次开局，取消选地与动作响应通过。整局回执随附原始数据，远端干净取回可重判。对照入口逐文件限制，正常页面与所需模块通过 Chromium 验证。570 项测试通过。 | 改善首局决策的节奏和回报，验证玩家是否愿意再玩一局。 |
+| [monoploy11](https://github.com/ZisIsNotZis/monoploy11) | [a253c28b](https://github.com/ZisIsNotZis/monoploy11/tree/a253c28b62a2fd0b923a05e659f9819a766dac0e) | 「街角生意」可走完整局。三种起手在修正对手座位的实测中，胜率为 45.7%、32.0%、34.7%，最大差距由 42.7 降至 13.7 个百分点。360×640 和 390×844 均从首屏进入首回合。独立从远端检出复验了发布回执及其绑定的 35 个产品文件。 | 改善首局各起手第一个值得权衡的选择，验证玩家是否愿意再玩一局。 |
 | [monopoly12](https://github.com/ZisIsNotZis/monopoly12) | [7cd4c2f5](https://github.com/ZisIsNotZis/monopoly12/tree/7cd4c2f55d0e440b15dadedfb0739cff60222faa) | 单文件离线原型已验证两档整局、键盘买地和日志回看。新版的逐块租金、停点合计和收款明细采用同一次交易的记录，部分付款显示实际缺口，后来调整单价不改写旧账。独立复建与发布包文档门禁通过，102 项测试通过，390×844 和 1280×900 均复验鼠标与键盘展开账单。 | 优先验收首局的玩法节奏和决定性提示，继续推进完整游戏范围。 |
 | [learn_draw](https://github.com/ZisIsNotZis/learn_draw) | [84b1136f](https://github.com/ZisIsNotZis/learn_draw/tree/84b1136f17182cee1c4be728324e2616c0677b40) | 两幅原创画面已发布，分别展示卸货与记账。从干净目录按首页安装后，2 PNG、2 SVG 均可复建。整身参考稿已分别记录发出版校验与重建差异。 | R1a 暂缓。复验原创坐姿切片，按仓内路线图推进其余开放范围。 |
 | [dojo](https://github.com/ZisIsNotZis/dojo) | [09eca156](https://github.com/ZisIsNotZis/dojo/tree/09eca156c4f5a36ade31ecbf5a598640e8566360) | 离线 CLI 可读带出处、比较和修订的知识链。重试案例把公开规范用于模型请求与知识账本两个决定，独立复验截断回复只发一次、完整请求重放可追原行且不动版本。旧库缺少请求值时保留不确定性。全套 1044 项，2 项跳过。 | 验证真实工作经验如何经追问和核查成为可在下一项工作中使用的知识。 |
