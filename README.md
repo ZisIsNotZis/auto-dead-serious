@@ -2,13 +2,14 @@
 
 English | [简体中文](README.zh-CN.md)
 
+[Current projects and delivery queue](PROJECTS.md) · [Workspace guide](WORKSPACE.md) · [Historical reviews and scores](docs/result/catalogue-redesign/README.md)
+
 > A serious, inspectable home for weird software ideas: independent projects,
 > pinned together without flattening their histories.
 
 **For:** someone deciding whether the author can build a thing — a collaborator, a hiring reader, an engineer who wants the source rather than a pitch.
 **Not for:** a package registry, a monorepo with one build, or a promise that any of this is production-supported. Each child owns its own toolchain, licence, tests and release path.
 
-[![Projects](https://img.shields.io/badge/projects-70-6f42c1)](docs/result/catalogue-redesign/README.md)
 [![License](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
 [![Contributing](https://img.shields.io/badge/docs-contributing-0f766e)](CONTRIBUTING.md)
 
@@ -77,4 +78,4 @@ Open an issue or PR against the relevant child repository, or against this index
 
 ## License
 
-This aggregator's original materials are AGPL-3.0-only, and the policy in `agent-policy/` is MIT. Child repositories retain their own licenses; inspect each child before reuse.
+This aggregator's original materials are AGPL-3.0-only. Projects retain their own licenses, including the MIT-licensed [agent-policy archive](https://github.com/ZisIsNotZis/agent-policy).

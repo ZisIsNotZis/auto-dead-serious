@@ -2,12 +2,13 @@
 
 [English](README.md) | 简体中文
 
+[项目总索引与推进顺序](PROJECTS.md) · [工作区说明](WORKSPACE.md) · [历史评审与评分](docs/result/catalogue-redesign/README.md)
+
 > 一个认真收纳“奇怪软件想法”的可检查作品集：每个项目独立维护，并以固定版本汇总，不抹平历史。
 
 **适合谁：** 想判断作者到底能不能把东西做出来的人——合作者、招聘方的读者、只想看源码不想看推销的工程师。
 **不适合谁：** 这不是包仓库，不是统一构建的 monorepo，也不承诺任何项目可用在生产环境。每个子项目拥有自己的工具链、许可证、测试和发布路径。
 
-[![项目数](https://img.shields.io/badge/projects-70-6f42c1)](docs/result/catalogue-redesign/README.md)
 [![许可证](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
 [![贡献指南](https://img.shields.io/badge/docs-contributing-0f766e)](CONTRIBUTING.md)
 
